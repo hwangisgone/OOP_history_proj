@@ -1,6 +1,15 @@
 # OOP History Project
 
 Team project for Object-oriented Programming class
+```bf
+[Team 12]
+Đặng Việt Hoàng
+Nguyễn Quang Minh
+Lê Hà Ngân
+Ngô Minh Quý
+Trịnh Diễm Quỳnh
+Trịnh Thị Diệu Thùy
+```
 
 ## TODO
 ### 1. Automatic Scraping the Web for historical figures, monuments and such
