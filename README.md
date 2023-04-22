@@ -2,8 +2,8 @@
 
 Team project for Object-oriented Programming class
 
-### TODO
-1. Automatic Scraping the Web for historical figures, monuments and such
+## TODO
+### 1. Automatic Scraping the Web for historical figures, monuments and such
 Các thực thể cần thu thập bao gồm:
 - Các triều đại lịch sử Việt Nam (thời Tiền Sử, Hồng Bàng, An Dương Vương, Bắc Thuộc lần I, …)
 - Các nhân vật lịch sử Việt Nam (Ví dụ, các vị vua Việt Nam có thể thu thập tại https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam)
@@ -11,9 +11,9 @@ Các thực thể cần thu thập bao gồm:
 - Các lễ hội văn hóa Việt Nam
 - Các sự kiện lịch sử Việt Nam
 
-2. Cleaning Data, 
+### 2. Cleaning Data, 
 
-3. Report
+### 3. Report
 Báo cáo:
 - Phân công công việc các thành viên trong nhóm
 - % đóng góp (con số lượng hóa cụ thể) của từng thành viên
@@ -33,7 +33,7 @@ Báo cáo:
 - Liệt kê công nghệ sử dụng, thuật toán hay ho (nếu có)
 - Hướng dẫn sử dụng ngắn gọn + 1 số ảnh quan trọng demo chương trình
 
-4. Web UI / Application UI?
+### 4. Web UI / Application UI?
 - Organize contents
 
-5. Demo Video?
+### 5. Demo Video?
