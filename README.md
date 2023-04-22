@@ -1,7 +1,7 @@
 # OOP History Project
 
 Team project for Object-oriented Programming class
-```bf
+``` bf
 [Team 12]
 Đặng Việt Hoàng
 Nguyễn Quang Minh
