@@ -17,7 +17,7 @@
 
 > Example
 
-	```
-		$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler
-	```
+	
+	$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler
+	
 
