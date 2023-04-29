@@ -1,0 +1,2 @@
+-d /home/minh/School/Learning/20222/OOP/Project/Class
+-cp .:/home/minh/snap/java/lib/jsoup-1.15.4.jar
