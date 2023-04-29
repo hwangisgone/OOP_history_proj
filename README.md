@@ -10,6 +10,8 @@
 
 > Still on developing phase, developers want to use classes of this branch, should follow the below instruction
 
+> For better understand the module, see the UML model in Specification directory
+
 
 ## Running Instruction
 
