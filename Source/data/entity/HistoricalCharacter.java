@@ -4,6 +4,7 @@
 package data.entity;
 
 import java.util.jar.Attributes;
+import java.util.Map;
 
 
 public class HistoricalCharacter {
@@ -27,4 +28,14 @@ public class HistoricalCharacter {
 		return map.getValue(key);
 	}	// close getProperty
 
+
+	// return info of the HistoricalCharacter
+	public String info() {
+		String info = "";
+		for (Map.Entry entry: map.entrySet()) {
+			info += entry.getKey() + " : ";
+			info += entry.getValue() + "\n";
+		}	// close for
+		return info;
+	}	// close info
 }	// close HistoricalCharacter
