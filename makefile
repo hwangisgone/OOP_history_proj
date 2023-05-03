@@ -4,11 +4,11 @@
 # Main class path
 DES=/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Class
 # Used class path
-USED=/home/minh/snap/java/lib/jsoup-1.15.4.jar
+USED=/home/minh/snap/java/lib/jsoup-1.15.4.jar:/home/minh/snap/java/lib/javax.json-1.1.4.jar
 # class path
 CLASS_PATH=$(DES):$(USED)
 # classes
-CLASS=data.crawl.Crawler
+CLASS=data.crawl.ExtractHistoricalCharacter
 
 
 all: compile
