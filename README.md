@@ -15,11 +15,15 @@
 
 ## Running Instruction
 
-> All classes are stored in Class directory, to run or use any class, it's neccessary to include Class directory path and jsoup library in `-classpath` option
-
-> Example
-
+- All classes are stored in Class directory, to run or use any class, it's neccessary to include the below path in `-classpath` option:
 	
-	$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler
+	1. Class directory: where the classes stored
+	2. Jsoup library
+	3. Json library 
+
+
+- Example
+	
+	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler`
 	
 
