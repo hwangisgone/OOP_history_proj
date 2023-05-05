@@ -48,7 +48,7 @@ public class SearchLinkCharacter extends SearchLink {
 		listMust = new ArrayList<String>();
 		listSpecifiedExist = new ArrayList<String>();
 		listSpecifiedAll = new ArrayList<String>();
-		JSON_FILE = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Source/data/crawl/constraintWord.json";
+		JSON_FILE = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/DataConfigure/constraintWord.json";
 		readConstraint();
 	}	// close constructor
 
@@ -90,6 +90,7 @@ public class SearchLinkCharacter extends SearchLink {
 		} catch (IOException e) {
 			System.out.println("Unable to read constraints file: " + JSON_FILE);
 			System.out.println("ERROR: " + e.getMessage());
+			System.exit(-1);
 		}	// close try
 	}	// close readConstraint
 
@@ -144,6 +145,7 @@ public class SearchLinkCharacter extends SearchLink {
 		} catch (IOException e) {
 			System.out.println("Unable to read url: " + url);
 			System.out.println("Error: " + e.getMessage());
+			return false;
 		}	// close try
 		return true;
 	}	// close checkSpecifiedUrl

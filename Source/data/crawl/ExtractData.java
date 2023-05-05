@@ -35,7 +35,8 @@ import java.util.List;
 public abstract class ExtractData {
 	
 
-	/* to extract data given an url, return an Map of field name and string value */
+	/* to extract data given an url, return an Map of field name and string value 
+		return null when unable to extract data */
 	public abstract Map<String, String> extract(String url);
 
 
@@ -44,14 +45,21 @@ public abstract class ExtractData {
 			- listUrl: list of links to be extracted
 			- filePath: a json file path, where the extract data will be stored */
 	public final void extract(List<String> listUrl, String filePath) {
+		JsonWriter writer = null;
+		JsonArray data = null;
 		try {
+			System.out.println("START EXTRACTING...");
 			// open file
 			OutputStream fos = new FileOutputStream(filePath);
-			JsonWriter writer = Json.createWriter(fos);
+			writer = Json.createWriter(fos);
 			JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 			// write each instance data to file
 			for (String url: listUrl) {
 				Map<String, String> instance = extract(url);
+				if (instance == null) {
+					System.out.println("Unable to extract URL: " + url);
+					continue;
+				}	// close if
 				JsonObjectBuilder builder = Json.createObjectBuilder();
 				// add each field to builder
 				for (Map.Entry<String, String> entry: instance.entrySet()) 
@@ -59,13 +67,17 @@ public abstract class ExtractData {
 				JsonObject object = builder.build();
 				arrayBuilder.add(object);
 			}	// close for
-			JsonArray data = arrayBuilder.build();
+			data = arrayBuilder.build();
 			writer.writeArray(data);
 			writer.close();
 			System.out.println("SUCCESFULLY WROTE " + data.size() + " objects!");
 		} catch (IOException e) {
 			System.out.println("Unable to write to file: " + filePath);
 			System.out.println("Error: " + e.getMessage());
+			if (!data.isEmpty()) {
+				writer.close();
+				System.out.println("SUCCESFULLY WROTE " + data.size() + " objects!");
+			}	// close if
 		}	// close extract
 	}	// close extract
 }	// close ExtractData

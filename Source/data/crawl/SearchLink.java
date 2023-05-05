@@ -32,11 +32,13 @@ public abstract class SearchLink {
 	static final int CAPACITY = 1000;			// initial capacity of hash map
 
 
-	/* Used to filter an url for specific webpage */
+	/* Used to filter an url for specific webpage 
+		NOTE: return false even when unable to read url */
 	public abstract boolean checkCommonUrl(String url);
 
 
-	/* Used to filter an url for specific data class */
+	/* Used to filter an url for specific data class 
+		NOTE: return false even when unable to read url */
 	public abstract boolean checkSpecifiedUrl(String url);
 
 
@@ -110,6 +112,8 @@ public abstract class SearchLink {
 			// check if goesNext level
 			if (node.level < level) {
 				List<String> listUrlPage = getListUrl(node.url);
+				if (listUrlPage == null)		// mean unable to open link
+					continue;
 				for (String url: listUrlPage) {
 					// ENQUEUE
 					Node child = new Node(url, node.level + 1);

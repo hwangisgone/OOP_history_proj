@@ -35,8 +35,9 @@ public class ExtractHistoricalCharacter extends ExtractData {
 	
 	/* to extract data given an url, return an Map of field name and string value */
 	public Map<String, String> extract(String url) {
-		Map<String, String> instance = new HashMap<String, String>(CAPACITY);		// instance data in map format
+		Map<String, String> instance = null;		// instance data in map format
 		try {
+			instance = new HashMap<String, String>(CAPACITY);
 			Document doc = Jsoup.parse(new URL(url).openStream(), UNICODE, url);
 			// Get table info
 			Element infobox = doc.getElementsByClass("infobox").first();
@@ -46,12 +47,12 @@ public class ExtractHistoricalCharacter extends ExtractData {
 			// Get attribute #2: dateOfBirth
 			String dateOfBirth = "";
 			Element header = infobox.getElementsMatchingOwnText("Sinh").first();
-			if (header != null)
-				dateOfBirth = header.parent().getElementsByTag("td").first().text();
+			if ((header != null) && (header.nextElementSibling() != null)) 
+				dateOfBirth = header.nextElementSibling().text();
 			// Get attribute #3: dateofDeath
 			String dateOfDeath = "";
 			header = infobox.getElementsMatchingOwnText("Mất").first();
-			if (header != null) 
+			if ((header != null) && (header.nextElementSibling() != null)) 
 				dateOfDeath = header.nextElementSibling().text();
 			// Get attribute #4: biography
 			String biography = "";
@@ -93,20 +94,11 @@ public class ExtractHistoricalCharacter extends ExtractData {
 		} catch (IOException e) {
 			System.out.println("Unable to read URL: " + url);
 			System.out.println("Error: " + e.getMessage());
+		} catch (NullPointerException e) {
+			System.out.println("The structure of URL is uable be to extracted, URL: " + url);
+			System.out.println("Error: " + e.getMessage());
 		}	// close try
 		return instance;
 	}	// close extract
-
-
-
-	public static void main(String[] args) {
-		String urlSeed = "https://vi.wikipedia.org/wiki/Quang_Trung";
-		SearchLinkCharacter searcher = new SearchLinkCharacter();
-		List<String> listUrl = searcher.getListUrl(urlSeed, 2, 10);
-		for (String url: listUrl) 
-			System.out.println("Matching URL: " + url);
-		ExtractHistoricalCharacter extractor = new ExtractHistoricalCharacter();
-		extractor.extract(listUrl, "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Source/data/crawl/dataCharacter.json");
-	}	// close main
 
 }	// close ExtractHistoricalCharacter
