@@ -1,0 +1,14 @@
+Địa điểm
+	Tên
+	Địa chỉ
+	Lịch sử
+	Kiến trúc
+
+Chùa
+	Tên khác
+	Tên tự
+	Tôn giáo
+	Khởi lập
+	Người sáng lập
+
+	Trụ trì
