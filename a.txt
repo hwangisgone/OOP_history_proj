@@ -1,14 +1,36 @@
 Địa điểm
-	Tên
-	Địa chỉ
-	Lịch sử
+	Tên / Tên chính xác?? / Tên khác (Tên tự/ Chữ Hán)
+	Địa chỉ / Vị trí 1,2 / Địa điểm / Tọa độ | thuộc, tại, ở (tọa lạc) (Tọa độ)
+	Lịch sử (Xây dựng / Khởi công / Tôn tạo / Ngày xây dựng / 
+		/ Hoàn thành / Khánh thành
+		/ Xây mới / Trùng tu)
 	Kiến trúc
 
-Chùa
-	Tên khác
-	Tên tự
-	Tôn giáo
+Bãi đá
+Bia mộ
+Chùa (thánh đường, Từ Lâm tự)
+	Tên khác / Tên tự / Tên chữ
+	Tôn giáo / Giáo phái
+	Tôn kính / Thờ phụng / Vị thần
+	Tông phái??
+
 	Khởi lập
 	Người sáng lập
+	Quản lý
 
-	Trụ trì
+	Trụ trì / Thầy
+
+
+Đình / Đền / Miếu / Tháp / Điện
+	Thờ (Công tích / Đc thờ vì)
+	Lễ hội
+
+
+Others
+	Phân loại / Loại??? / Phân cấp 
+	Ngày công nhận??
+	Quyết định
+	Relationship: Một phần của
+
+
+Remove: Động, Trường, Khu du lịch
