@@ -98,6 +98,7 @@ public class SearchLinkCharacter extends SearchLink {
 	// Implement abstract methods
 
 	/* Used to filter an url for specific webpage */
+	@Override
 	public boolean checkCommonUrl(String url) {
 		// Check if link contains any word in listAvoidWord
 		for (String word: listAvoid) {
@@ -113,6 +114,7 @@ public class SearchLinkCharacter extends SearchLink {
 
 
 	/* Used to filter an url for specific data class */
+	@Override
 	public boolean checkSpecifiedUrl(String url) {
 		// get html doc
 		try {

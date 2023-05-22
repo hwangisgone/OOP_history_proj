@@ -7,13 +7,13 @@
 package data.crawl;
 
 // used classes
-import java.util.List;						// Container
+import java.util.*;							// Container
+import javax.json.*;							
+import java.io.*;							
 import data.crawl.SearchLink;				// self
 import data.crawl.ExtractData;
 import data.crawl.SearchLinkCharacter;
 import data.crawl.ExtractHistoricalCharacter;
-import javax.json.*;
-import java.io.*;
 
 
 public class DataControler {
@@ -27,18 +27,86 @@ public class DataControler {
 	}	// close constructor
 
 
+	/*	- write list url into given file
+	 	- parameters
+	 		(0) listUrl: list of urls
+	 		(1) filePath: path of writing file */
+	private void writeListUrl(List<String> listUrl, String filePath) {
+		try {
+			FileWriter writer = new FileWriter(filePath);
+			for (String url: listUrl) 
+				writer.write(url + "\n");
+			writer.close();
+			System.out.println("Successfully wrote " + listUrl.size() + " urls into file: " + filePath);
+		} catch (IOException e) {
+			System.out.println("Unable to write list url to file " + filePath);
+			System.out.println(e.getMessage());
+		}	// close try
+	}	// close writeListUrl
+
+
+	/*	- read list url from given file
+		- parameters
+			(1) filePath: file to read from */
+	private List<String> readListUrl(String filePath) {
+		List<String> listUrl = new ArrayList<String>();
+		StringBuffer buffer = new StringBuffer();
+		try {
+			FileReader reader = new FileReader(filePath);
+			char[] charArray = new char[512];
+			while (reader.ready()) {
+				reader.read(charArray);
+				buffer.append(reader);
+			}	// close while
+			reader.close();
+			String arrayUrl[] = buffer.toString().split("\n");
+			for (String url: arrayUrl) 
+				listUrl.add(url.trim());
+			System.out.println("Successfully read listUrl from file: " + filePath);
+		} catch (IOException e) {
+			System.out.println("Unable to read list url from file: " + filePath);
+			System.out.println(e.getMessage());
+		}	// close try
+		return listUrl;
+	}	// close readListUrl
+
+
 	/* 
-		* To crawl data
-		* Parameter:
-			(1) urlSeed: link where searching starts off
-			(2) level: Maximum number of searching levels
-			(3) size: maximum number of links will be found
-			(4) databaseFile: a json file where data is stored
+		- to search urls from list of seeds and stored lists from each seed into corresponding files
+		- parameters
+			(1) listUrlSeed: list of seeds
+			(2) directory: the path of the directory where to stored the list
+			(3) level: maximum number of level reached by searching
+			(4) size: maximum number of urls searched from each seed
 	 */
-	public void crawlData(String urlSeed, int level, int size, String databaseFile) {
-		List<String> listUrl = seacher.getListUrl(urlSeed, level, size);
-		extractor.extract(listUrl, databaseFile);
-	}	// close crawlData
+	public void searchMultipleListUrl(List<String> listUrlSeed, String directory, int level, int size) {
+		int index = 0;
+		System.out.println("# THE PROGRAM IS GOING TO SEARCH FROM " + listUrlSeed.size() + " SEEDs");
+		for (String seed: listUrlSeed) {
+			System.out.println("# START SEARCHING WITH SEED: " + seed);
+			String filePath = directory + "/listUrl#" + index;
+			List<String> listUrl = seacher.getListUrl(seed, level, size);
+			// add url seed at begin of the list
+			listUrl.add(0, seed);		
+			// write each list into corresponding file
+			writeListUrl(listUrl, filePath);
+			index += 1;
+		}	// close for
+		System.out.println("Finished wrote " + listUrlSeed.size() + " url files in " + directory);
+	}	// close searchMultipleListUrl
+
+
+	/*
+		- to join a set of list of urls without dupplicate 
+		- parameters:
+			(1) directory: where the set of url files stored
+			(2) filePath: where the list of url after merging stored
+	 */
+	public void joinMultipleListUrl(String directory, String filePath) {
+
+		// CODING
+
+	}	// close joinMultipleListUrl
 
 
 	/* 	
@@ -82,22 +150,4 @@ public class DataControler {
 		}	// close try
 	}	// close reWriteData
 
-	
-	public static void main(String[] args) {
-		// setup
-		SearchLinkCharacter seacher = new SearchLinkCharacter();
-		ExtractHistoricalCharacter extractor = new ExtractHistoricalCharacter();
-		DataControler controler = new DataControler(seacher, extractor);
-		// parameter
-		String urlSeed = "https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam";
-		int level = 2;
-		int size = 100;
-		String databaseFile = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/HistoricalCharacter/HC1.json";
-		// crawl
-		controler.crawlData(urlSeed, level, size, databaseFile);
-		// rewrite
-		String readableFile = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/Readable/HC1.readable";
-		String attributeFile = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/DataConfigure/attributeHistoricalCharacter.json";
-		DataControler.reWriteData(databaseFile, readableFile, attributeFile);
-	}	// close main
 }	// close DataControler

@@ -16,6 +16,8 @@ import org.jsoup.nodes.Element;
 import java.net.URL;
 	// file
 import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
 	// containers
 import java.util.HashMap;

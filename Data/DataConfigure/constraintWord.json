@@ -3,7 +3,7 @@
 		{
 			"website": "wikipedia",
 			"avoid": ["index.php"],
-			"must": ["/wiki/"],
+			"must": ["/wiki/", "/vi.wikipedia.org/"],
 			"specified": {
 				"exist": [
 					"Thể loại:Nhân vật quân sự Việt Nam",

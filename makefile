@@ -8,7 +8,7 @@ USED=/home/minh/snap/java/lib/jsoup-1.15.4.jar:/home/minh/snap/java/lib/javax.js
 # class path
 CLASS_PATH=$(DES):$(USED)
 # classes
-CLASS=data.crawl.DataControler
+CLASS=data.crawl.Database
 
 
 all: compile
