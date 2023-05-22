@@ -56,7 +56,7 @@ public class DataControler {
 			char[] charArray = new char[512];
 			while (reader.ready()) {
 				reader.read(charArray);
-				buffer.append(reader);
+				buffer.append(charArray);
 			}	// close while
 			reader.close();
 			String arrayUrl[] = buffer.toString().split("\n");
@@ -76,6 +76,7 @@ public class DataControler {
 		- parameters
 			(1) listUrlSeed: list of seeds
 			(2) directory: the path of the directory where to stored the list
+				*NOTE: THE directory must existed, otherwise no files will be written*
 			(3) level: maximum number of level reached by searching
 			(4) size: maximum number of urls searched from each seed
 	 */
@@ -102,10 +103,30 @@ public class DataControler {
 			(1) directory: where the set of url files stored
 			(2) filePath: where the list of url after merging stored
 	 */
-	public void joinMultipleListUrl(String directory, String filePath) {
-
-		// CODING
-
+	public void joinMultipleListUrl(String directory, String filePathDest) {
+		File directoryPath = new File(directory);
+		String contents[] = directoryPath.list();
+		List<String> filePaths = new ArrayList<String>();
+		// get list url file
+		for (String name: contents) 
+			if (name.contains("listUrl#"))
+				filePaths.add(directory + "/" + name);
+		// read list url from each file
+		List<String> listUrl = null;
+		HashMap<String, Integer> hashListUrl = new HashMap<String, Integer>(1000);
+		int index = 0;
+		for (String filePath: filePaths) {
+			listUrl = readListUrl(filePath);
+			for (String url: listUrl) {
+				if (!hashListUrl.containsKey(url)) {
+					hashListUrl.put(url, index);
+					index += 1;
+				}	// close if
+			}	// close for 1
+		}	// close for
+		listUrl = new ArrayList<String>(hashListUrl.keySet());
+		writeListUrl(listUrl, filePathDest);
+		System.out.println("Successfully join " + filePaths.size() + " url files into " + filePathDest	 + ", containing " + index + " urls");
 	}	// close joinMultipleListUrl
 
 

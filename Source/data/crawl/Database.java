@@ -39,11 +39,9 @@ public class Database {
 		};
 		List<String> listUrlSeed = new ArrayList<String>();
 		Collections.addAll(listUrlSeed, arrayUrlSeed);
-		String directory = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/Url/HistoricalCharacter/Batch#1";
+		String directory = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/Url/HistoricalCharacter/Batch#2";
 		int level = 3;
 		int size = 30;
 		controler.searchMultipleListUrl(listUrlSeed, directory, level, size);
-
 	}	// close main
-
 }	// close Database

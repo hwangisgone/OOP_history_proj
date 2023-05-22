@@ -87,7 +87,7 @@ public abstract class SearchLink {
 			- level: the maximum numbers of searching levels from urlSeed(root: level 0)
 			- size: the maximum number of urls found */
 	public final List<String> getListUrl(String urlSeed, int level, int size) {
-		List<String> listUrl = null;
+		List<String> listUrl = new ArrayList<String>();
 		HashMap<String, Integer> hashListUrl = new HashMap<String, Integer>(CAPACITY);
 		int index = 0;	// the index of searching url
 		int count = 0;	// number of link matched
@@ -106,10 +106,8 @@ public abstract class SearchLink {
 			System.out.println("URL #" + index + ": " + node.url);
 			// PROCESS: add link to HashMap
 			if (checkSpecifiedUrl(node.url)) {
-				if (!hashListUrl.containsKey(node.url)) {
-					hashListUrl.put(node.url, node.level);
-					count += 1;
-				}	// close if 1
+				listUrl.add(node.url);
+				count += 1;
 			}	// close if
 			// check if goesNext level
 			if (node.level < level) {
@@ -117,14 +115,16 @@ public abstract class SearchLink {
 				if (listUrlPage == null)		// mean unable to open link
 					continue;
 				for (String url: listUrlPage) {
-					// ENQUEUE
-					Node child = new Node(url, node.level + 1);
-					queue.addLast(child);
+					if (!hashListUrl.containsKey(url)) {
+						hashListUrl.put(url, node.level);
+						// ENQUEUE
+						Node child = new Node(url, node.level + 1);
+						queue.addLast(child);
+					}	// close if
 				}	// close for
 			}	// close if
 		}	// close while
 		System.out.println("# FINISHED SEARCHING.");
-		listUrl = new ArrayList<String>(hashListUrl.keySet());
 		System.out.println("# FOUND: " + listUrl.size());
 		return listUrl;
 	}	// close getListUrl
