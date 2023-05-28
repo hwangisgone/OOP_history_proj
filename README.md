@@ -1,5 +1,34 @@
 # OOP History Project
 
+### Họp 28/5, nhiệm vụ cho tuần 28-3/5:
+
+#### Quý: cần báo cáo lại tiến độ ?
+
+#### Hoàng:
+- Crawl data Triều đại, Lễ hội (deadline t3 30/5) + địa điểm trên trang ditich.vn
+
+#### Thùy & Quỳnh: 
+- Modelize data & dọn dẹp (~80% thuộc tính là ok)
+	+ Địa điểm
+	+ Lễ hội (sau khi Hoàng xong)
+	+ Triều đại (sau khi Hoàng xong)
+- Có vấn đề thì báo :>
+
+(New Microsoft Excel Worksheet.xlsm)
+(hoặc Excel -> Data -> Get data -> From File -> CSV -> file `htmlparse.csv`)
+
+#### Ngân:
+- Crawl data Sự kiện lịch sử
+
+#### Anh Minh:
+- Clean data Nhân vật
+\
+\
+\
+\
+\
+\
+\
 Team project for Object-oriented Programming class
 ``` bf
 [Team 12]
