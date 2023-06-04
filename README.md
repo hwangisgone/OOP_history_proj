@@ -1,5 +1,37 @@
 # OOP History Project
 
+
+### Họp 28/5, nhiệm vụ cho tuần **4/6-10/6**:
+Để ý Interface cho file: Nhu cầu cần làm gì (read/write, ...)
+
+#### `Quý`
+- Cần báo cáo lại
+
+#### `Hoàng`
+- Lấy data lễ hội (dùng keywords thay vì infobox)
+- Thống nhất Ditich.vn và Địa điểm từ wiki
+- Chuyển code sang Java
+- Liên kết: Địa điểm - Nhân vật - Lễ hội
+- Hàm xác định thực thể (nv/địa điểm/...)
+- Modelize data
+
+#### `Quỳnh & Thùy`
+1. Phân loại: Phân loại địa điểm
+2. Modelize: 
+	Chọn ra những cột/attribute nổi bật ~80%
+	Địa điểm, Triều đại, Lễ hội
+3. Tổng hợp: Những cột/attribute có tên giống nhau
+	(vd: địa chỉ, địa điểm, "địa chỉ:" | Vị trí địa lý, vị trí)
+
+#### `Ngân`
+- Hoàn thành việc crawl data Sự kiện lịch sử
+
+#### `Minh`
+1. Modelize data historical-character
+2. Think and write down what database interface should provide
+
+
+
 ### Họp 28/5, nhiệm vụ cho tuần 28-3/5:
 
 #### ` Quý:` cần báo cáo lại tiến độ ?
