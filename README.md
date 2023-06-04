@@ -4,11 +4,11 @@
 ### Họp 4/6, nhiệm vụ cho tuần **4/6-10/6**:
 Để ý Interface cho file: Nhu cầu cần làm gì (read/write, ...)
 
-#### ` Quý`
+#### ` Quý `
 ```diff
 - Cần báo cáo lại (x2) (Chiều 6/6)
 ```
-#### ` Hoàng`
+#### ` Hoàng `
 - Lấy data lễ hội (dùng keywords thay vì infobox)
 - Thống nhất Ditich.vn và Địa điểm từ wiki
 - Chuyển code sang Java
@@ -16,7 +16,7 @@
 - Hàm xác định thực thể (nv/địa điểm/...)
 - Modelize data
 
-#### ` Quỳnh & Thùy`
+#### ` Quỳnh & Thùy `
 1. Phân loại: Phân loại địa điểm
 2. Modelize: 
 	Chọn ra những cột/attribute nổi bật ~80%
@@ -24,10 +24,10 @@
 3. Tổng hợp: Những cột/attribute có tên giống nhau
 	(vd: địa chỉ, địa điểm, "địa chỉ:" | Vị trí địa lý, vị trí)
 
-#### ` Ngân`
+#### ` Ngân `
 - Hoàn thành việc crawl data Sự kiện lịch sử
 
-#### ` Minh`
+#### ` Minh `
 1. Modelize data historical-character
 2. Think and write down what database interface should provide
 
