@@ -140,8 +140,8 @@ public class SearchLinkCharacter extends SearchLink {
 			Elements infoboxs = doc.getElementsByClass("infobox");
 			if (infoboxs.isEmpty())
 				return false;
-			// Check if the infobox has this section: Thông tin chung
-			Elements sections = infoboxs.first().getElementsMatchingOwnText("Thông tin chung");
+			// Check if the infobox has this section: Thông tin chung/Thông tin cá nhân 
+			Elements sections = infoboxs.first().getElementsMatchingOwnText("Thông tin");
 			if (sections.isEmpty())
 				return false;
 		} catch (IOException e) {
