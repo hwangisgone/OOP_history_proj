@@ -1,7 +1,7 @@
 # OOP History Project
 
 
-### Họp 28/5, nhiệm vụ cho tuần **4/6-10/6**:
+### Họp 4/6, nhiệm vụ cho tuần **4/6-10/6**:
 Để ý Interface cho file: Nhu cầu cần làm gì (read/write, ...)
 
 #### `Quý`
