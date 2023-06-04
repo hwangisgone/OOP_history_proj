@@ -2,7 +2,7 @@
 	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character 
  */
 
-package data.crawl;
+package data.crawl.character.wiki;
 
 // used classes
 	// jsoup

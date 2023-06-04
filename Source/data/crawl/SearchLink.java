@@ -29,7 +29,7 @@ import java.util.LinkedList;
 
 public abstract class SearchLink {
 
-	static final String UNICODE = "UTF-8";	// unicode of url page
+	protected static final String UNICODE = "UTF-8";		// unicode of url page
 
 	static final int CAPACITY = 1000;			// initial capacity of hash map
 
@@ -103,7 +103,7 @@ public abstract class SearchLink {
 			// DEQUEUE
 			Node node = queue.pollFirst();
 			index += 1; 		// the index of the current link
-			System.out.println("URL #" + index + ": " + node.url);
+			System.out.println("Checking URL #" + index + ": " + node.url);
 			// PROCESS: add link to HashMap
 			if (checkSpecifiedUrl(node.url)) {
 				listUrl.add(node.url);
@@ -114,8 +114,9 @@ public abstract class SearchLink {
 				List<String> listUrlPage = getListUrl(node.url);
 				if (listUrlPage == null)		// mean unable to open link
 					continue;
+												// add its children into queue
 				for (String url: listUrlPage) {
-					if (!hashListUrl.containsKey(url)) {
+					if (!hashListUrl.containsKey(url)) {	// no duplicated child will be added
 						hashListUrl.put(url, node.level);
 						// ENQUEUE
 						Node child = new Node(url, node.level + 1);

@@ -12,8 +12,8 @@ import javax.json.*;
 import java.io.*;							
 import data.crawl.SearchLink;				// self
 import data.crawl.ExtractData;
-import data.crawl.SearchLinkCharacter;
-import data.crawl.ExtractHistoricalCharacter;
+import data.crawl.character.wiki.SearchLinkCharacter;
+import data.crawl.character.wiki.ExtractHistoricalCharacter;
 
 
 public class DataControler {
@@ -170,5 +170,25 @@ public class DataControler {
 			System.out.println(e.getMessage());
 		}	// close try
 	}	// close reWriteData
+
+
+	/*
+		Given a file contains list of URLs, read list url and extract data from the corresponding website
+			Then store data into database-file
+	 */
+	public void extractUrlFile(String fileUrl, String databaseFile) {
+		List<String> listUrl = readListUrl(fileUrl);
+		extractor.extract(listUrl, databaseFile);
+	}	// close extractUrlFile
+
+
+	/*
+	 	To searck all links given url seed, max level, max number
+	 	Store the links into given file
+	 */
+	public void searchLinkIntoFile(String urlSeed, int level, int size, String fileUrl) {
+		List<String> listUrl = seacher.getListUrl(urlSeed, level, size);
+		writeListUrl(listUrl, fileUrl);
+	}	// close searchLinkIntoFile
 
 }	// close DataControler
