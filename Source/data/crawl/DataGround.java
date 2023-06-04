@@ -22,7 +22,7 @@ public class DataGround {
 		DataControler controler = new DataControler(seacher, extractor);
 		// Search links
 		int no = 2;
-		String urlSeed = "https://vi.wikipedia.org/wiki/Nh%C3%A0_Tri%E1%BB%87u";
+		String urlSeed = "https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh";
 		String fileUrl = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/url/historical-character/url#" + no;
 		controler.searchLinkIntoFile(urlSeed, 3, 100, fileUrl);
 		// Extract data

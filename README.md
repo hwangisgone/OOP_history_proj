@@ -25,5 +25,11 @@
 - Example
 	
 	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler`
-	
 
+## Description working sofar
+
+- Working on searching and extract Vietnamese Historical characters from wikipedia websites
+
+- The attributes of Historical character is declared at [file](./Data/DataConfigure/attributeHistoricalCharacter.json)
+
+- The data extracted is stored in [Data directory](./Data/Database/historical-character/)
