@@ -3,24 +3,22 @@
  */
 package data.entity;
 
-import java.util.jar.Attributes;
 import java.util.Map;
+import exception.data.NoIdException;
 
 
 public class HistoricalCharacter {
 
-	private 	Attributes map;		// map string with string
+	private Map<String, String> properties;		// map string with string
+	private String id;							// id of the character
 
-
-	public HistoricalCharacter() {
-		map = new Attributes();
+	// Constructor
+	public HistoricalCharacter(Map<String, String> map) {
+		this.properties = map;
+		if (!map.containsKey("id")) 
+			throw new NoIdException();
+		this.id = map.getValue("id");
 	}	// close constructor
-
-
-	// Set new value for the given attribute(key) in map
-	public void setProperty(String key, String value) {
-		map.putValue(key, value);
-	}	// close setProperties
 
 
 	// Get a value of given attribute(key) in map
@@ -29,8 +27,8 @@ public class HistoricalCharacter {
 	}	// close getProperty
 
 
-	// return info of the HistoricalCharacter
-	public String info() {
+	@Override
+	public String toString() {
 		String info = "";
 		for (Map.Entry entry: map.entrySet()) {
 			info += entry.getKey() + " : ";

@@ -4,31 +4,10 @@
  */
 
 package data.crawl;
-
-// used classes
-	// jsoup
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-import org.jsoup.nodes.Element;
-	// net
-import java.net.URL;
-	// file
-import java.io.File;
-import java.io.IOException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-	// file:jason
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonWriter;
-	// containers
+// containers
 import java.util.Map;
-import java.util.HashMap;
 import java.util.List;
+import java.util.ArrayList;
 
 	
 
@@ -40,44 +19,15 @@ public abstract class ExtractData {
 	public abstract Map<String, String> extract(String url);
 
 
-	/* 	* to extract data from list of urls and stored in json file 
+	/* 	* to extract data from list of urls and return list of Map<String, String>
 		* Parameter
 			- listUrl: list of links to be extracted
 			- filePath: a json file path, where the extract data will be stored */
-	public final void extract(List<String> listUrl, String filePath) {
-		JsonWriter writer = null;
-		JsonArray data = null;
-		try {
-			System.out.println("START EXTRACTING...");
-			// open file
-			OutputStream fos = new FileOutputStream(filePath);
-			writer = Json.createWriter(fos);
-			JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-			// write each instance data to file
-			for (String url: listUrl) {
-				Map<String, String> instance = extract(url);
-				if (instance == null) {
-					System.out.println("Unable to extract URL: " + url);
-					continue;
-				}	// close if
-				JsonObjectBuilder builder = Json.createObjectBuilder();
-				// add each field to builder
-				for (Map.Entry<String, String> entry: instance.entrySet()) 
-					builder.add(entry.getKey(), entry.getValue());
-				JsonObject object = builder.build();
-				arrayBuilder.add(object);
-			}	// close for
-			data = arrayBuilder.build();
-			writer.writeArray(data);
-			writer.close();
-			System.out.println("SUCCESFULLY WROTE " + data.size() + " objects!");
-		} catch (IOException e) {
-			System.out.println("Unable to write to file: " + filePath);
-			System.out.println("Error: " + e.getMessage());
-			if (!data.isEmpty()) {
-				writer.close();
-				System.out.println("SUCCESFULLY WROTE " + data.size() + " objects!");
-			}	// close if
-		}	// close extract
+	public final List<Map<String, String>> extract(List<String> listUrl) {
+		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+		for (String url: listUrl) {
+			list.add(extract(url));
+		}	// close for
+		return list;
 	}	// close extract
 }	// close ExtractData

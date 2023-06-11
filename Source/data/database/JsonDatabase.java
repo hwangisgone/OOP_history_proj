@@ -44,6 +44,8 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 				}	// close for
 				this.list.add(map);
 			}	// close for
+			reader.close();
+			fis.close();
 		} catch (IOException e) {
 			System.out.println("Unable to read the json file: " + jsonFilePath);
 			System.out.println("ERROR: " + e.getMessage());
@@ -67,6 +69,8 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 			}	// close for
 			// write array into file
 			writer.writeArray(arrayBuilder.build());
+			writer.close();
+			fos.close();
 		} catch (IOException e) {
 			System.out.println("Unable to save the change to the database!");
 			System.out.println("ERROR: " + e.getMessage());
