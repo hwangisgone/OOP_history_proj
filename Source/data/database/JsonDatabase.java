@@ -1,81 +1,109 @@
 /*
-	This is a database stored in json file, implements IDatabase interface
+	A generic Json database, which implements the IDatabase interface
+	Parameters:
+		1. JSON file: objects is stored in an JSON array 
+		2. IDatabase interface generics type is Map<String, String>
  */
 
 package data.database;
 
 import data.database.IDatabase;
-import java.util.Map;
-import java.util.List;
-import java.util.ArrayList;
-
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonWriter;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.util.*;
+import javax.json.*;
+import java.io.*;
 
 
-public class JsonDatabase implements IDatabase {
-	private String jsonFilePath;
+public class JsonDatabase implements IDatabase <Map<String, String>> {
+
+	private String jsonFilePath;		// the json file where the database operates on
+	private List<Map<String, String>> list;				// the list of objects in database
 
 	// constructor
 	public JsonDatabase(String jsonFilePath) {
 		this.jsonFilePath = jsonFilePath;
+		this.list = new ArrayList<Map<String, String>>();
+		// pre-load the file
+		loadFile();
 	}	// constructor
 
 
-	// build json object from an Map<String, String>
-	private JsonObject getJsonObject(Object instance) {
-		Map<String, String> map = (Map<String, String>) instance;
-		JsonObjectBuilder builder = Json.createObjectBuilder();
-		// add each field to builder
-		for (Map.Entry<String, String> entry: map.entrySet()) 
-			builder.add(entry.getKey(), entry.getValue());
-		JsonObject object = builder.build();
-		return object;
-	}	// close 
+	// load the JSON array from file and return the list of object
+	private void loadFile() {
+		try {
+			InputStream fis = new FileInputStream(jsonFilePath);
+			JsonReader reader = Json.createReader(fis);
+			JsonArray array = reader.readArray();	
+			// convert json array into list of Map<String, String>
+			for (JsonValue value: array) {
+				JsonObject obj = (JsonObject) value;
+				if (obj.isEmpty())			// if obj is empty, remove it
+					continue;
+				Map<String, String> map = new HashMap<String, String> ();
+				for (String key: obj.keySet()) {
+					map.put(key, obj.getString(key));
+				}	// close for
+				this.list.add(map);
+			}	// close for
+		} catch (IOException e) {
+			System.out.println("Unable to read the json file: " + jsonFilePath);
+			System.out.println("ERROR: " + e.getMessage());
+		}	// close try	
+	}	// close loadFile
+
+
+	// write each object in list into json file
+	private void storeFile() {
+		try {
+			OutputStream fos = new FileOutputStream(this.jsonFilePath);
+			JsonWriter writer = Json.createWriter(fos);
+			// convert list into Json array
+			JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
+			// convert each object in list into JsonObject
+			for (Map<String, String> map: this.list) {
+				JsonObjectBuilder objBuilder = Json.createObjectBuilder();
+				for (Map.Entry<String, String> entry: map.entrySet())
+					objBuilder.add(entry.getKey(), entry.getValue());
+				arrayBuilder.add(objBuilder);
+			}	// close for
+			// write array into file
+			writer.writeArray(arrayBuilder.build());
+		} catch (IOException e) {
+			System.out.println("Unable to save the change to the database!");
+			System.out.println("ERROR: " + e.getMessage());
+		}	// close
+	}	// close storeFile	
 
 
 	/* Store an object into database */
-	@Override
-	public void store(List<Object> listObject) {
-		// 
-		try {
-			OutputStream fos = new FileOutputStream(jsonFilePath);
-			JsonWriter writer = Json.createWriter(fos);
-			JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-			// write all instance in list into file
-			for (Object instance: listObject) {
-				JsonObject object = getJsonObject(instance);
-				arrayBuilder.add(object);
-			}	// close for
-			writer.write(arrayBuilder.build());
-			writer.close();
-		} catch (IOException e) {
-			System.out.println("Unable write to file: " + jsonFilePath);
-			System.out.println(e.getMessage());
-		}	// close try
-	}	// close store an object
+	public void store(List<Map<String, String>> listObject) {
+		this.list.addAll(listObject);
+	}	// close store
 
+	/* Load a list of objects with given index range 
+		- changes in the return list does NOT change the database
+	 */
+	public List<Map<String, String>> load(int startIndex, int endIndex) {
+		List<Map<String, String>> cloneList = new ArrayList<>(this.list.subList(startIndex, endIndex));
+		return cloneList;
+	}	// close load
 
-	/* Load and return all objects in the database */
-	@Override
-	public List<Object> load() {
-		List<Object> list = new ArrayList<Object>();
-		return list;
+	/* Load and return all objects in the database 
+		- changes in the return list does NOT change the database
+	 */
+	public List<Map<String, String>> load() {
+		List<Map<String, String>> cloneList = new ArrayList<>(this.list);
+		return cloneList;
 	}	// close load
 
 	/* return the number of objects in the database */
-	@Override
 	public int size() {
-		return 0;
+		return this.list.size();
 	}	// close size
+
+
+	/* close the database */ 
+	public void close() {
+		storeFile();
+	}	// close database
 
 }	// close JsonDatabase
