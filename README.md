@@ -1,6 +1,8 @@
 
 # OOP History Project
 
+**New feature: database interface, checking specification directory**
+
 ## Data module
 
 > This is a branch for data crawling and processing, the outcome will be a database
@@ -24,7 +26,8 @@
 
 - Example
 	
-	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.crawl.Crawler`
+	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.DataGround`
+
 
 ## Description working sofar
 
@@ -33,3 +36,5 @@
 - The attributes of Historical character is declared at [file](./Data/DataConfigure/attributeHistoricalCharacter.json)
 
 - The data extracted is stored in [Data directory](./Data/Database/historical-character/)
+
+- Creating database interface, the design is [database interface](./Source/data/database/)
