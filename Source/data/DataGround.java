@@ -15,6 +15,7 @@ import data.crawl.character.wiki.ExtractHistoricalCharacter;
 import data.database.IDatabase;
 import data.database.JsonDatabase;
 import data.entity.Entity;
+import data.entity.Character;
 import exception.data.NoIdException;
 
 
@@ -52,7 +53,7 @@ public class DataGround {
 		List<Map<String, String>> listObject = database.load();
 		for (Map<String, String> obj: listObject) {
 			try {
-				listEntity.add(new Entity(obj));
+				listEntity.add(new Character(obj));
 			} catch (NoIdException e) {
 				System.out.println(e.getMessage());
 			}	// close NoIdException
@@ -63,7 +64,7 @@ public class DataGround {
 
 	
 	public static void main(String[] args) {
-		JsonDatabase database = new JsonDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#3.json");
+		JsonDatabase database = new JsonDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
 		DataGround.load(database);
 	}	// close main
 }	// close DataGround
