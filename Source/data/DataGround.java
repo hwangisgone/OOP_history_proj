@@ -48,7 +48,7 @@ public class DataGround {
 	/*
 		Testing load datq from database
 	 */
-	public static void load(IDatabase<Map<String, String>> database) {
+	public static List<Entity> load(IDatabase<Map<String, String>> database) {
 		List<Entity> listEntity = new ArrayList<Entity> ();
 		List<Map<String, String>> listObject = database.load();
 		for (Map<String, String> obj: listObject) {
@@ -58,13 +58,12 @@ public class DataGround {
 				System.out.println(e.getMessage());
 			}	// close NoIdException
 		}	// close for
-		for (Entity entity: listEntity) 
-			System.out.println(entity);
+		return listEntity;
 	}	// close load
 
 	
 	public static void main(String[] args) {
-		JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
-		DataGround.load(database);
+		// JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
+		// DataGround.load(database);
 	}	// close main
 }	// close DataGround

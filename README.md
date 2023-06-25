@@ -4,32 +4,44 @@
 
 ## Outline Modules
 
-1. Data crawling
+1. Data package
 
-	> This is crawling data module, which searchs related link and extract data
+	1. Data crawling
 
-2. Database
+		> This is crawling data module, which searchs related link and extract data
 
-	> This is database: include database interface and Json implementation of database interface
+	2. Database
 
-3. Entity
+		> This is database: include database interface and Json implementation of database interface
 
-	> This is module to modelize the object in database into Java class
+	3. Entity
+
+		> This is module to modelize the object in database into Java class
+
+2. Service package
+
+	1. Search 
+
+		> This is a module which provides search service
 
 
 ## Working Process
 
 > For better understand the module, see the UML model in Specification directory
 
-> Current work: Only tested on Historical character from wikipedia website. Working on loading data from database and modelize the data into java objects for historical character.
+> Current work: Only tested on Historical character from wikipedia website. Working on search service
 
-- Working on searching and extract Vietnamese Historical characters from wikipedia websites
+- Work done:
+	
+	- searching and extract Vietnamese Historical characters from wikipedia websites
 
-- The attributes of Historical character is declared at [file](./Data/DataConfigure/attributeHistoricalCharacter.json)
+	- The attributes of Historical character is declared at [file](./Data/DataConfigure/attributeHistoricalCharacter.json)
 
-- The data extracted is stored in [Data directory](./Data/Database/historical-character/)
+	- The data extracted is stored in [Data directory](./Data/Database/historical-character/)
 
-- Creating database interface, the design is [database interface](./Source/data/database/)
+	- Creating database interface, the design is [database interface](./Source/data/database/)
+
+	- provide search service [service module](./Source/service/search/), design was stored in Specification directory. 
 
 
 ## Running Instruction
@@ -40,8 +52,10 @@
 	2. Jsoup library
 	3. Json library 
 
+- The class contain main method, which project activities occur is: [Ground](./Source/Ground.java)
+	
 
 - Example
 	
-	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar data.DataGround`
+	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar Ground`
 
