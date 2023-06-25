@@ -15,16 +15,42 @@ import java.io.*;
 
 public class JsonDatabase implements IDatabase <Map<String, String>> {
 
-	private String jsonFilePath;		// the json file where the database operates on
+	private static List<String> listFileExist;			// list of files have already been opened
+	private static List<JsonDatabase> listDatabase;		// list of database exist
+	private String jsonFilePath;						// the json file where the database operates on
 	private List<Map<String, String>> list;				// the list of objects in database
 
+	// initialize static properties
+	static {
+		listFileExist = new ArrayList<String>();
+		listDatabase = new ArrayList<JsonDatabase>();
+	}
+
+
 	// constructor
-	public JsonDatabase(String jsonFilePath) {
+	private JsonDatabase(String jsonFilePath) {
 		this.jsonFilePath = jsonFilePath;
 		this.list = new ArrayList<Map<String, String>>();
 		// pre-load the file
 		loadFile();
 	}	// constructor
+
+
+	/* get instance through this method 
+		to ensure that no more than 1 database on the same json-file at anytime */
+	public static JsonDatabase getDatabase(String jsonFilePath) {
+		int indexOfFile = listFileExist.indexOf(jsonFilePath);
+		if (indexOfFile != -1) {		// file has been opened
+			System.out.println("NO CREATE NEW");
+			return listDatabase.get(indexOfFile);
+		}	// close if
+										// file does not exist
+		listFileExist.add(jsonFilePath);
+		JsonDatabase newDatabase = new JsonDatabase(jsonFilePath);
+		listDatabase.add(newDatabase);
+		return newDatabase;
+	}	// close getDatabase
+
 
 
 	// load the JSON array from file and return the list of object

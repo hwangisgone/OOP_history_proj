@@ -27,7 +27,7 @@ public class DataGround {
 		// setup
 		SearchLinkCharacter seacher = new SearchLinkCharacter();
 		ExtractHistoricalCharacter extractor = new ExtractHistoricalCharacter();
-		JsonDatabase database = new JsonDatabase(databaseFile);
+		JsonDatabase database = JsonDatabase.getDatabase(databaseFile);
 		DataControler controler = new DataControler(seacher, extractor, database);
 		// Measure running-time
 		long startTime = System.nanoTime();
@@ -64,7 +64,7 @@ public class DataGround {
 
 	
 	public static void main(String[] args) {
-		JsonDatabase database = new JsonDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
+		JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
 		DataGround.load(database);
 	}	// close main
 }	// close DataGround
