@@ -24,4 +24,19 @@ public class Character extends Entity {
 		dateOfDeath = new Date(map.get("dateOfDeath"));
 	}	// close Character
 
+
+	@Override
+	public String toString() {
+		StringBuffer info = new StringBuffer("");
+		info.append("ID: " + this.getProperty("id") + "\n");
+		info.append("Name: " + this.getProperty("name") + "\n");
+		info.append("Date of Birth: " + this.dateOfBirth + "\n");
+		info.append("Date of Death: " + this.dateOfDeath + "\n");
+		info.append("Father: " + this.getProperty("father") + "\n");
+		info.append("Mother: " + this.getProperty("mother") + "\n");
+		info.append("Dynasty: " + this.getProperty("dynasty") + "\n");
+		info.append("Biography: " + this.getProperty("career&bio") + "\n");
+		return info.toString();
+	}	// close toString
+
 }	// close 

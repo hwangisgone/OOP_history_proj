@@ -26,13 +26,15 @@ public class Searcher {
 
 
 	public List<Entity> search(List<Entity> listEntity, String keyword) {
-		// get the list of searching fields from list entity
+		// ignore case
+		keyword = keyword.toLowerCase();
+		// Get the list of searching fields from list entity
 		List<String> listField = new ArrayList<String>();
 		for (Entity entity: listEntity) 
 			listField.add(fieldGetter.getSearchField(entity));
-		// searching for list of indices of matching strings
+		// Searching for list of indices of matching strings
 		List<Integer> listIndexMatch = searchWorker.search(listField, keyword);
-		// get list of matching entities
+		// Get list of matching entities
 		List<Entity> listMatchEntity = new ArrayList<Entity>();
 		for (Integer i: listIndexMatch)
 			listMatchEntity.add(listEntity.get(i));

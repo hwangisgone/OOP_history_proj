@@ -84,7 +84,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 		// Get attribute #5: career&bio
 			String careerBio = "";
 			String carBioList[] = {"Tiểu_sử", "Thân_thế", "Sự_nghiệp"};
-			for (String keyword: carBioList) {
+			for (String keyword: carBioList) {				// search for keyword in the header
 				header = doc.getElementById(keyword);
 				if (header != null) {
 					header = header.parent();
@@ -99,6 +99,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 					break;
 				careerBio += header.text() + "\n";
 			}	// close while
+			careerBio.replace("[sửa | sửa mã nguồn]", "");
 		// get attribute #6: dynasty
 			String dynasty = "";
 			String dynastyKeyword[] = {"Triều đại"};
@@ -151,6 +152,9 @@ public class ExtractHistoricalCharacter extends ExtractData {
 			System.out.println("Error: " + e.getMessage());
 		} catch (NullPointerException e) {
 			System.out.println("The structure of URL is uable be to extracted, URL: " + url);
+			System.out.println("Error: " + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Unable to read URL: " + url);
 			System.out.println("Error: " + e.getMessage());
 		}	// close try
 		return instance;

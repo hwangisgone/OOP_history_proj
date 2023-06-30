@@ -22,7 +22,7 @@ import exception.data.NoIdException;
 public class DataGround {
 
 	// Crawling data activity
-	public static void crawl(int no) {
+	public static void crawl(String no) {
 		String databaseFile = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#"+ no +".json";
 		// setup
 		SearchLinkCharacter seacher = new SearchLinkCharacter();
@@ -32,9 +32,9 @@ public class DataGround {
 		// Measure running-time
 		long startTime = System.nanoTime();
 		// Search links
-		String urlSeed = "https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh";
+		String urlSeed = "https://vi.wikipedia.org/wiki/Hai_B%C3%A0_Tr%C6%B0ng";
 		String fileUrl = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/url/historical-character/url#" + no;
-		controler.searchLinkIntoFile(urlSeed, 3, 100, fileUrl);
+		// controler.searchLinkIntoFile(urlSeed, 3, 10, fileUrl);
 		long elapsedTime = System.nanoTime() - startTime;
 		System.out.println("\nSEARCH LINK COST: " + (elapsedTime / 1e9) + " secs");
 		// Extract data
@@ -45,25 +45,7 @@ public class DataGround {
 	}	// close crawl
 
 
-	/*
-		Testing load datq from database
-	 */
-	public static List<Entity> load(IDatabase<Map<String, String>> database) {
-		List<Entity> listEntity = new ArrayList<Entity> ();
-		List<Map<String, String>> listObject = database.load();
-		for (Map<String, String> obj: listObject) {
-			try {
-				listEntity.add(new Character(obj));
-			} catch (NoIdException e) {
-				System.out.println(e.getMessage());
-			}	// close NoIdException
-		}	// close for
-		return listEntity;
-	}	// close load
-
-	
 	public static void main(String[] args) {
-		// JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#4.json");
-		// DataGround.load(database);
+		DataGround.crawl("30-06#0");
 	}	// close main
 }	// close DataGround
