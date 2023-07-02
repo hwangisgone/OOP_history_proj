@@ -1,48 +1,61 @@
+
 # OOP History Project
 
-Team project for Object-oriented Programming class
-``` bf
-[Team 12]
-Đặng Việt Hoàng
-Nguyễn Quang Minh
-Lê Hà Ngân
-Ngô Minh Quý
-Trịnh Diễm Quỳnh
-Trịnh Thị Diệu Thùy
-```
 
-## TODO
-### 1. Automatic Scraping the Web for historical figures, monuments and such
-Các thực thể cần thu thập bao gồm:
-- Các triều đại lịch sử Việt Nam (thời Tiền Sử, Hồng Bàng, An Dương Vương, Bắc Thuộc lần I, …)
-- Các nhân vật lịch sử Việt Nam (Ví dụ, các vị vua Việt Nam có thể thu thập tại https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam)
-- Các địa điểm du lịch (chùa, đình, miếu, gò, …) và các di tích lịch sử Việt Nam
-- Các lễ hội văn hóa Việt Nam
-- Các sự kiện lịch sử Việt Nam
+## Outline Modules
 
-### 2. Cleaning Data, 
+1. Data package
 
-### 3. Report
-Báo cáo:
-- Phân công công việc các thành viên trong nhóm
-- % đóng góp (con số lượng hóa cụ thể) của từng thành viên
-- Con số thống kê về dữ liệu thu thập được. Ví dụ
-	- Bao nhiêu nhân vật lịch sử, bao nhiêu lễ hội, bao nhiêu di tích, …
-	- Bao nhiêu thuộc tính dữ liệu cho mỗi loại thực thể
-	- Bao nhiêu liên kết giữa các thực thể
-	- Lấy dữ liệu của bao nhiêu nguồn, là những nguồn nào. Mỗi nguồn lấy được dữ liệu gì
-- Vẽ biểu đồ UML (Asta)
-	- Biểu đồ phụ thuộc gói
-	- Biểu đồ lớp
-- Giải thích thiết kế
-	- Các gói (package) dùng để làm gì
-	- Các lớp ý tưởng là gì
-- Giải thích các kỹ thuật lập trình hướng đối tượng đã áp dụng
-	- Nhóm đã áp dụng kỹ thuật gì, ở đâu, lợi ích đem lại là gì
-- Liệt kê công nghệ sử dụng, thuật toán hay ho (nếu có)
-- Hướng dẫn sử dụng ngắn gọn + 1 số ảnh quan trọng demo chương trình
+	1. Data crawling
 
-### 4. Web UI / Application UI?
-- Organize contents
+		> This is crawling data module, which searchs related link and extract data
 
-### 5. Demo Video?
+	2. Database
+
+		> This is database: include database interface and Json implementation of database interface
+
+	3. Entity
+
+		> This is module to modelize the object in database into Java class
+
+2. Service package
+
+	1. Search 
+
+		> This is a module which provides search service
+
+
+## Working Process
+
+> For better understand the module, see the UML model in Specification directory
+
+> Current work: Only tested on Historical character from wikipedia website. Working on search service
+
+- Work done:
+	
+	- searching and extract Vietnamese Historical characters from wikipedia websites
+
+	- The attributes of Historical character is declared at [file](./Data/DataConfigure/attributeHistoricalCharacter.json)
+
+	- The data extracted is stored in [Data directory](./Data/Database/historical-character/)
+
+	- Creating database interface, the design is [database interface](./Source/data/database/)
+
+	- provide search service [service module](./Source/service/search/), design was stored in Specification directory. 
+
+
+## Running Instruction
+
+- All classes are stored in Class directory, to run or use any class, it's neccessary to include the below path in `-classpath` option:
+	
+	1. Class directory: where the classes stored
+	2. Jsoup library
+	3. Json library 
+
+- The class contain main method, which project activities occur is: [Ground](./Source/Ground.java)
+	
+
+- Example
+	
+	> `$ java -classpath [...]/Class:[...]/jsoup-1.15.4.jar Ground`
+
