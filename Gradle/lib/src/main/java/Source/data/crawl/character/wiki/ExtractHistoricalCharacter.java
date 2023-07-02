@@ -2,7 +2,7 @@
 	* ExtractHistoricalCharacter: to extract all historical character data of wikipedia websites
  */
 
-package data.crawl.character.wiki;
+package Source.data.crawl.character.wiki;
 
 // used classes
 	// jsoup
@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.LinkedList;
 	// custom
-import data.crawl.ExtractData;
+import Source.data.crawl.ExtractData;
 
 
 public class ExtractHistoricalCharacter extends ExtractData {

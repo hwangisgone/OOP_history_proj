@@ -2,7 +2,7 @@
 	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character 
  */
 
-package data.crawl.character.wiki;
+package Source.data.crawl.character.wiki;
 
 // used classes
 	// jsoup
@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.LinkedList;
 	// custom
-import data.crawl.SearchLink;
+import Source.data.crawl.SearchLink;
 
 
 

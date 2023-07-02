@@ -4,7 +4,7 @@
  	They are made to check and validate urls for specific data
  */
 
-package data.crawl;
+package Source.data.crawl;
 
 // used classes
 	// jsoup

@@ -2,9 +2,9 @@
 	An interface provide the searching field from an entity for searcher
  */
 
-package service.search;
+package Source.service.search;
 
-import data.entity.Entity;
+import Source.data.entity.Entity;
 
 
 public interface ISearchFieldGetter {

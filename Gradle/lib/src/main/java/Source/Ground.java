@@ -1,13 +1,15 @@
+package Source;
+
 /*
 	The ground of project: where all actions take place
  */
 
-import data.database.JsonDatabase;
-import service.search.*;
-import data.entity.Entity;
-import data.entity.Character;
-import data.DataGround;
-import exception.data.NoIdException;
+import Source.data.database.JsonDatabase;
+import Source.service.search.*;
+import Source.data.entity.Entity;
+import Source.data.entity.Character;
+import Source.data.DataGround;
+import Source.exception.data.NoIdException;
 import java.util.*;
 
 

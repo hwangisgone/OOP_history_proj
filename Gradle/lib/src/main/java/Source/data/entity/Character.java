@@ -5,11 +5,11 @@
 		1. dynasty entity
  */
 
-package data.entity;
+package Source.data.entity;
 
-import data.entity.Entity;
-import data.entity.utils.Date;
-import exception.data.NoIdException;
+import Source.data.entity.Entity;
+import Source.data.entity.utils.Date;
+import Source.exception.data.NoIdException;
 import java.util.Map;
 
 

@@ -3,20 +3,20 @@
  */
 
 
-package data;
+package Source.data;
 
 // used classes
 import java.util.*;						// Container
-import data.crawl.SearchLink;				// self
-import data.crawl.ExtractData;
-import data.crawl.DataControler;
-import data.crawl.character.wiki.SearchLinkCharacter;
-import data.crawl.character.wiki.ExtractHistoricalCharacter;
-import data.database.IDatabase;
-import data.database.JsonDatabase;
-import data.entity.Entity;
-import data.entity.Character;
-import exception.data.NoIdException;
+import Source.data.crawl.SearchLink;				// self
+import Source.data.crawl.ExtractData;
+import Source.data.crawl.DataControler;
+import Source.data.crawl.character.wiki.SearchLinkCharacter;
+import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
+import Source.data.database.IDatabase;
+import Source.data.database.JsonDatabase;
+import Source.data.entity.Entity;
+import Source.data.entity.Character;
+import Source.exception.data.NoIdException;
 
 
 public class DataGround {

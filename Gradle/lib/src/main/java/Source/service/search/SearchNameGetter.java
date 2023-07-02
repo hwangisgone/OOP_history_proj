@@ -1,8 +1,8 @@
 
-package service.search;
+package Source.service.search;
 
-import service.search.ISearchFieldGetter;
-import data.entity.Entity;
+import Source.service.search.ISearchFieldGetter;
+import Source.data.entity.Entity;
 
 
 public class SearchNameGetter implements ISearchFieldGetter {

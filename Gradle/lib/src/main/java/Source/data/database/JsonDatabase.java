@@ -5,9 +5,9 @@
 		2. IDatabase interface generics type is Map<String, String>
  */
 
-package data.database;
+package Source.data.database;
 
-import data.database.IDatabase;
+import Source.data.database.IDatabase;
 import java.util.*;
 import javax.json.*;
 import java.io.*;
@@ -57,6 +57,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 	private void loadFile() {
 		try {
 			InputStream fis = new FileInputStream(jsonFilePath);
+			
 			JsonReader reader = Json.createReader(fis);
 			JsonArray array = reader.readArray();	
 			// convert json array into list of Map<String, String>

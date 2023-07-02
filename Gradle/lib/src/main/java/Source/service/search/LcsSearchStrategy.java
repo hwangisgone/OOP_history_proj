@@ -2,9 +2,9 @@
 	Perform searching of SearchStrategy interface by using longest common searching algorithm
  */
 
-package service.search;
+package Source.service.search;
 
-import service.search.ISearchStrategy;
+import Source.service.search.ISearchStrategy;
 import java.util.*;
 
 

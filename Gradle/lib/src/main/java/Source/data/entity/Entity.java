@@ -1,10 +1,10 @@
 /*
 	This class is used to represent an Entity
  */
-package data.entity;
+package Source.data.entity;
 
 import java.util.Map;
-import exception.data.NoIdException;
+import Source.exception.data.NoIdException;
 
 
 public class Entity {

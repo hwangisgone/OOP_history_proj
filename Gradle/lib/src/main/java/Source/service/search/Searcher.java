@@ -2,11 +2,11 @@
 	Class provide search service to user (who use the database for retrieve information)
  */
 
-package service.search;
+package Source.service.search;
 
-import service.search.ISearchFieldGetter;
-import service.search.ISearchStrategy;
-import data.entity.Entity;
+import Source.service.search.ISearchFieldGetter;
+import Source.service.search.ISearchStrategy;
+import Source.data.entity.Entity;
 import java.util.*;
 
 
