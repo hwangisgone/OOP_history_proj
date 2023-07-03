@@ -1,29 +1,26 @@
 /*
  *	- SearchLink: is an abstract class used to provide a general tool to find all url which are about specific data
- 	- In order to find url of specific data, it's necessary to implement 3 abstract methods: `checkCommonUrl`, `checkSpecifiedUrl` and `validate` 
+ 	- In order to find url of specific data, it's necessary to implement 3 abstract methods: `checkCommonUrl`, `checkSpecifiedUrl` and `validate`
  	They are made to check and validate urls for specific data
  */
 
 package Source.data.crawl;
 
+import java.io.IOException;
+// net
+import java.net.URL;
+import java.util.ArrayList;
+// containers
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 // used classes
 	// jsoup
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import org.jsoup.nodes.Element;
-	// net
-import java.net.URL;
-	// file
-import java.io.File;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.IOException;
-	// containers
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
+import org.jsoup.select.Elements;
 
 
 
@@ -34,18 +31,18 @@ public abstract class SearchLink {
 	static final int CAPACITY = 1000;			// initial capacity of hash map
 
 
-	/* Used to filter an url for specific webpage 
+	/* Used to filter an url for specific webpage
 		NOTE: return false even when unable to read url */
 	public abstract boolean checkCommonUrl(String url);
 
 
-	/* Used to filter an url for specific data class 
+	/* Used to filter an url for specific data class
 		NOTE: return false even when unable to read url */
 	public abstract boolean checkSpecifiedUrl(String url);
 
 
-	/* * To find list of urls given urlSeed, only search links, 
-		which are available on the urlSeed page 
+	/* * To find list of urls given urlSeed, only search links,
+		which are available on the urlSeed page
 		* Parameter:
 			- urlSeed: an url where the searching start off */
 	public final List<String> getListUrl(String urlSeed) {
@@ -58,14 +55,14 @@ public abstract class SearchLink {
 			// get all links in the current page which have title
 			Elements listLink = doc.select("a[href]").select("a[title]");
 			// create a hashMap of urls with initial capacity is number of links found
-			hashListUrl = new HashMap<String, String>(listLink.size());
+			hashListUrl = new HashMap<>(listLink.size());
 			// validate each link of listUrl found
 			for (Element link: listLink) {
 				if (checkCommonUrl(link.attr("abs:href"))) {
 					String key = link.attr("abs:href");
 					String value = link.attr("title");
 					// check if hashListUrl already contained above link
-					if (!hashListUrl.containsKey(key)) 
+					if (!hashListUrl.containsKey(key))
 						hashListUrl.put(key, value);
 				}	// close if
 			}	// close for
@@ -75,30 +72,30 @@ public abstract class SearchLink {
 		}	// close
 		// return list of links found
 		if (hashListUrl != null)
-			listUrl = new ArrayList<String>(hashListUrl.keySet());
+			listUrl = new ArrayList<>(hashListUrl.keySet());
 		return listUrl;
 	}	// close getListUrl
 
 
-	/* * To find list of urls given urlSeed, and search all links 
+	/* * To find list of urls given urlSeed, and search all links
 		with breadth-first-search algorimthm
 		* Parameter:
 			- urlSeed: the url where the searching start off
 			- level: the maximum numbers of searching levels from urlSeed(root: level 0)
 			- size: the maximum number of urls found */
 	public final List<String> getListUrl(String urlSeed, int level, int size) {
-		List<String> listUrl = new ArrayList<String>();
-		HashMap<String, Integer> hashListUrl = new HashMap<String, Integer>(CAPACITY);
+		List<String> listUrl = new ArrayList<>();
+		HashMap<String, Integer> hashListUrl = new HashMap<>(CAPACITY);
 		int index = 0;	// the index of searching url
 		int count = 0;	// number of link matched
 		// create a queue using linkedList
-		LinkedList<Node> queue = new LinkedList<Node>();
+		LinkedList<Node> queue = new LinkedList<>();
 		Node root = new Node(urlSeed, 0);
 		queue.addLast(root);
 		System.out.println("# START SEARCHING: ...");
 		while (!queue.isEmpty()) {
 			// break if reach maximum number of links found
-			if (count == size) 
+			if (count == size)
 				break;
 			// DEQUEUE
 			Node node = queue.pollFirst();

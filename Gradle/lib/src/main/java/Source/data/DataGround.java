@@ -1,22 +1,14 @@
-/* 
+/*
 	The place where all data process activies occur
  */
 
 
 package Source.data;
 
-// used classes
-import java.util.*;						// Container
-import Source.data.crawl.SearchLink;				// self
-import Source.data.crawl.ExtractData;
 import Source.data.crawl.DataControler;
-import Source.data.crawl.character.wiki.SearchLinkCharacter;
 import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
-import Source.data.database.IDatabase;
+import Source.data.crawl.character.wiki.SearchLinkCharacter;
 import Source.data.database.JsonDatabase;
-import Source.data.entity.Entity;
-import Source.data.entity.Character;
-import Source.exception.data.NoIdException;
 
 
 public class DataGround {

@@ -22,13 +22,14 @@ public class Database implements IDatabase<JSONObject> {
     }
 
     /* Store an object into database */
-    public void store(List<JSONObject> listObject) {
+    @Override
+	public void store(List<JSONObject> listObject) {
         for (Object i : jsonArray) {
             listObject.add((JSONObject) i);
         }
         try (
             FileWriter fileWriter = new FileWriter("E:/OOP/javaProject/Crawl/extractData.json")) {
-            String modifiedJsonString = extractData.unescapeUnicode(jsonArray.toString());
+            String modifiedJsonString = ExtractData.unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();
         } catch (IOException e) {
@@ -41,22 +42,26 @@ public class Database implements IDatabase<JSONObject> {
      * - startIndex is inclusive
      * - endIndex is exclusive
      */
-    public List<JSONObject> load(int startIndex, int endIndex) {
+    @Override
+	public List<JSONObject> load(int startIndex, int endIndex) {
         List<JSONObject> cloneList = new ArrayList<>(this.listObject.subList(startIndex, endIndex));
         return cloneList;
-    };
+    }
 
     /* Load and return all objects in the database */
-    public List<JSONObject> load() {
+    @Override
+	public List<JSONObject> load() {
         return this.listObject;
     }
 
     /* return the number of objects in the database */
-    public int size() {
+    @Override
+	public int size() {
         return this.jsonArray.size();
     }
 
     /* close the database: cleaning environment if neccessary */
-    public void close() {
+    @Override
+	public void close() {
     }
 }

@@ -1,15 +1,30 @@
 /*
 	A generic Json database, which implements the IDatabase interface
 	Parameters:
-		1. JSON file: objects is stored in an JSON array 
+		1. JSON file: objects is stored in an JSON array
 		2. IDatabase interface generics type is Map<String, String>
  */
 
 package Source.data.database;
 
-import java.util.*;
-import javax.json.*;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
+import javax.json.JsonReader;
+import javax.json.JsonValue;
+import javax.json.JsonWriter;
 
 
 public class JsonDatabase implements IDatabase <Map<String, String>> {
@@ -21,21 +36,21 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 
 	// initialize static properties
 	static {
-		listFileExist = new ArrayList<String>();
-		listDatabase = new ArrayList<JsonDatabase>();
+		listFileExist = new ArrayList<>();
+		listDatabase = new ArrayList<>();
 	}
 
 
 	// constructor
 	private JsonDatabase(String jsonFilePath) {
 		this.jsonFilePath = jsonFilePath;
-		this.list = new ArrayList<Map<String, String>>();
+		this.list = new ArrayList<>();
 		// pre-load the file
 		loadFile();
 	}	// constructor
 
 
-	/* get instance through this method 
+	/* get instance through this method
 		to ensure that no more than 1 database on the same json-file at anytime */
 	public static JsonDatabase getDatabase(String jsonFilePath) {
 		int indexOfFile = listFileExist.indexOf(jsonFilePath);
@@ -56,15 +71,15 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 	private void loadFile() {
 		try {
 			InputStream fis = new FileInputStream(jsonFilePath);
-			
+
 			JsonReader reader = Json.createReader(fis);
-			JsonArray array = reader.readArray();	
+			JsonArray array = reader.readArray();
 			// convert json array into list of Map<String, String>
 			for (JsonValue value: array) {
 				JsonObject obj = (JsonObject) value;
 				if (obj.isEmpty())			// if obj is empty, remove it
 					continue;
-				Map<String, String> map = new HashMap<String, String> ();
+				Map<String, String> map = new HashMap<> ();
 				for (String key: obj.keySet()) {
 					map.put(key, obj.getString(key));
 				}	// close for
@@ -75,7 +90,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 		} catch (IOException e) {
 			System.out.println("Unable to read the json file: " + jsonFilePath);
 			System.out.println("ERROR: " + e.getMessage());
-		}	// close try	
+		}	// close try
 	}	// close loadFile
 
 
@@ -101,37 +116,42 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 			System.out.println("Unable to save the change to the database!");
 			System.out.println("ERROR: " + e.getMessage());
 		}	// close
-	}	// close storeFile	
+	}	// close storeFile
 
 
 	/* Store an object into database */
+	@Override
 	public void store(List<Map<String, String>> listObject) {
 		this.list.addAll(listObject);
 	}	// close store
 
-	/* Load a list of objects with given index range 
+	/* Load a list of objects with given index range
 		- changes in the return list does NOT change the database
 	 */
+	@Override
 	public List<Map<String, String>> load(int startIndex, int endIndex) {
 		List<Map<String, String>> cloneList = new ArrayList<>(this.list.subList(startIndex, endIndex));
 		return cloneList;
 	}	// close load
 
-	/* Load and return all objects in the database 
+	/* Load and return all objects in the database
 		- changes in the return list does NOT change the database
 	 */
+	@Override
 	public List<Map<String, String>> load() {
 		List<Map<String, String>> cloneList = new ArrayList<>(this.list);
 		return cloneList;
 	}	// close load
 
 	/* return the number of objects in the database */
+	@Override
 	public int size() {
 		return this.list.size();
 	}	// close size
 
 
-	/* close the database */ 
+	/* close the database */
+	@Override
 	public void close() {
 		storeFile();
 	}	// close database

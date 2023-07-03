@@ -1,34 +1,30 @@
 /*
-	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character 
+	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character
  */
 
 package Source.data.crawl.character.wiki;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+// net
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+// file:jason
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 
 // used classes
 	// jsoup
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.jsoup.nodes.Element;
-	// net
-import java.net.URL;
-	// file
-import java.io.File;
-import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.InputStream;
-	// file:jason
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonValue;
-	// containers
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
-	// custom
+
+// custom
 import Source.data.crawl.SearchLink;
 
 
@@ -44,10 +40,10 @@ public class SearchLinkCharacter extends SearchLink {
 
 	// constructor
 	public SearchLinkCharacter() {
-		listAvoid = new ArrayList<String>();
-		listMust = new ArrayList<String>();
-		listSpecifiedExist = new ArrayList<String>();
-		listSpecifiedAll = new ArrayList<String>();
+		listAvoid = new ArrayList<>();
+		listMust = new ArrayList<>();
+		listSpecifiedExist = new ArrayList<>();
+		listSpecifiedAll = new ArrayList<>();
 		JSON_FILE = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/DataConfigure/constraintWord.json";
 		readConstraint();
 	}	// close constructor
@@ -69,21 +65,21 @@ public class SearchLinkCharacter extends SearchLink {
 				String nameWeb = web.getString("website");
 				// get avoid array
 				JsonArray array = web.getJsonArray("avoid");
-				for (int j = 0; j < array.size(); j ++ ) 
+				for (int j = 0; j < array.size(); j ++ )
 					listAvoid.add(array.getString(j));
 				// get must array
 				array = web.getJsonArray("must");
-				for (int j = 0; j < array.size(); j ++ ) 
+				for (int j = 0; j < array.size(); j ++ )
 					listMust.add(array.getString(j));
 				// For specific data
 				JsonObject specifiedObject = web.getJsonObject("specified");
 					// get specifiedExit array
 				array = specifiedObject.getJsonArray("exist");
-				for (int j = 0; j < array.size(); j ++ ) 
+				for (int j = 0; j < array.size(); j ++ )
 					listSpecifiedExist.add(array.getString(j));
 					// get specifiedAll array: mean the content must contain all of these keywords
 				array = specifiedObject.getJsonArray("all");
-				for (int j = 0; j < array.size(); j ++ ) 
+				for (int j = 0; j < array.size(); j ++ )
 					listSpecifiedAll.add(array.getString(j));
 			}	// close for
 			System.out.println("# SUCCESSFULLY READ CONSTRAINT FILE");
@@ -94,7 +90,7 @@ public class SearchLinkCharacter extends SearchLink {
 		}	// close try
 	}	// close readConstraint
 
-	
+
 	// Implement abstract methods
 
 	/* Used to filter an url for specific webpage */
@@ -106,7 +102,7 @@ public class SearchLinkCharacter extends SearchLink {
 				return false;
 		}	// close for
 		// Check if the link does not contain any words of compulsory list
-		for (String word: listMust) 
+		for (String word: listMust)
 			if (!url.contains(word))
 				return false;
 		return true;
@@ -125,10 +121,10 @@ public class SearchLinkCharacter extends SearchLink {
 				Elements titleList = doc.getElementById("catlinks").getElementsByAttributeValueContaining("title", keyword);
 				if (!titleList.isEmpty()) { 	// There is a match with a topic
 					isMatch = true;
-					break; 	
+					break;
 				}	// close if
 			}	// close for
-			if (isMatch == false)
+			if (!isMatch)
 				return false;
 			// Check if the website contains the must-have keywords
 			for (String keyword: listSpecifiedAll) {
@@ -140,7 +136,7 @@ public class SearchLinkCharacter extends SearchLink {
 			Elements infoboxs = doc.getElementsByClass("infobox");
 			if (infoboxs.isEmpty())
 				return false;
-			// Check if the infobox has this section: Thông tin chung/Thông tin cá nhân 
+			// Check if the infobox has this section: Thông tin chung/Thông tin cá nhân
 			Elements sections = infoboxs.first().getElementsMatchingOwnText("Thông tin");
 			if (sections.isEmpty())
 				return false;

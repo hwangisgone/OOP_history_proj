@@ -4,7 +4,7 @@
 
 package Source.service.search;
 
-import java.util.*;
+import java.util.List;
 
 
 public interface ISearchStrategy {
@@ -18,6 +18,6 @@ public interface ISearchStrategy {
 			list of indices
 	 */
 	public List<Integer> search(List<String> listField, String keyword);
-	
+
 }	// close ISearchStrategy
 

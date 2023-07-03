@@ -1,4 +1,4 @@
-/* 
+/*
 	DataControler: to implement the data modular:
 		(1) Search list of link for specified data -> listUrl
 		(2) From listUrl, extract the data and store it into database.json
@@ -6,14 +6,16 @@
 
 package Source.data.crawl;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 // used classes
-import java.util.*;							// Container
-import java.io.*;							
-import Source.data.crawl.SearchLink;				// self
-import Source.data.crawl.ExtractData;
+// Container
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import Source.data.database.IDatabase;
-import Source.data.crawl.character.wiki.SearchLinkCharacter;
-import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
 
 
 public class DataControler {
@@ -36,7 +38,7 @@ public class DataControler {
 	private void writeListUrl(List<String> listUrl, String filePath) {
 		try {
 			FileWriter writer = new FileWriter(filePath);
-			for (String url: listUrl) 
+			for (String url: listUrl)
 				writer.write(url + "\n");
 			writer.close();
 			System.out.println("Successfully wrote " + listUrl.size() + " urls into file: " + filePath);
@@ -51,7 +53,7 @@ public class DataControler {
 		- parameters
 			(1) filePath: file to read from */
 	private List<String> readListUrl(String filePath) {
-		List<String> listUrl = new ArrayList<String>();
+		List<String> listUrl = new ArrayList<>();
 		StringBuffer buffer = new StringBuffer();
 		try {
 			FileReader reader = new FileReader(filePath);
@@ -62,7 +64,7 @@ public class DataControler {
 			}	// close while
 			reader.close();
 			String arrayUrl[] = buffer.toString().split("\n");
-			for (String url: arrayUrl) 
+			for (String url: arrayUrl)
 				listUrl.add(url.trim());
 			System.out.println("Successfully read listUrl from file: " + filePath);
 		} catch (IOException e) {

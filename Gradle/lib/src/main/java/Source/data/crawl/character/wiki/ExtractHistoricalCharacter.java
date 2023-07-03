@@ -1,27 +1,24 @@
-/* 
+/*
 	* ExtractHistoricalCharacter: to extract all historical character data of wikipedia websites
  */
 
 package Source.data.crawl.character.wiki;
 
+import java.io.IOException;
+// net
+import java.net.URL;
+import java.util.HashMap;
+// containers
+import java.util.Map;
+
 // used classes
 	// jsoup
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import org.jsoup.nodes.Element;
-	// net
-import java.net.URL;
-	// file
-import java.io.File;
-import java.io.IOException;
-	// containers
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
-	// custom
+import org.jsoup.select.Elements;
+
+// custom
 import Source.data.crawl.ExtractData;
 
 
@@ -30,12 +27,13 @@ public class ExtractHistoricalCharacter extends ExtractData {
 	private final String UNICODE = "utf-8";		// unicode of website
 	private final int CAPACITY = 10;				// maximum number of fields
 
-	
+
 	/* to extract data given an url, return an Map of field name and string value */
+	@Override
 	public Map<String, String> extract(String url) {
 		Map<String, String> instance = null;		// instance data in map format
 		try {
-			instance = new HashMap<String, String>(CAPACITY);
+			instance = new HashMap<>(CAPACITY);
 			Document doc = Jsoup.parse(new URL(url).openStream(), UNICODE, url);
 				// Get table info
 			Element infobox = doc.getElementsByClass("infobox").first();
@@ -69,7 +67,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 				if (!setMatchs.isEmpty())
 					header = setMatchs.first();
 			}	// end for
-			if ((header != null) && (header.nextElementSibling() != null)) 
+			if ((header != null) && (header.nextElementSibling() != null))
 				dateOfBirth = header.nextElementSibling().text();
 		// Get attribute #4: dateofDeath
 			String dateOfDeath = "";
@@ -79,7 +77,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 				if (!setMatchs.isEmpty())
 					header = setMatchs.first();
 			}	// end for
-			if ((header != null) && (header.nextElementSibling() != null)) 
+			if ((header != null) && (header.nextElementSibling() != null))
 				dateOfDeath = header.nextElementSibling().text();
 		// Get attribute #5: career&bio
 			String careerBio = "";
@@ -93,9 +91,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 			}	// close
 			while (header != null) {
 				header = header.nextElementSibling();
-				if (header == null) 
-					break;
-				if (header.tagName().equals("h2"))
+				if ((header == null) || header.tagName().equals("h2"))
 					break;
 				careerBio += header.text() + "\n";
 			}	// close while

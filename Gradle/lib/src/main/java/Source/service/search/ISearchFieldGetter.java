@@ -10,7 +10,7 @@ import Source.data.entity.Entity;
 public interface ISearchFieldGetter {
 	/*
 		Get the search field, which is attribute value of the entity
-		Example: 
+		Example:
 			if we are searching by name, the method will return the name of the entity
 	 */
 	public String getSearchField(Entity entity);

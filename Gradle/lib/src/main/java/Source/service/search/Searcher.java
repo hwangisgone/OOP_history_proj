@@ -4,14 +4,14 @@
 
 package Source.service.search;
 
-import Source.service.search.ISearchFieldGetter;
-import Source.service.search.ISearchStrategy;
+import java.util.ArrayList;
+import java.util.List;
+
 import Source.data.entity.Entity;
-import java.util.*;
 
 
 public class Searcher {
-	
+
 	private ISearchFieldGetter fieldGetter;
 	private ISearchStrategy searchWorker;
 
@@ -29,13 +29,13 @@ public class Searcher {
 		// ignore case
 		keyword = keyword.toLowerCase();
 		// Get the list of searching fields from list entity
-		List<String> listField = new ArrayList<String>();
-		for (Entity entity: listEntity) 
+		List<String> listField = new ArrayList<>();
+		for (Entity entity: listEntity)
 			listField.add(fieldGetter.getSearchField(entity));
 		// Searching for list of indices of matching strings
 		List<Integer> listIndexMatch = searchWorker.search(listField, keyword);
 		// Get list of matching entities
-		List<Entity> listMatchEntity = new ArrayList<Entity>();
+		List<Entity> listMatchEntity = new ArrayList<>();
 		for (Integer i: listIndexMatch)
 			listMatchEntity.add(listEntity.get(i));
 		return listMatchEntity;

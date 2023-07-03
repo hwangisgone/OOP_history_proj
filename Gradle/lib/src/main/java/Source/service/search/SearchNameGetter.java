@@ -1,7 +1,6 @@
 
 package Source.service.search;
 
-import Source.service.search.ISearchFieldGetter;
 import Source.data.entity.Entity;
 
 
@@ -12,4 +11,4 @@ public class SearchNameGetter implements ISearchFieldGetter {
 		String name = entity.getProperty("name").toLowerCase();
 		return name;
 	}	// close getSearchField
-}	
+}

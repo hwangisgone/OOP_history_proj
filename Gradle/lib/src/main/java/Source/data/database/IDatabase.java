@@ -1,5 +1,5 @@
 /*
-	- This is a database interface for store/load objects 
+	- This is a database interface for store/load objects
 	The database is a virtual list of objects
 	- An interface for database, which must provides below services:
 		1. store: store an object into database (append not overwrite)
@@ -13,11 +13,11 @@ import java.util.List;
 
 
 public interface IDatabase <E> {
-	
+
 	/* Store an object into database */
 	public void store(List<E> listObject);
 
-	/* Load a list of objects with given index range[startIndex, endIndex) 
+	/* Load a list of objects with given index range[startIndex, endIndex)
 		- startIndex is inclusive
 		- endIndex is exclusive
 	 */

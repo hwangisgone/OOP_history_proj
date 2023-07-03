@@ -4,8 +4,8 @@
 
 package Source.service.search;
 
-import Source.service.search.ISearchStrategy;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class LcsSearchStrategy implements ISearchStrategy {
@@ -21,12 +21,12 @@ public class LcsSearchStrategy implements ISearchStrategy {
 		int colN = secondSequence.length() + 1;
 		int[][] table = new int[ rowN ][ colN ];
 		// initialize base case
-		for (int row = 0; row < rowN; row ++ ) 
+		for (int row = 0; row < rowN; row ++ )
 			table[row][0] = 0;
 		for (int col = 0; col < colN; col ++ )
 			table[0][col] = 0;
 		// update the table
-		for (int row = 1; row < rowN; row ++ ) 
+		for (int row = 1; row < rowN; row ++ )
 			for (int col = 1; col < colN; col ++ ) {
 				if (firstSequence.charAt(row - 1) == secondSequence.charAt(col - 1))
 					table[row][col] = table[row -1][col - 1] + 1;
@@ -49,7 +49,7 @@ public class LcsSearchStrategy implements ISearchStrategy {
 				max = similarityDegree[i];
 		}	// close for
 		// find the list of fields with the highest sililarity
-		List<Integer> listIndexMatch = new ArrayList<Integer>();
+		List<Integer> listIndexMatch = new ArrayList<>();
 		for (int i = 0; i < similarityDegree.length; i ++ )		// find max degree
 			if (similarityDegree[i] == max)
 				listIndexMatch.add(i);

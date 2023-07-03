@@ -1,7 +1,6 @@
 package Ngan.Entity;
 import java.util.Map;
 
-import org.json.simple.JSONArray;
 import Source.exception.data.NoIdException;
 
 public class Entity {
@@ -12,7 +11,7 @@ public class Entity {
 	// Constructor
 	public Entity(Map<String,String> map) throws NoIdException {
 		this.properties = map;
-		if (!map.containsKey("id")) 
+		if (!map.containsKey("id"))
 			throw new NoIdException();
 		this.id = map.get("id");
 	}	// close constructor
