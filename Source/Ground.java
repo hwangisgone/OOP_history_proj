@@ -15,7 +15,7 @@ public class Ground {
 
 	public static void testSearch(String keyword) {
 		// Read database
-		JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#29-06#0.json");
+		JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-event/event#0.json");
 		// modeling entities
 		List<Entity> listEntity = new ArrayList<Entity> ();		// place holder - testing
 		List<Map<String, String>> listObject = database.load();
@@ -38,6 +38,6 @@ public class Ground {
 	}	// close testSearch
 
 	public static void main(String[] args) {
-		Ground.testSearch("Nguyễn");
+		Ground.testSearch("");
 	}	// close main
 }
