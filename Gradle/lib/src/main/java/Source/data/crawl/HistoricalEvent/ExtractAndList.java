@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Ngan.Database.Database;
+import Source.data.database.Database;
 
 public class ExtractAndList extends ExtractData {
     public static int numberUrlUsed = 0;
