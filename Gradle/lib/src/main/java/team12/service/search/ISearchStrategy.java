@@ -2,7 +2,7 @@
 	An interface performs a particular searching algorithms
  */
 
-package Source.service.search;
+package team12.service.search;
 
 import java.util.List;
 

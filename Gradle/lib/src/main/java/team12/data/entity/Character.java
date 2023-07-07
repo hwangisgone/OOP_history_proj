@@ -5,12 +5,12 @@
 		1. dynasty entity
  */
 
-package Source.data.entity;
+package team12.data.entity;
 
 import java.util.Map;
 
-import Source.data.entity.utils.Date;
-import Source.exception.data.NoIdException;
+import team12.data.entity.utils.Date;
+import team12.exception.data.NoIdException;
 
 
 public class Character extends Entity {

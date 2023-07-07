@@ -2,7 +2,7 @@
 	Perform searching of SearchStrategy interface by using longest common searching algorithm
  */
 
-package Source.service.search;
+package team12.service.search;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Source;
+package team12;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.Map;
 	The ground of project: where all actions take place
  */
 
-import Source.data.database.JsonDatabase;
-import Source.data.entity.Character;
-import Source.data.entity.Entity;
-import Source.exception.data.NoIdException;
-import Source.service.search.LcsSearchStrategy;
-import Source.service.search.SearchNameGetter;
-import Source.service.search.Searcher;
+import team12.data.database.JsonDatabase;
+import team12.data.entity.Character;
+import team12.data.entity.Entity;
+import team12.exception.data.NoIdException;
+import team12.service.search.LcsSearchStrategy;
+import team12.service.search.SearchNameGetter;
+import team12.service.search.Searcher;
 
 
 public class Ground {

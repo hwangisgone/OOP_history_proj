@@ -7,7 +7,7 @@
 		3. size: return the number of objects in the database
  */
 
-package Source.data.database;
+package team12.data.database;
 
 import java.util.List;
 

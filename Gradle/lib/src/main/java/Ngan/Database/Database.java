@@ -9,7 +9,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import Ngan.Crawl.ExtractData;
-import Source.data.database.IDatabase;
+import team12.data.database.IDatabase;
 
 public class Database implements IDatabase<JSONObject> {
     ExtractData extractData = new ExtractData();

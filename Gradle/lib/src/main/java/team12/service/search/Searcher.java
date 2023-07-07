@@ -2,12 +2,12 @@
 	Class provide search service to user (who use the database for retrieve information)
  */
 
-package Source.service.search;
+package team12.service.search;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Source.data.entity.Entity;
+import team12.data.entity.Entity;
 
 
 public class Searcher {

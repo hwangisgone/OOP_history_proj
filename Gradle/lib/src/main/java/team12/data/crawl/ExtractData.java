@@ -3,7 +3,7 @@
 	It's neccessay to implement the abstract method: `extract`, which extracts specified data given an url
  */
 
-package Source.data.crawl;
+package team12.data.crawl;
 import java.util.ArrayList;
 import java.util.List;
 // containers

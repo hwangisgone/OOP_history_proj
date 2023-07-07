@@ -3,12 +3,12 @@
  */
 
 
-package Source.data;
+package team12.data;
 
-import Source.data.crawl.DataControler;
-import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
-import Source.data.crawl.character.wiki.SearchLinkCharacter;
-import Source.data.database.JsonDatabase;
+import team12.data.crawl.DataControler;
+import team12.data.crawl.character.wiki.ExtractHistoricalCharacter;
+import team12.data.crawl.character.wiki.SearchLinkCharacter;
+import team12.data.database.JsonDatabase;
 
 
 public class DataGround {

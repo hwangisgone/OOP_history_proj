@@ -5,7 +5,7 @@
 		2. IDatabase interface generics type is Map<String, String>
  */
 
-package Source.data.database;
+package team12.data.database;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -4,7 +4,7 @@
 		(2) From listUrl, extract the data and store it into database.json
  */
 
-package Source.data.crawl;
+package team12.data.crawl;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import Source.data.database.IDatabase;
+import team12.data.database.IDatabase;
 
 
 public class DataControler {

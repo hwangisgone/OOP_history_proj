@@ -1,11 +1,11 @@
 /*
 	This class is used to represent an Entity
  */
-package Source.data.entity;
+package team12.data.entity;
 
 import java.util.Map;
 
-import Source.exception.data.NoIdException;
+import team12.exception.data.NoIdException;
 
 
 public class Entity {

@@ -1,7 +1,7 @@
 package Ngan.Entity;
 import java.util.Map;
 
-import Source.exception.data.NoIdException;
+import team12.exception.data.NoIdException;
 
 public class Entity {
 

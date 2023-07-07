@@ -2,7 +2,7 @@
 	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character
  */
 
-package Source.data.crawl.character.wiki;
+package team12.data.crawl.character.wiki;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 // custom
-import Source.data.crawl.SearchLink;
+import team12.data.crawl.SearchLink;
 
 
 
