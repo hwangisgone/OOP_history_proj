@@ -44,9 +44,3 @@
   -fx-cursor: hand;
 }
 
-.button-crawl:hover {
-  -fx-border-radius: 0;
-  -fx-background-color: #34d399;
-  -fx-text-fill: white;
-  -fx-cursor: hand;
-}
