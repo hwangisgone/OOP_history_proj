@@ -67,4 +67,4 @@ run {
     }
 }
 
-// mainClassName = 'Main'
+mainClassName = 'team12.Ground'

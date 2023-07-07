@@ -81,6 +81,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 					continue;
 				Map<String, String> map = new HashMap<> ();
 				for (String key: obj.keySet()) {
+					// String attriValue = obj.get(key).toString();
 					map.put(key, obj.getString(key));
 				}	// close for
 				this.list.add(map);
