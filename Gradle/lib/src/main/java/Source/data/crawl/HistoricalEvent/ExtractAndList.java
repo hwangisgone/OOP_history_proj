@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Source.data.database.Database;
+import Source.data.database.historical_event.Database;
 
 public class ExtractAndList extends ExtractData {
     public static int numberUrlUsed = 0;
