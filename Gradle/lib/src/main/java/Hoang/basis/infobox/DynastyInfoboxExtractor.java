@@ -35,6 +35,7 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		
 		toFind = infobox.selectFirst("td:containsOwn(–)");
 		if (toFind != null) {
+			System.err.println(toFind.text());
 			String[] period = toFind.text().split("–");
 			if (period.length == 2) { 
 				dynasty.setYearStart(period[0]);

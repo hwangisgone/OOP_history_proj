@@ -72,9 +72,9 @@ public abstract class InfoboxExtractor<T> {
 				if (key != null && val != null ) {
 					this.mapKeyVal(key, val);
 				} else {
-					System.out.println("Null " + i + ": --" 
-							+ (key != null ? key.text() : "") + "--" 
-							+ (val != null ? val.text() : "") + "--");
+//					System.out.println("Null " + i + ": --" 
+//							+ (key != null ? key.text() : "") + "--" 
+//							+ (val != null ? val.text() : "") + "--");
 				}
 			}
 		}
