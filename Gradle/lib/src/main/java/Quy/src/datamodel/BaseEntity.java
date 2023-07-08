@@ -100,5 +100,9 @@ public class BaseEntity {
 	public String getType() {
 		return Constant.BASE_ENTITY;
 	}
+	public String getDesJsonPath()
+	{
+		return Constant.JSON_PATH_DES;
+	}
 }
 

@@ -20,4 +20,8 @@ public class DynastyEntity extends BaseEntity {
 	public String getType() {
 		return Constant.DYNASTY_ENTITY;
 	}
+	public String getDesJsonPath()
+	{
+		return Constant.JSON_PATH_DYNASTY;
+	}
 }

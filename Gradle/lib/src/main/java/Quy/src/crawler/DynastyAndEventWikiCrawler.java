@@ -14,11 +14,7 @@ import Quy.src.datamodel.DynastyEntity;
 
 public class DynastyAndEventWikiCrawler extends AbstractCrawler {
 
-	private JSONArray jsonArray = new JSONArray();
 
-	public JSONArray getJsonArray() {
-		return jsonArray;
-	}
 
 	@Override
 	public void start()
