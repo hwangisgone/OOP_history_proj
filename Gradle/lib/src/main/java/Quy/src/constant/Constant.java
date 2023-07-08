@@ -27,6 +27,6 @@ public class Constant {
 	public final static String COUNT_LINKS = "CountLinks";
 
 	//JsonFilePath
-	public final static String JSON_PATH = "./json/data.json";
+	public final static String JSON_PATH = "./Gradle/lib/src/main/resources/dynasty_data.json";
 
 }

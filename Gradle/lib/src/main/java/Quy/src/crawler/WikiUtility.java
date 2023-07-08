@@ -23,6 +23,7 @@ public class WikiUtility {
 	public static Document getWikiDocumentFromURL(String url) {
 		Document document = null;
 
+
 		// Lấy document của trang web url.
 		try {
 			document = Jsoup.connect(url).get();

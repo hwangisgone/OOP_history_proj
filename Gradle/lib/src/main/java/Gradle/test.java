@@ -20,7 +20,7 @@ public class test {
 		}
 		// Nếu có sự cố thì trả về null
 		catch(Exception e) {
-			System.out.println("Error url.");
+			System.out.println("Error url");
 			System.err.println(e);
 		}
 	}

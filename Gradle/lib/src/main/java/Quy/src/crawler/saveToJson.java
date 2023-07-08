@@ -7,6 +7,7 @@ import Quy.src.constant.Constant;
 public class saveToJson {
     public static void main(String[] args) throws IOException {
 
+
         DynastyAndEventWikiCrawler data = new DynastyAndEventWikiCrawler();
         data.start();
 
