@@ -82,4 +82,5 @@ run {
     }
 }
 
-// mainClassName = 'Main'
+
+mainClassName = 'javafx.App'
