@@ -5,14 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.json.simple.JSONArray;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import Quy.src.datamodel.DynastyEntity;
 
-public class DynastyAndEventWikiCrawler extends AbstractCrawler {
+public class DynastyWikiCrawler extends AbstractCrawler {
 
 
 

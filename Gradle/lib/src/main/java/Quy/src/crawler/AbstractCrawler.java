@@ -8,7 +8,6 @@ import org.json.simple.JSONArray;
 public abstract class AbstractCrawler {
 
 	protected JSONArray jsonArray = new JSONArray();
-
 	public JSONArray getJsonArray() {
 		return jsonArray;
 	}
