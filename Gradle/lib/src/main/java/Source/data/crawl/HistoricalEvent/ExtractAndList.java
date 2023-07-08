@@ -1,4 +1,4 @@
-package Ngan.Crawl;
+package Source.data.crawl.HistoricalEvent;
 
 import java.io.FileWriter;
 // import org.jsoup.*;
@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Ngan.Database.Database;
+import Source.data.database.historical_event.Database;
 
 public class ExtractAndList extends ExtractData {
     public static int numberUrlUsed = 0;
@@ -114,7 +114,7 @@ public class ExtractAndList extends ExtractData {
         listUrlNew.remove("https://vi.wikipedia.org/wiki/1954");
 
         searchMoreLink.writeListUrl(listUrlNew,
-                "E:/OOP/javaProject/Crawl/eventLinkNew.txt");
+                "lib/src/main/java/Data/Database/url/historical-event/eventLinkNew.txt");
         searchMoreLink.wrtieDataAll();
         for( int i = 0 ; i<=6 ; i++)
             jsonArray.remove(i);

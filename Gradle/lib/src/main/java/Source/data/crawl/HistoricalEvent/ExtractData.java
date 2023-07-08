@@ -1,4 +1,4 @@
-package Ngan.Crawl;
+package Source.data.crawl.HistoricalEvent;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -144,7 +144,7 @@ public class ExtractData {
 
     public void writeDataToFile() throws IOException{
         try (
-                FileWriter fileWriter = new FileWriter("E:/OOP/javaProject/Crawl/extractData.json")) {
+                FileWriter fileWriter = new FileWriter("lib/src/main/java/Data/Database/historical-event/extractData.json")) {
             String modifiedJsonString = unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();

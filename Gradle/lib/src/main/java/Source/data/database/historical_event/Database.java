@@ -1,4 +1,4 @@
-package Ngan.Database;
+package Source.data.database.historical_event;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import Ngan.Crawl.ExtractData;
+import Source.data.crawl.HistoricalEvent.ExtractData;
 import Source.data.database.IDatabase;
 
 public class Database implements IDatabase<JSONObject> {
