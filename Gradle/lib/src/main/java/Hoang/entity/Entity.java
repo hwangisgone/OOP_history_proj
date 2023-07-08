@@ -1,5 +1,5 @@
 package Hoang.entity;
 
-public class Entity {
-
+public abstract class Entity {
+	public abstract String toString();
 }

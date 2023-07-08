@@ -131,7 +131,8 @@ public class Dynasty extends Entity {
 		// TODO Auto-generated constructor stub
 	}
 
-	
+
+	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Country{")
@@ -149,4 +150,7 @@ public class Dynasty extends Entity {
                 .append("\n}");
         return sb.toString();
     }
+
+	
+
 }

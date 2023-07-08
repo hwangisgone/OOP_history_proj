@@ -1,49 +1,46 @@
 package Hoang;
 
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URLEncoder;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Multithreader {
 	private ExecutorService executorService;
-	
+
 	public Multithreader() {
 	}
-	
+
 	public void shutdown() {
         // Shutdown the ExecutorService
         executorService.shutdown();
         try {
             if (!executorService.awaitTermination(1, TimeUnit.MINUTES)) {
                 executorService.shutdownNow();
-            } 
+            }
         } catch (InterruptedException e) {
             executorService.shutdownNow();
         }
-        
+
         System.out.println("Multithreading Ended.");
 	}
-    
+
     public List<HttpResponse<String>> getResponseFromPages(HttpClient client, List<String> manyUrls) {
 		executorService = Executors.newFixedThreadPool(10);
     	System.out.println("Multithreading Started.");
-    	
+
     	List<HttpResponse<String>> responses = new ArrayList<>();
-    	
+
     	// Create a list to store Future objects representing the responses
         List<Future<HttpResponse<String>>> futures = new ArrayList<>();
-        
+
         // Send GET requests concurrently
         for (String url : manyUrls) {
             // Submit the request to the ExecutorService and store the Future object
@@ -54,25 +51,25 @@ public class Multithreader {
 	                    .GET().build(),
 	                    HttpResponse.BodyHandlers.ofString()
 	            );
-	            
+
 	            return response;
             });
 
             futures.add(future);
         }
-        
+
         // Process the responses when they become available
         for (Future<HttpResponse<String>> future : futures) {
             // Retrieve the response from the Future object
             HttpResponse<String> response;
-            
+
 			try {
 				response = future.get();
 	            // Process the response as needed
 	            System.out.println("Response code: " + response.statusCode());
 	            System.out.println("Response body: " + response.body());
 				responses.add(response);
-				
+
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -81,12 +78,12 @@ public class Multithreader {
 				e.printStackTrace();
 			}
         }
-    	
+
         shutdown();
-        
+
     	return responses;
     }
-    
+
 	public static void main(String[] args) {
         // Define the URLs for the GET requests
 
@@ -95,10 +92,10 @@ public class Multithreader {
         titles.add("Thể loại:Nhà Triệu");
         titles.add("Thể loại:Nhà Nguyễn");
         titles.add("Thể loại:Nhà Lê trung hưng");
-        
+
         Multithreader multithreader = new Multithreader();
         HttpClient client = HttpClient.newHttpClient();
         multithreader.getResponseFromPages(client, URLMaker.getPageQueries(titles));
 	}
-	
+
 }
