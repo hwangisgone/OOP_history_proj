@@ -1,8 +1,6 @@
 package Hoang.crawler;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.util.ArrayList;
@@ -16,11 +14,7 @@ import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
-import Hoang.JSONHandler;
 import Hoang.basis.CategoryFinder;
 import Hoang.basis.PageFinder;
 import Hoang.basis.infobox.DynastyInfoboxExtractor;
@@ -68,13 +62,13 @@ public class DynastyCrawler extends BaseCrawler {
 
 	@Override
 	protected void workWithObjectsFromPages(List<String> pages) {
-		JSONHandler<Dynasty> jsonHandle = new JSONHandler<>();
 
 		ObjectMapper mapper = new ObjectMapper();
 		TypeReference<List<Dynasty>> typeReference = new TypeReference<List<Dynasty>>() {};
 		// Pages
 		List<Dynasty> resultDynasty = new ArrayList<>();
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		
 		File fileJson = new File(finalDirectory + "Dynasty.json");
 		if (fileJson.exists()) {
 			
