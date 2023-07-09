@@ -5,7 +5,8 @@ public class Constant {
 	//Entity Type
 	public final static String BASE_ENTITY = "BaseEntity";
 	public final static String DYNASTY_ENTITY = "DynastyEntity";
-	public final static String EVENT_ENTITY = "EventEntity";
+	public final static String FESTIVAL_ENTITY = "FestivalEntity";
+
 
 
 	//Entities
@@ -20,13 +21,11 @@ public class Constant {
 	public final static String ENTITY_ROOT_URL = "RootURL";
 
 	// Statistics
-	public final static String APP_INFO = "AppInfo";
-	public final static String UPDATE_TIME = "UpdateTime";
-	public final static String TOTAL_INFO = "TotalInfo";
-	public final static String SITE_INFO = "SiteInfo";
-	public final static String COUNT_LINKS = "CountLinks";
 
 	//JsonFilePath
-	public final static String JSON_PATH = "./Gradle/lib/src/main/resources/dynasty_data.json";
+	public final static String JSON_PATH_DYNASTY = "./Gradle/lib/src/main/resources/dynasty_data.json";
+	public final static String JSON_PATH_FESTIVAL = "./Gradle/lib/src/main/resources/festival_data.json";
+
+	public final static String JSON_PATH_DES = "./Gradle/lib/src/main/resources/destination_data.json";
 
 }

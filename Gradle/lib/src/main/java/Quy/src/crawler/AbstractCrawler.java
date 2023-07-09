@@ -3,11 +3,18 @@ package Quy.src.crawler;
 import java.util.List;
 
 import Quy.src.datamodel.BaseEntity;
+import org.json.simple.JSONArray;
 
 public abstract class AbstractCrawler {
-	public List<BaseEntity> crawled;
+
+	protected JSONArray jsonArray = new JSONArray();
+	protected List<BaseEntity> crawled;
 	public abstract void start() throws Exception;
 	public List<BaseEntity> getCrawledData(){
 		return this.crawled;
 	}
+	public JSONArray getJsonArray() {
+		return jsonArray;
+	}
+
 }
