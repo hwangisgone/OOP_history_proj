@@ -32,21 +32,18 @@ public abstract class InfoboxExtractor<T> {
 	protected abstract void mapFindInInfobox(Element infobox);
 	protected abstract boolean mapRow(int index, Element key, Element val);
 
-	protected List<String> separateBr(String text) {
-		return Arrays.stream(text.split("<br/>"))
+	protected List<String> splitComma(String text) {
+		return Arrays.stream(text.split(","))
                 .map(String::trim)
                 .collect(Collectors.toList());
 	}
-	
-	protected String toCommaBr(String text) {
-		return text.replace("<br/>", ", ");
-	}
 
-	private void remapBr(Document doc) {
-		Elements brTags = doc.select("br");
+	private void remapBr(Element el) {
+		Elements brTags = el.select("br");
         for (Element br : brTags) {
-        	br.tagName("span");
-        	br.text("<br/>");
+//        	br.tagName("span");
+//        	br.text("<br/>");
+        	br.before(", ");
         }
 	}
 
@@ -57,7 +54,7 @@ public abstract class InfoboxExtractor<T> {
 		if (infobox == null) {
 			throw new InfoboxException("Infobox not found for: " + title);
 		}
-		this.remapBr(doc);
+		this.remapBr(infobox);
 		this.startNew(title);
 		this.mapFindInInfobox(infobox);
 

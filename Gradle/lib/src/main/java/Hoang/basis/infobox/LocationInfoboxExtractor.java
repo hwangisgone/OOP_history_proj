@@ -9,9 +9,9 @@ import org.jsoup.nodes.Element;
 
 import entity.Dynasty;
 
-public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
+public class LocationInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 
-    public DynastyInfoboxExtractor(HttpClient client) {
+    public LocationInfoboxExtractor(HttpClient client) {
 		super(client);
 		// TODO Auto-generated constructor stub
 	}
@@ -69,7 +69,7 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 	}
 
 	
-    private List<String> splitCapitals(String input) {
+    private static List<String> splitCapitals(String input) {
         List<String> result = new ArrayList<>();
         String[] parts = input.split(",");
 
@@ -127,7 +127,7 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 
     public static void main(String[] args) {
     	HttpClient client = HttpClient.newHttpClient();
-    	InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
+    	InfoboxExtractor<Dynasty> ext = new LocationInfoboxExtractor(client);
 
     	List<Dynasty> maps = ext.getInfoboxContents(Arrays.asList("Thời kỳ Bắc thuộc lần thứ ba", "Nhà Tiền Lý", "Nhà Hậu Trần"));
 

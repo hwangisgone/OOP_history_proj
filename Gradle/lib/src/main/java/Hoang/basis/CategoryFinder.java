@@ -15,12 +15,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CategoryFinder {
 	private static final String URL = "https://vi.wikipedia.org/w/api.php";
 	private static final String URL_SUBCAT = URL + "?action=query&cmlimit=100&list=categorymembers&format=json&formatversion=2&cmtype=subcat&cmtitle=";
-	private static final String URL_SUBPAGE = URL + "?action=query&cmlimit=100&list=categorymembers&format=json&formatversion=2&cmtype=page&cmtitle=";
-
+	private Collection<String> catFilter;
 	private HttpClient client;
 
     public CategoryFinder(HttpClient client) {
 		this.client = client;
+	}
+    
+	public void setCatFilter(Collection<String> catFilter) {
+		this.catFilter = catFilter;
 	}
 
 	private static String encodeValue(String value) {
@@ -52,6 +55,11 @@ public class CategoryFinder {
                 	for (JsonNode page: PAGES) {
                 		String childTitle = page.get("title").asText();
 
+                		if (collectedCats.contains(childTitle) // No duplicate allowed
+                				|| (catFilter != null && catFilter.contains(childTitle))) { // Filter in
+                			continue;
+                		}
+                		
                 		for (int i = 0; i < level; i++) System.out.print("- ");
                 		System.out.printf("%d %s\n", (index++), childTitle);
 

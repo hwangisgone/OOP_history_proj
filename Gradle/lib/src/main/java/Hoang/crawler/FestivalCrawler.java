@@ -17,16 +17,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Hoang.basis.CategoryFinder;
 import Hoang.basis.PageFinder;
-import Hoang.basis.infobox.DynastyInfoboxExtractor;
+import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
+import entity.Festival;
 import Hoang.util.ResultUtil;
 
-public class DynastyCrawler extends BaseCrawler {
+public class FestivalCrawler extends BaseCrawler {
 	private HttpClient client;
 
-	public DynastyCrawler(HttpClient client) {
-		super("src/main/resources/final/trieu_dai/");
+	public FestivalCrawler(HttpClient client) {
+		super("src/main/resources/final/le_hoi/");
 		this.client = client;
 	}
 
@@ -36,12 +37,16 @@ public class DynastyCrawler extends BaseCrawler {
 		Set<String> catSet = new HashSet<>(); // Ensure no duplicates
 
 		// Get subcategories
-		catSet.add("Thể loại:Triều đại Việt Nam");
-		catFinder.getCategoriesFor(catSet, "Thể loại:Triều đại Việt Nam", 4);
+		catSet.add("Thể_loại:Lễ_hội_Việt_Nam");
+		List<String> wordsFilter = Arrays.asList(
+				"Thể loại:Tết",
+				"Thể loại:Đại lễ 1000 năm Thăng Long – Hà Nội"
+		);
+		
+		catFinder.setCatFilter(wordsFilter);
+		catFinder.getCategoriesFor(catSet, "Thể_loại:Lễ_hội_Việt_Nam", 4);
 
-		// Filter subcategories
-		List<String> wordsFilter = Arrays.asList(":Thời kỳ", ":Nhà", ":Triều đại");
-		return ResultUtil.filterString(catSet, wordsFilter, false);
+		return new ArrayList<>(catSet);
 	}
 
 	@Override
@@ -51,27 +56,28 @@ public class DynastyCrawler extends BaseCrawler {
 
 		pageFinder.getPagesFor(pageSet, categories);
 
-		List<String> wordsFilter = Arrays.asList(
-			"Thời kỳ",
-	        "Nhà",
-	        "Triều đại",
-	        "cổ đại"
-		);
-		return ResultUtil.filterString(pageSet, wordsFilter, true);
+//		List<String> wordsFilter = Arrays.asList(
+//			"Thời kỳ",
+//	        "Nhà",
+//	        "Triều đại",
+//	        "cổ đại"
+//		);
+//		ResultUtil.filterString(pageSet, wordsFilter, true);
+		return new ArrayList<>(pageSet);
 	}
 
 	@Override
 	protected void workWithObjectsFromPages(List<String> pages) {
 		ObjectMapper mapper = new ObjectMapper();
-		TypeReference<List<Dynasty>> typeReference = new TypeReference<List<Dynasty>>() {};
+		TypeReference<List<Festival>> typeReference = new TypeReference<List<Festival>>() {};
 		// Pages
-		List<Dynasty> resultDynasty = new ArrayList<>();
+		List<Festival> resultFestival = new ArrayList<>();
 		
-		File fileJson = new File(finalDirectory + "Dynasty.json");
+		File fileJson = new File(finalDirectory + "Festival.json");
 		if (fileJson.exists()) {
 			
 			try {
-				resultDynasty = mapper.readValue(fileJson, typeReference);
+				resultFestival = mapper.readValue(fileJson, typeReference);
 			} catch (StreamReadException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -82,22 +88,13 @@ public class DynastyCrawler extends BaseCrawler {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-//	        try (FileReader reader = new FileReader(fileJson)) {
-//
-//	            // Load JSON file into object list
-//	            resultDynasty = gson.fromJson(reader, new TypeToken<List<Dynasty>>() {}.getType());
-//	        } catch (IOException e) {
-//	            e.printStackTrace();
-//	            resultDynasty 
-//	        }
 		} else {
-			InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
+			InfoboxExtractor<Festival> ext = new FestivalInfoboxExtractor(client);
 
-			resultDynasty = ext.getInfoboxContents(pages);
+			resultFestival= ext.getInfoboxContents(pages);
 			
 			try {
-				mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultDynasty);
+				mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultFestival);
 			} catch (StreamWriteException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -117,7 +114,7 @@ public class DynastyCrawler extends BaseCrawler {
 //	        }
 		}
 
-		resultDynasty.forEach(map -> {
+		resultFestival.forEach(map -> {
 			System.out.println(map.toString());
 		});
 	}
