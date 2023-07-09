@@ -83,5 +83,12 @@ run {
     }
 }
 
+application {
+	mainClass = 'javafx.App'
+}
 
-mainClassName = 'javafx.App'
+jar {
+    manifest {
+        attributes 'Main-Class': 'javafx.App'
+    }
+}

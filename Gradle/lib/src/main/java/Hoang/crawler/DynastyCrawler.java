@@ -19,7 +19,7 @@ import Hoang.basis.CategoryFinder;
 import Hoang.basis.PageFinder;
 import Hoang.basis.infobox.DynastyInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
-import Hoang.entity.Dynasty;
+import entity.Dynasty;
 import Hoang.util.ResultUtil;
 
 public class DynastyCrawler extends BaseCrawler {

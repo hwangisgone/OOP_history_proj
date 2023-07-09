@@ -1,11 +1,10 @@
-package Hoang.entity;
+package entity;
 
 import java.util.List;
 
 public class Dynasty extends Entity {
 	List<String> longName;
 	List<String> nativeName;
-	String name;
 	String yearEnd;
 	String yearStart;
 	
@@ -35,17 +34,6 @@ public class Dynasty extends Entity {
 	public void setNativeName(List<String> nativeName) {
 		this.nativeName = nativeName;
 	}
-
-
-	public String getName() {
-		return name;
-	}
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 
 	public String getYearEnd() {
 		return yearEnd;

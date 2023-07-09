@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.jsoup.nodes.Element;
 
-import Hoang.entity.Dynasty;
+import entity.Dynasty;
 
 public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 
