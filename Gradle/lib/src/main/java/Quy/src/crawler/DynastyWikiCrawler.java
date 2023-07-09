@@ -12,9 +12,6 @@ import org.jsoup.select.Elements;
 import Quy.src.datamodel.DynastyEntity;
 
 public class DynastyWikiCrawler extends AbstractCrawler {
-
-
-
 	@Override
 	public void start()
 	{

@@ -16,7 +16,6 @@ public interface IDatabase <E> {
 
 	/* Store an object into database */
 	public void store(List<E> listObject);
-
 	/* Load a list of objects with given index range[startIndex, endIndex)
 		- startIndex is inclusive
 		- endIndex is exclusive
