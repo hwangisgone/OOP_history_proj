@@ -21,7 +21,7 @@ public class CategoryFinder {
     public CategoryFinder(HttpClient client) {
 		this.client = client;
 	}
-    
+
 	public void setCatFilter(Collection<String> catFilter) {
 		this.catFilter = catFilter;
 	}
@@ -59,7 +59,7 @@ public class CategoryFinder {
                 				|| (catFilter != null && catFilter.contains(childTitle))) { // Filter in
                 			continue;
                 		}
-                		
+
                 		for (int i = 0; i < level; i++) System.out.print("- ");
                 		System.out.printf("%d %s\n", (index++), childTitle);
 

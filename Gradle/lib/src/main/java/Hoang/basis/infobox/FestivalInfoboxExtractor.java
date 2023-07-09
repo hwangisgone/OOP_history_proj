@@ -1,13 +1,9 @@
 package Hoang.basis.infobox;
 
 import java.net.http.HttpClient;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import org.jsoup.nodes.Element;
 
-import entity.Dynasty;
 import entity.Festival;
 
 public class FestivalInfoboxExtractor extends InfoboxExtractor<Festival> {
@@ -34,19 +30,19 @@ public class FestivalInfoboxExtractor extends InfoboxExtractor<Festival> {
 	@Override
 	protected void mapFindInInfobox(Element infobox) {
 //		Element toFind;
-//		
+//
 //		toFind = infobox.selectFirst("td:containsOwn(–)");
 //		if (toFind != null) {
 //			System.err.println(toFind.text());
 //			String[] period = toFind.text().split("–");
-//			if (period.length == 2) { 
+//			if (period.length == 2) {
 //				festival.setYearStart(period[0]);
 //				festival.setYearEnd(period[1]);
-//			}	
+//			}
 //			return;
 //		}
 	}
-	
+
 	@Override
 	public boolean mapRow(int index, Element key, Element val) {
 //		if (key != null) {
@@ -77,7 +73,7 @@ public class FestivalInfoboxExtractor extends InfoboxExtractor<Festival> {
 		if (key.isBlank() || val.isBlank()) {
 			System.out.println("Empty : " + key + " = " + val);
 		}
-		
+
 		switch(key) {
 			case "Kiểu":
 				festival.setType(val);
@@ -85,9 +81,9 @@ public class FestivalInfoboxExtractor extends InfoboxExtractor<Festival> {
 			default:
 				break;
 		}
-		
+
 		key = key.toLowerCase();
-		
+
 		if (key.contains("ngày")) {
 			festival.setDate(val);
 		} else if (key.contains("cử hành")) {
