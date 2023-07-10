@@ -14,7 +14,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Source.data.database.historical_event.Database;
 
 public class ExtractAndList extends ExtractData {
     public static int numberUrlUsed = 0;
@@ -86,6 +85,16 @@ public class ExtractAndList extends ExtractData {
         }
     }
 
+    public void writeJsonArrayFile() throws IOException{
+        try (
+            FileWriter fileWriter = new FileWriter("lib/src/main/java/Data/Database/historical-event/extractData.json")) {
+            String modifiedJsonString = ExtractData.unescapeUnicode(jsonArray.toString());
+            fileWriter.write(modifiedJsonString);
+            fileWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) throws IOException {
         ExtractAndList searchMoreLink = new ExtractAndList();
         searchMoreLink.createListUrl(
@@ -116,8 +125,8 @@ public class ExtractAndList extends ExtractData {
         searchMoreLink.wrtieDataAll();
         for( int i = 0 ; i<=6 ; i++)
             jsonArray.remove(i);
-        //Database database = new Database(jsonArray);
 
+        searchMoreLink.writeJsonArrayFile();
 
         System.out.println(size);
     }
