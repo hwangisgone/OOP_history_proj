@@ -22,15 +22,16 @@ public abstract class SearchController<T> {
         filteredList.setPredicate(chara -> {
             Function<T, String> fun = searchMap.get(searchOption);
             
-            if (fun != null) {
-            	System.out.println("GOT THE FUNC");
+            if (fun != null) { // Is in the map
             	String originalText = fun.apply(chara);
             	
-                if (searchOption.equals("ID")) {
-                    return originalText.startsWith(searchText);
-                } else {
-                    return originalText.toLowerCase().contains(searchText.toLowerCase());
-                }
+            	if (originalText != null) { // (Null attribute)
+	                if (searchOption.equals("ID")) {
+	                    return originalText.startsWith(searchText);
+	                } else {
+	                    return originalText.toLowerCase().contains(searchText.toLowerCase());
+	                }
+            	}
             }
 
             return false;
