@@ -1,7 +1,7 @@
 package entity;
 
 public abstract class Entity {
-	protected String name;
+	protected String id;
 	protected String description;
 	
 	public String getDescription() {
@@ -13,11 +13,11 @@ public abstract class Entity {
 	}
 	
 	public String getName() {
-		return name;
+		return id;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.id = name;
 	}
 	
 

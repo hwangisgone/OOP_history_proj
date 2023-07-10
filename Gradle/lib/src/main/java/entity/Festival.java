@@ -35,7 +35,7 @@ public class Festival extends Entity {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Festival{")
-        	.append("\n name=").append(name)
+        	.append("\n name=").append(id)
         	.append("\n location='").append(location)
         	.append("'\n date='").append(date)
         	.append("'\n type='").append(type)

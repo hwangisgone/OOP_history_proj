@@ -83,7 +83,7 @@ public class Location extends Entity {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Location {")
-	    	.append("\n name='").append(name)
+	    	.append("\n name='").append(id)
 	    	.append("'\n otherNames='").append(otherNames)
 	    	.append("'\n located='").append(located)
 	    	.append("'\n position='").append(position)

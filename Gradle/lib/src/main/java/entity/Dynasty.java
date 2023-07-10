@@ -126,7 +126,7 @@ public class Dynasty extends Entity {
         sb.append("Country{")
                 .append("longName=").append(longName)
                 .append("\n, nativeName=").append(nativeName)
-                .append("\n, name='").append(name).append('\'')
+                .append("\n, name='").append(id).append('\'')
                 .append("\n, yearEnd='").append(yearEnd).append('\'')
                 .append("\n, yearStart='").append(yearStart).append('\'')
                 .append("\n, currency='").append(currency).append('\'')
