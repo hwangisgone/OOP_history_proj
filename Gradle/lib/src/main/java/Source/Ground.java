@@ -3,15 +3,15 @@ package Source;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 
 /*
 	The ground of project: where all actions take place
  */
 
-import Source.data.database.JsonDatabase;
-import Source.data.entity.Character;
-import Source.data.entity.Entity;
-import Source.exception.data.NoIdException;
+import Source.data.database.CharacterDatabase;
+import entity.Character;
+import entity.Entity;
 import Source.service.search.LcsSearchStrategy;
 import Source.service.search.SearchNameGetter;
 import Source.service.search.Searcher;
@@ -19,31 +19,66 @@ import Source.service.search.Searcher;
 
 public class Ground {
 
-	public static void testSearch(String keyword) {
+	/*
+		In order to merge multiple dataset into single one
+	 */
+	public static void mergeDataset() {
+		// create list of databases
+		String listDataset[] = {
+			"src/main/java/Data/Database/historical-character/hc#29-06#0.json",
+			"src/main/java/Data/Database/historical-character/hc#2.json",
+			"src/main/java/Data/Database/historical-character/hc#10-07#500.json"
+		};
+		// Using hashmap to remove entities with dupplicated ID
+		Map<String, Map<String, String>> mergedMap= new HashMap<String, Map<String, String>> (2000);
+		List<Map<String, String>> uniqueList = new ArrayList<Map<String, String>> ();
+		// create list of database
+		for (String datasetPath: listDataset) {
+			CharacterDatabase database = CharacterDatabase.getDatabase(datasetPath);
+			List<Map<String, String>> listObject = database.load();
+			// add each Map into hashmap
+			for (Map<String, String> map: listObject) {
+				String id = map.get("id");
+				if (!mergedMap.containsKey(id)) {		// id is unique
+					mergedMap.put(id, map);
+					uniqueList.add(map);
+				}	// close if
+			}	// close for
+		}	// close for
+		// create a single database 
+		String unifiedDataset = "src/main/java/Data/Database/historical-character/hc.json";
+		CharacterDatabase unionDatabase = CharacterDatabase.getDatabase(unifiedDataset);
+		unionDatabase.store(uniqueList);
+		unionDatabase.close();
+		System.out.println("Successfully merge " + listDataset.length + " datasets");
+	}	// close mergeDataset
+
+
+	/*
+		Load the data from given dataset path
+		@param 	jsonPath 	where the dataset allocated
+	 */
+	public static void testLoad(String jsonPath) {
 		// Read database
-		JsonDatabase database = JsonDatabase.getDatabase("/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/Database/historical-character/hc#29-06#0.json");
-		// modeling entities
+		CharacterDatabase database = CharacterDatabase.getDatabase(jsonPath);
+
+		// Modeling entities
 		List<Entity> listEntity = new ArrayList<> ();		// place holder - testing
 		List<Map<String, String>> listObject = database.load();
 		for (Map<String, String> map: listObject) {
-			try {
-				listEntity.add(new Character(map));
-			} catch (NoIdException e) {
-				System.out.println(e.getMessage());
-			}	// close try creating entity
+			listEntity.add(new Character(map));
 		}	// close for
-		Searcher searcher = new Searcher();
-		// Set up for searcher
-		searcher.setSearchFieldGetter(new SearchNameGetter());
-		searcher.setSearchStrategy(new LcsSearchStrategy());
-		List<Entity> listMatchEntity = searcher.search(listEntity, keyword);
-		for (Entity entity: listMatchEntity) {
-			System.out.println(entity);
+
+		// Print the ID of entity
+		for (Entity entity: listEntity) {
+			System.out.println(entity.getName());
 			System.out.println("------------------");
 		}	// close for
+		System.out.println("Size: " + listEntity.size());
 	}	// close testSearch
 
 	public static void main(String[] args) {
-		Ground.testSearch("Nguyễn");
+		Ground.testLoad("src/main/resources/character_data.json");
+		// Ground.mergeDataset();
 	}	// close main
 }

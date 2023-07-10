@@ -44,7 +44,7 @@ public class SearchLinkCharacter extends SearchLink {
 		listMust = new ArrayList<>();
 		listSpecifiedExist = new ArrayList<>();
 		listSpecifiedAll = new ArrayList<>();
-		JSON_FILE = "/home/minh/School/Learning/20222/OOP/ProjectOOP20222/Data/DataConfigure/constraintWord.json";
+		JSON_FILE = "src/main/java/Data/DataConfigure/constraintWord.json";
 		readConstraint();
 	}	// close constructor
 

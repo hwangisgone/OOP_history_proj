@@ -27,10 +27,10 @@ import javax.json.JsonValue;
 import javax.json.JsonWriter;
 
 
-public class JsonDatabase implements IDatabase <Map<String, String>> {
+public class CharacterDatabase implements IDatabase <Map<String, String>> {
 
 	private static List<String> listFileExist;			// list of files have already been opened
-	private static List<JsonDatabase> listDatabase;		// list of database exist
+	private static List<CharacterDatabase> listDatabase;		// list of database exist
 	private String jsonFilePath;						// the json file where the database operates on
 	private List<Map<String, String>> list;				// the list of objects in database
 
@@ -42,7 +42,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 
 
 	// constructor
-	private JsonDatabase(String jsonFilePath) {
+	private CharacterDatabase(String jsonFilePath) {
 		this.jsonFilePath = jsonFilePath;
 		this.list = new ArrayList<>();
 		// pre-load the file
@@ -52,7 +52,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 
 	/* get instance through this method
 		to ensure that no more than 1 database on the same json-file at anytime */
-	public static JsonDatabase getDatabase(String jsonFilePath) {
+	public static CharacterDatabase getDatabase(String jsonFilePath) {
 		int indexOfFile = listFileExist.indexOf(jsonFilePath);
 		if (indexOfFile != -1) {		// file has been opened
 			System.out.println("NO CREATE NEW");
@@ -60,7 +60,7 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 		}	// close if
 										// file does not exist
 		listFileExist.add(jsonFilePath);
-		JsonDatabase newDatabase = new JsonDatabase(jsonFilePath);
+		CharacterDatabase newDatabase = new CharacterDatabase(jsonFilePath);
 		listDatabase.add(newDatabase);
 		return newDatabase;
 	}	// close getDatabase
@@ -156,4 +156,4 @@ public class JsonDatabase implements IDatabase <Map<String, String>> {
 		storeFile();
 	}	// close database
 
-}	// close JsonDatabase
+}	// close CharacterDatabase
