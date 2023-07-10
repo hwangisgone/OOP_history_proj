@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class Multithreader {
 	private ExecutorService executorService;
@@ -31,6 +32,43 @@ public class Multithreader {
 
         System.out.println("Multithreading Ended.");
 	}
+
+	
+    public <T, R> List<R> start(List<T> inputs, Function<T,R> task) {
+		executorService = Executors.newFixedThreadPool(10);
+    	System.out.println("Multithreading Started.");
+
+    	List<R> responses = new ArrayList<>();
+
+    	// Create a list to store Future objects representing the responses
+        List<Future<R>> futures = new ArrayList<>();
+
+        // Send GET requests concurrently
+        for (T input : inputs) {
+            Future<R> future = executorService.submit(() -> task.apply(input));
+            futures.add(future);
+        }
+
+        // Process the responses when they become available
+        for (Future<R> future : futures) {
+            try {
+            	R response = future.get();
+            	if (response != null) {
+            		responses.add(response);
+            	}
+			} catch (InterruptedException e) {
+				System.err.println("Multithreading interrupted.");
+				e.printStackTrace();
+			} catch (ExecutionException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+
+        shutdown();
+
+    	return responses;
+    }
 
     public List<HttpResponse<String>> getResponseFromPages(HttpClient client, List<String> manyUrls) {
 		executorService = Executors.newFixedThreadPool(10);

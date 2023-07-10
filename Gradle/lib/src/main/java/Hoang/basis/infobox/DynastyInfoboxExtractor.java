@@ -33,19 +33,19 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 	@Override
 	protected void mapFindInInfobox(Element infobox) {
 		Element toFind;
-		
+
 		toFind = infobox.selectFirst("td:containsOwn(–)");
 		if (toFind != null) {
 			System.err.println(toFind.text());
 			String[] period = toFind.text().split("–");
-			if (period.length == 2) { 
+			if (period.length == 2) {
 				dynasty.setYearStart(period[0]);
 				dynasty.setYearEnd(period[1]);
-			}	
+			}
 			return;
 		}
 	}
-	
+
 	@Override
 	public boolean mapRow(int index, Element key, Element val) {
 		if (key != null) {
@@ -68,7 +68,7 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		return false;
 	}
 
-	
+
     private List<String> splitCapitals(String input) {
         List<String> result = new ArrayList<>();
         String[] parts = input.split(",");
@@ -96,7 +96,7 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		if (key.isBlank() || val.isBlank()) {
 			System.out.println("Empty : " + key + " = " + val);
 		}
-		
+
 		switch(key) {
 			case "Chính phủ":
 				dynasty.setGovernmentType(val);

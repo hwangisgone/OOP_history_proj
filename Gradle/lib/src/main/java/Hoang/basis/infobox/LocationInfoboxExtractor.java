@@ -16,49 +16,49 @@ public class LocationInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		// TODO Auto-generated constructor stub
 	}
 
-	private Dynasty dynasty;
+	private Dynasty location;
 
 	@Override
 	public void startNew(String name) {
-		dynasty = new Dynasty();
-		dynasty.setName(name);
+		location = new Dynasty();
+		location.setName(name);
 	}
 
 	@Override
 	public Dynasty endNew() {
-		return dynasty;
+		return location;
 	}
 
 
 	@Override
 	protected void mapFindInInfobox(Element infobox) {
 		Element toFind;
-		
+
 		toFind = infobox.selectFirst("td:containsOwn(–)");
 		if (toFind != null) {
 			System.err.println(toFind.text());
 			String[] period = toFind.text().split("–");
-			if (period.length == 2) { 
-				dynasty.setYearStart(period[0]);
-				dynasty.setYearEnd(period[1]);
-			}	
+			if (period.length == 2) {
+				location.setYearStart(period[0]);
+				location.setYearEnd(period[1]);
+			}
 			return;
 		}
 	}
-	
+
 	@Override
 	public boolean mapRow(int index, Element key, Element val) {
 		if (key != null) {
 			switch(index) {
 				case 0:
-					dynasty.setLongName(this.splitComma(key.text()));
+					location.setLongName(this.splitComma(key.text()));
 					return true;
 			}
 		} else {
 			// Null header
 			switch(index) {
 				case 1:
-					dynasty.setNativeName(
+					location.setNativeName(
 						this.splitComma(val.select("ul").text())
 					);
 					return true;
@@ -68,7 +68,7 @@ public class LocationInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		return false;
 	}
 
-	
+
     private static List<String> splitCapitals(String input) {
         List<String> result = new ArrayList<>();
         String[] parts = input.split(",");
@@ -96,25 +96,25 @@ public class LocationInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 		if (key.isBlank() || val.isBlank()) {
 			System.out.println("Empty : " + key + " = " + val);
 		}
-		
+
 		switch(key) {
 			case "Chính phủ":
-				dynasty.setGovernmentType(val);
+				location.setGovernmentType(val);
 				break;
 			case "Ngôn ngữ thông dụng":
-				dynasty.setLanguage(val);
+				location.setLanguage(val);
 				break;
 			case "Thủ đô":
-				dynasty.setCapitals(splitCapitals(val));
+				location.setCapitals(splitCapitals(val));
 				break;
 			case "Tôn giáo chính":
-				dynasty.setReligion(val);
+				location.setReligion(val);
 				break;
 			case "Vị thế":
-				dynasty.setStatus(val);
+				location.setStatus(val);
 				break;
 			case "Đơn vị tiền tệ":
-				dynasty.setCurrency(val);
+				location.setCurrency(val);
 				break;
 			default:
 				System.out.println("Not valid : " + key + " = " + val);

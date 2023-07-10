@@ -3,142 +3,97 @@ package entity;
 import java.util.List;
 
 public class Location extends Entity {
-	List<String> longName;
-	List<String> nativeName;
-	String yearEnd;
-	String yearStart;
+	private List<String> otherNames;
+	private String located;
+	private String position;
+	private String gradeType;
+	private String grade;
+	private String worship;
 	
-	String currency;
-	String status;
-	String religion;
-	String language;
-	String governmentType;
-	List<String> capitals;
-
+	private String image;
+	private String url;
 	
-	public List<String> getLongName() {
-		return longName;
+	
+	public String getUrl() {
+		return url;
 	}
 
-
-	public void setLongName(List<String> longName) {
-		this.longName = longName;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
-
-	public List<String> getNativeName() {
-		return nativeName;
+	public String getImage() {
+		return image;
 	}
 
-
-	public void setNativeName(List<String> nativeName) {
-		this.nativeName = nativeName;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public String getYearEnd() {
-		return yearEnd;
+	public String getPosition() {
+		return position;
 	}
 
-
-	public void setYearEnd(String yearEnd) {
-		this.yearEnd = yearEnd;
+	public void setPosition(String position) {
+		this.position = position;
 	}
 
-
-	public String getYearStart() {
-		return yearStart;
+	public List<String> getOtherNames() {
+		return otherNames;
 	}
 
-
-	public void setYearStart(String yearStart) {
-		this.yearStart = yearStart;
+	public void setOtherNames(List<String> otherNames) {
+		this.otherNames = otherNames;
 	}
 
-
-	public String getCurrency() {
-		return currency;
+	public String getLocated() {
+		return located;
 	}
 
-
-	public void setCurrency(String currency) {
-		this.currency = currency;
+	public void setLocated(String located) {
+		this.located = located;
 	}
 
-
-	public String getStatus() {
-		return status;
+	public String getGradeType() {
+		return gradeType;
 	}
 
-
-	public void setStatus(String status) {
-		this.status = status;
+	public void setGradeType(String gradeType) {
+		this.gradeType = gradeType;
 	}
 
-
-	public String getReligion() {
-		return religion;
+	public String getGrade() {
+		return grade;
 	}
 
-
-	public void setReligion(String religion) {
-		this.religion = religion;
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 
-
-	public String getLanguage() {
-		return language;
+	public String getWorship() {
+		return worship;
 	}
 
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-
-	public String getGovernmentType() {
-		return governmentType;
-	}
-
-
-	public void setGovernmentType(String governmentType) {
-		this.governmentType = governmentType;
-	}
-
-
-	public List<String> getCapitals() {
-		return capitals;
-	}
-
-
-	public void setCapitals(List<String> capitals) {
-		this.capitals = capitals;
-	}
-
-
-	public Location() {
-		// TODO Auto-generated constructor stub
+	public void setWorship(String worship) {
+		this.worship = worship;
 	}
 
 
 	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Country{")
-                .append("longName=").append(longName)
-                .append("\n, nativeName=").append(nativeName)
-                .append("\n, name='").append(name).append('\'')
-                .append("\n, yearEnd='").append(yearEnd).append('\'')
-                .append("\n, yearStart='").append(yearStart).append('\'')
-                .append("\n, currency='").append(currency).append('\'')
-                .append("\n, status='").append(status).append('\'')
-                .append("\n, religion='").append(religion).append('\'')
-                .append("\n, language='").append(language).append('\'')
-                .append("\n, governmentType='").append(governmentType).append('\'')
-                .append("\n, capitals=").append(capitals)
-                .append("\n}");
+        sb.append("Location {")
+	    	.append("\n name='").append(id)
+	    	.append("'\n otherNames='").append(otherNames)
+	    	.append("'\n located='").append(located)
+	    	.append("'\n position='").append(position)
+	    	.append("'\n worship='").append(worship)
+	    	.append("'\n gradeType='").append(gradeType)
+	    	.append("'\n grade='").append(grade)
+	    	.append("'\n image=").append(image)
+	    	.append("\n}");
+
         return sb.toString();
     }
-
-	
 
 }

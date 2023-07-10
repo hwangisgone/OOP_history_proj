@@ -23,7 +23,7 @@ import entity.Dynasty;
 import entity.Festival;
 import Hoang.util.ResultUtil;
 
-public class FestivalCrawler extends BaseCrawler {
+public class FestivalCrawler extends WikiCrawler {
 	private HttpClient client;
 
 	public FestivalCrawler(HttpClient client) {
@@ -68,54 +68,6 @@ public class FestivalCrawler extends BaseCrawler {
 
 	@Override
 	protected void workWithObjectsFromPages(List<String> pages) {
-		ObjectMapper mapper = new ObjectMapper();
-		TypeReference<List<Festival>> typeReference = new TypeReference<List<Festival>>() {};
-		// Pages
-		List<Festival> resultFestival = new ArrayList<>();
-		
-		File fileJson = new File(finalDirectory + "Festival.json");
-		if (fileJson.exists()) {
-			
-			try {
-				resultFestival = mapper.readValue(fileJson, typeReference);
-			} catch (StreamReadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (DatabindException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} else {
-			InfoboxExtractor<Festival> ext = new FestivalInfoboxExtractor(client);
-
-			resultFestival= ext.getInfoboxContents(pages);
-			
-			try {
-				mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultFestival);
-			} catch (StreamWriteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (DatabindException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-//	        try (FileWriter writer = new FileWriter(fileJson)) {
-//
-//	            // Convert object list to JSON and write to file
-//	            gson.toJson(resultDynasty, writer);
-//	        } catch (IOException e) {
-//	            e.printStackTrace();
-//	        }
-		}
-
-		resultFestival.forEach(map -> {
-			System.out.println(map.toString());
-		});
+		super.workWithObjectsFromPages(pages, "Festival.json", new FestivalInfoboxExtractor(client));
 	}
 }
