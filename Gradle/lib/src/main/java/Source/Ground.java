@@ -12,9 +12,6 @@ import java.util.HashMap;
 import Source.data.database.CharacterDatabase;
 import entity.Character;
 import entity.Entity;
-import Source.service.search.LcsSearchStrategy;
-import Source.service.search.SearchNameGetter;
-import Source.service.search.Searcher;
 
 
 public class Ground {

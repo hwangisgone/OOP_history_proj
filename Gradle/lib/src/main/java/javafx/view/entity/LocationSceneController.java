@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import java.util.function.Function;
 
 import Source.data.database.IDatabase;
+import database.LocationDatabase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -24,7 +25,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import entity.Location;
-import Hoang.database.LocationDatabase;
 
 public class LocationSceneController extends SearchController<Location> implements Initializable {
 

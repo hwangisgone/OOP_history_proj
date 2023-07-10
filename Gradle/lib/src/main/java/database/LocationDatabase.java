@@ -1,4 +1,4 @@
-package Hoang.database;
+package database;
 
 import java.io.File;
 import java.util.List;
