@@ -28,4 +28,5 @@ public class Constant {
 
 	public final static String JSON_PATH_DES = "./Gradle/lib/src/main/resources/destination_data.json";
 
+	public final static String JSON_PATH_EVENT ="lib/src/main/java/Data/Database/historical-event/extractData.json";
 }

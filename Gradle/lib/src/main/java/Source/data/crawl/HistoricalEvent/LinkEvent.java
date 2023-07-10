@@ -15,6 +15,7 @@ public class LinkEvent {
 
     LinkEvent(String url) throws IOException {
         try {
+            this.url = url;
             doc = Jsoup.connect(url).get();
         } catch (IOException e) {
             e.printStackTrace();

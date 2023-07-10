@@ -2,10 +2,17 @@ package entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class HistoricalEvent extends Entity{
+	@JsonProperty("time")
     protected String time;
+
+	@JsonProperty("dynasty_related")
 	protected String dynasty_related;
-	protected List<String> relatedTo;
+
+	@JsonProperty("related_to")
+	protected List<String> related_to;
 
 	public String getTime() {
 		return this.time;
@@ -24,11 +31,11 @@ public class HistoricalEvent extends Entity{
 	}
 
 	public List<String> getRelatedTo() {
-		return this.relatedTo;
+		return this.related_to;
 	}
 
 	public void setRelatedTo(List<String> relatedTo) {
-		this.relatedTo = relatedTo;
+		this.related_to = related_to;
 	}
 
 	public HistoricalEvent() {
@@ -41,8 +48,9 @@ public class HistoricalEvent extends Entity{
 				.append("\n name=").append(id)
 				.append("'\n time='").append(time)
 				.append("\n dynasty related='").append(dynasty_related)
-				.append("'\n related to='").append(relatedTo)
+				.append("'\n related to='").append(related_to)
 				.append("\n}");
 		return sb.toString();
 	}
 }
+
