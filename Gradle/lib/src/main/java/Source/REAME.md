@@ -37,3 +37,7 @@
 - To know how Ground get data, see `src/main/java/Source/Ground.java`
 
 - To know how about attributes of Character class, see `src/main/java/entity/Character.java`
+
+
+## Main Dataset
+- The main dataset stored at `src/main/resources/character_data.json`
