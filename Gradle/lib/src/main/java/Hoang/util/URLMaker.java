@@ -1,4 +1,4 @@
-package Hoang;
+package Hoang.util;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

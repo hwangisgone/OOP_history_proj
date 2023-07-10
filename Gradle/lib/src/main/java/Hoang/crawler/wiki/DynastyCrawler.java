@@ -1,6 +1,5 @@
-package Hoang.crawler;
+package Hoang.crawler.wiki;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.util.ArrayList;
@@ -21,14 +20,13 @@ import Hoang.basis.infobox.DynastyInfoboxExtractor;
 import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
-import entity.Festival;
 import Hoang.util.ResultUtil;
 
-public class FestivalCrawler extends WikiCrawler<Festival> {
+public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	private HttpClient client;
 
-	public FestivalCrawler(HttpClient client) {
-		super("src/main/resources/final/le_hoi/");
+	public DynastyCrawler(HttpClient client) {
+		super("src/main/resources/crawl_temp/trieu_dai/");
 		this.client = client;
 	}
 
@@ -38,16 +36,16 @@ public class FestivalCrawler extends WikiCrawler<Festival> {
 		Set<String> catSet = new HashSet<>(); // Ensure no duplicates
 
 		// Get subcategories
-		catSet.add("Thể_loại:Lễ_hội_Việt_Nam");
-		List<String> wordsFilter = Arrays.asList(
-				"Thể loại:Tết",
-				"Thể loại:Đại lễ 1000 năm Thăng Long – Hà Nội"
-		);
-		
-		catFinder.setCatFilter(wordsFilter);
-		catFinder.getCategoriesFor(catSet, "Thể_loại:Lễ_hội_Việt_Nam", 4);
+		catSet.add("Thể loại:Triều đại Việt Nam");
+		catFinder.getCategoriesFor(catSet, "Thể loại:Triều đại Việt Nam", 1);
 
-		return new ArrayList<>(catSet);
+		// Filter subcategories
+		List<String> wordsFilter = Arrays.asList(
+			":Thời kỳ", 
+			":Nhà", 
+			":Triều đại"
+		);
+		return ResultUtil.filterString(catSet, wordsFilter, false);
 	}
 
 	@Override
@@ -57,12 +55,18 @@ public class FestivalCrawler extends WikiCrawler<Festival> {
 
 		pageFinder.getPagesFor(pageSet, categories);
 
-		return new ArrayList<>(pageSet);
+		List<String> wordsFilter = Arrays.asList(
+			"Thời kỳ",
+	        "Nhà",
+	        "Triều đại",
+	        "cổ đại"
+		);
+		return ResultUtil.filterString(pageSet, wordsFilter, true);
 	}
-
+	
 	@Override
-	protected List<Festival> getInfoFromPages(List<String> pages) {
-		InfoboxExtractor<Festival> ext = new FestivalInfoboxExtractor(client);
+	protected List<Dynasty> getInfoFromPages(List<String> pages) {
+		InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
 		return ext.getInfoboxContents(pages);
 	}
 }

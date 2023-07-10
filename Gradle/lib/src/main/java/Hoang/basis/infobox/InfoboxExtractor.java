@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Hoang.Multithreader;
-import Hoang.URLMaker;
+import Hoang.util.URLMaker;
 
 public abstract class InfoboxExtractor<T> {
 	private HttpClient client;

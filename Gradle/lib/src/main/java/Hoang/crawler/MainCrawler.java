@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Hoang.CSVHandler;
-import Hoang.crawler.location.DiTichLocationCrawler;
+import Hoang.crawler.nonwiki.DiTichLocationCrawler;
+import Hoang.crawler.wiki.DynastyCrawler;
+import Hoang.crawler.wiki.FestivalCrawler;
 
 public class MainCrawler {
 	private static final String finalDirectory = "src/main/resources/final/";

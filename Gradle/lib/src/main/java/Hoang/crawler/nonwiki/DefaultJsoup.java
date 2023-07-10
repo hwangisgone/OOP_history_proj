@@ -1,4 +1,4 @@
-package Hoang.crawler.location;
+package Hoang.crawler.nonwiki;
 
 import java.io.IOException;
 

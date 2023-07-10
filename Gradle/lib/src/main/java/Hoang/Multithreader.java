@@ -13,6 +13,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
+import Hoang.util.URLMaker;
+
 public class Multithreader {
 	private ExecutorService executorService;
 

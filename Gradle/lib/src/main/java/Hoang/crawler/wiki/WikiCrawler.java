@@ -1,4 +1,4 @@
-package Hoang.crawler;
+package Hoang.crawler.wiki;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import Hoang.CSVHandler;
 import Hoang.TextHandler;
 import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
+import Hoang.crawler.ICrawler;
 import entity.Festival;
 
 public abstract class WikiCrawler<T> implements ICrawler<T> {
