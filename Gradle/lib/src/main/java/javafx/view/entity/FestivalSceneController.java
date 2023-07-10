@@ -31,7 +31,6 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     private TableView<Festival> FestivalsTableView;
 
-
     @FXML
     private TableColumn<Festival, String> colDate;
 
@@ -54,13 +53,6 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     private HBox hboxFeature;
 
-    @FXML
-    private AnchorPane paneAdd;
-
-    @FXML
-    private VBox paneMain;
-
-    
     private IDatabase<Festival> festsData = new FestivalDatabase();
     
     public void refresh() {

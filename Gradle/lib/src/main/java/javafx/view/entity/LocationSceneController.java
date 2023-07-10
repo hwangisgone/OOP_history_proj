@@ -65,12 +65,6 @@ public class LocationSceneController extends SearchController<Location> implemen
     @FXML
     private HBox hboxFeature;
 
-    @FXML
-    private AnchorPane paneAdd;
-
-    @FXML
-    private VBox paneMain;
-
     
     private IDatabase<Location> locsData = new LocationDatabase();
     

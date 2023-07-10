@@ -28,12 +28,8 @@
             <TableView fx:id="LocationsTableView" prefHeight="561.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
                <columns>
                   <TableColumn fx:id="colID" prefWidth="77.60000801086426" text="Tên" />
-                  <TableColumn fx:id="colOtherNames" prefWidth="105.5999984741211" text="Tên khác" />
-                  <TableColumn fx:id="colLocated" prefWidth="106.39999389648438" text="Địa điểm" />
-                  <TableColumn fx:id="colPosition" prefWidth="124.0" text="Vị trí" />
-                  <TableColumn fx:id="colGrade" prefWidth="94.0" text="Xếp hạng" />
-                  <TableColumn fx:id="colGradeType" prefWidth="109.0" text="Loại xếp hạng" />
-                  <TableColumn fx:id="colWorship" prefWidth="113.0" text="Tôn thờ" />
+                  <TableColumn fx:id="colLocation" prefWidth="106.39999389648438" text="Địa điểm" />
+                  <TableColumn fx:id="colDate" prefWidth="124.0" text="Ngày" />
                   <TableColumn fx:id="colDescription" prefWidth="74.0" text="Mô tả" />
                </columns>
                <columnResizePolicy>
