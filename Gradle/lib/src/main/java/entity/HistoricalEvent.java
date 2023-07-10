@@ -5,7 +5,7 @@ import java.util.List;
 public class HistoricalEvent extends Entity{
     protected String time;
 	protected String dynasty_related;
-	protected List<String> relatedTo;
+	protected List<String> related_to;
 
 	public String getTime() {
 		return this.time;
@@ -24,11 +24,11 @@ public class HistoricalEvent extends Entity{
 	}
 
 	public List<String> getRelatedTo() {
-		return this.relatedTo;
+		return this.related_to;
 	}
 
 	public void setRelatedTo(List<String> relatedTo) {
-		this.relatedTo = relatedTo;
+		this.related_to = related_to;
 	}
 
 	public HistoricalEvent() {
@@ -41,7 +41,7 @@ public class HistoricalEvent extends Entity{
 				.append("\n name=").append(id)
 				.append("'\n time='").append(time)
 				.append("\n dynasty related='").append(dynasty_related)
-				.append("'\n related to='").append(relatedTo)
+				.append("'\n related to='").append(related_to)
 				.append("\n}");
 		return sb.toString();
 	}

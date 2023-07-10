@@ -42,7 +42,7 @@ public class HistoricalEventWar extends HistoricalEvent{
 				.append("'\n time='").append(time)
 				.append("'\n dynasty related='").append(dynasty_related)
                 .append("'\n location='").append(location)
-				.append("'\n related to='").append(relatedTo)
+				.append("'\n related to='").append(related_to)
                 .append("'\n characters related='").append(characters)
                 .append("'\n result='").append(result)
 				.append("\n}");

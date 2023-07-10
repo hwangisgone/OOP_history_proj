@@ -55,14 +55,14 @@ public class ExtractData {
             List<String> theloai = linkEvent.contentInfoboxList();
             String mota = linkEvent.description();
 
-            object.put("Result", result);
-            object.put("Location", destination);
-            object.put("Dynasty related", tdLienQuan);
-            object.put("Characters related", nvLienQuan);
+            object.put("result", result);
+            object.put("location", destination);
+            object.put("dynasty_related", tdLienQuan);
+            object.put("characters_related", nvLienQuan);
             //object.put("Lực lượng", lucluong);
             //object.put("Thương vong", thuongvong);
-            object.put("Related to", theloai);
-            object.put("Description" , mota);
+            object.put("related_to", theloai);
+            object.put("description" , mota);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,8 +95,8 @@ public class ExtractData {
                     i.child(0).remove();
                     //entry.put("Sự kiện", i.text());
                     entry.put("id" , i.text());
-                    entry.put("Time", thoigiancuthe);
-                    entry.put("Dynasty related", thoidai);
+                    entry.put("time", thoigiancuthe);
+                    entry.put("dynasty_related", thoidai);
                     Elements linkChild = i.select("a");
                     for (Element j : linkChild) {
                         String linkChildUrl = j.attr("abs:href");
@@ -118,8 +118,8 @@ public class ExtractData {
                 String sukien = link.text();
                 //entry.put("Sự kiện", sukien);
                 entry.put("id" , sukien);
-                entry.put("Time", thoigian);
-                entry.put("Dysnaty related", thoidai);
+                entry.put("time", thoigian);
+                entry.put("dysnaty_related", thoidai);
                 Elements linkChild = link.select("a");
                 for (Element j : linkChild) {
                     String linkChildUrl = j.attr("abs:href");
@@ -128,7 +128,7 @@ public class ExtractData {
                         listUrl.add(linkChildUrl);
                         infobox(linkEvent, entry);
                     } else {
-                        entry.put("Related to", linkEvent.contentInfoboxList());
+                        entry.put("related_to", linkEvent.contentInfoboxList());
                     }
                 }
                 size++;
