@@ -14,16 +14,26 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.exc.StreamWriteException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
+import com.fasterxml.jackson.databind.AnnotationIntrospector;
 
-public class CSVHandler {
-	ObjectMapper mapper;
+public class CSVHandler<T> {
+	private ObjectMapper mapper;
+	private Class<T> targetClass;
 	
-	public CSVHandler() {
+	public CSVHandler(Class<T> targetClass) {
 		mapper = new ObjectMapper();
+		AnnotationIntrospector introspector = new JacksonAnnotationIntrospector();
+		
+        mapper.getDeserializationConfig().with(introspector);
+        mapper.getSerializationConfig().with(introspector);
+        
+        this.targetClass = targetClass;
 	}
 	
-	public <T> void write(File fileJson, List<T> resultList) {
+	public void write(File fileJson, List<T> resultList) {
 		try {
 			mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultList);
 		} catch (StreamWriteException e) {
@@ -38,12 +48,16 @@ public class CSVHandler {
 		}
 	}
 	
-	public <T> List<T> load(File fileJson) {
-		TypeReference<List<T>> typeReference = new TypeReference<List<T>>() {};
+	public List<T> load(File fileJson) {
+		JavaType type = mapper.getTypeFactory().
+	            constructCollectionType(
+	                ArrayList.class, 
+	                targetClass);
+		
 		List<T> resultList = new ArrayList<>();
 		
 		try {
-			resultList = mapper.readValue(fileJson, typeReference);
+			resultList = mapper.readValue(fileJson, type);
 		} catch (StreamReadException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
