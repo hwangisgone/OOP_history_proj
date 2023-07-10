@@ -1,5 +1,4 @@
 [ {
-  "name" : "Nhà Mạc",
   "description" : null,
   "longName" : [ "Đại Việt", "Mạc triều", "(莫朝)" ],
   "nativeName" : [ "Đại Việt", "Mạc triều", "(莫朝)" ],
@@ -10,9 +9,9 @@
   "religion" : "Tam giáo quy nguyên",
   "language" : "Tiếng Việt",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Đông Kinh" ]
+  "capitals" : [ "Đông Kinh" ],
+  "name" : "Nhà Mạc"
 }, {
-  "name" : "Nhà Lê sơ",
   "description" : null,
   "longName" : [ "Đại Việt" ],
   "nativeName" : [ "大越" ],
@@ -23,9 +22,9 @@
   "religion" : "Phật giáo, Nho giáo, Tín ngưỡng dân gian",
   "language" : "Việt ngữ trung đại",
   "governmentType" : "Quân chủ tuyệt đối",
-  "capitals" : [ "Đông Kinh (東京 1428 - 1527)" ]
+  "capitals" : [ "Đông Kinh (東京 1428 - 1527)" ],
+  "name" : "Nhà Lê sơ"
 }, {
-  "name" : "Nhà Nguyễn",
   "description" : null,
   "longName" : [ "Đại Việt (1802–1804)", "Việt Nam (1804–1839)", "Đại Nam (1839–1945)" ],
   "nativeName" : [ "大越", "越南", "大南" ],
@@ -36,9 +35,9 @@
   "religion" : "Nho giáo, Phật giáo, Công giáo, Tín ngưỡng dân gian",
   "language" : "Tiếng Việt Văn ngôn Trung Quốc[1][2][Ghi chú 1] Tiếng Pháp (từ 1884)",
   "governmentType" : "Quân chủ chuyên chế",
-  "capitals" : [ "Phú Xuân (nay là Huế)", "16°28′B 107°36′Đ﻿ / ﻿16", "467°B 107", "6°Đ﻿ / 16.467; 107.600" ]
+  "capitals" : [ "Phú Xuân (nay là Huế)", "16°28′B 107°36′Đ﻿ / ﻿16", "467°B 107", "6°Đ﻿ / 16.467; 107.600" ],
+  "name" : "Nhà Nguyễn"
 }, {
-  "name" : "Nhà Hồ",
   "description" : null,
   "longName" : [ "Đại Ngu" ],
   "nativeName" : [ "大虞" ],
@@ -49,9 +48,9 @@
   "religion" : "Phật giáo, Đạo giáo, Tín ngưỡng Việt Nam",
   "language" : "Tiếng Việt trung đại",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Tây Đô", "20°4′B 105°36′Đ﻿ / ﻿20", "067°B 105", "6°Đ﻿ / 20.067; 105.600" ]
+  "capitals" : [ "Tây Đô", "20°4′B 105°36′Đ﻿ / ﻿20", "067°B 105", "6°Đ﻿ / 20.067; 105.600" ],
+  "name" : "Nhà Hồ"
 }, {
-  "name" : "Thời kỳ Bắc thuộc lần thứ hai",
   "description" : null,
   "longName" : [ "Bắc thuộc lần thứ hai" ],
   "nativeName" : [ "北屬吝次二" ],
@@ -62,9 +61,9 @@
   "religion" : null,
   "language" : "Tiếng Hán",
   "governmentType" : "Chế độ quân chủ",
-  "capitals" : [ "Long Biên" ]
+  "capitals" : [ "Long Biên" ],
+  "name" : "Thời kỳ Bắc thuộc lần thứ hai"
 }, {
-  "name" : "Nhà Đinh",
   "description" : null,
   "longName" : [ "Đại Cồ Việt" ],
   "nativeName" : [ "大瞿越" ],
@@ -75,9 +74,9 @@
   "religion" : "Phật giáo, Đạo giáo,...",
   "language" : "Hán ngữ trung đại",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Hoa Lư" ]
+  "capitals" : [ "Hoa Lư" ],
+  "name" : "Nhà Đinh"
 }, {
-  "name" : "Nhà Trần",
   "description" : null,
   "longName" : [ "Đại Việt" ],
   "nativeName" : [ "大越" ],
@@ -88,9 +87,9 @@
   "religion" : "Phật giáo, Đạo giáo, Tín ngưỡng Việt Nam",
   "language" : "Chữ Nôm, Tiếng Việt trung đại",
   "governmentType" : "Quân chủ chuyên chế",
-  "capitals" : [ "Thăng Long", "Thiên Trường[1]", "Thanh Hoá (tạm thời)" ]
+  "capitals" : [ "Thăng Long", "Thiên Trường[1]", "Thanh Hoá (tạm thời)" ],
+  "name" : "Nhà Trần"
 }, {
-  "name" : "Nhà Tây Sơn",
   "description" : null,
   "longName" : [ "Đại Việt" ],
   "nativeName" : [ "" ],
@@ -101,9 +100,9 @@
   "religion" : "Phật giáo, Nho giáo, Công giáo, Tín ngưỡng dân gian",
   "language" : "Tiếng Việt (Văn tự: Chữ Nôm), Tiếng Chăm, Tiếng Quảng Đông, Tiếng Khách Gia",
   "governmentType" : "Quân chủ chuyên chế",
-  "capitals" : [ "Quy Nhơn (1778-1788)", "Phú Xuân (1788-1802)", "Phượng Hoàng Trung Đô (1788-1802)" ]
+  "capitals" : [ "Quy Nhơn (1778-1788)", "Phú Xuân (1788-1802)", "Phượng Hoàng Trung Đô (1788-1802)" ],
+  "name" : "Nhà Tây Sơn"
 }, {
-  "name" : "Thời kỳ Bắc thuộc lần thứ tư",
   "description" : null,
   "longName" : [ "Thời kỳ Bắc thuộc lần thứ tư", "Giao Chỉ Thừa tuyên bố chính sứ ty" ],
   "nativeName" : [ "北屬吝次四", "交趾承宣布政使司" ],
@@ -114,9 +113,9 @@
   "religion" : "Tam giáo quy nguyên",
   "language" : "Tiếng Việt, Tiếng Hán",
   "governmentType" : "Quân chủ",
-  "capitals" : null
+  "capitals" : null,
+  "name" : "Thời kỳ Bắc thuộc lần thứ tư"
 }, {
-  "name" : "Thời kỳ Bắc thuộc lần thứ nhất",
   "description" : null,
   "longName" : [ "Bắc thuộc lần thứ nhất" ],
   "nativeName" : [ "北屬吝次一" ],
@@ -127,9 +126,9 @@
   "religion" : null,
   "language" : "Tiếng Hán thượng cổ",
   "governmentType" : "Chế độ quân chủ",
-  "capitals" : [ "Giao Chỉ" ]
+  "capitals" : [ "Giao Chỉ" ],
+  "name" : "Thời kỳ Bắc thuộc lần thứ nhất"
 }, {
-  "name" : "Nhà Ngô",
   "description" : null,
   "longName" : [ "Tĩnh Hải quân" ],
   "nativeName" : [ "靜海軍" ],
@@ -140,9 +139,9 @@
   "religion" : "Phật giáo, Đạo giáo, Cảnh giáo[1]",
   "language" : "Việt ngữ và Hán ngữ trung đại",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Cổ Loa" ]
+  "capitals" : [ "Cổ Loa" ],
+  "name" : "Nhà Ngô"
 }, {
-  "name" : "Nhà Lý",
   "description" : null,
   "longName" : [ "Nhà Lý" ],
   "nativeName" : [ "大越" ],
@@ -153,9 +152,9 @@
   "religion" : "Phật giáo",
   "language" : "Tiếng Việt trung đại",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Hoa Lư (1009 - 1010)", "Thăng Long (1010 - 1225)" ]
+  "capitals" : [ "Hoa Lư (1009 - 1010)", "Thăng Long (1010 - 1225)" ],
+  "name" : "Nhà Lý"
 }, {
-  "name" : "Nhà Hậu Trần",
   "description" : null,
   "longName" : [ "Nhà Hậu Trần", "茹後陳" ],
   "nativeName" : [ "茹後陳" ],
@@ -166,9 +165,9 @@
   "religion" : "Tam giáo quy nguyên",
   "language" : "Tiếng Việt, Tiếng Hán",
   "governmentType" : "Quân chủ chuyên chế",
-  "capitals" : [ "Mô Độ (1407 - 1409)", "Bình Than (1409 - 1414)" ]
+  "capitals" : [ "Mô Độ (1407 - 1409)", "Bình Than (1409 - 1414)" ],
+  "name" : "Nhà Hậu Trần"
 }, {
-  "name" : "Nhà Lê trung hưng",
   "description" : null,
   "longName" : [ "Đại Việt" ],
   "nativeName" : [ "大越" ],
@@ -179,9 +178,9 @@
   "religion" : "Nho giáo , Phật giáo , Đạo giáo , Công giáo , Tín ngưỡng dân gian",
   "language" : "Tiếng Việt trung đại",
   "governmentType" : "Chế độ quân chủ",
-  "capitals" : [ "Vạn Lại (tạm thời) (1533–1597)", "Đông Kinh (1597–1789)" ]
+  "capitals" : [ "Vạn Lại (tạm thời) (1533–1597)", "Đông Kinh (1597–1789)" ],
+  "name" : "Nhà Lê trung hưng"
 }, {
-  "name" : "Nhà Tiền Lý",
   "description" : null,
   "longName" : [ "Vạn Xuân" ],
   "nativeName" : [ "萬春" ],
@@ -192,9 +191,9 @@
   "religion" : null,
   "language" : "Tiếng Việt cổ Tiếng Hán trung đại",
   "governmentType" : "Chế độ quân chủ",
-  "capitals" : [ "Long Biên" ]
+  "capitals" : [ "Long Biên" ],
+  "name" : "Nhà Tiền Lý"
 }, {
-  "name" : "Nhà Triệu",
   "description" : null,
   "longName" : [ "Nam Việt" ],
   "nativeName" : [ "南越" ],
@@ -205,9 +204,9 @@
   "religion" : "Đa thần giáo",
   "language" : "Việt ngữ",
   "governmentType" : "Phong kiến",
-  "capitals" : [ "Phiên Ngung" ]
+  "capitals" : [ "Phiên Ngung" ],
+  "name" : "Nhà Triệu"
 }, {
-  "name" : "Nhà Tiền Lê",
   "description" : null,
   "longName" : [ "Đại Cồ Việt" ],
   "nativeName" : [ "大瞿越" ],
@@ -218,9 +217,9 @@
   "religion" : "Phật giáo, Đạo giáo,...",
   "language" : "Tiếng Việt trung đại",
   "governmentType" : "Quân chủ",
-  "capitals" : [ "Hoa Lư" ]
+  "capitals" : [ "Hoa Lư" ],
+  "name" : "Nhà Tiền Lê"
 }, {
-  "name" : "Thời kỳ Bắc thuộc lần thứ ba",
   "description" : null,
   "longName" : [ "Bắc thuộc lần thứ ba", "Tĩnh Hải quân" ],
   "nativeName" : [ "北屬吝次三", "靜海軍" ],
@@ -231,5 +230,6 @@
   "religion" : "Phật giáo",
   "language" : "Tiếng Trung",
   "governmentType" : "Chế độ quân chủ",
-  "capitals" : [ "Đại La" ]
+  "capitals" : [ "Đại La" ],
+  "name" : "Thời kỳ Bắc thuộc lần thứ ba"
 } ]

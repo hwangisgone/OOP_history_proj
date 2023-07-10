@@ -10,57 +10,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.core.exc.StreamWriteException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DatabindException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import Hoang.Multithreader;
-import Hoang.crawler.BaseCrawler;
-import entity.Festival;
+import Hoang.crawler.ICrawler;
 import entity.Location;
 
-public class DiTichLocationCrawler extends BaseCrawler {
+public class DiTichLocationCrawler implements ICrawler<Location> {
 
 	@Override
-	public void crawl() {
-		ObjectMapper mapper = new ObjectMapper();
-		TypeReference<List<Location>> typeReference = new TypeReference<List<Location>>() {};
-		// Pages
-		List<Location> resultLocation = new ArrayList<>();
-		
-		File fileJson = new File(finalDirectory + "Location.json");
-		if (fileJson.exists()) {
-			try {
-				resultLocation = mapper.readValue(fileJson, typeReference);
-			} catch (StreamReadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (DatabindException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} else {
-			resultLocation = getLocationsFromDiTich();
-			try {
-				mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultLocation);
-			} catch (StreamWriteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (DatabindException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		System.out.println("Success.");
+	public List<Location> crawl() {
+		return getLocationsFromDiTich();
 	}
 	
 	private List<Location> getLocationsFromDiTich() {
@@ -72,7 +30,7 @@ public class DiTichLocationCrawler extends BaseCrawler {
 		
 
 		try {
-			Document docstart = Jsoup.connect(url).timeout(9000).get();
+			Document docstart = DefaultJsoup.getDoc(url);
 	        Element span = docstart.selectFirst("span:contains(Tổng số)");
 	        
 	        if (span != null) {
@@ -94,9 +52,11 @@ public class DiTichLocationCrawler extends BaseCrawler {
 	    List<Location> locList = new ArrayList<>();
 		
 		try {
-		    Document doc = Jsoup.connect(fullUrl).timeout(9000).get();
+		    Document doc = DefaultJsoup.getDoc(fullUrl);
 		    Elements aTags = doc.select("a[title=Xem chi tiết]");
-			
+		    System.out.println(fullUrl);
+		    System.out.println(aTags.size());
+		    
 		    for (Element aTag : aTags) {
 		        Element thisLoc = aTag.selectFirst("span:matchesOwn((?i).+)");
 		        String locText = thisLoc != null ? thisLoc.text() : null;
@@ -110,13 +70,30 @@ public class DiTichLocationCrawler extends BaseCrawler {
 		    }
 		} catch (IOException e) {
 		    e.printStackTrace();
+		    System.out.println("Connecting to DiTich failed");
+		    return locList;
 		}
+		
+		List<Location> failedLocations = new ArrayList<>();
+		
+		System.out.println("Success.");
 		
 		Multithreader multithreader = new Multithreader();
 		locList = multithreader.start(locList, loc -> {
-			getLocationInfo(loc);
+			try {
+				this.getLocationInfo(loc);
+			} catch (IOException e) {
+				failedLocations.add(loc);
+			}
 			return loc;
 		});
+		
+
+//		for (Location loc: locList) {
+//			getLocationInfo(loc);
+//			System.out.println(i);
+//			i--;
+//		}
 		
 		return locList;
 	}
@@ -136,32 +113,28 @@ public class DiTichLocationCrawler extends BaseCrawler {
 		}
 	}
 	
-	private void getLocationInfo(Location location) {
-        String url = location.getUrl();
+	private void getLocationInfo(Location location) throws IOException {
         System.out.println("Getting " + location.getName() + "...");
-        try {
-            Document doc = Jsoup.connect(url).get();
-            Elements divs = doc.select("div.hl__illustrated-list__list-item");
 
-            for (Element div : divs) {
-                Element span = div.selectFirst("span:matchesOwn(.*:.*)");
+        Document doc = DefaultJsoup.getDoc(location.getUrl());
+        Elements divs = doc.select("div.hl__illustrated-list__list-item");
 
-                if (span == null) {
-                    continue;
-                }
+        for (Element div : divs) {
+            Element span = div.selectFirst("span:matchesOwn(.*:.*)");
 
-                String[] spanSplit = span.text().split(":", 2);
-                String key = spanSplit[0].trim();
-                String val = spanSplit[1].trim();
-
-                if (!key.isEmpty() && !val.isEmpty()) {
-                    matchKeyVal(key, val, location);
-                } else {
-                    System.out.println("ERR in split: for span" + spanSplit[0]);
-                }
+            if (span == null) {
+                continue;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            String[] spanSplit = span.text().split(":", 2);
+            String key = spanSplit[0].trim();
+            String val = spanSplit[1].trim();
+
+            if (!key.isEmpty() && !val.isEmpty()) {
+                matchKeyVal(key, val, location);
+            } else {
+                System.err.println("ERR in split: for span" + spanSplit[0]);
+            }
         }
     }
 	

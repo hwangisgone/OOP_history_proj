@@ -17,13 +17,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Hoang.basis.CategoryFinder;
 import Hoang.basis.PageFinder;
+import Hoang.basis.infobox.DynastyInfoboxExtractor;
 import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
 import entity.Festival;
 import Hoang.util.ResultUtil;
 
-public class FestivalCrawler extends WikiCrawler {
+public class FestivalCrawler extends WikiCrawler<Festival> {
 	private HttpClient client;
 
 	public FestivalCrawler(HttpClient client) {
@@ -56,18 +57,12 @@ public class FestivalCrawler extends WikiCrawler {
 
 		pageFinder.getPagesFor(pageSet, categories);
 
-//		List<String> wordsFilter = Arrays.asList(
-//			"Thời kỳ",
-//	        "Nhà",
-//	        "Triều đại",
-//	        "cổ đại"
-//		);
-//		ResultUtil.filterString(pageSet, wordsFilter, true);
 		return new ArrayList<>(pageSet);
 	}
 
 	@Override
-	protected void workWithObjectsFromPages(List<String> pages) {
-		super.workWithObjectsFromPages(pages, "Festival.json", new FestivalInfoboxExtractor(client));
+	protected List<Festival> getInfoFromPages(List<String> pages) {
+		InfoboxExtractor<Festival> ext = new FestivalInfoboxExtractor(client);
+		return ext.getInfoboxContents(pages);
 	}
 }

@@ -23,11 +23,11 @@ import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
 import Hoang.util.ResultUtil;
 
-public class DynastyCrawler extends WikiCrawler {
+public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	private HttpClient client;
 
 	public DynastyCrawler(HttpClient client) {
-		super("src/main/resources/final/trieu_dai/");
+		super("src/main/resources/crawl_temp/trieu_dai/");
 		this.client = client;
 	}
 
@@ -41,7 +41,11 @@ public class DynastyCrawler extends WikiCrawler {
 		catFinder.getCategoriesFor(catSet, "Thể loại:Triều đại Việt Nam", 1);
 
 		// Filter subcategories
-		List<String> wordsFilter = Arrays.asList(":Thời kỳ", ":Nhà", ":Triều đại");
+		List<String> wordsFilter = Arrays.asList(
+			":Thời kỳ", 
+			":Nhà", 
+			":Triều đại"
+		);
 		return ResultUtil.filterString(catSet, wordsFilter, false);
 	}
 
@@ -60,9 +64,10 @@ public class DynastyCrawler extends WikiCrawler {
 		);
 		return ResultUtil.filterString(pageSet, wordsFilter, true);
 	}
-
+	
 	@Override
-	protected void workWithObjectsFromPages(List<String> pages) {
-		super.workWithObjectsFromPages(pages, "Festival.json", new DynastyInfoboxExtractor(client));
+	protected List<Dynasty> getInfoFromPages(List<String> pages) {
+		InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
+		return ext.getInfoboxContents(pages);
 	}
 }

@@ -123,8 +123,6 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 	}
 
 
-
-
     public static void main(String[] args) {
     	HttpClient client = HttpClient.newHttpClient();
     	InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);

@@ -10,65 +10,52 @@ import java.util.List;
 import org.simpleflatmapper.csv.CsvWriter;
 import org.simpleflatmapper.lightningcsv.CsvParser;
 
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.core.exc.StreamWriteException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class CSVHandler {
+	ObjectMapper mapper;
+	
 	public CSVHandler() {
+		mapper = new ObjectMapper();
 	}
-
-	public List<String> readStringFromCSV(File file) {
-		List<String> loaded = new ArrayList<>();
-		// Remove duplicates
-		System.out.println("START READING CSV: " + file.getName());
+	
+	public <T> void write(File fileJson, List<T> resultList) {
 		try {
-			CsvParser.forEach(file, row -> {
-				System.out.println(Arrays.toString(row));
-				loaded.add(row[0]);
-			});
-
-		} catch (IOException e) {
+			mapper.writerWithDefaultPrettyPrinter().writeValue(fileJson, resultList);
+		} catch (StreamWriteException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-        System.out.println("END READING CSV.");
-        return loaded;
-	}
-
-
-	private CsvWriter.CsvWriterDSL<String[]> writerDsl = CsvWriter.from(String[].class).columns("a[0]").skipHeaders();
-
-	public void writeStringToCSV(File file, List<String> strings) {
-		// TODO Auto-generated method stub
-        file.setWritable(true);
-        file.setReadable(true);
-        System.out.println(file.getAbsolutePath());
-        System.out.println("START WRITING CSV: " + file.getName());
-
-        try (FileWriter fileWriter = new FileWriter(file)) {
-            CsvWriter<String[]> writer = writerDsl.to(fileWriter);
-
-            strings.forEach(str -> {
-				try {
-					writer.append(new String[] {str});
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} );
-        } catch (IOException e) {
+		} catch (DatabindException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-        System.out.println("END WRITING CSV.");
 	}
-
-	public static void main(String[] args) {
-		File file = new File("src/main/resources/test.csv");
-		CSVHandler thi = new CSVHandler();
-		List<String> gotlist = thi.readStringFromCSV(file);
-		System.out.println(gotlist);
-		gotlist.add("HAHAHAHAH");
-		gotlist.add("HAHAHAHAH2");
-
-		thi.writeStringToCSV(file, gotlist);
+	
+	public <T> List<T> load(File fileJson) {
+		TypeReference<List<T>> typeReference = new TypeReference<List<T>>() {};
+		List<T> resultList = new ArrayList<>();
+		
+		try {
+			resultList = mapper.readValue(fileJson, typeReference);
+		} catch (StreamReadException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DatabindException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return resultList;
 	}
 
 }
