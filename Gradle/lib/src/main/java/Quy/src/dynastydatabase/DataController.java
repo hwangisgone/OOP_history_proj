@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class DataController implements IDatabase<JSONObject>
 {
@@ -98,7 +99,7 @@ public class DataController implements IDatabase<JSONObject>
 		- startIndex is inclusive
 		- endIndex is exclusive
 	 */
-    @Override
+
     public List<JSONObject> load(int startIndex, int endIndex) {
         return null;
     }
@@ -110,8 +111,12 @@ public class DataController implements IDatabase<JSONObject>
     }
 
     @Override
+    public List<JSONObject> loadOr(Supplier<List<JSONObject>> getList) {
+        return null;
+    }
+
     public int size() {
-        return 0;
+        return jsonObjectList.size();
     }
 
     @Override
