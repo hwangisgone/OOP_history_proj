@@ -1,6 +1,9 @@
 package entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public abstract class Entity {
+
 	protected String id;
 	protected String description;
 	protected String url;

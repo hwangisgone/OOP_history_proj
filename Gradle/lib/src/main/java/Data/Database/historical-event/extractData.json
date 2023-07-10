@@ -1,24 +1,19 @@
 [
     {
-        "dysnaty_related": "",
-        "id": "",
-        "time": "Hồng Bàng"
-    },
-    {
-        "dysnaty_related": "",
-        "id": "",
-        "time": "Xem thêm"
-    },
-    {
         "related_to": [
             "Văn hóa cổ Việt Nam",
             "Khảo cổ Việt Nam",
             "Hạ Long",
             "Văn minh"
         ],
-        "dysnaty_related": "Thời đại đồ đá cũ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Soi Nhụ",
-        "time": "25.000 TCN-7.000 TCN"
+        "time": "25.000 TCN-7.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -29,9 +24,14 @@
             "Lịch sử Đông Nam Á",
             "Thời đại đồ đá"
         ],
-        "dysnaty_related": "Thời đại đồ đá cũ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Tràng An",
-        "time": "23.000 TCN-1.000 TCN"
+        "time": "23.000 TCN-1.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -42,9 +42,14 @@
             "Lịch sử Đông Nam Á",
             "Thời đại đồ đá"
         ],
-        "dysnaty_related": "Thời đại đồ đá mới",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Hòa Bình",
-        "time": "12.000 TCN-10.000 TCN"
+        "time": "12.000 TCN-10.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -54,9 +59,14 @@
             "Văn hóa Nghệ An",
             "Hà Tĩnh"
         ],
-        "dysnaty_related": "Thời đại đồ đá mới",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Quỳnh Văn",
-        "time": "8.000 TCN - 6.000 TCN"
+        "time": "8.000 TCN - 6.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -68,9 +78,14 @@
             "Châu Á thời đại đồ đá",
             "Dân tộc cổ đại"
         ],
-        "dysnaty_related": "Thời đại đồ đá mới",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Đa Bút",
-        "time": "6.000 TCN - 5.000 TCN"
+        "time": "6.000 TCN - 5.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -78,9 +93,14 @@
             "Khảo cổ Việt Nam",
             "Hạ Long"
         ],
-        "dysnaty_related": "Thời đại đồ đồng đá",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Hạ Long",
-        "time": "3.000 TCN-1.500 TCN"
+        "time": "3.000 TCN-1.500 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -90,15 +110,25 @@
             "Việt Nam cổ đại",
             "Châu Á thời đại đồ đồng"
         ],
-        "dysnaty_related": "Thời đại đồ đồng đá",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Phùng Nguyên",
-        "time": "2.000 TCN-1.500 TCN"
+        "time": "2.000 TCN-1.500 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [],
-        "dysnaty_related": "Thời đại đồ đồng đá",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Tiền Sa Huỳnh",
-        "time": "2.000 TCN-1.000 TCN"
+        "time": "2.000 TCN-1.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -112,9 +142,14 @@
             "Lịch sử Đông Nam Á",
             "Châu Á thời đại đồ đồng"
         ],
-        "dysnaty_related": "Thời đại đồ đồng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Đồng Đậu",
-        "time": "1.500 TCN-1.000 TCN"
+        "time": "1.500 TCN-1.000 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -127,9 +162,14 @@
             "Lịch sử Trung Quốc",
             "Châu Á thời đại đồ đồng"
         ],
-        "dysnaty_related": "Thời đại đồ đồng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Gò Mun",
-        "time": "1.000 TCN - 600 TCN"
+        "time": "1.000 TCN - 600 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -142,9 +182,14 @@
             "Thiên niên kỷ 1 TCN",
             "Thời đại đồ sắt"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Sa Huỳnh",
-        "time": "1.000 TCN - 200 "
+        "time": "1.000 TCN - 200 ",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -154,9 +199,14 @@
             "Việt Nam cổ đại",
             "Đồng Nai"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Đồng Nai",
-        "time": "1.000 TCN - 0"
+        "time": "1.000 TCN - 0",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -168,9 +218,14 @@
             "Thời đại đồ đồng",
             "Người Nam Đảo"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Đông Sơn",
-        "time": "700 TCN-100"
+        "time": "700 TCN-100",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -180,9 +235,14 @@
             "Lịch sử Đông Nam Á",
             "Thiên niên kỷ 1"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Văn hóa Óc Eo",
-        "time": "1 - 630"
+        "time": "1 - 630",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -191,9 +251,14 @@
             "Việt Nam cổ đại",
             "Văn Lang"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "vua Hùng thành lập quốc gia Văn Lang",
-        "time": "Thế kỉ VII TCN"
+        "time": "Thế kỉ VII TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -215,9 +280,14 @@
             "Đồng bằng sông Hồng",
             "Nhà Triệu"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "An Dương Vương thôn tính Văn Lang, thành lập quốc gia Âu Lạc",
-        "time": "207 TCN"
+        "time": "207 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nhà Tần chiếm được nhiều vùng lãnh thổ ở phương Nam, lập ra ba quận là Nam Hải, Quế Lâm, và Tượng Quận vào năm 214 TCN Tộc Âu Việt do Thục Phán chỉ huy kháng cự thành công",
@@ -235,7 +305,6 @@
             "Chiến tranh liên quan tới Trung Quốc",
             "Chiến tranh liên quan tới Việt Nam"
         ],
-        "dysnaty_related": "Thời đại đồ sắt",
         "description": "Chiến tranh Việt - Tần là cuộc kháng chiến chống nhà Tần mở rộng về phía nam của các bộ tộc Bách Việt ở vùng Hoa Nam, đây là các tộc người phân bố ở miền nam Trung hoa và Bắc Bộ Việt Nam hiện nay. Chiến dịch diễn ra 221 TCN đến năm 214 TCN, nghĩa là nhà Tần thực hiện mở rộng lãnh thổ về phía nam ngay sau khi thống nhất Trung Quốc.",
         "location": "Hoa Nam và miền Bắc Việt Nam (tranh chấp)",
         "id": "Chiến tranh Tần-Việt",
@@ -243,7 +312,8 @@
         "dynasty_related": [
             "Bách Việt",
             "Nhà Tần"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BA%A7n-Vi%E1%BB%87t"
     },
     {
         "related_to": [
@@ -263,9 +333,14 @@
             "Lịch sử Ma Cao",
             "Nhà Triệu"
         ],
-        "dysnaty_related": "Thuộc Nam Việt",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Triệu Đà xâm lược nước Âu Lạc, sáp nhập vào quốc gia Nam Việt",
-        "time": "179 TCN"
+        "time": "179 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nhà Hán chiến thắng",
@@ -288,7 +363,6 @@
             "Việt Nam cổ đại",
             "Lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Thuộc Nam Việt",
         "description": "Chiến tranh Hán-Nam Việt là một cuộc chiến tranh giữa nhà Tây Hán và nước Nam Việt vào cuối thế kỷ 2 trước Công nguyên.",
         "location": "Lưỡng Quảng và miền Bắc Việt Nam",
         "id": "Chiến tranh Hán-Nam Việt",
@@ -296,7 +370,8 @@
         "dynasty_related": [
             "Nhà Hán",
             "Nam Việt"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_H%C3%A1n-Nam_Vi%E1%BB%87t"
     },
     {
         "related_to": [
@@ -316,34 +391,27 @@
             "Lịch sử Ma Cao",
             "Nhà Triệu"
         ],
-        "dysnaty_related": "Thuộc Hán",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "nhà Hán thôn tính Nam Việt",
-        "time": "111 TCN"
+        "time": "111 TCN",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Nhà Hán chiến thắng",
-        "characters_related": [
-            "Mã Viện",
-            "[a]",
-            "Trưng Trắc",
-            "",
-            "[b]",
-            "Trưng Nhị",
-            "",
-            ""
-        ],
+        "result": "null",
+        "characters_related": [],
         "related_to": [
             "Huyện Hà Nội"
         ],
-        "dysnaty_related": "Thuộc Hán",
-        "description": "Khởi nghĩa Hai Bà Trưng là cuộc khởi nghĩa chống Bắc thuộc đầu tiên trong lịch sử Việt Nam do hai chị em Trưng Trắc và Trưng Nhị lãnh đạo. Cuộc khởi nghĩa đã đánh đuổi được lực lượng cai trị nhà Đông Hán ra khỏi Giao Chỉ (tương đương một phần Quảng Tây, Trung Quốc và Bắc Bộ, Bắc Trung Bộ Việt Nam hiện nay), mang lại độc lập trong 3 năm cho người Việt tại đây.",
-        "location": "Miền Bắc Việt Nam",
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Hai Bà Trưng, Trưng Trắc thành lập quốc gia Lĩnh Nam, kinh đô đặt tại Mê Linh",
         "time": "40",
-        "dynasty_related": [
-            "Nhà Hán",
-            "Lạc Việt"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Quân Hán chiến thắng",
@@ -372,7 +440,6 @@
             "Chiến tranh liên quan tới Việt Nam",
             "Chiến tranh liên quan tới Trung Quốc"
         ],
-        "dysnaty_related": "Thuộc Hán",
         "description": "Chiến tranh Hán-Việt 42-43 là tên gọi của cuộc chiến do tướng nhà Đông Hán Mã Viện chỉ huy chống lại quân nổi dậy của Hai Bà Trưng ở đất Việt năm 42-43.",
         "location": "Giao Chỉ, nay là miền Bắc Việt Nam",
         "id": "Chiến tranh Lĩnh Nam - Đông Hán",
@@ -381,7 +448,8 @@
             "Quân đội",
             "Hai Bà Trưng",
             "Nhà Đông Hán"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_H%C3%A1n%E2%80%93Vi%E1%BB%87t_(42-43)"
     },
     {
         "related_to": [
@@ -389,9 +457,14 @@
             "Sơ khai địa lý Cộng hòa Nhân dân Trung Hoa",
             "Khu vực địa lý của Trung Quốc"
         ],
-        "dysnaty_related": "Thuộc Hán",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đông Hán thôn tính Lĩnh Nam",
-        "time": "43"
+        "time": "43",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -399,31 +472,52 @@
             "Khởi nghĩa Việt Nam thời Bắc thuộc lần 2",
             "Lịch sử Thanh Hóa"
         ],
-        "dysnaty_related": "Thuộc Hán",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Khởi nghĩa Chu Đạt",
-        "time": "156-160"
+        "time": "156-160",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Khởi nghĩa Việt Nam thời Bắc thuộc lần 2"
         ],
-        "dysnaty_related": "Thuộc Hán",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Khởi nghĩa Lương Long",
-        "time": "178-181"
+        "time": "178-181",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Cựu quốc gia trong lịch sử Việt Nam",
             "Lịch sử Chăm Pa"
         ],
-        "dysnaty_related": "Thuộc Hán",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Khu Liên khởi nghĩa, tách quận Nhật Nam thành lập quốc gia Lâm Ấp",
-        "time": "192"
+        "time": "192",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Tôn Quyền xưng đế, lập nước Đông Ngô, ly khai nhà Hán",
         "time": "23 tháng 6 229",
-        "dynasty_related": "Thuộc Đông Ngô"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -438,9 +532,14 @@
             "Người họ Triệu tại Việt Nam",
             "Nữ tướng Việt Nam"
         ],
-        "dysnaty_related": "Thuộc Đông Ngô",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Khởi nghĩa Bà Triệu",
-        "time": "246 - 248"
+        "time": "246 - 248",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Tây Tấn đại thắng, Đông Ngô đầu hàng, Tây Tấn thống nhất toàn bộ Trung Hoa",
@@ -459,7 +558,6 @@
             "Năm 279",
             "Năm 280"
         ],
-        "dysnaty_related": "Thuộc Tấn",
         "description": "Chiến tranh Tấn-Ngô 279-280 là cuộc chiến cuối cùng thời Tam Quốc trong lịch sử Trung Quốc. Vua Tây Tấn là Tư Mã Viêm phát động chiến tranh và nhanh chóng tiêu diệt nước Đông Ngô (được hình thành từ đầu thế kỷ 3) chỉ sau một chiến dịch. Cuộc chiến tranh này gắn liền với sự kiện nhà Tây Tấn thống nhất toàn quốc, thời Tam Quốc kết thúc.",
         "location": "Phía Đông NamTrung Quốc",
         "id": "Chiến tranh Tấn - Ngô",
@@ -467,7 +565,8 @@
         "dynasty_related": [
             "Tây Tấn",
             "Đông Ngô"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BA%A5n_%E2%80%93_Ng%C3%B4_(280)"
     },
     {
         "related_to": [
@@ -475,26 +574,41 @@
             "Cựu quốc gia trong lịch sử Trung Quốc",
             "Nam triều (Trung Quốc)"
         ],
-        "dysnaty_related": "Thuộc Lưu Tống",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lưu Dụ ép Tấn Cung Đế nhường ngôi, lập ra nhà Lưu Tống",
-        "time": "420"
+        "time": "420",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Cựu quốc gia trong lịch sử Việt Nam",
             "Lịch sử Chăm Pa"
         ],
-        "dysnaty_related": "Thuộc Lưu Tống",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Thứ sử Giao Châu Đàn Hòa Chi đánh Lâm Ấp, cướp châu báu rút về",
-        "time": "436"
+        "time": "436",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Khởi nghĩa Việt Nam thời Bắc thuộc lần 2"
         ],
-        "dysnaty_related": "Thuộc Lưu Tống",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Lý Trường Nhân",
-        "time": "468 - 485"
+        "time": "468 - 485",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -502,9 +616,14 @@
             "Cựu quốc gia trong lịch sử Trung Quốc",
             "Nam triều (Trung Quốc)"
         ],
-        "dysnaty_related": "Thuộc Nam Tề",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Tiêu Đạo Thành phế Lưu Chuẩn tự làm vua, thành lập nhà Nam Tề",
-        "time": "479"
+        "time": "479",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -514,9 +633,14 @@
             "Cựu quốc gia trong lịch sử Trung Quốc",
             "Nam triều (Trung Quốc)"
         ],
-        "dysnaty_related": "Thuộc Lương",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Tiêu Diễn phế truất Tiêu Bảo Dung, thành lập nhà Lương",
-        "time": "502"
+        "time": "502",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Lý Bí thua trận Triệu Quang Phục đánh tan quân Lương, lên ngôi vua (Triệu Việt Vương).",
@@ -535,7 +659,6 @@
             "Nhà Tiền Lý",
             "Nhà Lương"
         ],
-        "dysnaty_related": "Thuộc Lương",
         "description": "Chiến tranh Tiền Lý - Lương là cuộc chiến bùng nổ từ năm 545 đến năm 550 kéo dài 5 năm do Triệu Quang Phục lãnh đạo chống quân Lương.",
         "location": "nước Vạn Xuân",
         "id": "khởi nghĩa Lý Bí",
@@ -543,7 +666,8 @@
         "dynasty_related": [
             "Nhà Tiền Lý",
             "Nhà Lương"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Ti%E1%BB%81n_L%C3%BD_-_L%C6%B0%C6%A1ng_(545-550)"
     },
     {
         "related_to": [
@@ -551,9 +675,14 @@
             "Quốc hiệu Việt Nam",
             "Cựu quốc gia trong lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Thuộc Lương",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Bí thành lập quốc gia Vạn Xuân",
-        "time": "544"
+        "time": "544",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nhà Tùy chiến thắng Hậu Lý Nam Đế đầu hàng Thời kỳ Bắc thuộc lần thứ ba",
@@ -565,7 +694,6 @@
         "related_to": [
             "Lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Thuộc Tùy",
         "description": "Nhà Tùy chiến thắng",
         "location": "Bắc Việt Nam",
         "id": "Chiến tranh Tùy-Vạn Xuân",
@@ -573,17 +701,30 @@
         "dynasty_related": [
             "Nhà Tùy",
             "Nhà Tiền Lý"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%C3%B9y%E2%80%93V%E1%BA%A1n_Xu%C3%A2n"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Uyên tuyên bố thành lập nhà Đường",
         "time": "tháng 3 618",
-        "dynasty_related": "Thuộc Đường"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Uyên ép Dương Hựu nhường ngôi",
         "time": "tháng 5 618",
-        "dynasty_related": "Thuộc Đường"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -593,9 +734,14 @@
             "Nhân vật lịch sử Việt Nam",
             "Nhân vật quân sự nhà Đường"
         ],
-        "dysnaty_related": "Thuộc Đường",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Lý Tự Tiên",
-        "time": "687"
+        "time": "687",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -608,9 +754,14 @@
             "Hoàng tộc Mai Hắc Đế",
             "Mất năm 723"
         ],
-        "dysnaty_related": "Thuộc Đường",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Mai Hắc Đế",
-        "time": "713 - 723"
+        "time": "713 - 723",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -622,9 +773,14 @@
             "Sinh năm 761",
             "Mất năm 802"
         ],
-        "dysnaty_related": "Thuộc Đường",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Phùng Hưng",
-        "time": "776-791"
+        "time": "776-791",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -636,18 +792,18 @@
             "Người Hải Dương",
             "Khởi nghĩa Việt Nam thời Bắc thuộc lần 3"
         ],
-        "dysnaty_related": "Tự chủ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Khúc Thừa Dụ xây dựng chính quyền tự chủ",
-        "time": "905"
+        "time": "905",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Tĩnh Hải quân chiến thắng Chấm dứt hoàn toàn thời kỳ Bắc thuộc sau hơn 1000 năm[1] Nhà Ngô được thành lập vào năm 939",
-        "characters_related": [
-            "Lưu Cung",
-            "Lưu Hoằng Tháo",
-            "-",
-            "Ngô Quyền"
-        ],
+        "result": "null",
+        "characters_related": [],
         "related_to": [
             "Hệ thống sông Thái Bình",
             "Sông tại Hải Phòng",
@@ -658,15 +814,12 @@
             "Di tích tại Hải Phòng",
             "Du lịch Hải Phòng"
         ],
-        "dysnaty_related": "Tự chủ",
-        "description": "Tĩnh Hải quân chiến thắng",
-        "location": "Sông Bạch Đằng nay thuộc Quảng Yên (Quảng Ninh) và Thủy Nguyên (Hải Phòng)",
+        "description": "null",
+        "location": "null",
         "id": "Trận Bạch Đằng, Ngô Quyền đánh bại quân Nam Hán trên sông Bạch Đằng",
         "time": "938",
-        "dynasty_related": [
-            "Nam Hán",
-            "Tĩnh Hải quân"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -682,9 +835,14 @@
             "Đông Anh",
             "Di tích khảo cổ Việt Nam"
         ],
-        "dysnaty_related": "Nhà Ngô",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Ngô Quyền xưng vương, kinh đô Cổ Loa",
-        "time": "939"
+        "time": "939",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -694,9 +852,14 @@
             "Nhà Ngô",
             "Khởi nghĩa Việt Nam"
         ],
-        "dysnaty_related": "Nhà Ngô",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Loạn 12 sứ quân",
-        "time": "944 - 968"
+        "time": "944 - 968",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -711,9 +874,14 @@
             "Chùa Việt Nam",
             "Thương cảng cổ Việt Nam"
         ],
-        "dysnaty_related": "Nhà Đinh",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đinh Bộ Lĩnh xưng đế, thành lập quốc gia Đại Cồ Việt, kinh đô Hoa Lư",
-        "time": "968"
+        "time": "968",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -723,9 +891,14 @@
             "Lịch sử Việt Nam thời Đinh",
             "Nhà Đinh"
         ],
-        "dysnaty_related": "Nhà Đinh",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đinh Bộ Lĩnh cho đúc Thái Bình hưng bảo, đồng tiền đầu tiên của Việt Nam",
-        "time": "970"
+        "time": "970",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -737,9 +910,14 @@
             "Vua Việt Nam bị giết",
             "Anh hùng dân tộc Việt Nam"
         ],
-        "dysnaty_related": "Nhà Đinh",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đinh Bộ Lĩnh cùng con trai bị sát hại",
-        "time": "979"
+        "time": "979",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -748,9 +926,14 @@
             "Chấm dứt năm 1009",
             "Triều đại Việt Nam"
         ],
-        "dysnaty_related": "Nhà Tiền Lê",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lê Hoàn lên ngôi vua, thành lập nhà Tiền Lê",
-        "time": "980"
+        "time": "980",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Đại Cồ Việt chiến thắng",
@@ -776,12 +959,19 @@
         "dynasty_related": [
             "Đại Cồ Việt",
             "Tống"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BB%91ng_-_Vi%E1%BB%87t,_981"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Công Uẩn lên ngôi vua, thành lập nhà Lý",
         "time": "21 tháng 11 1009",
-        "dynasty_related": "Nhà Lý"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -790,9 +980,14 @@
             "Lịch sử Hà Nội",
             "Cố đô Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lý",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Công Uẩn dời đô về Thăng Long",
-        "time": "1010"
+        "time": "1010",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -801,31 +996,27 @@
             "Quốc gia cổ trong lịch sử Lào",
             "Lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lý",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Thánh Tông lên ngôi, đổi tên nước từ Đại Cồ Việt thành Đại Việt",
-        "time": "1054"
+        "time": "1054",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Đại Việt chiến thắng",
-        "characters_related": [
-            "Lý Thánh Tông",
-            "Lý Thường Kiệt",
-            "Lý Thường Hiến",
-            "Chế Củ",
-            "Bố Bì Đà La"
-        ],
+        "result": "null",
+        "characters_related": [],
         "related_to": [
             "Lịch sử Chăm Pa"
         ],
-        "dysnaty_related": "Nhà Lý",
-        "description": "Chiến tranh Việt-Chiêm 1069 là cuộc chiến do vua Lý Thánh Tông của Đại Việt phát động năm 1069 nhằm đánh vương quốc Chiêm Thành ở phương Nam với lý do người Chiêm từ chối thần phục nhà Lý. Nhà Lý gọi cuộc chiến này là Chiến dịch phạt Chiêm 1069.",
-        "location": "Vương quốc Chiêm Thành",
+        "description": "null",
+        "location": "null",
         "id": "Chiến tranh Việt-Chiêm, Đại Việt chiếm được 3 châu của Chiêm Thành",
         "time": "1069",
-        "dynasty_related": [
-            "Đại Việt",
-            "Chiêm Thành"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Hai bên tuyên bố chiến thắng, hòa ước giữa hai nước Quân Tống rút ra khỏi Đại Việt Đại Việt chấp nhận thần phục và triều cống Thỏa thuận trao trả tù binh",
@@ -850,7 +1041,6 @@
             "Năm 1077",
             "Chiến tranh Tống-Việt"
         ],
-        "dysnaty_related": "Nhà Lý",
         "description": "Hai bên tuyên bố chiến thắng, hòa ước giữa hai nước",
         "location": "Một phần miền nam Đại Tống[a] và Đại Việt[b]",
         "id": "Chiến tranh Tống-Việt",
@@ -859,44 +1049,30 @@
             "Đại Tống",
             "Đại Việt",
             "nhà Lý"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BB%91ng-Vi%E1%BB%87t,_1075-1077"
     },
     {
-        "result": "chiến thắng quyết định cho Đại Việt",
-        "characters_related": [
-            "Quách Quỳ",
-            "Triệu Tiết",
-            "Miêu Lý",
-            "Hòa Mâu",
-            "Khái Linh",
-            "Lý Thường Kiệt",
-            "Hoằng Chân",
-            "-",
-            "Chiêu Văn",
-            "-",
-            "Thân Cảnh Phúc",
-            "-",
-            "Lý Kế Nguyên",
-            "Lưu Ba"
-        ],
-        "related_to": [
-            "Chiến tranh Tống-Việt",
-            "Sông Cầu",
-            "Năm 1077"
-        ],
-        "description": "",
-        "location": "sông Như Nguyệt, Đại Việt",
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Trận Như Nguyệt, đẩy lùi quân xâm lược Tống",
         "time": "18 tháng 1 - 28 tháng 2 1077",
-        "dynasty_related": [
-            "Đại Tống",
-            "Đại Việt"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Lý Chiêu Hoàng nhường ngôi cho Trần Cảnh, thành lập nhà Trần",
         "time": "10 tháng 1 1226",
-        "dynasty_related": "Nhà Trần"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Đại Việt chiến thắng; Quân Mông Cổ rút về Vân Nam",
@@ -923,7 +1099,6 @@
             "Chiến tranh liên quan tới Mông Cổ",
             "Chiến tranh Nguyên Mông - Đại Việt"
         ],
-        "dysnaty_related": "Nhà Trần",
         "description": "Chiến tranh Nguyên Mông - Đại Việt lần thứ nhất hay Kháng chiến chống Nguyên Mông lần thứ nhất là cách người Việt Nam gọi cuộc chiến đấu của quân dân Đại Việt chống lại quân đội của đế quốc Mông Cổ do Uriyangqatai (Ngột Lương Hợp Thai) chỉ huy vào trong khoảng thời gian nửa tháng cuối tháng 1 năm 1258 (hay năm Nguyên Phong[a] thứ 7). Cuộc chiến mở đầu với thất bại của quân Đại Việt trong trận Bình Lệ Nguyên, sau đó là trận Phù Lỗ, dù thắng nhưng quân đội của Ngột Lương Hợp Thai không đánh bại được đạo quân chủ lực của nhà Trần. Quân Mông Cổ tiến vào kinh thành của Đại Việt trong 9 ngày. Quân đội nhà Trần đã phản công, đại phá quân Mông trong trận Đông Bộ Đầu[1] khiến cho đội quân này phải chạy về phía Bắc, sau đó còn phải hứng chịu một cuộc tập kích khác của thủ lĩnh miền núi - Hà Bổng. Cuộc chiến này đã kết thúc với chiến thắng của nước Đại Việt, ghi dấu công lao của vua Trần Thái Tông trong việc lãnh đạo quân dân Đại Việt chiến đấu chống quân đội Mông Cổ.[2]",
         "location": "Đại Việt",
         "id": "Chiến tranh Nguyên Mông-Đại Việt lần 1",
@@ -934,15 +1109,21 @@
             "Đại Việt",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_1"
     },
     {
         "related_to": [
             "Lịch sử Việt Nam thời Trần"
         ],
-        "dysnaty_related": "Nhà Trần",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Hội nghị Bình Than, triệu họp vương hầu, trăm quan",
-        "time": "1282"
+        "time": "1282",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -950,9 +1131,14 @@
             "Lịch sử Việt Nam thời Trần",
             "Năm 1284"
         ],
-        "dysnaty_related": "Nhà Trần",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Hội nghị Diên Hồng, triệu họp bô lão cả nước",
-        "time": "1284"
+        "time": "1284",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Quân Đại Việt chiến thắng, Nguyên Mông phải rút lui khỏi Đại Việt",
@@ -1010,7 +1196,6 @@
             "Năm 1284",
             "Năm 1285"
         ],
-        "dysnaty_related": "Nhà Trần",
         "description": "Nhà Trần Đại Việt Chiêm Thành",
         "location": "Bắc Bộ và Bắc Trung Bộ Việt Nam",
         "id": "Chiến tranh Nguyên Mông-Đại Việt lần 2",
@@ -1022,7 +1207,8 @@
             "Chiêm Thành",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng-%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_2"
     },
     {
         "result": "Quân Đại Việt toàn thắng, Quân Mông Nguyên phải rút lui khỏi Đại Việt",
@@ -1077,7 +1263,6 @@
             "Năm 1287",
             "Năm 1288"
         ],
-        "dysnaty_related": "Nhà Trần",
         "description": "Chiến tranh Nguyên Mông - Đại Việt lần 3 (theo cách gọi khác ở Việt Nam là Kháng chiến chống quân Nguyên Mông lần thứ 3) là cuộc chiến tranh giữa Đại Nguyên và Đại Việt diễn ra trên lãnh thổ Đại Việt từ tháng 12 năm 1287 đến cuối tháng 4 năm 1288.",
         "location": "Bắc Việt Nam",
         "id": "Chiến tranh Nguyên Mông-Đại Việt lần 3",
@@ -1088,7 +1273,8 @@
             "Đại Việt",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_3"
     },
     {
         "related_to": [
@@ -1104,9 +1290,14 @@
             "Người tham gia lực lượng kháng chiến của Đại Việt chống quân Minh xâm lược (1406-1427)",
             "Vương tước nhà Trần"
         ],
-        "dysnaty_related": "Nhà Trần",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "phát hành Thông Bảo hội sao theo chủ trương của Hồ Quý Ly, đây là tiền giấy đầu tiên của Việt Nam",
-        "time": "1396"
+        "time": "1396",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1121,14 +1312,25 @@
             "Di tích khảo cổ Việt Nam",
             "Kiến trúc Việt Nam"
         ],
-        "dysnaty_related": "Nhà Trần",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Hồ Quý Ly ép Trần Thuận Tông dời đô về Tây Đô",
-        "time": "1397"
+        "time": "1397",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Hồ Quý Ly lên ngôi, thành lập nhà Hồ, đổi tên nước thành Đại Ngu",
         "time": "22 tháng 3 1400",
-        "dynasty_related": "Nhà Hồ"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1137,9 +1339,14 @@
             "Chiến tranh liên quan tới Việt Nam",
             "Chiến tranh Việt-Chiêm"
         ],
-        "dysnaty_related": "Nhà Hồ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Chiến tranh Việt-Chiêm",
-        "time": "1400-1407"
+        "time": "1400-1407",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nhà Minh chiến thắng Nhà Hồ sụp đổ",
@@ -1198,7 +1405,6 @@
             "Xung đột năm 1407",
             "Việt Nam thế kỷ 15"
         ],
-        "dysnaty_related": "Nhà Hồ",
         "description": "Chiến tranh Đại Ngu - Đại Minh, Chiến tranh Hồ-Minh hay thường được giới sử học Việt Nam gọi là cuộc xâm lược của nhà Minh, là cuộc chiến của nhà Hồ nước Đại Ngu (Đại Việt) chống cuộc xâm chiếm của nhà Minh (Trung Quốc) dưới triều Minh Thành Tổ từ tháng 4 năm 1406 cho đến tháng 6 năm 1407 khi nhà Minh đánh bại hoàn toàn quân đội nhà Hồ và bắt được Hồ Quý Ly, Hồ Hán Thương.",
         "location": "Việt Nam",
         "id": "Chiến tranh Đại Ngu-Đại Minh",
@@ -1207,12 +1413,19 @@
             "Đại Ngu",
             "Nhà Hồ",
             "Nhà Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_%C4%90%E1%BA%A1i_Ngu%E2%80%93%C4%90%E1%BA%A1i_Minh"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Trần Ngỗi xưng Giản Định đế, lập nên nhà Hậu Trần",
         "time": "2 tháng 10 1407",
-        "dynasty_related": "Thuộc Minh"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1227,9 +1440,14 @@
             "Triều đại Trung Quốc",
             "Cựu quốc gia trong lịch sử Trung Quốc"
         ],
-        "dysnaty_related": "Thuộc Minh",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "nhà Hậu Trần bị nhà Minh đánh bại",
-        "time": "1413"
+        "time": "1413",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nghĩa quân Lam Sơn chiến thắng. Hội thề Đông Quan Quân Minh rút lui về nước.[1]",
@@ -1278,7 +1496,6 @@
             "Việt Nam thế kỷ 15",
             "Khởi nghĩa"
         ],
-        "dysnaty_related": "Thuộc Minh",
         "description": "Nghĩa quân Lam Sơn chiến thắng.",
         "location": "Miền Bắc Việt Nam và một phần Bắc Trung Bộ hiện nay",
         "id": "khởi nghĩa Lam Sơn",
@@ -1287,12 +1504,19 @@
             "Đế quốc Đại Minh",
             "Lan Xang",
             "Ai Lao"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Kh%E1%BB%9Fi_ngh%C4%A9a_Lam_S%C6%A1n"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Lê Lợi thành lập quốc gia Đại Việt, đặt kinh đô tại Đông Kinh",
         "time": "29 tháng 4 1428",
-        "dynasty_related": "Nhà Lê sơ"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1303,9 +1527,14 @@
             "Nghi án về tội giết người chưa có lời giải minh bạch trong lịch sử",
             "Gia Bình"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Vụ án Lệ Chi viên",
-        "time": "1442"
+        "time": "1442",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1320,35 +1549,30 @@
             "Vua nhà Hậu Lê",
             "Nhà thơ Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Chính biến Thiên Hưng, Lê Thánh Tông lên ngôi",
-        "time": "1459-1460"
+        "time": "1459-1460",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Đại Việt toàn thắng",
-        "characters_related": [
-            "Lê Thánh Tông",
-            "Đinh Liệt",
-            "Lê Niệm",
-            "Lê Hy Cát",
-            "Nguyễn Đức Trung",
-            "Bàn La Trà Toàn"
-        ],
+        "result": "null",
+        "characters_related": [],
         "related_to": [
             "Quốc hiệu Việt Nam",
             "Cựu quốc gia trong lịch sử Việt Nam",
             "Quốc gia cổ trong lịch sử Lào",
             "Lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
-        "description": "Chiến tranh Việt-Chiêm 1471 là cuộc chiến do vua Lê Thánh Tông của Đại Việt phát động năm 1471 nhằm chống lại vương quốc Chiêm Thành ở phương Nam. Quân đội Đại Việt thắng lớn, và Chiêm Thành suy yếu đến mức hầu như không còn được nhắc đến trong sử sách.",
-        "location": "Vương quốc Chiêm Thành, Nam Trung Bộ Việt Nam hiện nay",
+        "description": "null",
+        "location": "null",
         "id": "Chiến tranh Việt-Chiêm, miền bắc Chiêm Thành sáp nhập vào Đại Việt",
         "time": "1471",
-        "dynasty_related": [
-            "Hậu Lê",
-            "Chiêm Thành"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "- Đại Việt chiến thắng -Lan Xang, Lanna, và Bồn Man bị phá hủy -Quan hệ Lan Xang và Đại Việt xấu đi",
@@ -1393,7 +1617,6 @@
             "Lan Xang",
             "Quân sự Việt Nam thời Lê sơ"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
         "description": "- Đại Việt chiến thắng -Lan Xang, Lanna, và Bồn Man bị phá hủy",
         "location": "Lào, Việt Nam, Vân Nam ngày nay",
         "id": "Chiến tranh Đại Việt-Lan Xang",
@@ -1405,7 +1628,8 @@
             "Lan Na",
             "[1]",
             "Muang Phuan"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_%C4%90%E1%BA%A1i_Vi%E1%BB%87t%E2%80%93Lan_Xang_(1478%E2%80%931480)"
     },
     {
         "related_to": [
@@ -1414,9 +1638,14 @@
             "Pháp luật Việt Nam thời Lê trung hưng",
             "Di sản Quân chủ Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "biên soạn Luật Hồng Đức",
-        "time": "1483"
+        "time": "1483",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1424,9 +1653,14 @@
             "Người Hà Nội",
             "Mất năm 1511"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Trần Tuân",
-        "time": "1511-1512"
+        "time": "1511-1512",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1434,9 +1668,14 @@
             "Quân nổi dậy Việt Nam",
             "Nhân vật quân sự thời Lê sơ"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Trần Cảo",
-        "time": "1516-1521"
+        "time": "1516-1521",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Chấm dứt nhà Lê sơ Mạc Đăng Dung lập ra nhà Mạc vào năm 1527",
@@ -1473,14 +1712,14 @@
             "Lịch sử Việt Nam",
             "Chiến tranh trong lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê sơ",
         "description": "Trong lịch sử Việt Nam, giai đoạn cuối triều Lê sơ (1516 - 1526) tương ứng với các triều vua Lê Tương Dực, Lê Chiêu Tông và Lê Cung Hoàng xảy ra khủng hoảng kinh tế - chính trị trầm trọng. Trong khoảng thời gian này, Đại Việt trở nên loạn lạc, biến thành nội chiến kéo dài khiến nhà Lê suy vong, cuối cùng dẫn đến Mạc Đăng Dung nắm quyền, lập nên nhà Mạc.",
         "location": "Miền Bắc Việt Nam",
         "id": "Khủng hoảng cuối nhà Lê sơ và nội chiến",
         "time": "1516-1526",
         "dynasty_related": [
             "Nhà Lê"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Kh%E1%BB%A7ng_ho%E1%BA%A3ng_cu%E1%BB%91i_nh%C3%A0_L%C3%AA_s%C6%A1"
     },
     {
         "related_to": [
@@ -1494,9 +1733,14 @@
             "Chấm dứt thế kỷ 17",
             "An Nam đô thống sứ"
         ],
-        "dysnaty_related": "Nhà Mạc",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Mạc Đăng Dung ép Lê Cung Hoàng nhường ngôi, lập lên nhà Mạc",
-        "time": "1527"
+        "time": "1527",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1507,9 +1751,14 @@
             "Di sản Quân chủ Việt Nam",
             "Thọ Xuân"
         ],
-        "dysnaty_related": "Nhà Mạc",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Kim lập Lê Ninh làm vua, tái lập nhà Lê, đóng đô tại Vạn Lại",
-        "time": "1533"
+        "time": "1533",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nam triều thắng, Bắc triều rút lên Cao Bằng rồi bị diệt hoàn toàn. Nhà Hậu Lê trung hưng, nhưng mất thực quyền về tay chúa Trịnh",
@@ -1560,7 +1809,6 @@
             "Xung đột năm 1539",
             "Xung đột năm 1551"
         ],
-        "dysnaty_related": "Nhà Mạc",
         "description": "Nội chiến Lê-Mạc (1533-1677) là cuộc nội chiến giữa nhà Mạc và nhà Hậu Lê trong lịch sử Việt Nam. Phe chống nhà Mạc về sau khi chép sử có gọi đây là thời kỳ Phù Lê diệt Mạc.",
         "location": "Bắc Bộ và Bắc Trung Bộ Việt Nam",
         "id": "Chiến tranh Lê-Mạc",
@@ -1572,7 +1820,8 @@
             "Chúa Trịnh",
             "Chúa Nguyễn",
             "Chúa Bầu"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_L%C3%AA%E2%80%93M%E1%BA%A1c"
     },
     {
         "related_to": [
@@ -1586,9 +1835,14 @@
             "Chấm dứt thế kỷ 17",
             "An Nam đô thống sứ"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "nhà Lê trung hưng đánh bại nhà Mạc, lên nắm quyền điều hành đất nước",
-        "time": "1592"
+        "time": "1592",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1597,9 +1851,14 @@
             "Lịch sử Hà Nội",
             "Cố đô Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Lê Thế Tông dời đô về Đông Kinh",
-        "time": "1597"
+        "time": "1597",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1613,9 +1872,14 @@
             "Nhà Hậu Lê",
             "Lịch sử Đàng Trong"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Hoàng vào trấn thủ Thuận Hóa",
-        "time": "1558"
+        "time": "1558",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Bất phân thắng bại (1627-1672) Sông Gianh là biên giới giữa Đàng Trong và Đàng Ngoài Chúa Nguyễn sụp đổ vào năm 1777 Chúa Trịnh sụp đổ năm 1786",
@@ -1659,7 +1923,6 @@
             "Lịch sử quân sự Đàng Trong",
             "Thế kỷ 17 ở Việt Nam"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
         "description": "Trịnh-Nguyễn phân tranh (chữ Hán: 鄭阮紛爭) là thời kỳ phân chia lãnh thổ giữa chế độ \"vua Lê chúa Trịnh\" ở phía Bắc sông Gianh (Đàng Ngoài) và chúa Nguyễn cai trị ở miền Nam (Đàng Trong), mở đầu khi Trịnh Tráng đem quân đánh Nguyễn Phúc Nguyên năm 1627 và kết thúc vào năm 1777 khi chúa Nguyễn sụp đổ.",
         "location": "Đàng Trong Đàng Ngoài",
         "id": "Trịnh - Nguyễn phân tranh",
@@ -1673,7 +1936,8 @@
             "",
             "Vương quốc Bồ Đào Nha",
             "[1]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BB%8Bnh_%E2%80%93_Nguy%E1%BB%85n_ph%C3%A2n_tranh"
     },
     {
         "related_to": [
@@ -1687,9 +1951,14 @@
             "Chấm dứt thế kỷ 17",
             "An Nam đô thống sứ"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "nhà Lê trung hưng đánh bại hoàn toàn nhà Mạc",
-        "time": "1683"
+        "time": "1683",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1699,9 +1968,14 @@
             "Triều đại Việt Nam",
             "Lịch sử Đàng Trong"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "khởi nghĩa Tây Sơn",
-        "time": "1771"
+        "time": "1771",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Quân Trịnh chiếm được Phú Xuân, chúa Nguyễn chạy vào nam",
@@ -1727,7 +2001,6 @@
             "Quân sự Việt Nam thời Lê trung hưng",
             "Lịch sử quân sự Đàng Trong"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
         "description": "Bình Nam (Chữ Hán: 平南) là cuộc chiến lần thứ 8 và là cuộc chiến cuối cùng giữa chúa Trịnh và chúa Nguyễn trong lịch sử chia cắt Đàng Ngoài-Đàng Trong hơn 200 năm của nước Đại Việt. Trong sử sách nhà Nguyễn cuộc chiến này còn được gọi là Loạn năm Giáp Ngọ.",
         "location": "Quảng Bình, Quảng Trị, Thừa Thiên-Huế - Việt Nam",
         "id": "chiến tranh Bình Nam",
@@ -1735,7 +2008,8 @@
         "dynasty_related": [
             "Chúa Trịnh",
             "Chúa Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/B%C3%ACnh_Nam_(chi%E1%BA%BFn_tranh)"
     },
     {
         "related_to": [
@@ -1746,14 +2020,18 @@
             "Người Huế",
             "Gia Long"
         ],
-        "dysnaty_related": "Nhà Lê trung hưng",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Ánh xưng vương",
-        "time": "1777"
+        "time": "1777",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "id": "Nguyễn Nhạc phong làm Bắc Bình Vương",
-        "time": " 1778",
-        "dynasty_related": "Nhà Lê trung hưng"
+        "time": " 1778"
     },
     {
         "result": "Quân Tây Sơn đại thắng.",
@@ -1798,57 +2076,23 @@
             "Tây Sơn",
             "Xiêm La",
             "Chúa Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_R%E1%BA%A1ch_G%E1%BA%A7m_%E2%80%93_Xo%C3%A0i_M%C3%BAt"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Huệ xưng đế, đặt niên hiệu Quang Trung, đặt kinh đô tại Phú Xuân",
         "time": "22 tháng 12 1788",
-        "dynasty_related": "Nhà Tây Sơn"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Tây Sơn chiến thắng, quân Thanh rút khỏi Đại Việt. Nhà Tây Sơn thay thế nhà Hậu Lê Nhà Tây Sơn lần đầu tiên thống nhất đất nước sau khi đánh đổ các tập đoàn phong kiến Lê (sụp đổ năm 1789) - Trịnh (sụp đổ năm 1787) - Nguyễn (sụp đổ năm 1785) Nhà Tây Sơn chấp nhận triều cống cho nhà Thanh để lập quan hệ bang giao.",
-        "characters_related": [
-            "Quang Trung",
-            "Phan Văn Lân",
-            "Ngô Văn Sở",
-            "Nguyễn Tăng Long",
-            "Đặng Xuân Bảo",
-            "Nguyễn Văn Lộc",
-            "Nguyễn Văn Tuyết",
-            "Đặng Tiến Đông",
-            "Phan Khải Đức",
-            "",
-            "Nguyễn Văn Diễm",
-            "Nguyễn Văn Hoà",
-            "",
-            "Tôn Sĩ Nghị",
-            "",
-            "Hứa Thế Hanh",
-            "-",
-            "",
-            "Thượng Duy Thăng",
-            "-",
-            "",
-            "Trương Triều Long",
-            "-",
-            "",
-            "Ô Đại Kinh",
-            "",
-            "Sầm Nghi Đống",
-            "-",
-            "",
-            "Thang Hùng Nghiệp",
-            "",
-            "Lý Hóa Long",
-            "-",
-            "",
-            "Khánh Thành",
-            "",
-            "Hình Đôn Hành",
-            "-",
-            "Lê Chiêu Thống",
-            "Hoàng Phùng Nghĩa"
-        ],
+        "result": "null",
+        "characters_related": [],
         "related_to": [
             "Nhà Lê sơ",
             "Nhà Lê trung hưng",
@@ -1859,22 +2103,23 @@
             "Chấm dứt năm 1788",
             "Nhà Hậu Lê"
         ],
-        "dysnaty_related": "Nhà Tây Sơn",
-        "description": "60.000 quân chính quy và dân binh đóng ở miền bắc[1], cộng với mấy vạn quân và dân binh hành quân từ phía nam ra, tổng số khoảng 100.000 quân chính quy và dân binh[2] (gồm khoảng 5 vạn quân chính quy và 5 vạn dân binh)",
-        "location": "Miền Bắc Đại Việt",
+        "description": "null",
+        "location": "null",
         "id": "Trận Ngọc Hồi - Đống Đa, đẩy lui quân xâm lược nhà Thanh, nhà Hậu Lê sụp đổ",
         "time": "1789",
-        "dynasty_related": [
-            "Nhà Tây Sơn",
-            "",
-            "Nhà Thanh",
-            "Nhà Lê Trung Hưng"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Huệ qua đời, con trai Nguyễn Quang Toản lên ngôi",
         "time": "16 tháng 9 1792",
-        "dynasty_related": "Nhà Tây Sơn"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1887,17 +2132,27 @@
             "Huế",
             "Lịch sử Đàng Trong"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Ánh đánh bại nhà Tây Sơn, lên ngôi vua, đặt niên hiệu là Gia Long, lập lên nhà Nguyễn, đặt kinh đô tại Phú Xuân",
-        "time": "1802"
+        "time": "1802",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Cuộc nổi dậy thời Nguyễn"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nổi dậy Đá Vách",
-        "time": "1803-1855"
+        "time": "1803-1855",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -1907,9 +2162,14 @@
             "Cộng hòa",
             "Quốc gia và vùng lãnh thổ nói tiếng Việt"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Ánh đổi tên nước thành Việt Nam",
-        "time": "1804"
+        "time": "1804",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Triều Nguyễn chiến thắng",
@@ -1929,7 +2189,6 @@
         "related_to": [
             "Cuộc nổi dậy thời Nguyễn"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
         "description": "Phan Bá Vành Phan Khánh (Ba Voi) Trần Bất Hựu (Ba Bất) Hai Đáng - Trưởng tả quân Phan Ba Trần Diễn Chiêu Liễn Vũ Thị Hinh (vợ Hai Đáng) Ba Hùm thủ lĩnh (người Mường) Nguyễn Hạnh (tướng cũ của nhà Tây Sơn)",
         "location": "Hải Dương, Hải Phòng, Thái Bình, Nam Định ngày nay",
         "id": "Khởi nghĩa Phan Bá Vành",
@@ -1937,7 +2196,8 @@
         "dynasty_related": [
             "Phan Bá Vành",
             "Triều Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Cu%E1%BB%99c_n%E1%BB%95i_d%E1%BA%ADy_Phan_B%C3%A1_V%C3%A0nh"
     },
     {
         "result": "Quân Việt chiến thắng",
@@ -1972,7 +2232,6 @@
             "Chiến tranh liên quan tới Thái Lan",
             "Quan hệ quân sự Thái Lan-Việt Nam"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
         "description": "Chiến tranh Việt - Xiêm (1833-1834) là một cuộc chiến gồm hai đợt tấn công của quân Xiêm vào lãnh thổ Đại Nam (Việt Nam ngày nay), đợt thứ nhất khởi đầu từ tháng 11 năm 1833, đợt thứ hai tấn công từ tháng Giêng năm Giáp Ngọ (1834), đến tháng Năm cùng năm thì kết thúc. Sau cùng, quân Việt chiến thắng[1]. Theo Việt sử tân biên, Quyển 4, thì:",
         "location": "Đại Nam",
         "id": "Chiến tranh Việt-Xiêm",
@@ -1980,20 +2239,32 @@
         "dynasty_related": [
             "Nhà Nguyễn",
             "Triều Rattanakosin"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Xi%C3%AAm_(1833-1834)"
     },
     {
         "related_to": [
             "Địa danh cũ Việt Nam"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Việt Nam thôn tính Chân Lạp, đặt làm Trấn Tây Thành",
-        "time": "1836"
+        "time": "1836",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Minh Mạng đổi tên nước thành Đại Nam",
         "time": "15 tháng 2 1839",
-        "dynasty_related": "Nhà Nguyễn"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -2004,9 +2275,14 @@
             "Cựu quốc gia châu Á",
             "Cựu quốc gia trong lịch sử Việt Nam"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "rút quân khỏi Trấn Tây Thành, Xiêm đặt Ang Duong lên ngôi, tái lập Chân Lạp",
-        "time": "1841"
+        "time": "1841",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Pháp chiến thắng Hòa ước Nhâm Tuất (1862), nhà Nguyễn nhượng 3 tỉnh Đông Nam Kỳ cho Pháp (gồm Biên Hòa, Gia Định, Định Tường) Hòa ước Quý Mùi (1883) Hòa ước Giáp Thân (1884), Pháp giành quyền bảo hộ Đại Nam Pháp mở rộng tầm ảnh hưởng đến khu vực Viễn Đông",
@@ -2053,7 +2329,6 @@
             "Xung đột thế kỷ 19",
             "Chiến tranh Pháp-Đại Nam"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
         "description": "",
         "location": "Khắp lãnh thổ Đại Nam và một phần của Nhà Thanh",
         "id": "Chiến tranh Pháp-Đại Nam",
@@ -2065,25 +2340,36 @@
             "Đại Nam",
             "Đại Thanh",
             "Quân Cờ Đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Ph%C3%A1p-%C4%90%E1%BA%A1i_Nam"
     },
     {
         "related_to": [
             "Sơ khai lịch sử",
             "Cuộc nổi dậy thời Nguyễn"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Bạo loạn ven biển",
-        "time": "1861-1865"
+        "time": "1861-1865",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Cuộc nổi dậy thời Nguyễn",
             "Lịch sử Huế"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Chính biến chày vôi",
-        "time": "1866"
+        "time": "1866",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -2106,67 +2392,25 @@
             "Quốc gia Tây Nam Âu",
             "Quốc gia"
         ],
-        "dysnaty_related": "Nhà Nguyễn",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "nhà Nguyễn cắt Nam Kỳ lục tỉnh nhượng cho Pháp",
-        "time": "1867"
+        "time": "1867",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
-        "result": "Pháp chiến thắng Hòa ước Nhâm Tuất (1862), nhà Nguyễn nhượng 3 tỉnh Đông Nam Kỳ cho Pháp (gồm Biên Hòa, Gia Định, Định Tường) Hòa ước Quý Mùi (1883) Hòa ước Giáp Thân (1884), Pháp giành quyền bảo hộ Đại Nam Pháp mở rộng tầm ảnh hưởng đến khu vực Viễn Đông",
-        "characters_related": [
-            "",
-            "Napoleon III",
-            "",
-            "de Genouilly",
-            "",
-            "François Page",
-            "",
-            "Leonard Charner",
-            "",
-            "Francis Garnier",
-            "-",
-            "",
-            "Henri Rivière",
-            "-",
-            "",
-            "Eugène Bouët",
-            "",
-            "Berthe de Villers",
-            "",
-            "Carlos Palanca",
-            "Tự Đức",
-            "Nguyễn Tri Phương",
-            "-",
-            "Hoàng Diệu",
-            "-",
-            "Hoàng Kế Viêm",
-            "Tôn Thất Thuyết",
-            "Nguyễn Quang Bích",
-            "Nguyễn Thiện Thuật",
-            "",
-            "Phan Đỉnh Tân",
-            "",
-            "",
-            "",
-            "Lưu Vĩnh Phúc"
-        ],
-        "related_to": [
-            "Lịch sử Việt Nam thời Nguyễn",
-            "Việt Nam thế kỷ 19",
-            "Xung đột thế kỷ 19",
-            "Chiến tranh Pháp-Đại Nam"
-        ],
-        "description": "",
-        "location": "Khắp lãnh thổ Đại Nam và một phần của Nhà Thanh",
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Hòa ước Giáp Thân, kết thúc Chiến tranh Pháp-Đại Nam, triều đình nhà Nguyễn chấp nhận sự bảo hộ của Pháp",
         "time": "6 tháng 6 1884",
-        "dynasty_related": [
-            "Đệ Nhị Đế chế Pháp",
-            "Đệ Tam Cộng hòa Pháp",
-            "Tây Ban Nha",
-            "Đại Nam",
-            "Đại Thanh",
-            "Quân Cờ Đen"
-        ]
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Phong trào thất bại",
@@ -2213,7 +2457,6 @@
             "Xung đột năm 1887",
             "Xung đột năm 1888"
         ],
-        "dysnaty_related": "Pháp thuộc",
         "description": "Phong trào Cần Vương (Chữ Nôm: 風潮勤王) nổ ra vào cuối thế kỷ 19 do đại thần nhà Nguyễn là Tôn Thất Thuyết nhân danh vua Hàm Nghi đề xướng trước cuộc xâm lược của thực dân Pháp.",
         "location": "Bắc Kỳ, Trung Kỳ, Nam Kỳ",
         "id": "phong trào Cần Vương",
@@ -2226,22 +2469,41 @@
             "Trung Kỳ",
             "Nhà Nguyễn",
             "Nam Kỳ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Phong_tr%C3%A0o_C%E1%BA%A7n_V%C6%B0%C6%A1ng"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "thực dân Pháp thành lập Liên bang Đông Dương, gồm Bắc Kỳ, Trung Kỳ, Nam Kỳ và Campuchia, đặt thủ đô tại Sài Gòn",
         "time": "17 tháng 10 1887",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "sáp nhập Lào vào Liên bang Đông Dương",
         "time": "3 tháng 10 1893",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "sáp nhập Quảng Châu Loan vào Liên bang Đông Dương",
         "time": "12 tháng 4 1898",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -2252,9 +2514,14 @@
             "Thủ đô của châu Á",
             "Đồng bằng sông Hồng"
         ],
-        "dysnaty_related": "Pháp thuộc",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Liên bang Đông Dương dời thủ đô về Hà Nội",
-        "time": "1902"
+        "time": "1902",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -2264,17 +2531,27 @@
             "Tổ chức thành lập năm 1906",
             "Tổ chức giải thể năm 1908"
         ],
-        "dysnaty_related": "Pháp thuộc",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "phong trào Duy Tân",
-        "time": "1906-1908"
+        "time": "1906-1908",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
             "Lịch sử Việt Nam thời Pháp thuộc"
         ],
-        "dysnaty_related": "Pháp thuộc",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "phong trào chống sưu thuế Trung Kỳ",
-        "time": "1908"
+        "time": "1908",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -2380,7 +2657,6 @@
             "Ferdinand I",
             "và nhiều người khác ..."
         ],
-        "dysnaty_related": "Pháp thuộc",
         "description": "",
         "location": "Châu Âu, Châu Phi, Trung Đông, Quần đảo Thái Bình Dương, Trung Quốc, Ấn Độ Dương, Bắc và Nam Đại Tây Dương",
         "id": "khoảng 100.000 người Việt bị ép sang châu Âu chiến đấu cho Pháp trong Chiến tranh thế giới thứ nhất",
@@ -2422,7 +2698,8 @@
             "Đế quốc Ottoman",
             "Bulgaria",
             "... và nhiều nước khác"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_th%E1%BA%BF_gi%E1%BB%9Bi_th%E1%BB%A9_nh%E1%BA%A5t"
     },
     {
         "result": "Khởi nghĩa thất bại",
@@ -2459,7 +2736,6 @@
             "Chiến tranh liên quan tới Pháp",
             "Chiến tranh liên quan tới Việt Nam"
         ],
-        "dysnaty_related": "Pháp thuộc",
         "description": "Khởi nghĩa Thái Nguyên hay Binh biến Thái Nguyên là tên gọi cuộc nổi dậy ở tỉnh lỵ Thái Nguyên vào năm 1917 do Trịnh Văn Cấn chỉ huy, chống lại chính quyền Bảo hộ của Pháp để giành độc lập cho người Việt.",
         "location": "Thái Nguyên",
         "id": "khởi nghĩa Thái Nguyên",
@@ -2467,17 +2743,30 @@
         "dynasty_related": [
             "Liên bang Đông Dương",
             ""
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Kh%E1%BB%9Fi_ngh%C4%A9a_Th%C3%A1i_Nguy%C3%AAn"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Nguyễn Ái Quốc gửi Yêu sách của nhân dân An Nam tới Hội nghị Hòa bình Versailles",
         "time": "18 tháng 6 1919",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "hợp nhất ba tổ chức cộng sản thành Đảng Cộng sản Việt Nam",
         "time": "3 tháng 2 1930",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Nhiều cuộc biểu tình tự vệ vũ trang kết hợp yêu sách chính trị, kết hợp đấu tranh bạo động và đấu tranh chính trị nổ ra. Cuối cùng bị quân đội Pháp trấn áp và tan rã.",
@@ -2505,7 +2794,6 @@
             "Việt Nam thế kỷ 20",
             "Cách mạng thế kỷ 20"
         ],
-        "dysnaty_related": "Pháp thuộc",
         "description": "Xô Viết Nghệ - Tĩnh là tên gọi chỉ phong trào đấu tranh của lực lượng công nhân và nông dân ở Nghệ An và Hà Tĩnh trong năm 1930-1931 chống lại đế quốc Pháp tại Việt Nam. Tên gọi Xô viết Nghệ Tĩnh xuất phát từ sự hình thành các \"xã bộ nông\" mà những người cộng sản gọi là \"Xô viết\" [1].",
         "location": "Nghệ An và Hà Tĩnh",
         "id": "phong trào Xô Viết Nghệ Tĩnh",
@@ -2518,7 +2806,8 @@
             "Liên bang Đông Dương",
             "Xứ bảo hộ Trung Kỳ",
             "Nhà Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/X%C3%B4_Vi%E1%BA%BFt_Ngh%E1%BB%87_T%C4%A9nh"
     },
     {
         "related_to": [
@@ -2620,7 +2909,6 @@
             "",
             "Benito Mussolini"
         ],
-        "dysnaty_related": "Pháp thuộc",
         "description": "",
         "location": "Châu Âu, Thái Bình Dương, Đại Tây Dương, Đông Nam Á, Trung Quốc, Trung Đông, Địa Trung Hải và Châu Phi, một phần Bắc và Nam Mỹ",
         "id": "khoảng 20.000 thanh niên Việt Nam bị cưỡng bức phục vụ Pháp trong chiến tranh thế giới thứ hai",
@@ -2644,32 +2932,63 @@
             "",
             "Vương quốc Ý",
             "và nhiều nước khác-"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_th%E1%BA%BF_gi%E1%BB%9Bi_th%E1%BB%A9_hai"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "quân đội Nhật Bản tiến vào Đông Dương",
         "time": "30 tháng 8 1940",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "chính phủ Pháp chấp nhận mọi yêu sách, chấp nhận việc chiếm đóng cùng giao quyền điều hành những căn cứ quân sự cho quân đội Nhật",
         "time": "25 tháng 9 1940",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Việt Nam Tuyên truyền Giải phóng quân được thành lập",
         "time": "22 tháng 12 1944",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Nhật đảo chính thực dân Pháp",
         "time": "tháng 3 1945",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "thành lập Đế quốc Việt Nam, phụ thuộc Đế quốc Nhật Bản",
         "time": "11 tháng 3 1945",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Việt Minh giành được chính quyền. Vua Bảo Đại thoái vị, chấm dứt chế độ quân chủ chuyên chế. Đế quốc Nhật Bản đầu hàng Việt Minh.",
@@ -2712,27 +3031,52 @@
             "Nhật Bản",
             "Đế quốc Việt Nam",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/C%C3%A1ch_m%E1%BA%A1ng_th%C3%A1ng_T%C3%A1m"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Đế quốc Việt Nam sụp đổ",
         "time": "23 tháng 8 1945",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Bảo Đại thoái vị",
         "time": "30 tháng 8 1945",
-        "dynasty_related": "Pháp thuộc"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Hồ Chí Minh tuyên bố độc lập, thành lập nước Việt Nam Dân chủ Cộng hòa",
         "time": "2 tháng 9 1945",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "phát động phong trào Bình dân học vụ",
         "time": "8 tháng 9 1945",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Việt Nam Dân chủ Cộng hòa chiến thắng. Việt Nam, Lào, Campuchia tách khỏi Liên hiệp Pháp, hoàn toàn độc lập. Pháp và Quốc gia Việt Nam tập kết về miền Nam. Việt Nam bị phân chia tạm thời tại Vĩ tuyến 17. Sau 2 năm Pháp rút khỏi Việt Nam. Hoa Kỳ đẩy mạnh việc can thiệp sâu hơn vào Đông Dương.[1][2]",
@@ -2832,7 +3176,8 @@
             "Trung Quốc",
             "Đông Đức",
             "[4]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_%C4%90%C3%B4ng_D%C6%B0%C6%A1ng"
     },
     {
         "result": "Quân đội Việt Nam sau khi chống trả, rút về các chiến khu và tiến hành kháng chiến lâu dài. Liên quân Anh-Pháp chiếm đóng các thành phố lớn. Phe Anh tuyên bố chiến thắng và trao quyền quản lý cho Pháp. Chiến tranh Đông Dương bùng nổ sau khi Anh rút quân.",
@@ -2899,29 +3244,41 @@
             "dân quân Bình Xuyên",
             "Việt Nam Quốc Dân Đảng",
             "Nam Bộ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Nam_B%E1%BB%99_kh%C3%A1ng_chi%E1%BA%BFn"
     },
     {
-        "result": "",
+        "result": "null",
         "characters_related": [],
-        "related_to": [
-            "Bầu cử tại Việt Nam"
-        ],
-        "description": "Hồ Chí Minh Việt Minh",
-        "location": "",
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Tổng tuyển cử bầu Quốc hội đầu tiên",
         "time": "6 tháng 1 1946",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Pháp lập nên Cộng hòa Tự trị Nam Kỳ thuộc Liên hiệp Pháp, thủ đô Sài Gòn",
         "time": "26 tháng 3 1946",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Tạm ước Việt - Pháp",
         "time": "14 tháng 9 1946",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Chính quyền Việt Nam Dân chủ Cộng hòa rút khỏi các đô thị về Chiến khu. Cuộc chiến đấu thực sự bắt đầu.",
@@ -2946,7 +3303,8 @@
         "dynasty_related": [
             "Pháp",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/To%C3%A0n_qu%E1%BB%91c_kh%C3%A1ng_chi%E1%BA%BFn"
     },
     {
         "result": "Pháp chiếm giữ một số khu vực biên giới nhưng thất bại về mặt chiến lược",
@@ -2979,17 +3337,30 @@
             "Pháp",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Vi%E1%BB%87t_B%E1%BA%AFc_Thu_-_%C4%90%C3%B4ng_1947"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Pháp lập nên Quốc gia Việt Nam, quốc trưởng Bảo Đại, thủ đô Sài Gòn",
         "time": "14 tháng 6 1949",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Mỹ bắt đầu can thiệp quân sự vào Việt Nam",
         "time": "8 tháng 5 1950",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Thắng lợi chiến lược của Quân đội nhân dân Việt Nam",
@@ -3034,7 +3405,8 @@
             "Quốc gia Việt Nam",
             "Khu tự trị Nùng",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Bi%C3%AAn_gi%E1%BB%9Bi"
     },
     {
         "result": "Thắng lợi quyết định của Việt Nam Dân chủ Cộng hòa.[3] Hiệp định Genève được ký kết, Pháp trao trả độc lập cho ba nước Đông Dương.",
@@ -3113,7 +3485,8 @@
             "Việt Minh",
             "Trung Quốc",
             "Đông Đức"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7"
     },
     {
         "result": "",
@@ -3155,12 +3528,19 @@
         "location": "",
         "id": "Hiệp định Genève, Pháp rút quân khỏi Việt Nam và đất nước bị chia cắt",
         "time": "20 tháng 7 1954",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Hi%E1%BB%87p_%C4%91%E1%BB%8Bnh_Gen%C3%A8ve,_1954"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Giải phóng Thủ đô",
         "time": "10 tháng 10 1954",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -3174,9 +3554,14 @@
             "Chiến tranh Việt Nam",
             "Khởi đầu năm 1955 ở Việt Nam"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Ngô Đình Diệm phế truất Bảo Đại, lên làm Tổng thống, lập nên Việt Nam Cộng hòa",
-        "time": "1955"
+        "time": "1955",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -3187,19 +3572,36 @@
             "Chiến tranh Việt Nam 1959-1965",
             "Khởi nghĩa Việt Nam"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Phong trào Đồng khởi",
-        "time": "1959-1960"
+        "time": "1959-1960",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "thành lập Mặt trận Dân tộc Giải phóng miền Nam Việt Nam",
         "time": "20 tháng 12 1960",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "thành lập Quân Giải phóng miền Nam Việt Nam",
         "time": "15 tháng 12 1961",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Thắng lợi chiến lược của Quân Giải phóng miền Nam Việt Nam",
@@ -3214,7 +3616,6 @@
         "related_to": [
             "Chiến tranh Việt Nam"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
         "description": "Giai đoạn 1960-1965",
         "location": "Toàn miền Nam, Việt Nam",
         "id": "chiến dịch Chiến tranh đặc biệt",
@@ -3228,7 +3629,8 @@
             "Việt Nam Dân chủ Cộng hoà",
             "",
             "Mặt trận Dân tộc Giải phóng Miền Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/K%E1%BA%BF_ho%E1%BA%A1ch_Staley-Taylor"
     },
     {
         "related_to": [
@@ -3255,14 +3657,25 @@
             "Độc tài",
             "Chủ nghĩa gia đình trị"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "đảo chính lật đổ chính quyền Ngô Đình Diệm",
-        "time": "1963"
+        "time": "1963",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Mỹ bắt đầu đưa quân vào tham chiến tại miền Nam Việt Nam",
         "time": "8 tháng 3 1965",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Thất bại chiến lược của Hoa Kỳ Khởi đầu \"Việt Nam hóa chiến tranh\"",
@@ -3312,7 +3725,6 @@
             "Chiến tranh liên quan tới Liên Xô",
             "Việt Nam thế kỷ 20"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
         "description": "Thất bại chiến lược của Hoa Kỳ",
         "location": "Toàn miền Nam Việt Nam Miền Bắc Việt Nam (trên không và trên biển)",
         "id": "chiến dịch Chiến tranh cục bộ",
@@ -3335,7 +3747,8 @@
             "Cộng hòa Dân chủ Nhân dân Triều Tiên",
             "Cộng hòa Nhân dân Trung Hoa",
             "Cuba"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_c%E1%BB%A5c_b%E1%BB%99_(Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_Nam)"
     },
     {
         "result": "Thất bại chiến lược của Hoa Kỳ Hiệp định Paris được ký kết giữa Việt Nam Dân chủ Cộng hòa-Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam và Hoa Kỳ. Hai bên tiến hành trao trả tù binh. Quân viễn chinh Hoa Kỳ và các đồng minh rời khỏi Việt Nam, chỉ để lại các cố vấn quân sự Chiến tranh tiếp tục, Việt Nam Cộng hòa đầu hàng năm 1975 và Việt Nam thống nhất năm 1976 thông qua Tổng tuyển cử.",
@@ -3434,7 +3847,6 @@
             "Việt Nam năm 1971",
             "Hoa Kỳ trong Chiến tranh Việt Nam"
         ],
-        "dysnaty_related": "Việt Nam Dân chủ Cộng hòa",
         "description": "Lào - Sunrise - Ấp Bắc - Gò Công - Hiệp Hòa - Chà Là - 34A - Long Định - Quyết Thắng 202 - USNS Card - Nam Đông - An Lão - Bình Giã - Pleiku - Sông Bé - Ba Gia - Đồng Xoài - Ka Nak - Đèo Nhông",
         "location": "Việt Nam",
         "id": "chiến dịch Việt Nam hóa chiến tranh",
@@ -3466,17 +3878,30 @@
             "Khmer Đỏ",
             "Liên Xô",
             "Cộng hòa Dân chủ Nhân dân Triều Tiên"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Vi%E1%BB%87t_Nam_h%C3%B3a_chi%E1%BA%BFn_tranh"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "thành lập Cộng hòa Miền Nam Việt Nam, thủ đô Tây Ninh",
         "time": "8 tháng 6 1969",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Chủ tịch Hồ Chí Minh từ trần",
         "time": "2 tháng 9 1969",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Thắng lợi chiến lược của VNDCCH (Mỹ chấp nhận ký kết Hiệp định Paris với nội dung tương tự với bản dự thảo hiệp định vào tháng 10 năm 1972 - bản mà Hoa Kỳ đã từ chối ký kết).",
@@ -3541,28 +3966,19 @@
             "Không lực Hoa Kỳ",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_tr%C3%AAn_kh%C3%B4ng"
     },
     {
-        "result": "",
+        "result": "null",
         "characters_related": [],
-        "related_to": [
-            "Hiệp ước liên quan tới Việt Nam",
-            "Ngoại giao trong chiến tranh Việt Nam",
-            "Hiệp ước của Hoa Kỳ",
-            "Chiến tranh Việt Nam",
-            "Chính trị năm 1973",
-            "Hiệp ước được ký năm 1973",
-            "Quan hệ quốc tế năm 1973",
-            "Lịch sử quân sự năm 1973",
-            "Hiệp ước Chiến tranh Lạnh",
-            "Hiệp ước thành lập tổ chức liên chính phủ"
-        ],
-        "description": "",
-        "location": "",
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "Hiệp định Paris, Mỹ rút quân khỏi Việt Nam",
         "time": "27 tháng 1 1973",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Việt Nam Dân chủ Cộng hòa và Mặt trận Dân tộc Giải phóng miền Nam Việt Nam giành chiến thắng[3] Toàn bộ lực lượng Hoa Kỳ di tản khỏi Việt Nam Chính phủ Việt Nam Cộng hòa tuyên bố đầu hàng vô điều kiện Chính phủ Cách mạng Lâm thời Cộng hòa miền Nam Việt Nam Chính phủ Cách mạng Lâm thời Cộng hòa miền Nam Việt Nam tiếp quản toàn bộ miền Nam Việt Nam, tạo cơ sở cho sự thống nhất 2 miền thông qua Tổng tuyển cử năm 1976",
@@ -3633,22 +4049,41 @@
             "Hoa Kỳ",
             "",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_H%E1%BB%93_Ch%C3%AD_Minh"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "chính phủ Việt Nam Cộng hòa đầu hàng vô điều kiện Cộng hòa Miền Nam Việt Nam",
         "time": "30 tháng 4 1975",
-        "dynasty_related": "Việt Nam Dân chủ Cộng hòa"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "đổi tên nước thành Cộng hòa xã hội chủ nghĩa Việt Nam",
         "time": "2 tháng 7 1976",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "gia nhập Liên Hợp Quốc",
         "time": "20 tháng 9 1977",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam chiến thắng Chế độ Khmer Đỏ bị lật đổ, Campuchia Dân chủ sụp đổ. Kết thúc nạn diệt chủng Campuchia Sự thành lập và sau đó là sự tan rã của Cộng hòa Nhân dân Campuchia Trung Quốc xâm lược Việt Nam và tiếp tục giao tranh biên giới Quân đội nhân dân Việt Nam ở lại Campuchia cho đến năm 1989 Ký kết Hiệp định Hòa bình Paris 1991 đồng thuận với quá trình chuyển đổi do Liên Hợp Quốc lãnh đạo",
@@ -3715,7 +4150,6 @@
             "Chiến tranh Đông Dương thứ ba",
             "Chiến tranh liên quan đến Thái Lan"
         ],
-        "dysnaty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam",
         "description": "",
         "location": "Campuchia, biên giới Tây Nam Việt Nam, biên giới phía đông Thái Lan",
         "id": "chiến tranh biên giới Tây Nam",
@@ -3762,7 +4196,8 @@
             "Hoa Kỳ",
             "[11]",
             "[12]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_bi%C3%AAn_gi%E1%BB%9Bi_T%C3%A2y_Nam"
     },
     {
         "result": "Cả hai bên cùng tuyên bố chiến thắng Trung Quốc phải rút quân Việt Nam tái chiếm lãnh thổ, tiếp tục tham chiến ở Campuchia. Xung đột tiếp diễn đến năm 1991",
@@ -3796,7 +4231,6 @@
             "Chiến tranh Việt Nam-Trung Quốc",
             "Chiến tranh biên giới"
         ],
-        "dysnaty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam",
         "description": "",
         "location": "Toàn tuyến biên giới phía bắc của Việt Nam",
         "id": "chiến tranh biên giới phía Bắc",
@@ -3806,7 +4240,8 @@
             "Việt Nam",
             "Cuba",
             "Liên Xô"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_bi%C3%AAn_gi%E1%BB%9Bi_Vi%E1%BB%87t%E2%80%93Trung_1979"
     },
     {
         "related_to": [
@@ -3818,34 +4253,69 @@
             "Lịch sử Việt Nam",
             "Cộng sản ở Việt Nam"
         ],
-        "dysnaty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đổi Mới",
-        "time": "1986"
+        "time": "1986",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "bình thường hóa quan hệ với Trung Quốc",
         "time": "7 tháng 11 1991",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "bình thường hóa quan hệ với Mỹ",
         "time": "11 tháng 7 1995",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "gia nhập ASEAN",
         "time": "28 tháng 7 1995",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "gia nhập APEC",
         "time": "14 tháng 11 1998",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
+        "result": "null",
+        "characters_related": [],
+        "related_to": [],
+        "description": "null",
+        "location": "null",
         "id": "gia nhập WTO",
         "time": "11 tháng 1 2007",
-        "dynasty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam"
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "related_to": [
@@ -3854,9 +4324,14 @@
             "Đại dịch COVID-19 theo quốc gia và vùng lãnh thổ",
             "Sự kiện tháng 1 năm 2020"
         ],
-        "dysnaty_related": "Cộng hòa xã hội chủ nghĩa Việt Nam",
+        "result": "null",
+        "characters_related": [],
+        "description": "null",
+        "location": "null",
         "id": "Đại dịch COVID-19",
-        "time": "2020-2022"
+        "time": "2020-2022",
+        "dynasty_related": [],
+        "url": "null"
     },
     {
         "result": "Đại Việt chiến thắng",
@@ -3892,7 +4367,8 @@
         "dynasty_related": [
             "Đại Việt",
             "Nhà Tống"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%91%C3%A1nh_T%E1%BB%91ng,_1075-1076"
     },
     {
         "result": "Tây Sơn thắng, làm phân rã hoàn toàn số quân Thanh đóng tại Đại Việt",
@@ -3916,7 +4392,8 @@
         "dynasty_related": [
             "Tây Sơn",
             "Đại Thanh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Th%C4%83ng_Long"
     },
     {
         "result": "Nhà Nguyên thất bại",
@@ -3939,7 +4416,8 @@
             "Champa",
             "Đại Việt",
             "Nhà Nguyên"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Ch%C6%B0%C6%A1ng_D%C6%B0%C6%A1ng_%C4%90%E1%BB%99"
     },
     {
         "result": "Nghĩa quân Lam Sơn chiến thắng",
@@ -3976,7 +4454,8 @@
         "dynasty_related": [
             "Nghĩa quân Lam Sơn",
             "Đại Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_T%E1%BB%91t_%C4%90%E1%BB%99ng_%E2%80%93_Ch%C3%BAc_%C4%90%E1%BB%99ng"
     },
     {
         "result": "Nghĩa quân Lam Sơn chiến thắng",
@@ -4023,7 +4502,8 @@
         "dynasty_related": [
             "Nghĩa quân Lam Sơn",
             "Đế quốc Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Chi_L%C4%83ng_%E2%80%93_X%C6%B0%C6%A1ng_Giang"
     },
     {
         "result": "Bất phân thắng bại (1627-1672) Sông Gianh là biên giới giữa Đàng Trong và Đàng Ngoài Chúa Nguyễn sụp đổ vào năm 1777 Chúa Trịnh sụp đổ năm 1786",
@@ -4080,7 +4560,8 @@
             "",
             "Vương quốc Bồ Đào Nha",
             "[1]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BB%8Bnh_Nguy%E1%BB%85n_ph%C3%A2n_tranh"
     },
     {
         "result": "Chúa Nguyễn chiến thắng",
@@ -4111,7 +4592,8 @@
         "dynasty_related": [
             "Chúa Nguyễn",
             "Công ty Đông Ấn Hà Lan"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_c%E1%BA%A3ng_Eo_1643"
     },
     {
         "result": "Quân Lê - Trịnh thắng trận Nhà Mạc chấm dứt hoàn toàn Đất Cao Bằng thống nhất trở lại Đại Việt",
@@ -4133,7 +4615,8 @@
             "Nhà Lê",
             "Chúa Trịnh",
             "Nhà Mạc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Cao_B%C3%ACnh_1677"
     },
     {
         "result": "Quân Trịnh chiến thắng, Tây Sơn phải quy thuận",
@@ -4158,7 +4641,8 @@
         "dynasty_related": [
             "Chúa Trịnh",
             "Tây Sơn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_C%E1%BA%A9m_Sa"
     },
     {
         "result": "Quân Trịnh thất bại, mất vùng lãnh thổ từ nam sông Gianh tới Thuận Hóa",
@@ -4183,7 +4667,8 @@
         "dynasty_related": [
             "Tây Sơn",
             "Chúa Trịnh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Ph%C3%BA_Xu%C3%A2n_1786"
     },
     {
         "result": "Chúa Trịnh sụp đổ",
@@ -4214,7 +4699,8 @@
             "Triều Tây Sơn",
             "",
             "Chúa Trịnh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Th%C4%83ng_Long_(1786)"
     },
     {
         "result": "Tây Sơn chiến thắng, quân Thanh rút khỏi Đại Việt. Nhà Tây Sơn thay thế nhà Hậu Lê Nhà Tây Sơn lần đầu tiên thống nhất đất nước sau khi đánh đổ các tập đoàn phong kiến Lê (sụp đổ năm 1789) - Trịnh (sụp đổ năm 1787) - Nguyễn (sụp đổ năm 1785) Nhà Tây Sơn chấp nhận triều cống cho nhà Thanh để lập quan hệ bang giao.",
@@ -4281,7 +4767,8 @@
             "",
             "Nhà Thanh",
             "Nhà Lê Trung Hưng"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Ng%E1%BB%8Dc_H%E1%BB%93i_-_%C4%90%E1%BB%91ng_%C4%90a"
     },
     {
         "result": "Chúa Nguyễn chiến thắng",
@@ -4314,7 +4801,8 @@
         "dynasty_related": [
             "Quân đội chúa Nguyễn",
             "Quân Tây Sơn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Th%E1%BB%8B_N%E1%BA%A1i_(1801)"
     },
     {
         "result": "quân chúa Nguyễn toàn thắng",
@@ -4339,7 +4827,8 @@
         "dynasty_related": [
             "Quân đội Tây Sơn",
             "Quân đội chúa Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Tr%E1%BA%A5n_Ninh_(1802)"
     },
     {
         "result": "Chiến thắng của Pháp giành quyền bảo hộ miền Nam Kỳ, nhà Nguyễn Hòa ước Nhâm Tuất (1862) Là tiền đề đầu tiên trong việc Pháp giành quyền bảo hộ toàn lãnh thổ Đại Nam",
@@ -4369,7 +4858,8 @@
             "Nhà Nguyễn",
             "Đế chế Pháp",
             "Tây Ban Nha"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Nam_K%E1%BB%B3"
     },
     {
         "result": "Liên quân Pháp - Tây Ban Nha bị cầm chân.",
@@ -4410,7 +4900,8 @@
             "Nhà Nguyễn",
             "Pháp",
             "Tây Ban Nha"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%C3%A0_N%E1%BA%B5ng_(1858-1859)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4434,7 +4925,8 @@
             "Đế chế thứ hai Pháp",
             "",
             "Tây Ban Nha"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_th%C3%A0nh_Gia_%C4%90%E1%BB%8Bnh,_1859"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4456,7 +4948,8 @@
         "dynasty_related": [
             "Nhà Nguyễn",
             "Đệ nhị Đế chế Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BA%A1i_%C4%91%E1%BB%93n_Ch%C3%AD_H%C3%B2a"
     },
     {
         "result": "Quân Pháp thắng trận",
@@ -4478,7 +4971,8 @@
         "dynasty_related": [
             "Nhà Nguyễn",
             "Đế chế Pháp thứ hai"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BB%8Bnh_T%C6%B0%E1%BB%9Dng_(1861)"
     },
     {
         "result": "Liên quân Pháp - Tây Ban Nha rút khỏi Đà Nẵng.",
@@ -4500,7 +4994,8 @@
             "Nhà Nguyễn",
             "Pháp",
             "Tây Ban Nha"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%C3%A0_N%E1%BA%B5ng_(1859-1860)"
     },
     {
         "result": "Hòa ước Giáp Tuất với những điều khoản có lợi cho Pháp.",
@@ -4526,7 +5021,8 @@
             "Nhà Nguyễn",
             "Quân Cờ Đen",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Bi%E1%BA%BFn_c%E1%BB%91_B%E1%BA%AFc_K%E1%BB%B3_(1873)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4546,7 +5042,8 @@
         "dynasty_related": [
             "Pháp",
             "Nhà Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_th%C3%A0nh_H%C3%A0_N%E1%BB%99i_(1873)"
     },
     {
         "result": "Quân Cờ đen chiến thắng",
@@ -4567,7 +5064,8 @@
         "dynasty_related": [
             "Quân Cờ Đen",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_C%E1%BA%A7u_Gi%E1%BA%A5y_(1873)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4598,7 +5096,8 @@
             "Nhà Thanh",
             "Nhà Nguyễn",
             "Quân Cờ Đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_B%E1%BA%AFc_K%E1%BB%B3"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4621,7 +5120,8 @@
         "dynasty_related": [
             "Pháp",
             "Nhà Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_th%C3%A0nh_H%C3%A0_N%E1%BB%99i_(1882)"
     },
     {
         "result": "Quân Pháp chiến thắng",
@@ -4648,7 +5148,8 @@
             "Pháp",
             "Nhà Nguyễn",
             "Quân Cờ Đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Nam_%C4%90%E1%BB%8Bnh_(1883)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4677,7 +5178,8 @@
             "Nhà Nguyễn",
             "",
             "Quân cờ đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Gia_Qu%E1%BA%A5t-Gia_L%C3%A2m"
     },
     {
         "result": "Quân Cờ Đen chiến thắng",
@@ -4708,7 +5210,8 @@
             "",
             "Đệ tam cộng hòa Pháp",
             "Quân Cờ Đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_C%E1%BA%A7u_Gi%E1%BA%A5y_(1883)"
     },
     {
         "result": "Pháp tuyên bố chiến thắng",
@@ -4738,7 +5241,8 @@
             "Quân Cờ Đen",
             "",
             "Nhà Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Ph%E1%BB%A7_Ho%C3%A0i_(1883)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -4761,7 +5265,8 @@
             "Pháp",
             "Tập tin:Ensign of the Nguyen Dynasty (1802-85).png",
             "triều Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_C%E1%BB%ADa_Thu%E1%BA%ADn_An"
     },
     {
         "result": "Quân Pháp chiếm thành cổ Sơn Tây.",
@@ -4788,7 +5293,8 @@
             "Quân Cờ Đen",
             "",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_S%C6%A1n_T%C3%A2y_(1883)"
     },
     {
         "result": "Quân Pháp chiếm được thành Bắc Ninh.",
@@ -4823,7 +5329,8 @@
             "Quân Cờ Đen",
             "",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%E1%BA%AFc_Ninh_(1884)"
     },
     {
         "result": "Quân Pháp chiếm được thành Hưng Hóa.",
@@ -4856,7 +5363,8 @@
             "Quân Cờ Đen",
             "Nhà Thanh",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_H%C6%B0ng_H%C3%B3a_(1884)"
     },
     {
         "result": "Quân Pháp chiếm được thành Tuyên Quang.",
@@ -4882,7 +5390,8 @@
             "Nhà Thanh",
             "",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Tuy%C3%AAn_Quang_(1884)"
     },
     {
         "result": "Quân Đế quốc thực dân Pháp đại bại",
@@ -4915,7 +5424,8 @@
             "Đại Thanh",
             "",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%E1%BA%AFc_L%E1%BB%87"
     },
     {
         "result": "Quân Pháp đại bại",
@@ -4944,7 +5454,8 @@
         "dynasty_related": [
             "Nhà Thanh",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_L%E1%BA%A1ng_S%C6%A1n_(1885)"
     },
     {
         "result": "Quân đội Pháp chiến thắng",
@@ -4966,7 +5477,8 @@
         "dynasty_related": [
             "Nhà Nguyễn",
             "Pháp"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Kinh_th%C3%A0nh_Hu%E1%BA%BF_1885"
     },
     {
         "result": "Việt Nam Dân chủ Cộng hòa chiến thắng. Việt Nam, Lào, Campuchia tách khỏi Liên hiệp Pháp, hoàn toàn độc lập. Pháp và Quốc gia Việt Nam tập kết về miền Nam. Việt Nam bị phân chia tạm thời tại Vĩ tuyến 17. Sau 2 năm Pháp rút khỏi Việt Nam. Hoa Kỳ đẩy mạnh việc can thiệp sâu hơn vào Đông Dương.[1][2]",
@@ -5066,7 +5578,8 @@
             "Trung Quốc",
             "Đông Đức",
             "[4]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_%C4%90%C3%B4ng_D%C6%B0%C6%A1ng_l%E1%BA%A7n_th%E1%BB%A9_nh%E1%BA%A5t"
     },
     {
         "result": "Quân Pháp chiếm Hà Nội, quân chủ lực Việt Nam Dân chủ Cộng hòa rút quân lên Việt Bắc lập cứ địa, Chiến tranh Đông Dương bùng nổ.",
@@ -5098,7 +5611,8 @@
         "dynasty_related": [
             "Tập đoàn quân viễn chinh Pháp",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_H%C3%A0_N%E1%BB%99i_1946"
     },
     {
         "result": "Pháp chiếm giữ một số khu vực biên giới nhưng thất bại về mặt chiến lược",
@@ -5131,7 +5645,8 @@
             "Pháp",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Vi%E1%BB%87t_B%E1%BA%AFc"
     },
     {
         "result": "Việt Minh phá được vòng vây ở Vĩnh Yên",
@@ -5173,7 +5688,8 @@
             "",
             "Quân đội nhân dân Việt Nam",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Tr%E1%BA%A7n_H%C6%B0ng_%C4%90%E1%BA%A1o"
     },
     {
         "result": "Việt Minh giành chiến thắng.[1] Cả bốn trung đoàn của Việt Minh đều đột phá không thành công.",
@@ -5204,7 +5720,8 @@
             "Quốc gia Việt Nam",
             "",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Ho%C3%A0ng_Hoa_Th%C3%A1m"
     },
     {
         "result": "Việt Minh giành chiến thắng về mặt chính trị nhưng không đạt được mục tiêu đã đề ra.[1]",
@@ -5244,7 +5761,8 @@
             "Giáo phận Phát Diệm",
             "",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Quang_Trung"
     },
     {
         "result": "Quân đội nhân dân Việt Nam giành thắng lợi chiến lược",
@@ -5275,7 +5793,8 @@
             "Khu Tự trị Mường",
             "Quốc gia Việt Nam",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_H%C3%B2a_B%C3%ACnh"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam chiến thắng, giải phóng một vùng rộng lớn ở địa bàn chiến lược quan trọng",
@@ -5301,7 +5820,8 @@
             "Quốc gia Việt Nam",
             "Khu tự trị Thái",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_T%C3%A2y_B%E1%BA%AFc"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam và Quân Giải phóng Nhân dân Lào chiến thắng",
@@ -5334,7 +5854,8 @@
             "Đảng Lao động Việt Nam",
             "Quân đội nhân dân Việt Nam",
             "Pathet Lào"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Th%C6%B0%E1%BB%A3ng_L%C3%A0o"
     },
     {
         "result": "Quân Giải phóng chiến thắng",
@@ -5360,7 +5881,8 @@
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam",
             "Hoa Kỳ",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%E1%BA%A4p_B%E1%BA%AFc"
     },
     {
         "result": "2 bên cùng tuyên bố chiến thắng",
@@ -5411,7 +5933,8 @@
             "Hoa Kỳ",
             "Việt Nam Cộng hòa",
             "[2]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Ia_%C4%90r%C4%83ng"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam chiến thắng",
@@ -5440,7 +5963,8 @@
             "Quân lực Việt Nam Cộng hòa",
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Ba_Gia"
     },
     {
         "result": "Cả hai bên đều tuyên bố chiến thắng",
@@ -5466,7 +5990,8 @@
             "Quân đội Hoa Kỳ",
             "",
             "Quân Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_V%E1%BA%A1n_T%C6%B0%E1%BB%9Dng"
     },
     {
         "result": "Thắng lợi của Quân giải phóng miền Nam",
@@ -5501,7 +6026,8 @@
             "Bộ chỉ huy Viện trợ Quân sự Mỹ tại Việt Nam",
             "",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%C3%ACnh_Gi%C3%A3"
     },
     {
         "result": "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam giành chiến thắng",
@@ -5530,7 +6056,8 @@
             "Bộ chỉ huy Viện trợ Quân sự Mỹ tại Việt Nam",
             "",
             "Quân lực Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BB%93ng_Xo%C3%A0i"
     },
     {
         "result": "Việt Nam Cộng Hoà và Hoa Kỳ chiến thắng",
@@ -5561,7 +6088,8 @@
             "Hoa Kỳ",
             "",
             "Mặt trận Dân tộc Giải phóng Miền Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Plei_Me"
     },
     {
         "result": "Liên quân chiến thắng",
@@ -5586,7 +6114,8 @@
             "Hàn Quốc",
             "",
             "Hoa Kỳ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BB%A9c_C%C6%A1"
     },
     {
         "result": "Cả hai bên đều tuyên bố chiến thắng.",
@@ -5614,7 +6143,8 @@
             "Lực lượng Quốc phòng Úc",
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Long_T%C3%A2n"
     },
     {
         "result": "Cả hai bên đều tuyên bố chiến thắng",
@@ -5652,7 +6182,8 @@
             "Việt Nam Cộng hòa",
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%E1%BA%AFk_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(1967)"
     },
     {
         "result": "Mặt trận Dân tộc Giải phóng miền Nam thắng",
@@ -5673,7 +6204,8 @@
             "Hoa Kỳ",
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C3%94ng_Th%C3%A0nh"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam giành thắng lợi chiến lược:[2][3][4] Quân Mỹ rút khỏi Khe Sanh, Quân đội Nhân dân Việt Nam chiếm Khe Sanh từ giữa tháng 7. Trung tâm chỉ huy Hàng rào điện tử McNamara bị phá hủy. Chiến lược cắt Đường mòn Hồ Chí Minh của Hoa Kỳ thất bại. Đường mòn Hồ Chí Minh được mở rộng về phía Đông. Hoa Kỳ thất bại trong mục tiêu \"giữ Khe Sanh bằng mọi giá\" mà Tổng thống Johnson từng tuyên bố.[5]",
@@ -5723,7 +6255,8 @@
             "Quân đội nhân dân Việt Nam",
             "",
             "Pathet Lào"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C6%B0%E1%BB%9Dng_9_-_Khe_Sanh"
     },
     {
         "result": "Hoa Kỳ và Việt Nam Cộng hòa thắng về chiến thuật. Thắng lợi về chính trị cho Mặt trận Dân tộc Giải phóng miền Nam.",
@@ -5752,7 +6285,8 @@
             "",
             "Việt Nam Dân chủ Cộng hòa",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_M%E1%BA%ADu_Th%C3%A2n_t%E1%BA%A1i_Hu%E1%BA%BF"
     },
     {
         "result": "Hai bên cùng tuyên bố chiến thắng, quân Mỹ sau đó rút đi, Quân Giải phóng miền Nam Việt Nam chiếm lại đồi.",
@@ -5778,7 +6312,8 @@
             "Quân đội Nhân dân Việt Nam",
             "",
             "Quân Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BB%93i_Th%E1%BB%8Bt_B%C4%83m"
     },
     {
         "result": "Chiến dịch thất bại, thắng lợi chiến lược của Quân Giải phóng miền Nam[1]",
@@ -5818,7 +6353,8 @@
             "Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam",
             "",
             "Pathet Lào"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Lam_S%C6%A1n_719"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam thắng",
@@ -5841,7 +6377,8 @@
             "Việt Nam Dân chủ Cộng hòa",
             "",
             "Pathet Lào"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%E1%BA%A3n_%C4%90%C3%B4ng"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam chiến thắng[1][2][3]",
@@ -5871,7 +6408,8 @@
             "Hoa Kỳ",
             "",
             "Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%E1%BA%AFk_T%C3%B4_(1972)"
     },
     {
         "result": "Hoa Kỳ và Việt Nam Cộng hòa chiếm được thành cổ Quảng Trị Mỗi bên tham chiến kiểm soát một nửa tỉnh Quảng Trị",
@@ -5906,7 +6444,8 @@
             "Hoa Kỳ",
             "",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B"
     },
     {
         "result": "Thắng lợi chiến lược của VNDCCH (Mỹ chấp nhận ký kết Hiệp định Paris với nội dung tương tự với bản dự thảo hiệp định vào tháng 10 năm 1972 - bản mà Hoa Kỳ đã từ chối ký kết).",
@@ -5971,7 +6510,8 @@
             "Không lực Hoa Kỳ",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Linebacker_II"
     },
     {
         "result": "- Hoa Kỳ và Việt Nam Cộng hòa chặn được cuộc tiến công của Quân Giải phóng miền Nam nhưng mất nhiều vị trí chiến lược - Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam mở rộng vùng kiểm soát thêm 10 - 20% lãnh thổ miền Nam Việt Nam Dân chủ Cộng hòa và Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam tiếp tục duy trì lợi thế tại Hội nghị Paris từ sau Chiến dịch đường 9 - Nam Lào",
@@ -6030,7 +6570,8 @@
             "Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam",
             "",
             "Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Xu%C3%A2n_%E2%80%93_H%C3%A8_1972"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam giành chiến thắng.[1] Hai phía đều bị tổn thất đáng kể Quân Giải phóng miền Nam Việt Nam giành quyền kiểm soát cảng Cửa Việt và nửa bắc tỉnh Quảng Trị (các huyện Vĩnh Linh, Cam Lộ, Gio Linh, Hướng Hóa, 6 xã phía Tây Triệu Phong, Thị xã Đông Hà và Cảng Cửa Việt) Việt Nam Cộng hòa tái chiếm thành công khu vực phía nam sông Thạch Hãn",
@@ -6075,7 +6616,8 @@
             "",
             "Không lực Hoa Kỳ",
             "Hạm đội 7"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Tr%E1%BB%8B_Thi%C3%AAn"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam chiến thắng[1][2]. Quân Giải phóng miền Nam Việt Nam chiếm phần lớn tỉnh KonTum và bao vây khu vực thị xã[3]",
@@ -6112,7 +6654,8 @@
             "Việt Nam Cộng Hòa",
             "",
             "Quân Giải phóng miền Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_B%E1%BA%AFc_T%C3%A2y_Nguy%C3%AAn_1972"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam chiến thắng[1]",
@@ -6167,7 +6710,8 @@
             "Hoa Kỳ",
             "",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Nguy%E1%BB%85n_Hu%E1%BB%87"
     },
     {
         "result": "Chiến thắng quyết định của Quân Giải phóng miền Nam Việt Nam[1]",
@@ -6197,7 +6741,8 @@
             "Quân Giải phóng miền Nam",
             "",
             "Quân lực Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C6%B0%E1%BB%9Dng_14_-_Ph%C6%B0%E1%BB%9Bc_Long"
     },
     {
         "result": "Chiến thắng quyết định của Quân Giải phóng miền Nam Việt Nam[1]",
@@ -6229,7 +6774,8 @@
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam",
             "Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_T%C3%A2y_Nguy%C3%AAn"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam giành thắng lợi quyết định[1] Việt Nam Cộng hòa đầu hàng, Hoa Kỳ rút toàn bộ nhân viên quân sự khỏi Việt Nam[2]",
@@ -6306,7 +6852,8 @@
             "Quân lực Việt Nam Cộng Hòa",
             "",
             "Quân đội Hoa Kỳ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_M%C3%B9a_Xu%C3%A2n_1975"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam chiến thắng Chế độ Khmer Đỏ bị lật đổ, Campuchia Dân chủ sụp đổ. Kết thúc nạn diệt chủng Campuchia Sự thành lập và sau đó là sự tan rã của Cộng hòa Nhân dân Campuchia Trung Quốc xâm lược Việt Nam và tiếp tục giao tranh biên giới Quân đội nhân dân Việt Nam ở lại Campuchia cho đến năm 1989 Ký kết Hiệp định Hòa bình Paris 1991 đồng thuận với quá trình chuyển đổi do Liên Hợp Quốc lãnh đạo",
@@ -6419,7 +6966,8 @@
             "Hoa Kỳ",
             "[11]",
             "[12]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_ph%E1%BA%A3n_c%C3%B4ng_bi%C3%AAn_gi%E1%BB%9Bi_T%C3%A2y-Nam_Vi%E1%BB%87t_Nam"
     },
     {
         "result": "Trung Quốc chiếm đá Gạc Ma Việt Nam giữ được bên đá Cô Lin và đá Len Đao",
@@ -6454,42 +7002,94 @@
             "Hải quân Quân Giải phóng Nhân dân Trung Quốc",
             "",
             "Hải quân Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/H%E1%BA%A3i_chi%E1%BA%BFn_Tr%C6%B0%E1%BB%9Dng_Sa_1988"
     },
     {
-        "result": "Trung Quốc chiếm đá Gạc Ma Việt Nam giữ được bên đá Cô Lin và đá Len Đao",
+        "result": "Chiến thắng của Việt Nam Dân chủ Cộng hòa, Mặt trận Dân tộc Giải phóng miền Nam Việt Nam cùng Cộng hòa miền Nam Việt Nam Hoa Kỳ và đồng minh rút quân sau Hiệp định Paris (1973) Việt Nam Cộng hòa, Vương quốc Campuchia-Cộng hòa Khmer và Vương quốc Lào sụp đổ, các đảng Cộng sản lên nắm chính quyền Thống nhất Việt Nam về mặt nhà nước thông qua cuộc Tổng tuyển cử năm 1976[6] Bắt đầu cuộc khủng hoảng tị nạn Đông Dương với làn sóng người di tản từ Đông Dương qua đường bộ và đường biển Bắt đầu cuộc diệt chủng Campuchia và Chiến tranh Đông Dương lần thứ ba",
         "characters_related": [
-            "",
-            "",
-            "Trần Đức Thông",
-            "-",
-            "",
-            "Vũ Phi Trừ",
-            "-",
-            "",
-            "Vũ Huy Lễ",
-            "",
-            "Lê Lệnh Sơn"
+            "Những nhà lãnh đạo trong Chiến tranh Việt Nam",
+            "Những nhà lãnh đạo trong Chiến tranh Việt Nam"
         ],
         "related_to": [
-            "Việt Nam năm 1988",
-            "Quan hệ quân sự Trung Quốc-Việt Nam",
-            "Xung đột năm 1988",
-            "Lịch sử Biển Đông",
+            "Chiến tranh Việt Nam",
+            "Chiến tranh trong lịch sử Việt Nam",
+            "Lịch sử Hoa Kỳ",
+            "Lịch sử Việt Nam thời kỳ 1945-1975",
+            "Chiến tranh liên quan tới Việt Nam",
+            "Chiến tranh liên quan tới Hàn Quốc",
+            "Xung đột thế kỷ 20",
+            "Xung đột trong thời kỳ Chiến tranh Lạnh",
+            "Lịch sử Việt Nam",
+            "Chiến tranh liên quan tới Campuchia",
+            "Chiến tranh liên quan tới Lào",
+            "Chiến tranh liên quan tới Thái Lan",
+            "Chiến tranh liên quan tới Hoa Kỳ",
+            "Thập niên 1950",
+            "Xung đột thập niên 1950",
+            "Việt Nam năm 1957",
+            "Việt Nam năm 1958",
+            "Việt Nam năm 1959",
+            "Việt Nam năm 1960",
+            "Thập niên 1960",
+            "Xung đột thập niên 1960",
+            "Việt Nam năm 1961",
+            "Việt Nam năm 1962",
+            "Việt Nam năm 1963",
+            "Việt Nam năm 1964",
+            "Việt Nam năm 1965",
+            "Việt Nam năm 1966",
+            "Việt Nam năm 1967",
+            "Việt Nam năm 1968",
+            "Việt Nam năm 1969",
+            "Việt Nam năm 1970",
+            "Thập niên 1970",
+            "Xung đột thập niên 1970",
+            "Việt Nam năm 1975",
+            "Chủ nghĩa đế quốc",
             "Chiến tranh bán đảo Đông Dương",
-            "Lịch sử quân sự Việt Nam",
-            "Chiến tranh Đông Dương thứ ba"
+            "Nội chiến Lào",
+            "Nhiệm kỳ tổng thống Dwight D. Eisenhower",
+            "Nhiệm kỳ tổng thống Gerald Ford",
+            "Nhiệm kỳ tổng thống John F. Kennedy",
+            "Nhiệm kỳ tổng thống Lyndon B. Johnson",
+            "Nhiệm kỳ tổng thống Richard Nixon",
+            "Chiến tranh ủy nhiệm",
+            "Nội chiến cách mạng",
+            "Chiến tranh liên quan tới Úc",
+            "Chiến tranh liên quan tới New Zealand",
+            "Chiến tranh liên quan tới Cộng hòa Nhân dân Trung Hoa",
+            "Chiến tranh liên quan tới Philippines",
+            "Chiến tranh liên quan tới Liên Xô"
         ],
-        "description": "3 tàu khu trục gồm:",
-        "location": "Đá Gạc Ma, đá Cô Lin, đá Len Đao thuộc quần đảo Trường Sa",
+        "description": "",
+        "location": "Việt Nam, Campuchia, Lào, Biển Đông, Vịnh Thái Lan",
         "id": "Chiến tranh Việt Nam",
-        "time": "14 tháng 3 năm 1988",
+        "time": "1 tháng 11, 1955 - 30 tháng 4 năm 1975 (1975-04-30) (19 năm, 5 tháng, 4 tuần và 1 ngày)[A 1][5]",
         "dynasty_related": [
-            "",
-            "Hải quân Quân Giải phóng Nhân dân Trung Quốc",
-            "",
-            "Hải quân Nhân dân Việt Nam"
-        ]
+            "Việt Nam Dân chủ Cộng hòa",
+            "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam",
+            "Cộng hòa Miền Nam Việt Nam",
+            "Pathet Lào",
+            "Khmer Đỏ",
+            "GRUNK",
+            "Trung Quốc",
+            "Liên Xô",
+            "Bắc Triều Tiên",
+            "Viện trợ nước ngoài trong Chiến tranh Việt Nam",
+            "Việt Nam Cộng hòa",
+            "Hoa Kỳ",
+            "Hàn Quốc",
+            "Úc",
+            "New Zealand",
+            "Lào",
+            "Campuchia",
+            "Cộng hòa Khmer",
+            "Thái Lan",
+            "Philippines",
+            "Viện trợ nước ngoài trong Chiến tranh Việt Nam"
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_Nam"
     },
     {
         "result": "Đại Cồ Việt chiến thắng",
@@ -6512,7 +7112,8 @@
         "dynasty_related": [
             "Đại Cồ Việt",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(1044)"
     },
     {
         "result": "Đại Việt toàn thắng. Chém được Bê Mi Thuế, bắt dân lính Chăm về, phá hủy thành trì, kho tàng.",
@@ -6534,7 +7135,8 @@
         "dynasty_related": [
             "Nhà Tiền Lê",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(982)"
     },
     {
         "result": "Đại Việt chiến thắng",
@@ -6559,7 +7161,8 @@
         "dynasty_related": [
             "Đại Việt",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(1069)"
     },
     {
         "result": "Xem phần Kết quả và ý nghĩa",
@@ -6586,7 +7189,8 @@
         "dynasty_related": [
             "Chiêm Thành",
             "Đại Việt"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(1367%E2%80%931396)"
     },
     {
         "result": "Đại Việt toàn thắng. Bắt được vua Chiêm Thành là Bí Cai cùng bộ thuộc.",
@@ -6611,7 +7215,8 @@
             "Đại Việt",
             "Nhà Lê sơ",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(1446)"
     },
     {
         "result": "Chúa Nguyễn toàn thắng. Mở rộng thêm lãnh thổ",
@@ -6634,7 +7239,8 @@
         "dynasty_related": [
             "Chúa Nguyễn",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t%E2%80%93Chi%C3%AAm_(1611)"
     },
     {
         "result": "Quân Chiêm đại thắng",
@@ -6661,7 +7267,8 @@
         "dynasty_related": [
             "Đại Việt",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90%E1%BB%93_B%C3%A0n_(1377)"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam chiến thắng Chế độ Khmer Đỏ bị lật đổ, Campuchia Dân chủ sụp đổ. Kết thúc nạn diệt chủng Campuchia Sự thành lập và sau đó là sự tan rã của Cộng hòa Nhân dân Campuchia Trung Quốc xâm lược Việt Nam và tiếp tục giao tranh biên giới Quân đội nhân dân Việt Nam ở lại Campuchia cho đến năm 1989 Ký kết Hiệp định Hòa bình Paris 1991 đồng thuận với quá trình chuyển đổi do Liên Hợp Quốc lãnh đạo",
@@ -6774,7 +7381,8 @@
             "Hoa Kỳ",
             "[11]",
             "[12]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_bi%C3%AAn_gi%E1%BB%9Bi_Vi%E1%BB%87t_Nam_%E2%80%93_Campuchia"
     },
     {
         "result": "Quân Mông Cổ chiến thắng",
@@ -6810,7 +7418,8 @@
             "Nhà Trần",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%C3%ACnh_L%E1%BB%87_Nguy%C3%AAn"
     },
     {
         "result": "Khmer Đỏ chiến thắng; thành lập Campuchia Dân chủ. Bắt đầu cuộc diệt chủng Campuchia.",
@@ -6861,7 +7470,8 @@
             "Việt Nam Dân chủ Cộng hòa",
             "Cộng hòa Miền Nam Việt Nam",
             "Trung Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/N%E1%BB%99i_chi%E1%BA%BFn_Campuchia"
     },
     {
         "result": "Nhà Hán chiến thắng",
@@ -6891,7 +7501,8 @@
         "dynasty_related": [
             "Nhà Hán",
             "Nam Việt"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_H%C3%A1n%E2%80%93Nam_Vi%E1%BB%87t"
     },
     {
         "result": "Quân Hán chiến thắng",
@@ -6928,7 +7539,8 @@
             "Quân đội",
             "Hai Bà Trưng",
             "Nhà Đông Hán"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_H%C3%A1n%E2%80%93Vi%E1%BB%87t_(42%E2%80%9343)"
     },
     {
         "result": "Nhà Hậu Trần sụp đổ, các lực lượng khác bị dẹp hoặc thu hẹp phạm vi hoạt động",
@@ -6994,7 +7606,8 @@
             "Nhà Hậu Trần",
             "Đại Việt",
             "Nhà Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Minh%E2%80%93Vi%E1%BB%87t_(1407%E2%80%931414)"
     },
     {
         "result": "Đại Việt chiến thắng; Quân Mông Cổ rút về Vân Nam",
@@ -7031,7 +7644,8 @@
             "Đại Việt",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng_%E2%80%93_%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_1"
     },
     {
         "result": "Quân Đại Việt chiến thắng, Nguyên Mông phải rút lui khỏi Đại Việt",
@@ -7100,7 +7714,8 @@
             "Chiêm Thành",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng_%E2%80%93_%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_2"
     },
     {
         "result": "Quân Đại Việt toàn thắng, Quân Mông Nguyên phải rút lui khỏi Đại Việt",
@@ -7165,7 +7780,8 @@
             "Đại Việt",
             "",
             "Đế quốc Mông Cổ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng_%E2%80%93_%C4%90%E1%BA%A1i_Vi%E1%BB%87t_l%E1%BA%A7n_3"
     },
     {
         "result": "Bất phân thắng bại[3] Nhật Bản dàn xếp việc ngừng bắn[4][5]",
@@ -7193,7 +7809,8 @@
             "Pháp Vichy",
             "Liên bang Đông Dương",
             "Thái Lan"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Ph%C3%A1p%E2%80%93Th%C3%A1i"
     },
     {
         "result": "Nhà Tần chiếm được nhiều vùng lãnh thổ ở phương Nam, lập ra ba quận là Nam Hải, Quế Lâm, và Tượng Quận vào năm 214 TCN Tộc Âu Việt do Thục Phán chỉ huy kháng cự thành công",
@@ -7218,7 +7835,8 @@
         "dynasty_related": [
             "Bách Việt",
             "Nhà Tần"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BA%A7n%E2%80%93Vi%E1%BB%87t"
     },
     {
         "result": "Đại Cồ Việt chiến thắng",
@@ -7244,7 +7862,8 @@
         "dynasty_related": [
             "Đại Cồ Việt",
             "Tống"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_T%E1%BB%91ng%E2%80%93Vi%E1%BB%87t_l%E1%BA%A7n_th%E1%BB%A9_nh%E1%BA%A5t"
     },
     {
         "result": "Quân Việt chiến thắng",
@@ -7286,7 +7905,8 @@
         "dynasty_related": [
             "Nhà Nguyễn",
             "Triều Rattanakosin"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Xi%C3%AAm_(1833%E2%80%931834)"
     },
     {
         "result": "Pháp chiến thắng",
@@ -7324,7 +7944,8 @@
             "Vương quốc Rattanakosin",
             "Pháp",
             "Liên bang Đông Dương"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Xi%C3%AAm_%E2%80%93_Ph%C3%A1p"
     },
     {
         "result": "Triều Nguyễn chiến thắng",
@@ -7367,7 +7988,8 @@
             "",
             "Xiêm La",
             "Triều Nguyễn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Cu%E1%BB%99c_n%E1%BB%95i_d%E1%BA%ADy_L%C3%AA_V%C4%83n_Kh%C3%B4i"
     },
     {
         "result": "Nhật Bản chiến thắng",
@@ -7398,7 +8020,8 @@
             "Đạo quân Viễn chinh Đông Dương",
             "Pháp Vichy",
             "Liên bang Đông Dương"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C3%B4ng_D%C6%B0%C6%A1ng_(1940)"
     },
     {
         "result": "Nhật Bản chiến thắng",
@@ -7440,7 +8063,8 @@
             "Pháp",
             "Liên bang Đông Dương",
             "Hoa Kỳ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Nh%E1%BA%ADt_%C4%91%E1%BA%A3o_ch%C3%ADnh_Ph%C3%A1p_t%E1%BA%A1i_%C4%90%C3%B4ng_D%C6%B0%C6%A1ng"
     },
     {
         "result": "",
@@ -7465,7 +8089,8 @@
         "dynasty_related": [
             "Pháp",
             "Liên bang Đông Dương"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Kh%E1%BB%9Fi_ngh%C4%A9a_Gi%C3%A0ng_P%E1%BA%A3_Chay"
     },
     {
         "result": "Pháp chiến thắng Lực lượng khởi nghĩa bị đánh bại Đảng viên bị Pháp truy nã, giam cầm, lưu đày, hành quyết.[1]",
@@ -7498,7 +8123,8 @@
             "",
             "",
             "Quân đội Pháp tại Đông Dương"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Kh%E1%BB%9Fi_ngh%C4%A9a_Y%C3%AAn_B%C3%A1i"
     },
     {
         "result": "Lào chiến thắng",
@@ -7534,7 +8160,8 @@
             "Thái Lan",
             "Lào",
             "Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_bi%C3%AAn_gi%E1%BB%9Bi_L%C3%A0o_%E2%80%93_Th%C3%A1i_Lan"
     },
     {
         "result": "Pathet Lào chiến thắng và thành lập Cộng hòa Dân chủ Nhân dân Lào.",
@@ -7611,7 +8238,8 @@
             "România",
             "Tiệp Khắc",
             "Trung Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/N%E1%BB%99i_chi%E1%BA%BFn_L%C3%A0o"
     },
     {
         "result": "Chiến thắng của Majapahit",
@@ -7637,7 +8265,8 @@
             "Vương quốc Singhasari",
             "Vương quốc Kediri",
             "Đế quốc Majapahit"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/M%C3%B4ng_C%E1%BB%95_x%C3%A2m_l%C6%B0%E1%BB%A3c_Java"
     },
     {
         "result": "Đại Việt chiến thắng[1]. Để tránh xung đột thêm, Đại Việt đồng ý triều cống cho nhà Nguyên. Đế quốc Mông Cổ từ bỏ hoàn toàn tham vọng xâm lược Đại Việt",
@@ -7684,7 +8313,8 @@
             "Nhà Trần",
             "Nam Tống",
             "Chiêm Thành"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Nguy%C3%AAn_M%C3%B4ng_%E2%80%93_%C4%90%E1%BA%A1i_Vi%E1%BB%87t"
     },
     {
         "result": "Cả hai đều tuyên bố chiến thắng Pháp chiến thắng tại Đài Loan và các hòn đảo lân cận Quân Thanh chiến thắng chiến lược trên lục địa[1][2] Chính phủ Ferry bị sụp đổ vào cuối tháng 3 khi cuộc chiến bị phản đối Hiệp ước Thiên Tân",
@@ -7767,7 +8397,8 @@
             "Nhà Nguyễn",
             "",
             "Quân Cờ Đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Ph%C3%A1p%E2%80%93Thanh"
     },
     {
         "result": "Đại Thanh tuyên bố chiến thắng hoàn toàn nhưng thật ra thất trận 2 lần ở Việt Nam và Myanmar và hao tổn nhiều tài chính",
@@ -7819,7 +8450,8 @@
             "",
             "Vương triều Shahs",
             "Nepal"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Th%E1%BA%ADp_to%C3%A0n_V%C3%B5_c%C3%B4ng"
     },
     {
         "result": "Giải phóng quân Trung Quốc chiến thắng.",
@@ -7837,7 +8469,8 @@
             "Giải phóng quân Trung Quốc",
             "",
             "Quân đội Trung Hoa Dân Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%91%E1%BA%A3o_B%E1%BA%A1ch_Long_V%E1%BB%B9_1955"
     },
     {
         "result": "Pháp chiến thắng",
@@ -7866,7 +8499,8 @@
             "Nhà Nguyễn",
             "",
             "Quân cờ đen"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Gia_Qu%E1%BA%A5t_%E2%80%93_Gia_L%C3%A2m"
     },
     {
         "result": "Hai bên cùng tuyên bố chiến thắng",
@@ -7906,7 +8540,8 @@
             "[1]",
             "",
             "Quân đội Hàn Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Quang_Th%E1%BA%A1nh_(1967)"
     },
     {
         "result": "Bất phân thắng bại (1627-1672) Sông Gianh là biên giới giữa Đàng Trong và Đàng Ngoài Chúa Nguyễn sụp đổ vào năm 1777 Chúa Trịnh sụp đổ năm 1786",
@@ -7963,7 +8598,8 @@
             "",
             "Vương quốc Bồ Đào Nha",
             "[1]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BB%8Bnh%E2%80%93Nguy%E1%BB%85n_ph%C3%A2n_tranh"
     },
     {
         "result": "Việt-Xiêm ký hòa ước và cùng rút quân, Cao Miên phải thần phục cả hai. Nam Kỳ chính thức được Xiêm La và Cao Miên công nhận thuộc Đại Nam (Việt Nam).",
@@ -8009,7 +8645,8 @@
             "Nhà Nguyễn",
             "Xiêm La",
             "Nhà Chakri"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_tranh_Vi%E1%BB%87t_%E2%80%93_Xi%C3%AAm_(1841%E2%80%931845)"
     },
     {
         "result": "Nhiều căn cứ du kích và các trại tị nạn dọc theo biên giới Campuchia-Thái Lan bị phá hủy và làm tự phát những hành động thù địch công khai giữa quân đội Việt Nam và Thái Lan.",
@@ -8035,7 +8672,8 @@
             "Mặt trận Dân tộc Giải phóng Nhân dân Khmer",
             "FUNCINPEC",
             "Trung Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_Th%C3%A1i_Lan_%E2%80%93_Vi%E1%BB%87t_Nam_(1979%E2%80%931989)"
     },
     {
         "result": "",
@@ -8060,7 +8698,8 @@
             "Cộng hòa Xã hội Chủ nghĩa Việt Nam",
             "",
             "Kampuchea Dân chủ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_bi%C3%AAn_gi%E1%BB%9Bi_Vi%E1%BB%87t_Nam%E2%80%93Campuchia_(1975%E2%80%931978)"
     },
     {
         "result": "Hun Sen thắng lợi và trở thành Thủ tướng duy nhất Đồng Thủ tướng Norodom Ranariddh bị lật đổ phải sống lưu vong đến năm 1998",
@@ -8095,7 +8734,8 @@
             "",
             "Khmer Đỏ",
             "[1]"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_Campuchia_(1997)"
     },
     {
         "result": "",
@@ -8152,7 +8792,8 @@
             "",
             "Chính phủ lưu vong Hoàng gia Lào",
             "Người H'Mông"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_t%E1%BA%A1i_L%C3%A0o"
     },
     {
         "result": "Giao tranh tại một số khu vực biên giới nhưng không bùng phát thành chiến tranh lớn. Hai nước bình thường hóa quan hệ vào cuối năm 1991.",
@@ -8192,7 +8833,8 @@
             "Cộng hòa Nhân dân Trung Hoa",
             "",
             "Cộng hòa Xã hội chủ nghĩa Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_Vi%E1%BB%87t%E2%80%93Trung_1979%E2%80%931991"
     },
     {
         "result": "Đợt 1: Bất phân thắng bại, mỗi bên giữ một nửa đồi Đợt 2: Quân đội Nhân dân Việt Nam chiến thắng, hoàn tất chiếm đồi.",
@@ -8230,7 +8872,8 @@
             "Quốc gia Việt Nam",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%91%E1%BB%93i_A1"
     },
     {
         "result": "QĐNDVN chiếm được các điểm cao phía Bắc, đặt khu chỉ huy của Pháp dưới tầm hỏa lực.",
@@ -8253,7 +8896,8 @@
             "Liên hiệp Pháp",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_B%E1%BA%A3n_K%C3%A9o"
     },
     {
         "result": "Việt Minh giành quyền kiểm soát Bắc Kạn[1]",
@@ -8276,7 +8920,8 @@
             "Chính phủ Trung ương lâm thời Việt Nam",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Cao_%E2%80%93_B%E1%BA%AFc_%E2%80%93_L%E1%BA%A1ng"
     },
     {
         "result": "Pháp kiểm soát khu vực Điện Biên Phủ và bắt đầu xây dựng tập đoàn cứ điểm.",
@@ -8300,7 +8945,8 @@
             "Quân đội Quốc gia Việt Nam",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Cu%E1%BB%99c_h%C3%A0nh_qu%C3%A2n_Castor"
     },
     {
         "result": "QĐNDVN chiếm đồi và đẩy lui các đợt phản kích",
@@ -8334,7 +8980,8 @@
             "Quốc gia Việt Nam",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%91%E1%BB%93i_C1"
     },
     {
         "result": "Việt Nam phá thế an toàn của đối phương ở tuyến đường số 4 và gây được lòng tin cho nhân dân trong vùng[1]",
@@ -8354,7 +9001,8 @@
             "Pháp",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C3%B4ng_B%E1%BA%AFc_I"
     },
     {
         "result": "Mục đích đánh lạc hướng của Việt Minh thành công nhưng vẫn không làm tê liệt đường số 4.",
@@ -8375,7 +9023,8 @@
             "Khu tự trị Nùng",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C3%B4ng_B%E1%BA%AFc_II"
     },
     {
         "result": "Chiến thắng của Quân đội Nhân dân Việt Nam.",
@@ -8402,7 +9051,8 @@
             "Quốc gia Việt Nam",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90ak_P%C6%A1"
     },
     {
         "result": "Việt Minh thắng, tạo thế cho chiến dịch Đông Bắc II",
@@ -8424,7 +9074,8 @@
             "Khu tự trị Nùng",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%90i%E1%BB%81n_X%C3%A1"
     },
     {
         "result": "Chiến thắng của Quân đội Nhân dân Việt Nam, gần như tiêu diệt Phân khu Bắc, cứ điểm Điện Biên Phủ",
@@ -8460,7 +9111,8 @@
             "Pháp",
             "Quốc gia Việt Nam",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_%C4%91%E1%BB%93i_%C4%90%E1%BB%99c_L%E1%BA%ADp"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam hoàn tất trận địa bao vây khu vực Điện Biên Phủ",
@@ -8492,7 +9144,8 @@
             "Xứ Thái tự trị",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/V%C3%B2ng_v%C3%A2y_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7"
     },
     {
         "result": "Việt Minh giành chiến thắng về mặt chính trị nhưng không đạt được mục tiêu đã đề ra.[1]",
@@ -8532,7 +9185,8 @@
             "Giáo phận Phát Diệm",
             "",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_H%C3%A0_Nam_Ninh"
     },
     {
         "result": "Quân đội Pháp chiếm giữ thành phố Hải Phòng và thị xã Kiến An",
@@ -8566,7 +9220,8 @@
             "Quân đội viễn chinh Pháp vùng Viễn Đông",
             "",
             "Vệ quốc đoàn"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_H%E1%BA%A3i_Ph%C3%B2ng_(1946%E2%80%931947)"
     },
     {
         "result": "Quân đội Nhân dân Việt Nam giành thắng lợi mở màn",
@@ -8596,7 +9251,8 @@
         "dynasty_related": [
             "Quân đội Pháp",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Him_Lam"
     },
     {
         "result": "2 bên giằng co đến ngày 7-5 thì quân Pháp đầu hàng",
@@ -8626,7 +9282,8 @@
             "Liên hiệp Pháp",
             "",
             "Quân đội Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_H%E1%BB%93ng_C%C3%BAm"
     },
     {
         "result": "Quân đội Tưởng Giới Thạch rút lui. Việt Nam Quốc dân Đảng và Việt Nam Cách mệnh Đồng minh Hội rút khỏi Chính phủ Liên hiệp",
@@ -8662,7 +9319,8 @@
             "Việt Quốc",
             "Đảng Đại Việt",
             "Việt Cách"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Hoa_qu%C3%A2n_nh%E1%BA%ADp_Vi%E1%BB%87t"
     },
     {
         "result": "Việt Minh chiếm nhiều vị trí nhưng không chiếm được đồn Nghĩa Lộ",
@@ -8691,7 +9349,8 @@
             "Xứ Thái tự trị",
             "",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_L%C3%BD_Th%C6%B0%E1%BB%9Dng_Ki%E1%BB%87t"
     },
     {
         "result": "Không rõ ràng",
@@ -8717,7 +9376,8 @@
             "French Union",
             "",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Cu%E1%BB%99c_h%C3%A0nh_qu%C3%A2n_Lorraine"
     },
     {
         "result": "Hai bên đều tuyên bố chiến thắng",
@@ -8746,7 +9406,8 @@
             "Việt Nam Dân chủ Cộng hòa",
             "Đảng Lao động Việt Nam",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Ninh_B%C3%ACnh"
     },
     {
         "result": "",
@@ -8764,7 +9425,8 @@
             "Pháp",
             "Việt Nam Dân chủ Cộng hòa",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Ngh%C4%A9a_L%E1%BB%99"
     },
     {
         "result": "Liên quân Quân Giải phóng Nhân dân Trung Quốc và Quân đội Nhân dân Việt Nam chiếm thành phố Nam Ninh và một số địa phương khác tại Quảng Tây",
@@ -8794,7 +9456,8 @@
             "Đài Loan",
             "",
             "Quốc quân Trung Hoa Dân Quốc"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Th%E1%BA%ADp_V%E1%BA%A1n_%C4%90%E1%BA%A1i_S%C6%A1n"
     },
     {
         "result": "Pháp phá hủy làng Vật Lại, dân chúng và quân đội du kích Việt Nam rút lui an toàn.",
@@ -8812,7 +9475,8 @@
             "",
             "Quân đội Quốc gia Việt Nam",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_V%E1%BA%ADt_L%E1%BA%A1i"
     },
     {
         "result": "Liên hiệp Pháp giữ vững Vĩnh Yên. Quân đội Nhân dân Việt Nam bỏ cuộc.",
@@ -8847,7 +9511,8 @@
             "Liên hiệp Pháp",
             "Việt Nam Dân chủ Cộng hòa",
             "Quân đội nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_V%C4%A9nh_Y%C3%AAn"
     },
     {
         "result": "Quân Pháp đầu hàng",
@@ -8866,7 +9531,8 @@
             "Quân đội Pháp",
             "",
             "Quân đội Quốc gia Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Vinh_(1946)"
     },
     {
         "result": "Việt Nam giành lại độc lập và chiến tranh Đông Dương bùng nổ",
@@ -8988,7 +9654,8 @@
             "Chính phủ Vichy",
             "Nhật Bản",
             "Đế quốc Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Phong_tr%C3%A0o_gi%E1%BA%A3i_ph%C3%B3ng_d%C3%A2n_t%E1%BB%99c_Vi%E1%BB%87t_Nam_(1885%E2%80%931945)"
     },
     {
         "result": "Việt Minh giành được chính quyền. Vua Bảo Đại thoái vị, chấm dứt chế độ quân chủ chuyên chế. Đế quốc Nhật Bản đầu hàng Việt Minh.",
@@ -9031,7 +9698,8 @@
             "Nhật Bản",
             "Đế quốc Việt Nam",
             "Việt Minh"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/C%C3%A1ch_m%E1%BA%A1ng_Th%C3%A1ng_T%C3%A1m"
     },
     {
         "result": "",
@@ -9045,7 +9713,8 @@
         "location": "Khách sạn Victoria, khu vực tô giới Sa Diện thuộc Anh, Quảng Châu, Quảng Đông, Trung Hoa Dân Quốc",
         "id": "Tiếng bom Sa Diện",
         "time": "",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Ti%E1%BA%BFng_bom_Ph%E1%BA%A1m_H%E1%BB%93ng_Th%C3%A1i"
     },
     {
         "result": "",
@@ -9064,7 +9733,8 @@
         "location": "Thị trấn Ba Chúc, huyện Tri Tôn, tỉnh An Giang, Việt Nam",
         "id": "Thảm sát Ba Chúc",
         "time": "",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Th%E1%BA%A3m_s%C3%A1t_Ba_Ch%C3%BAc"
     },
     {
         "result": "Trung Quốc chiếm đá Gạc Ma Việt Nam giữ được bên đá Cô Lin và đá Len Đao",
@@ -9099,7 +9769,8 @@
             "Hải quân Quân Giải phóng Nhân dân Trung Quốc",
             "",
             "Hải quân Nhân dân Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Xung_%C4%91%E1%BB%99t_gi%C3%A0nh_quy%E1%BB%81n_ki%E1%BB%83m_so%C3%A1t_t%E1%BA%A1i_qu%E1%BA%A7n_%C4%91%E1%BA%A3o_Tr%C6%B0%E1%BB%9Dng_Sa_1988"
     },
     {
         "result": "Quân đội Mỹ thắng về chiến thuật Mặt trận Dân tộc Giải phóng thắng về chiến lược",
@@ -9125,7 +9796,8 @@
             "Việt Nam Cộng hòa",
             "",
             "Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Cedar_Falls"
     },
     {
         "result": "Chiến thắng quyết định của Quân Giải phóng miền Nam Việt Nam[1]",
@@ -9155,7 +9827,8 @@
             "Quân Giải phóng miền Nam",
             "",
             "Quân lực Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_%C4%90%C6%B0%E1%BB%9Dng_14_%E2%80%93_Ph%C6%B0%E1%BB%9Bc_Long"
     },
     {
         "result": "Hoa Kỳ hoàn tất di tản mà không có thiệt hại lớn, 7000 người được di tản",
@@ -9182,7 +9855,8 @@
             "Việt Nam Dân chủ Cộng hòa",
             "",
             "Mặt trận Dân tộc Giải phóng miền Nam Việt Nam"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Gi%C3%B3_l%E1%BB%91c"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam giành chiến thắng chiến lược[1][2][3]",
@@ -9228,7 +9902,8 @@
             "Bộ chỉ huy Viện trợ Quân sự Mỹ tại Việt Nam",
             "",
             "Quân lực Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Chi%E1%BA%BFn_d%E1%BB%8Bch_Phan_Rang_%E2%80%93_Xu%C3%A2n_L%E1%BB%99c"
     },
     {
         "result": "",
@@ -9245,7 +9920,8 @@
         "location": "Đắk Sơn, tỉnh Đắk Lắk, Việt Nam Cộng hòa",
         "id": "Thảm sát Đắk Sơn",
         "time": "",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Th%E1%BA%A3m_s%C3%A1t_%C4%90%E1%BA%AFk_S%C6%A1n"
     },
     {
         "result": "Cuộc khởi nghĩa tạo tiếng vang lớn, gây nhiều tổn hại cho Pháp-Nhật, nhưng về sau bị đàn áp và đã thất bại, nhiều đảng viên, cán bộ cao cấp của Đảng Cộng sản Đông Dương bị xử tử. Một bộ phận nghĩa quân rút vào rừng tiến hành chiến tranh du kích.",
@@ -9277,7 +9953,8 @@
             "Pháp Vichy",
             "Liên bang Đông Dương",
             "Đế quốc Nhật Bản"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Nam_K%E1%BB%B3_kh%E1%BB%9Fi_ngh%C4%A9a"
     },
     {
         "result": "Chiến thắng quyết định của Việt Nam Dân chủ Cộng hòa và Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam\/Cộng hòa Miền Nam Việt Nam: Kết thúc chiến tranh Việt Nam Chính phủ cách mạng lâm thời giành chính quyền trên toàn miền Nam Việt Nam, bắt đầu chuẩn bị việc tổng tuyển cử thống nhất Việt Nam Hoa Kỳ sơ tán tất cả các nhân viên ngoại giao, quân sự và dân sự khỏi miền Nam Việt Nam Sài Gòn đổi tên thành Thành phố Hồ Chí Minh",
@@ -9348,7 +10025,8 @@
             "Cộng hòa miền Nam Việt Nam",
             "Việt Nam Cộng hòa",
             "Hoa Kỳ"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/S%E1%BB%B1_ki%E1%BB%87n_30_th%C3%A1ng_4_n%C4%83m_1975"
     },
     {
         "result": "Cả 2 bên đều bị thiệt hại nặng Hoa Kỳ và Việt Nam Cộng hòa giành chiến thắng về mặt trận quân sự Việt Nam Dân chủ Cộng hòa và Mặt trận Dân tộc Giải phóng miền Nam Việt Nam giành chiến thắng về chiến lược, tuyên truyền và ngoại giao.",
@@ -9395,7 +10073,8 @@
             "Mặt trận Dân tộc Giải phóng Miền Nam Việt Nam",
             "",
             "Việt Nam Dân chủ Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/S%E1%BB%B1_ki%E1%BB%87n_T%E1%BA%BFt_M%E1%BA%ADu_Th%C3%A2n"
     },
     {
         "result": "Quân Giải phóng miền Nam Việt Nam chiến thắng chiến lược, chiếm được Chơn Thành vào 2 tháng 4 năm 1975",
@@ -9417,7 +10096,8 @@
             "Quân Giải phóng miền Nam",
             "",
             "Quân lực Việt Nam Cộng hòa"
-        ]
+        ],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/Tr%E1%BA%ADn_Ch%C6%A1n_Th%C3%A0nh"
     },
     {
         "result": "",
@@ -9434,6 +10114,7 @@
         "location": "Sài Gòn, Việt Nam Cộng hòa",
         "id": "Vụ đánh bom cư xá Brinks",
         "time": "",
-        "dynasty_related": []
+        "dynasty_related": [],
+        "url": "https:\/\/vi.wikipedia.org\/wiki\/V%E1%BB%A5_%C4%91%C3%A1nh_bom_c%C6%B0_x%C3%A1_Brinks"
     }
 ]

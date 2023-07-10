@@ -15,15 +15,8 @@ public class ManageDatabase {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             File jsonFile = new File("lib/src/main/java/Data/Database/historical-event/extractData.json");
-
-            // Read JSON file and convert it to a List of Person objects
             List<HistoricalEventWar> eventList = objectMapper.readValue(jsonFile, new TypeReference<List<HistoricalEventWar>>() {});
-
-            // Use the personList as needed
-            // for (HistoricalEventWar event : eventList) {
-            //     System.out.println("Name: " + person.getName() + ", Age: " + person.getAge());
-            // }
-            System.out.println(eventList.get(10).toString());
+            System.out.println(eventList.get(20).toString());
         } catch (Exception e) {
             e.printStackTrace();
         }

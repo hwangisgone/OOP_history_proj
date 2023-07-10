@@ -16,7 +16,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class ExtractData {
-    //List<Map<String, String >> data = new ArrayList<>();
+    // List<Map<String, String >> data = new ArrayList<>();
 
     public static JSONArray jsonArray = new JSONArray();
     public static List<String> listUrl = new ArrayList<>();
@@ -59,10 +59,11 @@ public class ExtractData {
             object.put("location", destination);
             object.put("dynasty_related", tdLienQuan);
             object.put("characters_related", nvLienQuan);
-            //object.put("Lực lượng", lucluong);
-            //object.put("Thương vong", thuongvong);
+            // object.put("Lực lượng", lucluong);
+            // object.put("Thương vong", thuongvong);
             object.put("related_to", theloai);
-            object.put("description" , mota);
+            object.put("description", mota);
+            object.put("url", linkEvent.url);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -93,10 +94,10 @@ public class ExtractData {
                     Map<String, Object> entry = new HashMap<>();
                     String thoigiancuthe = i.select("b").text() + " " + thoigian;
                     i.child(0).remove();
-                    //entry.put("Sự kiện", i.text());
-                    entry.put("id" , i.text());
+                    // entry.put("Sự kiện", i.text());
+                    entry.put("id", i.text());
                     entry.put("time", thoigiancuthe);
-                    entry.put("dynasty_related", thoidai);
+                    //entry.put("age", thoidai);
                     Elements linkChild = i.select("a");
                     for (Element j : linkChild) {
                         String linkChildUrl = j.attr("abs:href");
@@ -104,6 +105,14 @@ public class ExtractData {
                         if (LinkEvent.isEvent() && !listUrl.contains(linkChildUrl)) {
                             listUrl.add(linkChildUrl);
                             infobox(linkEvent, entry);
+                        } else {
+                            entry.put("result", "null");
+                            entry.put("location", "null");
+                            entry.put("dynasty_related", new JSONArray());
+                            entry.put("characters_related", new JSONArray());
+                            entry.put("related_to", new JSONArray());
+                            entry.put("description", "null");
+                            entry.put("url" , "null");
                         }
                     }
                     size++;
@@ -112,14 +121,14 @@ public class ExtractData {
                     System.out.println(size);
                 }
             } else {
-                //Map<String, String> entry = new HashMap<>();
+                // Map<String, String> entry = new HashMap<>();
                 Map<String, Object> entry = new HashMap<>();
                 link.child(0).remove();
                 String sukien = link.text();
-                //entry.put("Sự kiện", sukien);
-                entry.put("id" , sukien);
+                // entry.put("Sự kiện", sukien);
+                entry.put("id", sukien);
                 entry.put("time", thoigian);
-                entry.put("dysnaty_related", thoidai);
+                //entry.put("age", thoidai);
                 Elements linkChild = link.select("a");
                 for (Element j : linkChild) {
                     String linkChildUrl = j.attr("abs:href");
@@ -129,6 +138,12 @@ public class ExtractData {
                         infobox(linkEvent, entry);
                     } else {
                         entry.put("related_to", linkEvent.contentInfoboxList());
+                        entry.put("result", "null");
+                        entry.put("location", "null");
+                        entry.put("dynasty_related", new JSONArray());
+                        entry.put("characters_related", new JSONArray());
+                        entry.put("description", "null");
+                        entry.put("url" , "null");
                     }
                 }
                 size++;
@@ -138,13 +153,14 @@ public class ExtractData {
             }
 
         }
-        //writeDataToFile();
+        // writeDataToFile();
 
     }
 
-    public void writeDataToFile() throws IOException{
+    public void writeDataToFile() throws IOException {
         try (
-                FileWriter fileWriter = new FileWriter("lib/src/main/java/Data/Database/historical-event/extractData.json")) {
+                FileWriter fileWriter = new FileWriter(
+                        "lib/src/main/java/Data/Database/historical-event/extractData.json")) {
             String modifiedJsonString = unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();

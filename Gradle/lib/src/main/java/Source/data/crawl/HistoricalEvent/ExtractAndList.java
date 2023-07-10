@@ -127,7 +127,7 @@ public class ExtractAndList extends ExtractData {
             jsonArray.remove(i);
 
         searchMoreLink.writeJsonArrayFile();
-
+        
         System.out.println(size);
     }
 }

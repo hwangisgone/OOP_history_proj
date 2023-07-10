@@ -2,9 +2,16 @@ package entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class HistoricalEvent extends Entity{
+	@JsonProperty("time")
     protected String time;
+
+	@JsonProperty("dynasty_related")
 	protected String dynasty_related;
+
+	@JsonProperty("related_to")
 	protected List<String> related_to;
 
 	public String getTime() {
@@ -46,3 +53,4 @@ public class HistoricalEvent extends Entity{
 		return sb.toString();
 	}
 }
+
