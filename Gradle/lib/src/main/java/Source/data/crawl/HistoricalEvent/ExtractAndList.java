@@ -71,7 +71,7 @@ public class ExtractAndList extends ExtractData {
             }
         }
         entry.put("id",sukien);
-        entry.put("Time", thoigian);
+        entry.put("time", thoigian);
         infobox(linkEvent, entry);
         JSONObject jsonObject = new JSONObject(entry);
         jsonArray.add(jsonObject);
