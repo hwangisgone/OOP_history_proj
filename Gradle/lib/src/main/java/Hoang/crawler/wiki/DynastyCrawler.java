@@ -20,7 +20,7 @@ import Hoang.basis.infobox.DynastyInfoboxExtractor;
 import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
-import Hoang.util.ResultUtil;
+import Hoang.util.ExtraStringUtil;
 
 public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	private HttpClient client;
@@ -45,7 +45,7 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 			":Nhà", 
 			":Triều đại"
 		);
-		return ResultUtil.filterString(catSet, wordsFilter, false);
+		return ExtraStringUtil.filterString(catSet, wordsFilter, false);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	        "Triều đại",
 	        "cổ đại"
 		);
-		return ResultUtil.filterString(pageSet, wordsFilter, true);
+		return ExtraStringUtil.filterString(pageSet, wordsFilter, true);
 	}
 	
 	@Override

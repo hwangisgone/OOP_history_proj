@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ResultUtil {
+public class ExtraStringUtil {
 
 	public static List<String> filterString(Collection<String> collection, List<String> wordList, boolean caseSensitive) {	
     	// String[] wordsFilter = {":Thời kỳ", "Nhà", "Triều đại"};

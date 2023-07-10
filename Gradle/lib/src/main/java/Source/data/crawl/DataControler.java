@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import Source.data.database.IDatabase;
+import database.IDatabase;
 
 
 public class DataControler {
@@ -91,9 +91,10 @@ public class DataControler {
 	 */
 	public void extractUrlFile(String fileUrl) {
 		List<String> listUrl = readListUrl(fileUrl);
-		this.database.store(extractor.extract(listUrl));
+		List<Map<String, String>> extracted = extractor.extract(listUrl);
+		this.database.store(extracted);
 		this.database.close();
-		System.out.println("Successfully extract " + this.database.size() + " objects!");
+		System.out.println("Successfully extract " + extracted.size() + " objects!");
 	}	// close extractUrlFile
 
 }	// close DataControler

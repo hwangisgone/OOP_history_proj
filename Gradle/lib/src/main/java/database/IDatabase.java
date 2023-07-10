@@ -7,27 +7,24 @@
 		3. size: return the number of objects in the database
  */
 
-package Source.data.database;
+package database;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 
 public interface IDatabase <E> {
 
 	/* Store an object into database */
 	public void store(List<E> listObject);
-	/* Load a list of objects with given index range[startIndex, endIndex)
-		- startIndex is inclusive
-		- endIndex is exclusive
-	 */
-	public List<E> load(int startIndex, int endIndex);
 
 	/* Load and return all objects in the database */
 	public List<E> load();
+	
+	/* Load from other source if database doesn't exist */
+	/* Useful for combining crawling and saving code */
+	public List<E> loadOr(Supplier<List<E>> getList);
 
-	/* return the number of objects in the database */
-	public int size();
-
-	/* close the database: cleaning environment if neccessary */
+	/* Close the database: cleaning environment if neccessary */
 	public void close();
 }	// close IDatabase

@@ -26,6 +26,8 @@ import javax.json.JsonReader;
 import javax.json.JsonValue;
 import javax.json.JsonWriter;
 
+import database.IDatabase;
+
 
 public class CharacterDatabase implements IDatabase <Map<String, String>> {
 
@@ -125,15 +127,6 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		this.list.addAll(listObject);
 	}	// close store
 
-	/* Load a list of objects with given index range
-		- changes in the return list does NOT change the database
-	 */
-	@Override
-	public List<Map<String, String>> load(int startIndex, int endIndex) {
-		List<Map<String, String>> cloneList = new ArrayList<>(this.list.subList(startIndex, endIndex));
-		return cloneList;
-	}	// close load
-
 	/* Load and return all objects in the database
 		- changes in the return list does NOT change the database
 	 */
@@ -142,13 +135,6 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		List<Map<String, String>> cloneList = new ArrayList<>(this.list);
 		return cloneList;
 	}	// close load
-
-	/* return the number of objects in the database */
-	@Override
-	public int size() {
-		return this.list.size();
-	}	// close size
-
 
 	/* close the database */
 	@Override

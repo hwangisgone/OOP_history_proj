@@ -22,7 +22,7 @@ import Hoang.basis.infobox.FestivalInfoboxExtractor;
 import Hoang.basis.infobox.InfoboxExtractor;
 import entity.Dynasty;
 import entity.Festival;
-import Hoang.util.ResultUtil;
+import Hoang.util.ExtraStringUtil;
 
 public class FestivalCrawler extends WikiCrawler<Festival> {
 	private HttpClient client;

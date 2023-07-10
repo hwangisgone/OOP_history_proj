@@ -5,24 +5,24 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import Hoang.CSVHandler;
-import entity.Location;
+import entity.Festival;
 
-public class LocationDatabase implements IDatabase<Location> {
+public class FestivalDatabase implements IDatabase<Festival> {
 	File fileJson;
-	CSVHandler<Location> csvHandler;
+	CSVHandler<Festival> csvHandler;
 	
-	public LocationDatabase() {
-		fileJson = new File(PathConstants.pathLocation);
-		csvHandler = new CSVHandler<>(Location.class);
+	public FestivalDatabase() {
+		fileJson = new File(PathConstants.pathFestival);
+		csvHandler = new CSVHandler<>(Festival.class);
 	}
 	
 	@Override
-	public void store(List<Location> listObject) {
+	public void store(List<Festival> listObject) {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public List<Location> load() {
+	public List<Festival> load() {
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
 		} else {
@@ -32,17 +32,15 @@ public class LocationDatabase implements IDatabase<Location> {
 	}
 
 	@Override
-	public List<Location> loadOr(Supplier<List<Location>> getList) {
+	public List<Festival> loadOr(Supplier<List<Festival>> getList) {
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
 		} else {
 			return getList.get();
 		}
 	}
-	
+
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
-		
 	}
 }

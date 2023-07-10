@@ -1,7 +1,8 @@
 package Quy.src.dynastydatabase;
 import Quy.src.constant.Constant;
 import Quy.src.crawler.*;
-import Source.data.database.IDatabase;
+import database.IDatabase;
+
 import org.json.JSONObject;
 import org.json.simple.JSONArray;
 import javax.json.Json;

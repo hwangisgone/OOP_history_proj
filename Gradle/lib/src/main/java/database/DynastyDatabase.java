@@ -5,24 +5,24 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import Hoang.CSVHandler;
-import entity.Location;
+import entity.Dynasty;
 
-public class LocationDatabase implements IDatabase<Location> {
+public class DynastyDatabase implements IDatabase<Dynasty> {
 	File fileJson;
-	CSVHandler<Location> csvHandler;
+	CSVHandler<Dynasty> csvHandler;
 	
-	public LocationDatabase() {
-		fileJson = new File(PathConstants.pathLocation);
-		csvHandler = new CSVHandler<>(Location.class);
+	public DynastyDatabase() {
+		fileJson = new File(PathConstants.pathDynasty);
+		csvHandler = new CSVHandler<>(Dynasty.class);
 	}
 	
 	@Override
-	public void store(List<Location> listObject) {
+	public void store(List<Dynasty> listObject) {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public List<Location> load() {
+	public List<Dynasty> load() {
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
 		} else {
@@ -32,17 +32,15 @@ public class LocationDatabase implements IDatabase<Location> {
 	}
 
 	@Override
-	public List<Location> loadOr(Supplier<List<Location>> getList) {
+	public List<Dynasty> loadOr(Supplier<List<Dynasty>> getList) {
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
 		} else {
 			return getList.get();
 		}
 	}
-	
+
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
-		
 	}
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-import Source.data.database.IDatabase;
+import database.IDatabase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
