@@ -31,15 +31,15 @@
 }
 
 .button:hover {
-  -fx-border-radius: 0;
-  -fx-background-color: #34d399;
+  -fx-border-radius: 20;
+  -fx-background-color: #99e6ca;
   -fx-text-fill: white;
   -fx-cursor: hand;
 }
 
 .button-clear:hover {
-  -fx-border-radius: 0;
-  -fx-background-color: #f43f5e;
+  -fx-border-radius: 20;
+  -fx-background-color: #ff9d9d;
   -fx-text-fill: white;
   -fx-cursor: hand;
 }
