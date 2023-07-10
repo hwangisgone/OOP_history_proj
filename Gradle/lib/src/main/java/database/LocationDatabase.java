@@ -20,11 +20,9 @@ public class LocationDatabase implements IDatabase<Location> {
 		return null;
 	}
 
-	private static final String finalDirectory = "src/main/resources/final/";
-	
 	@Override
 	public List<Location> load() {
-		File fileJson = new File(finalDirectory + "Location.json");
+		File fileJson = new File(PathConstants.pathLocation);
 		
 		if (fileJson.exists()) {
 			CSVHandler<Location> csvHandler = new CSVHandler<>(Location.class);

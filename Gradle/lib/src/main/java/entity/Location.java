@@ -11,16 +11,6 @@ public class Location extends Entity {
 	private String worship;
 	
 	private String image;
-	private String url;
-	
-	
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
 
 	public String getImage() {
 		return image;

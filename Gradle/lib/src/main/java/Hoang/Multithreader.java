@@ -35,7 +35,7 @@ public class Multithreader {
         System.out.println("Multithreading Ended.");
 	}
 
-	
+
     public <T, R> List<R> start(List<T> inputs, Function<T,R> task) {
 		executorService = Executors.newFixedThreadPool(10);
     	System.out.println("Multithreading Started.");

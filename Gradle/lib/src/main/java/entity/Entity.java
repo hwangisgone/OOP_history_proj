@@ -3,6 +3,15 @@ package entity;
 public abstract class Entity {
 	protected String id;
 	protected String description;
+	protected String url;
+	
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	
 	public String getDescription() {
 		return description;

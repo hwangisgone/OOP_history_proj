@@ -9,38 +9,25 @@ import Hoang.CSVHandler;
 import Hoang.crawler.nonwiki.DiTichLocationCrawler;
 import Hoang.crawler.wiki.DynastyCrawler;
 import Hoang.crawler.wiki.FestivalCrawler;
+import database.PathConstants;
 import entity.Dynasty;
 import entity.Entity;
 import entity.Festival;
 import entity.Location;
 
 public class MainCrawler {
-	private static final String finalDirectory = "src/main/resources/final/";
-	private boolean forceRestart;
-	
 	public MainCrawler() {
 	}
 	
-	public void setForceRestart(boolean forceRestart) {
-		this.forceRestart = forceRestart;
+	public void forceRestart() {
+		PathConstants.forceRestart();
 	}
 	
-	private void createRequiredDir() {
-		File finalFileDir = new File(finalDirectory);
-        if (!finalFileDir.exists()) {
-        	finalFileDir.mkdirs();
-        }
-        
-        if (forceRestart) {
-        	for (File f: finalFileDir.listFiles())  f.delete();
-        }
-	}
-	
-	private <T> void crawlAndSave(CSVHandler<T> csvHandler, String filename, ICrawler<T> crawler) {
+	private <T> void crawlAndSave(CSVHandler<T> csvHandler, String filepath, ICrawler<T> crawler) {
 		// Pages
 		List<T> resultList = new ArrayList<>();
 		
-		File fileJson = new File(finalDirectory + filename);
+		File fileJson = new File(filepath);
 		if (fileJson.exists()) {
 			resultList = csvHandler.load(fileJson);
 		} else {
@@ -48,7 +35,7 @@ public class MainCrawler {
 			csvHandler.write(fileJson, resultList);
 		}
 
-		System.out.println("Collected in " + filename + ": " + resultList.size());
+		System.out.println("Collected in " + filepath + ": " + resultList.size());
 
 //		resultList.forEach(map -> {
 //			if (map instanceof Location) {
@@ -60,15 +47,15 @@ public class MainCrawler {
 	}
 	
 	public void startCrawl() {
-		createRequiredDir();
+		PathConstants.createRequiredDir();
 		HttpClient client = HttpClient.newHttpClient();
 		
 		CSVHandler<Dynasty> CSVdynasty = new CSVHandler<>(Dynasty.class);
 		CSVHandler<Festival> CSVfestival = new CSVHandler<>(Festival.class);
 		CSVHandler<Location> CSVlocation = new CSVHandler<>(Location.class);
 		
-		crawlAndSave(CSVdynasty, "Dynasty.json", new DynastyCrawler(client));
-		crawlAndSave(CSVfestival, "Festival.json", new FestivalCrawler(client));
-		crawlAndSave(CSVlocation, "Location.json", new DiTichLocationCrawler());
+		crawlAndSave(CSVdynasty, PathConstants.pathDynasty, new DynastyCrawler(client));
+		crawlAndSave(CSVfestival, PathConstants.pathFestival, new FestivalCrawler(client));
+		crawlAndSave(CSVlocation, PathConstants.pathLocation, new DiTichLocationCrawler());
 	}
 }
