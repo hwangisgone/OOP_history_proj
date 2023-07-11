@@ -122,19 +122,15 @@ public class Dynasty extends Entity {
 	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Country{")
-                .append("longName=").append(longName)
-                .append("\n, nativeName=").append(nativeName)
-                .append("\n, name='").append(id).append('\'')
-                .append("\n, yearEnd='").append(yearEnd).append('\'')
-                .append("\n, yearStart='").append(yearStart).append('\'')
-                .append("\n, currency='").append(currency).append('\'')
-                .append("\n, status='").append(status).append('\'')
-                .append("\n, religion='").append(religion).append('\'')
-                .append("\n, language='").append(language).append('\'')
-                .append("\n, governmentType='").append(governmentType).append('\'')
-                .append("\n, capitals=").append(capitals)
-                .append("\n}");
+        sb.append("Tên đầy đủ: ").append(longName)
+            .append("\n Tên khác: ").append(nativeName)
+            .append("\n (").append(yearStart).append(" - ").append(yearEnd).append(")")
+            .append("\n Đơn vị tiền tệ: ").append(currency)
+            .append("\n Vị thế: ").append(status)
+            .append("\n Tôn giáo: ").append(religion)
+            .append("\n Ngôn ngữ: ").append(language)
+            .append("\n Chính trị: ").append(governmentType)
+            .append("\n Thủ đô: ").append(String.join(", ", capitals));
         return sb.toString();
     }
 

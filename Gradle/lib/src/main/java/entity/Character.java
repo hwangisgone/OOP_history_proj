@@ -73,14 +73,13 @@ public class Character extends Entity {
 	@Override
 	public String toString() {
 		StringBuffer info = new StringBuffer("");
-		info.append("ID: " + getName() + "\n");
-		info.append("Name: " + getFullName() + "\n");
-		info.append("Date of Birth: " + getDateOfBirth() + "\n");
-		info.append("Date of Death: " + getDateOfDeath() + "\n");
-		info.append("Father: " + getFather() + "\n");
-		info.append("Mother: " + getMother() + "\n");
-		info.append("Dynasty: " + getDynasty() + "\n");
-		info.append("Biography: " + getBiography() + "\n");
+		info.append("Tên: " + getName() + "\n");
+		info.append("Tên đầy đủ: " + getFullName() + "\n");
+		info.append("Ngày sinh: " + getDateOfBirth() + "\n");
+		info.append("Ngày mất: " + getDateOfDeath() + "\n");
+		info.append("Bố: " + getFather() + "\n");
+		info.append("Mẹ: " + getMother() + "\n");
+		info.append("Triều đại: " + getDynasty() + "\n");
 		return info.toString();
 	}	// close toString
 

@@ -32,12 +32,16 @@ public class Festival extends Entity {
 	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Festival{")
-        	.append("\n name=").append(id)
-        	.append("\n location='").append(location)
-        	.append("'\n date='").append(date)
-        	.append("'\n type='").append(type)
-        	.append("\n}");
+        sb.append("\n Tên: ").append(id);
+        if (location != null) {
+        	sb.append("\n Địa điểm: ").append(location);
+		}
+		if (date != null) {
+        	sb.append("'\n Thời gian: ").append(date);
+		}
+		if (type != null) {
+        	sb.append("'\n Loại: ").append(type);
+		}
         return sb.toString();
     }
 }

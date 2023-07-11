@@ -1,6 +1,9 @@
 package javafx.view.entity;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +25,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -30,7 +34,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import entity.Location;
 import entity.Location;
 
 public class LocationSceneController extends SearchController<Location> implements Initializable {
@@ -179,6 +182,21 @@ public class LocationSceneController extends SearchController<Location> implemen
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
         	
+//        	URLConnection connection;
+//			try {
+//				String url = selectLocation.getImage();
+//				connection = new URL(url.replace('\\', '/')).openConnection();
+//	        	connection.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
+//	        	Image image = new Image(connection.getInputStream());
+//	            imageInfo.setImage(image);
+//			} catch (MalformedURLException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+
         	labelTitle.setText(selectLocation.getName());
         	labelDescription.setText(selectLocation.getDescription());
         	labelInfo.setText(selectLocation.toString());
@@ -192,9 +210,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 
     @FXML
     void tableClick(MouseEvent event) {
-    	// if (event.getClickCount() == 2) {
-            Location entity = LocationsTableView.getSelectionModel().getSelectedItem();
-            switchPane(entity);
-        // }
+        Location entity = LocationsTableView.getSelectionModel().getSelectedItem();
+        switchPane(entity);
     }
 }
