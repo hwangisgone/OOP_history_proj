@@ -6,7 +6,7 @@ public abstract class Entity {
 	protected String id;
 	protected String description;
 	protected Map<String, String> additionalInfo;
-	
+
 	public Map<String, String> getAdditionalInfo() {
 		return additionalInfo;
 	}
@@ -38,5 +38,6 @@ public abstract class Entity {
 		this.id = name;
 	}
 
+	@Override
 	public abstract String toString();
 }

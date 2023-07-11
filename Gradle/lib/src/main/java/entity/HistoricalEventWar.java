@@ -57,7 +57,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 // 		return sb.toString();
 // 	}
 // }
-public class HistoricalEventWar {
+public class HistoricalEventWar extends Entity {
 
 	@JsonProperty("time")
 	protected String time;
@@ -85,6 +85,14 @@ public class HistoricalEventWar {
 
 	@JsonProperty("url")
 	private String url;
+
+	public String getTime() {
+		return this.time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
 
 	public List<String> getCharacters() {
 		return this.characters_related;
@@ -117,15 +125,14 @@ public class HistoricalEventWar {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("HistoricalEvent{")
-				.append("\n name=").append(id)
-				.append("'\n time='").append(time)
-				.append("'\n dynasty related='").append(dynasty_related)
-				.append("'\n location='").append(location)
-				.append("'\n related to='").append(related_to)
-				.append("'\n characters related='").append(characters_related)
-				.append("'\n result='").append(result)
-				.append("\n}");
+		sb.append("\n ").append(id)
+			.append("'\n Thời gian ").append(time)
+			.append("'\n Triều đại: ").append(dynasty_related)
+			.append("'\n Địa điểm: ").append(location)
+			.append("'\n Liên quan: ").append(related_to)
+			.append("'\n Nhân vật liên quan: ").append(characters_related)
+			.append("'\n result='").append(result);
+
 		return sb.toString();
 	}
 }

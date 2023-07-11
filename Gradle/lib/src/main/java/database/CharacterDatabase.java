@@ -27,7 +27,6 @@ import javax.json.JsonReader;
 import javax.json.JsonValue;
 import javax.json.JsonWriter;
 
-import database.IDatabase;
 import entity.Character;
 
 
@@ -80,13 +79,13 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		// read database
 		List<Map<String, String>> listMap = database.load();
 		// modeling Character
-		List<Character> listCharacter = new ArrayList<Character> ();
+		List<Character> listCharacter = new ArrayList<> ();
 		for (Map<String, String> map: listMap) {
 			listCharacter.add(new Character(map));
 		}	// close for
-		// return list of character 
+		// return list of character
 		return listCharacter;
-	}	// close 
+	}	// close
 
 
 	// load the JSON array from file and return the list of object
@@ -170,6 +169,6 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 	public List<Map<String, String>> loadOr(Supplier<List<Map<String, String>>> getList) {
 		// TO-DO?
 		return null;
-	}	// close 
+	}	// close
 
 }	// close CharacterDatabase

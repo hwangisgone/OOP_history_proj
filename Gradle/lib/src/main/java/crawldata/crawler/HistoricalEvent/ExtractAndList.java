@@ -14,10 +14,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import crawldata.crawler.ICrawler;
 import database.constants.PathConstants;
+import entity.HistoricalEvent;
 
 
-public class ExtractAndList extends ExtractData {
+public class ExtractAndList extends ExtractData implements ICrawler<HistoricalEvent> {
     public static int numberUrlUsed = 0;
     public static List<String> listUrlNew = new ArrayList<>();
 

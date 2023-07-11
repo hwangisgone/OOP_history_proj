@@ -82,7 +82,7 @@
                      <center>
                         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../image/search-icon-png-9964.png" />
+                              <Image url="@../image/human_icon.png" />
                            </image>
                         </ImageView>
                      </center>
@@ -97,7 +97,7 @@
                      <center>
                         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../image/search-icon-png-9964.png" />
+                              <Image url="@../image/round.png" />
                            </image>
                         </ImageView>
                      </center>
@@ -112,7 +112,7 @@
                      <center>
                         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../image/search-icon-png-9964.png" />
+                              <Image url="@../image/event_icon.png" />
                            </image>
                         </ImageView>
                      </center>
@@ -127,7 +127,7 @@
                      <center>
                         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../image/search-icon-png-9964.png" />
+                              <Image url="@../image/festival_icon.png" />
                            </image>
                         </ImageView>
                      </center>
@@ -142,7 +142,7 @@
                      <center>
                         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../image/search-icon-png-9964.png" />
+                              <Image url="@../image/relic_icon.png" />
                            </image>
                         </ImageView>
                      </center>

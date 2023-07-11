@@ -13,14 +13,14 @@ import java.util.List;
 import java.util.function.Supplier;
 
 
-public interface IDatabase <E> {
+public interface IDatabase <E>{
 
 	/* Store an object into database */
 	public void store(List<E> listObject);
 
 	/* Load and return all objects in the database */
 	public List<E> load();
-	
+
 	/* Load from other source if database doesn't exist */
 	/* Useful for combining crawling and saving code */
 	public List<E> loadOr(Supplier<List<E>> getList);

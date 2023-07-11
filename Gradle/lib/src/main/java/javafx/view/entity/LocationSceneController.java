@@ -1,20 +1,14 @@
 package javafx.view.entity;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.function.Function;
 
 import database.IDatabase;
 import database.LocationDatabase;
+import entity.Location;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,16 +19,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import entity.Location;
 
 public class LocationSceneController extends SearchController<Location> implements Initializable {
 
@@ -72,16 +63,17 @@ public class LocationSceneController extends SearchController<Location> implemen
     @FXML
     private HBox hboxFeature;
 
-    
+
     private IDatabase<Location> locsData = new LocationDatabase();
-    
-    public void refresh() {
+
+    @Override
+	public void refresh() {
         data = FXCollections.observableArrayList(locsData.load());
-        
+
         // Bind the ObservableList to the TableView
 	    LocationsTableView.setItems(data);
     }
-    
+
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
@@ -93,12 +85,12 @@ public class LocationSceneController extends SearchController<Location> implemen
 		searchMap.put("Loại xếp hạng",		loc -> loc.getGradeType());
 		searchMap.put("Tôn thờ",	loc -> loc.getWorship());
 		// Tiểu sử, mô tả
-		
+
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
         comboBox.setItems(itemsList);
         comboBox.setValue(itemsList.get(0));
 	}
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -106,22 +98,22 @@ public class LocationSceneController extends SearchController<Location> implemen
 	        // Add a default row
 		refresh();
 		initSearchMap();
-        
+
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-        
+
         colOtherNames.setCellValueFactory(new PropertyValueFactory<>("otherNames"));
         colLocated.setCellValueFactory(new PropertyValueFactory<>("located"));
         colPosition.setCellValueFactory(new PropertyValueFactory<>("position"));
         colGrade.setCellValueFactory(new PropertyValueFactory<>("grade"));
         colGradeType.setCellValueFactory(new PropertyValueFactory<>("gradeType"));
         colWorship.setCellValueFactory(new PropertyValueFactory<>("worship"));
-        
+
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 //	@Override
 //	public void initialize() {
-//       
+//
 //
 //        // Bind the columns to the corresponding properties in MyDataModel
 //        colID.setCellValueFactory(new PropertyValueFactory<>("publicationID"));
@@ -142,7 +134,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         String searchOption = comboBox.getValue();
         SearchData(searchText, searchOption);
     }
-    
+
     private void SearchData(String searchText, String searchOption) {
         if (searchText.isEmpty()) {
             // If the search text is empty, revert to the original unfiltered list
@@ -152,13 +144,13 @@ public class LocationSceneController extends SearchController<Location> implemen
 		}
     }
 
-    
+
     @FXML
     private ImageView imageInfo;
 
     @FXML
     private ScrollPane scrollText;
-    
+
     @FXML
     private Text labelDescription;
 
@@ -170,10 +162,10 @@ public class LocationSceneController extends SearchController<Location> implemen
 
     @FXML
     private BorderPane paneInfo;
-    
+
     @FXML
     private VBox paneTable;
-    
+
     private void switchPane(Location selectLocation) {
     	if (selectLocation == null) {
         	paneInfo.setVisible(false);
@@ -181,7 +173,7 @@ public class LocationSceneController extends SearchController<Location> implemen
     	} else {
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
-        	
+
 //        	URLConnection connection;
 //			try {
 //				String url = selectLocation.getImage();
@@ -202,7 +194,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         	labelInfo.setText(selectLocation.toString());
     	}
     }
-    
+
     @FXML
     void btnActionReturn(ActionEvent event) {
     	switchPane(null);

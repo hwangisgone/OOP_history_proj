@@ -4,11 +4,7 @@ import java.io.File;
 import java.util.List;
 import java.util.function.Supplier;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import database.constants.PathConstants;
-import entity.Dynasty;
 import entity.HistoricalEventWar;
 import main.CSVHandler;
 
@@ -50,9 +46,9 @@ public class EventDatabase implements IDatabase<HistoricalEventWar>{
 	@Override
 	public void close() {
 		// TODO Auto-generated method stub
-		
+
 	}
-    
+
 	public static void main(String[] args){
 		EventDatabase ed = new EventDatabase();
 		List<HistoricalEventWar> eventlist = ed.load();

@@ -3,9 +3,7 @@ package javafx.view;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -55,7 +53,7 @@ public class MainSceneController {
 
     @FXML
     private Tab tabLocation;
-    
+
     @FXML
     void mainLogOut(ActionEvent event) {
 
@@ -67,7 +65,7 @@ public class MainSceneController {
         try {
             AnchorPane child = loader.load();
             parent.getChildren().add(child);
-            
+
             AnchorPane.setTopAnchor(child, 0.0);
             AnchorPane.setBottomAnchor(child, 0.0);
             AnchorPane.setLeftAnchor(child, 0.0);
@@ -76,14 +74,15 @@ public class MainSceneController {
             e.printStackTrace();
         }
     }
-    
+
 	@FXML
     public void initialize() {
 		loadFXML(contentDynasty, "entity/DynastyScene.fxml");
 		loadFXML(contentCharacter, "entity/CharacterScene.fxml");
+		loadFXML(contentEvent, "entity/EventScene.fxml");
 		loadFXML(contentFestival, "entity/FestivalScene.fxml");
 		loadFXML(contentLocation, "entity/LocationScene.fxml");
-        
+
         tabDynasty.setGraphic(paneTabDynasty);
         tabCharacter.setGraphic(paneTabCharacter);
         tabEvent.setGraphic(paneTabEvent);
