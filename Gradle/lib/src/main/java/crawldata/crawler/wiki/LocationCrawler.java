@@ -1,6 +1,7 @@
 package crawldata.crawler.wiki;
 
 import java.net.http.HttpClient;
+import java.util.ArrayList;
 import java.util.List;
 
 import crawldata.crawler.ICrawler;
@@ -29,7 +30,7 @@ public class LocationCrawler implements ICrawler<Location> {
 
 			return locList;
 		});
-
+		
 		WikiUtility.getDescriptionsFor(locations, client);
 
 		return locations;

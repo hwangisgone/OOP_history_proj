@@ -85,7 +85,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("ID",			chara -> chara.getID());
+		searchMap.put("Tên",			chara -> chara.getID());
 		searchMap.put("Tên đầy đủ",	chara -> chara.getFullName());
 		searchMap.put("Ngày sinh",	chara -> chara.getDateOfBirth());
 		searchMap.put("Ngày mất",	chara -> chara.getDateOfDeath());
@@ -96,7 +96,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
         comboBox.setItems(itemsList);
-        comboBox.setValue("ID");
+        comboBox.setValue("Tên");
 	}
 
 	@Override

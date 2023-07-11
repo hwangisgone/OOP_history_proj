@@ -25,58 +25,46 @@ import main.Multithreader;
 public class WikiUtility {
 	private static String whitespace = "    ";
 
+	public static Map<String, Document> getDocumentsFromPages(List<String> titles, HttpClient client) {
+		List<WikiPage> pages = new ArrayList<>();
+		for (String title: titles) {
+			WikiPage page = new WikiPage(title);
+			page.setUrl(URLMaker.getHtmlQuery(title));
+			
+			pages.add(page);
+		}
+		
+		Multithreader multithreader = new Multithreader();
+		List<WikiPage> filteredpages = multithreader.getDocumentsForPages(client, pages);
+		
+		Map<String, Document> titleDocs = new HashMap<>();
+		for (WikiPage page : filteredpages) {
+			titleDocs.put(page.getTitle(), page.getDoc());
+		}
+		return titleDocs;
+	}
+	
 	public static <T extends Entity> void getDescriptionsFor(Collection<T> locs, HttpClient client) {
-		List<String> pages = new ArrayList<>();
-		Map<String, T> newMap = new HashMap<>();
+		List<WikiPage> pages = new ArrayList<>();
+		Map<String, T> titleToEntity = new HashMap<>();
+		
 		for (T loc: locs) {
 			if (loc.getDescription() == null || loc.getDescription().equals("null")) { // Only do it with the ones wihout desc
-				newMap.put(loc.getID(), loc);
-				pages.add(loc.getID());
+				WikiPage page = new WikiPage(loc.getID());
+				page.setUrl(URLMaker.getHtmlQuery(loc.getID()));
+				
+				pages.add(page);
+				titleToEntity.put(loc.getID(), loc);
 			}
 		}
 		
-		Map<String, Document> docs = getDocumentsFromPages(pages, client);
-		for (Map.Entry<String, Document> entry : docs.entrySet()) {
-		    T entity = newMap.get(entry.getKey());
-		    Document doc = entry.getValue();
-
-		    entity.setDescription(WikiUtility.getDescriptionFromDocument(doc));
-		}
-	}
-	
-	public static Map<String, Document> getDocumentsFromPages(List<String> pages, HttpClient client) {
-		List<String> htmlurls = URLMaker.getHtmlQueries(pages);
-		Map<String, Document> docs = new HashMap<>();
-
-		int index = 0;
 		Multithreader multithreader = new Multithreader();
-        for (HttpResponse<String> response : multithreader.getResponseFromPages(client, htmlurls)) {
-            if (response.statusCode() == 200) {
-                String jsonResponse = response.body();
-                // System.out.println(jsonResponse);
-
-                ObjectMapper mapper = new ObjectMapper();
-
-                try {
-					JsonNode parse = mapper.readTree(jsonResponse).get("parse");
-
-					if (parse == null) { continue; }
-
-					Document thisdoc = Jsoup.parse(parse.get("text").asText());
-					if (thisdoc != null) {
-						docs.put(pages.get(index), thisdoc);
-					}
-
-				} catch (JsonProcessingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-            }
-
-            index += 1;
-        }
-
-        return docs;
+		List<WikiPage> filteredpages = multithreader.getDocumentsForPages(client, pages);
+		
+		for (WikiPage page : filteredpages) {
+			titleToEntity.get(page.getTitle())
+						.setDescription(WikiUtility.getDescriptionFromDocument(page.getDoc()));
+		}
 	}
 
 	/**
@@ -342,4 +330,5 @@ public class WikiUtility {
 
 		return description.toString();
 	}
+
 }

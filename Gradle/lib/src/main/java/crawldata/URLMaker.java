@@ -44,7 +44,7 @@ public class URLMaker {
 	}
 
 	public static String getHtmlQuery(String title) {
-		return URL_HTML + title;
+		return URL_HTML + encodeCorrectURL(title);
 	}
 
 //	public URLMaker() {

@@ -1,11 +1,14 @@
 package main;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -13,7 +16,12 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
+import org.jsoup.nodes.Document;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import crawldata.URLMaker;
+import crawldata.wikibasis.WikiPage;
 
 public class Multithreader {
 	private ExecutorService executorService;
@@ -71,6 +79,62 @@ public class Multithreader {
 
     	return responses;
     }
+    
+    public List<WikiPage> getDocumentsForPages(HttpClient client, List<WikiPage> manyPages) {
+		executorService = Executors.newFixedThreadPool(10);
+    	System.out.println("Multithreading Started.");
+
+    	List<WikiPage> filtered = new ArrayList<>();     
+     // Create a list to store Future objects representing the responses
+        List<Future<HttpResponse<String>>> futures = new ArrayList<>();
+
+        // Send GET requests concurrently
+        for (WikiPage page : manyPages) {
+            // Submit the request to the ExecutorService and store the Future object
+            Future<HttpResponse<String>> future = executorService.submit(() -> {
+	            HttpResponse<String> response = client.send(
+	            		HttpRequest.newBuilder()
+	                    .uri(URI.create(page.getUrl()))
+	                    .GET().build(),
+	                    HttpResponse.BodyHandlers.ofString()
+	            );
+
+	            return response;
+            });
+
+            futures.add(future);
+        }
+
+        int i = 0;
+        // Process the responses when they become available
+        for (Future<HttpResponse<String>> future : futures) {
+            // Retrieve the response from the Future object
+            HttpResponse<String> response;
+
+			try {
+				response = future.get();
+	            // Process the response as needed
+				System.out.println(manyPages.get(i).getTitle());
+	            System.out.println("Response body: " + response.body());
+	            
+				if (manyPages.get(i).acceptResponse(response)) {
+					filtered.add(manyPages.get(i));
+				}
+
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ExecutionException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			i++;
+        }
+
+        shutdown();
+        
+        return filtered;
+    }
 
     public List<HttpResponse<String>> getResponseFromPages(HttpClient client, List<String> manyUrls) {
 		executorService = Executors.newFixedThreadPool(10);
@@ -98,6 +162,7 @@ public class Multithreader {
             futures.add(future);
         }
 
+        int i = 0;
         // Process the responses when they become available
         for (Future<HttpResponse<String>> future : futures) {
             // Retrieve the response from the Future object
@@ -106,6 +171,8 @@ public class Multithreader {
 			try {
 				response = future.get();
 	            // Process the response as needed
+				System.out.println(manyUrls.get(i));
+				i++;
 	            System.out.println("Response code: " + response.statusCode());
 	            System.out.println("Response body: " + response.body());
 				responses.add(response);
