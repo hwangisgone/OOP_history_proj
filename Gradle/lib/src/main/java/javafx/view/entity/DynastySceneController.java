@@ -1,6 +1,5 @@
 package javafx.view.entity;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -8,7 +7,7 @@ import java.util.ResourceBundle;
 import database.DynastyDatabase;
 import database.IDatabase;
 import entity.Dynasty;
-import entity.Festival;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -29,13 +28,12 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import util.ExtraStringUtil;
-import javafx.beans.property.SimpleStringProperty;
 
 public class DynastySceneController extends SearchController<Dynasty> implements Initializable{
 
     @FXML
     private TableView<Dynasty> DynastiesTableView;
-    
+
     @FXML
     private TableColumn<Dynasty, String> colID;
 
@@ -61,14 +59,15 @@ public class DynastySceneController extends SearchController<Dynasty> implements
     private HBox hboxFeature;
 
     private IDatabase<Dynasty> dysData = new DynastyDatabase();
-    
-    public void refresh() {
+
+    @Override
+	public void refresh() {
         data = FXCollections.observableArrayList(dysData.load());
-        
+
         // Bind the ObservableList to the TableView
 	    DynastiesTableView.setItems(data);
     }
-    
+
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
@@ -76,14 +75,14 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 		searchMap.put("Tên đầy đủ",	dynasty -> ExtraStringUtil.addComma(dynasty.getLongName()));
 		searchMap.put("Tên khác",	dynasty -> ExtraStringUtil.addComma(dynasty.getNativeName()));
 		// Mô tả
-		
+
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
         comboBox.setItems(itemsList);
         comboBox.setValue("Tên");
 	}
-	
 
-	
+
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -91,10 +90,10 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 	        // Add a default row
 		refresh();
 		initSearchMap();
-        
+
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-        
+
         colLongName.setCellValueFactory(celldata -> {
         	return new SimpleStringProperty(ExtraStringUtil.addComma(celldata.getValue().getLongName()));
         });
@@ -103,7 +102,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         });
         colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
         colYearEnd.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
-        
+
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 
@@ -111,7 +110,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
     void inputSearch(KeyEvent event) {
         String searchText = fieldSearch.getText();
         String searchOption = comboBox.getValue();
-        
+
         if (searchText.isEmpty()) {
             // If the search text is empty, revert to the original unfiltered list
         	DynastiesTableView.setItems(data);
@@ -125,7 +124,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 
     @FXML
     private ScrollPane scrollText;
-    
+
     @FXML
     private Text labelDescription;
 
@@ -137,10 +136,10 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 
     @FXML
     private BorderPane paneInfo;
-    
+
     @FXML
     private VBox paneTable;
-    
+
     private void switchPane(Dynasty selectDynasty) {
     	if (selectDynasty == null) {
         	paneInfo.setVisible(false);
@@ -148,13 +147,13 @@ public class DynastySceneController extends SearchController<Dynasty> implements
     	} else {
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
-        	
+
         	labelTitle.setText(selectDynasty.getName());
         	labelDescription.setText(selectDynasty.getDescription());
         	labelInfo.setText(selectDynasty.toString());
     	}
     }
-    
+
     @FXML
     void btnActionReturn(ActionEvent event) {
     	switchPane(null);

@@ -14,10 +14,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import crawldata.crawler.ICrawler;
 import database.constants.PathConstants;
+import entity.HistoricalEvent;
 
 
-public class ExtractAndList extends ExtractData {
+public class ExtractAndList extends ExtractData  {
     public static int numberUrlUsed = 0;
     public static List<String> listUrlNew = new ArrayList<>();
 
@@ -89,7 +91,7 @@ public class ExtractAndList extends ExtractData {
 
     public void writeJsonArrayFile() throws IOException{
         try (
-            FileWriter fileWriter = new FileWriter(PathConstants.pathEvent)) {
+            FileWriter fileWriter = new FileWriter("lib/src/main/resources/final/Event.json")) {
             String modifiedJsonString = ExtractData.unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();
@@ -97,6 +99,7 @@ public class ExtractAndList extends ExtractData {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) throws IOException {
         ExtractAndList searchMoreLink = new ExtractAndList();
         searchMoreLink.createListUrl(

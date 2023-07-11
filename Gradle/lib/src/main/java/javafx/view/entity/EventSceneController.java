@@ -4,9 +4,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import database.FestivalDatabase;
+import database.EventDatabase;
 import database.IDatabase;
-import entity.Festival;
+import entity.HistoricalEventWar;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -27,20 +27,19 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class FestivalSceneController extends SearchController<Festival> implements Initializable {
+public class EventSceneController extends SearchController<HistoricalEventWar> implements Initializable{
 
     @FXML
-    private TableView<Festival> FestivalsTableView;
+    private TableView<HistoricalEventWar> HistoricalEventsTableView;
 
     @FXML
-    private TableColumn<Festival, String> colDate;
+    private TableColumn<HistoricalEventWar, String> colDate;
 
     @FXML
-    private TableColumn<Festival, String> colID;
+    private TableColumn<HistoricalEventWar, String> colID;
 
     @FXML
-    private TableColumn<Festival, String> colLocation;
-
+    private TableColumn<HistoricalEventWar, String> colLocation;
 
     @FXML
     private ComboBox<String> comboBox;
@@ -51,22 +50,22 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     private HBox hboxFeature;
 
-    private IDatabase<Festival> festsData = new FestivalDatabase();
+    private IDatabase<HistoricalEventWar> db = new EventDatabase();
 
     @Override
 	public void refresh() {
-        data = FXCollections.observableArrayList(festsData.load());
+        data = FXCollections.observableArrayList(db.load());
 
         // Bind the ObservableList to the TableView
-	    FestivalsTableView.setItems(data);
+	    HistoricalEventsTableView.setItems(data);
     }
 
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("Tên",		loc -> loc.getName());
-		searchMap.put("Địa điểm",	loc -> loc.getLocation());
-		searchMap.put("Thời gian",	loc -> loc.getDate());
+		searchMap.put("Tên",		hisevent -> hisevent.getName());
+		searchMap.put("Thời gian",	hisevent -> hisevent.getTime());
+		searchMap.put("Địa điểm",	hisevent -> hisevent.getLocation());
 		// Mô tả
 
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
@@ -74,19 +73,20 @@ public class FestivalSceneController extends SearchController<Festival> implemen
         comboBox.setValue("Tên");
 	}
 
+
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		 System.out.println("Festival controller initialized");
+		 System.out.println("HistoricalEventWar controller initialized");
 	        // Add a default row
 		refresh();
 		initSearchMap();
 
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
-       //  colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 
-        colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
-        colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+
 
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
@@ -98,9 +98,9 @@ public class FestivalSceneController extends SearchController<Festival> implemen
 
         if (searchText.isEmpty()) {
             // If the search text is empty, revert to the original unfiltered list
-        	FestivalsTableView.setItems(data);
+        	HistoricalEventsTableView.setItems(data);
         } else {
-		    FestivalsTableView.setItems(getSearchData(searchText, searchOption));
+		    HistoricalEventsTableView.setItems(getSearchData(searchText, searchOption));
 		}
     }
 
@@ -125,17 +125,17 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     private VBox paneTable;
 
-    private void switchPane(Festival selectFestival) {
-    	if (selectFestival == null) {
+    private void switchPane(HistoricalEventWar selectHistoricalEventWar) {
+    	if (selectHistoricalEventWar == null) {
         	paneInfo.setVisible(false);
         	paneTable.setVisible(true);
     	} else {
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-        	labelTitle.setText(selectFestival.getName());
-        	labelDescription.setText(selectFestival.getDescription());
-        	labelInfo.setText(selectFestival.toString());
+        	labelTitle.setText(selectHistoricalEventWar.getName());
+        	labelDescription.setText(selectHistoricalEventWar.getDescription());
+        	labelInfo.setText(selectHistoricalEventWar.toString());
     	}
     }
 
@@ -147,7 +147,7 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     void tableClick(MouseEvent event) {
     	// if (event.getClickCount() == 2) {
-            Festival entity = FestivalsTableView.getSelectionModel().getSelectedItem();
+            HistoricalEventWar entity = HistoricalEventsTableView.getSelectionModel().getSelectedItem();
             switchPane(entity);
         // }
     }

@@ -11,12 +11,12 @@ import main.CSVHandler;
 public class FestivalDatabase implements IDatabase<Festival> {
 	File fileJson;
 	CSVHandler<Festival> csvHandler;
-	
+
 	public FestivalDatabase() {
 		fileJson = new File(PathConstants.pathFestival);
 		csvHandler = new CSVHandler<>(Festival.class);
 	}
-	
+
 	@Override
 	public void store(List<Festival> listObject) {
 		csvHandler.write(fileJson, listObject);

@@ -9,7 +9,7 @@ package entity;
 
 import java.util.Map;
 
-import crawldata.crawlm.data.Date;
+import crawldata.crawler.crawlm.data.Date;
 
 
 public class Character extends Entity {

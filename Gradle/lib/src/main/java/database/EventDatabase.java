@@ -4,9 +4,6 @@ import java.io.File;
 import java.util.List;
 import java.util.function.Supplier;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.HistoricalEvent;
@@ -17,7 +14,7 @@ public class EventDatabase implements IDatabase<HistoricalEvent>{
 	CSVHandler<HistoricalEvent> csvHandler;
 
 	public EventDatabase() {
-		fileJson = new File("lib/src/main/resources/event_data.json");
+		fileJson = new File("lib/src/main/resources/final/Event.json");
 		csvHandler = new CSVHandler<>(HistoricalEvent.class);
 	}
 
@@ -50,9 +47,9 @@ public class EventDatabase implements IDatabase<HistoricalEvent>{
 	@Override
 	public void close() {
 		// TODO Auto-generated method stub
-		
+
 	}
-    
+
 	public static void main(String[] args){
 		EventDatabase ed = new EventDatabase();
 		List<HistoricalEvent> eventlist = ed.load();

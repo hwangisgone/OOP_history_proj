@@ -11,12 +11,12 @@ import main.CSVHandler;
 public class LocationDatabase implements IDatabase<Location> {
 	File fileJson;
 	CSVHandler<Location> csvHandler;
-	
+
 	public LocationDatabase() {
 		fileJson = new File(PathConstants.pathLocation);
 		csvHandler = new CSVHandler<>(Location.class);
 	}
-	
+
 	@Override
 	public void store(List<Location> listObject) {
 		csvHandler.write(fileJson, listObject);
@@ -40,10 +40,10 @@ public class LocationDatabase implements IDatabase<Location> {
 			return getList.get();
 		}
 	}
-	
+
 	@Override
 	public void close() {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

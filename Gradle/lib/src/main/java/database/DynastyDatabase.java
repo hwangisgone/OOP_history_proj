@@ -11,12 +11,12 @@ import main.CSVHandler;
 public class DynastyDatabase implements IDatabase<Dynasty> {
 	File fileJson;
 	CSVHandler<Dynasty> csvHandler;
-	
+
 	public DynastyDatabase() {
 		fileJson = new File(PathConstants.pathDynasty);
 		csvHandler = new CSVHandler<>(Dynasty.class);
 	}
-	
+
 	@Override
 	public void store(List<Dynasty> listObject) {
 		csvHandler.write(fileJson, listObject);
