@@ -36,6 +36,8 @@ public class Ground {
 			// add each Map into hashmap
 			for (Map<String, String> map: listObject) {
 				String id = map.get("id");
+				if (id.contains("\""))
+					continue;
 				if (!mergedMap.containsKey(id)) {		// id is unique
 					mergedMap.put(id, map);
 					uniqueList.add(map);
@@ -76,7 +78,7 @@ public class Ground {
 
 
 	public static void main(String[] args) {
-		Ground.testLoad("src/main/resources/final/Character.json");
+		Ground.testLoad("src/main/java/Data/Database/historical-character/hc.json");
 		// Ground.mergeDataset();
 	}	// close main
 }
