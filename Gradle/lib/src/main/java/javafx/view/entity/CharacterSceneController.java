@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-import database.IDatabase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -23,7 +22,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
 import entity.Character;
+import database.IDatabase;
+import database.CharacterDatabase;
+
 
 public class CharacterSceneController implements Initializable {
 
@@ -73,10 +76,14 @@ public class CharacterSceneController implements Initializable {
     private VBox paneMain;
 
     private ObservableList<Character> data;
-    private IDatabase<Character> charsData = new CharacterDatabase();
+    /*
+        Here I don't return any database, just return directly the list of Character,
+        which read from file: "src/main/resources/final/Character.json"
+     */
+    private List<Character> listCharacter = CharacterDatabase.getListCharacter();
     
     public void refresh() {
-        data = FXCollections.observableArrayList(charsData.load());
+        data = FXCollections.observableArrayList(listCharacter);
 
         // Bind the ObservableList to the TableView
 	    CharactersTableView.setItems(data);

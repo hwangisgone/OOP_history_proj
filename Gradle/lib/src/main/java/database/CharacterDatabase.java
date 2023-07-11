@@ -5,7 +5,7 @@
 		2. IDatabase interface generics type is Map<String, String>
  */
 
-package Source.data.database;
+package database;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -27,6 +28,7 @@ import javax.json.JsonValue;
 import javax.json.JsonWriter;
 
 import database.IDatabase;
+import entity.Character;
 
 
 public class CharacterDatabase implements IDatabase <Map<String, String>> {
@@ -67,6 +69,24 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		return newDatabase;
 	}	// close getDatabase
 
+
+	/*
+		*QUICK-FIX*
+		To get final dataset, relative-path: "src/main/resources/final/Character.json"
+		@return 	List of Character
+	 */
+	public static List<Character> getListCharacter() {
+		CharacterDatabase database = CharacterDatabase.getDatabase("src/main/resources/final/Character.json");
+		// read database
+		List<Map<String, String>> listMap = database.load();
+		// modeling Character
+		List<Character> listCharacter = new ArrayList<Character> ();
+		for (Map<String, String> map: listMap) {
+			listCharacter.add(new Character(map));
+		}	// close for
+		// return list of character 
+		return listCharacter;
+	}	// close 
 
 
 	// load the JSON array from file and return the list of object
@@ -127,6 +147,7 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		this.list.addAll(listObject);
 	}	// close store
 
+
 	/* Load and return all objects in the database
 		- changes in the return list does NOT change the database
 	 */
@@ -136,10 +157,19 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		return cloneList;
 	}	// close load
 
+
 	/* close the database */
 	@Override
 	public void close() {
 		storeFile();
 	}	// close database
+
+
+	/* load or ?*/
+	@Override
+	public List<Map<String, String>> loadOr(Supplier<List<Map<String, String>>> getList) {
+		// TO-DO?
+		return null;
+	}	// close 
 
 }	// close CharacterDatabase

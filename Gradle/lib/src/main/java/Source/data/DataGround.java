@@ -8,7 +8,7 @@ package Source.data;
 import Source.data.crawl.DataControler;
 import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
 import Source.data.crawl.character.wiki.SearchLinkCharacter;
-import Source.data.database.CharacterDatabase;
+import database.CharacterDatabase;
 
 
 public class DataGround {
