@@ -11,7 +11,7 @@ public class PathConstants {
 	public static final String pathFestival	= finalDirectory + "Festival.json";
 	public static final String pathLocation	= finalDirectory + "Location.json";
 
-	public static final String pathCharConstraintWord =  "src/main/resources/constraintWord.json";
+	public static final String pathCharConstraintWord =  "src/main/resources/character_crawl/constraintWord.json";
 	
 	public static void createRequiredDir() {
 		File finalFileDir = new File(finalDirectory);

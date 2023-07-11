@@ -24,7 +24,9 @@ public class Date implements Comparable<Date> {
 		this.day = UNKNOWN;
 		this.month = UNKNOWN;
 		this.year = UNKNOWN;
-		extractDateFromString(dateString);
+		if (dateString != null) {
+			extractDateFromString(dateString);
+		}
 	}	// close Date
 
 

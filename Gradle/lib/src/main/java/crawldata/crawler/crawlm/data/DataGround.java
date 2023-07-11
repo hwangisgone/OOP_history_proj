@@ -19,7 +19,7 @@ public class DataGround {
 		@param 	size 	number of the searching links
 	 */
 	public static void crawl(String no, String urlSeed, int size) {
-		String databaseFile = "src/main/java/Data/Database/historical-character/hc#"+ no +".json";
+		String databaseFile = "src/main/resources/character_crawl/historical-character/hc#"+ no +".json";
 		// setup
 		SearchLinkCharacter seacher = new SearchLinkCharacter();
 		ExtractHistoricalCharacter extractor = new ExtractHistoricalCharacter();
@@ -28,7 +28,7 @@ public class DataGround {
 		// Measure running-time
 		long startTime = System.nanoTime();
 		// Search links
-		String fileUrl = "src/main/java/Data/Database/url/historical-character/url#" + no;
+		String fileUrl = "src/main/resources/character_crawl/url/historical-character/url#" + no;
 		controler.searchLinkIntoFile(urlSeed, 3, size, fileUrl);
 		long elapsedTime = System.nanoTime() - startTime;
 		System.out.println("\nSEARCH LINK COST: " + (elapsedTime / 1e9) + " secs");

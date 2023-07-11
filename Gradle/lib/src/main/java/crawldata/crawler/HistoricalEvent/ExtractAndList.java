@@ -126,7 +126,7 @@ public class ExtractAndList extends ExtractData  {
         listUrlNew.remove("https://vi.wikipedia.org/wiki/1954");
 
         searchMoreLink.writeListUrl(listUrlNew,
-                "lib/src/main/java/Data/Database/url/historical-event/eventLinkNew.txt");
+                "lib/src/main/resources/character_crawl/url/historical-event/eventLinkNew.txt");
         searchMoreLink.wrtieDataAll();
         for( int i = 0 ; i<=6 ; i++)
             jsonArray.remove(i);

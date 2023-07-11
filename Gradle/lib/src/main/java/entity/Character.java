@@ -15,6 +15,8 @@ import crawldata.crawler.crawlm.data.Date;
 
 public class Character extends Entity {
 
+
+
 	private Date dateOfBirth;		// can be convert to String by toString
 	private Date dateOfDeath;		// can be convert to String by toString
 	private String fullName;
@@ -23,6 +25,10 @@ public class Character extends Entity {
 	private String dynasty;
 	private String biography;
 
+	public Character() {
+		
+	}
+	
 	public Character(Map<String, String> map) {
 		setID(map.get("id"));
 		setDescription(map.get("description"));
@@ -32,7 +38,7 @@ public class Character extends Entity {
 		this.father = map.get("father");
 		this.mother = map.get("mother");
 		this.dynasty = map.get("dynasty");
-		this.biography = map.get("career&bio");
+		this.biography = map.get("biography");
 	}	// close Character
 
 	public Map<String, String> toMap() {
@@ -47,14 +53,14 @@ public class Character extends Entity {
 		conversion.put("father", father);
 		conversion.put("mother", mother);
 		conversion.put("dynasty", dynasty);
-		conversion.put("career&bio", biography);
+		conversion.put("biography", biography);
 		
 		return conversion;
 	}
 
 	// getters for fields
 	public String getFullName() {
-		if (fullName.isBlank()) {
+		if (fullName == null || fullName.isBlank()) {
 			return id;
 
 		} else {
@@ -87,6 +93,33 @@ public class Character extends Entity {
 		return biography;
 	}	// close getBiography
 
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public void setDateOfDeath(Date dateOfDeath) {
+		this.dateOfDeath = dateOfDeath;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public void setFather(String father) {
+		this.father = father;
+	}
+
+	public void setMother(String mother) {
+		this.mother = mother;
+	}
+
+	public void setDynasty(String dynasty) {
+		this.dynasty = dynasty;
+	}
+
+	public void setBiography(String biography) {
+		this.biography = biography;
+	}
 
 	@Override
 	public String toString() {

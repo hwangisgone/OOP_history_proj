@@ -25,12 +25,12 @@
 	2. urlSeed: url link, where to start searching
 	3. size: the number of links to search
 - Stored location
-	1. list of urls is stored in relative path: `src/main/java/Data/Database/url/historical-character/`
-	2. fild json of crawled data is stored at: `src/main/java/Data/Database/historical-character/`
+	1. list of urls is stored in relative path: `src/main/resources/character_crawl/url/historical-character/`
+	2. fild json of crawled data is stored at: `src/main/resources/character_crawl/historical-character/`
 
 2. Demonstrate loading and modeling character data
 - At class Source.Ground, using static method `testLoad` with specific json path of dataset:
-	`Ground.testLoad("src/main/java/Data/Database/historical-character/hc#2.json")`
+	`Ground.testLoad("src/main/resources/character_crawl/historical-character/hc#2.json")`
 
 - The Ground class will print out list of character entities in the dataset
 

@@ -78,7 +78,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 			}	// end for
 			if ((header != null) && (header.nextElementSibling() != null))
 				dateOfDeath = header.nextElementSibling().text();
-		// Get attribute #5: career&bio
+		// Get attribute #5: biography
 			String careerBio = "";
 			String carBioList[] = {"Tiểu_sử", "Thân_thế", "Sự_nghiệp"};
 			for (String keyword: carBioList) {				// search for keyword in the header
@@ -138,7 +138,7 @@ public class ExtractHistoricalCharacter extends ExtractData {
 			instance.put("name", name);
 			instance.put("dateOfBirth", dateOfBirth);
 			instance.put("dateOfDeath", dateOfDeath);
-			instance.put("career&bio", careerBio);
+			instance.put("biography", careerBio);
 			instance.put("dynasty", dynasty);
 			instance.put("mother", mother);
 			instance.put("father", father);					// attri #8

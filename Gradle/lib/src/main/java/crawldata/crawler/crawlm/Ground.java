@@ -22,9 +22,9 @@ public class Ground {
 	public static void mergeDataset() {
 		// create list of databases
 		String listDataset[] = {
-			"src/main/java/Data/Database/historical-character/hc#29-06#0.json",
-			"src/main/java/Data/Database/historical-character/hc#2.json",
-			"src/main/java/Data/Database/historical-character/hc#10-07#500.json"
+			"src/main/resources/character_crawl/historical-character/hc#29-06#0.json",
+			"src/main/resources/character_crawl/historical-character/hc#2.json",
+			"src/main/resources/character_crawl/historical-character/hc#10-07#500.json"
 		};
 		// Using hashmap to remove entities with dupplicated ID
 		Map<String, Character> mergedMap= new HashMap<String, Character> (2000);
@@ -46,7 +46,7 @@ public class Ground {
 			}	// close for
 		}	// close for
 		// create a single database 
-		String unifiedDataset = "src/main/java/Data/Database/historical-character/hc.json";
+		String unifiedDataset = "src/main/resources/character_crawl/historical-character/hc.json";
 		CharacterDatabase unionDatabase = CharacterDatabase.getDatabase(unifiedDataset);
 		unionDatabase.store(uniqueList);
 		unionDatabase.close();
@@ -75,7 +75,7 @@ public class Ground {
 
 
 	public static void main(String[] args) {
-		Ground.testLoad("src/main/java/Data/Database/historical-character/hc.json");
+		Ground.testLoad("src/main/resources/character_crawl/historical-character/hc.json");
 		// Ground.mergeDataset();
 	}	// close main
 }
