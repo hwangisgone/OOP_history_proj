@@ -1,8 +1,6 @@
 package crawldata.crawler;
 
-import java.io.File;
 import java.net.http.HttpClient;
-import java.util.ArrayList;
 import java.util.List;
 
 import crawldata.crawler.nonwiki.DiTichLocationCrawler;
@@ -12,11 +10,10 @@ import database.DynastyDatabase;
 import database.FestivalDatabase;
 import database.IDatabase;
 import database.LocationDatabase;
-import database.PathConstants;
+import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.Festival;
 import entity.Location;
-import main.CSVHandler;
 
 public class MainCrawler {
 	public MainCrawler() {
@@ -57,7 +54,7 @@ public class MainCrawler {
 
 			return locList;
 		});
-		
+
 		System.out.println("Collected in Dynasty: " + dynasties.size());
 		System.out.println("Collected in Festival: " + festivals.size());
 		System.out.println("Collected in Location: " + locations.size());

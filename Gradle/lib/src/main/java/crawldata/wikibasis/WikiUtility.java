@@ -17,13 +17,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import crawldata.wikibasis.infobox.InfoboxException;
 import main.Multithreader;
 import util.URLMaker;
 
 public class WikiUtility {
 	private static String whitespace = "    ";
-	
+
 	public static Map<String, Document> getDocumentsFromPages(List<String> pages, HttpClient client) {
 		List<String> htmlurls = URLMaker.getHtmlQueries(pages);
 		Map<String, Document> docs = new HashMap<>();

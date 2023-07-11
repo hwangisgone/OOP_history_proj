@@ -7,16 +7,17 @@ import java.util.function.Supplier;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import Quy.src.constant.Constant;
+import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.HistoricalEventWar;
 import main.CSVHandler;
+
 public class EventDatabase implements IDatabase<HistoricalEventWar>{
 	File fileJson;
 	CSVHandler<HistoricalEventWar> csvHandler;
 
 	public EventDatabase() {
-		fileJson = new File(Constant.JSON_PATH_EVENT);
+		fileJson = new File(PathConstants.pathEvent);
 		csvHandler = new CSVHandler<>(HistoricalEventWar.class);
 	}
 

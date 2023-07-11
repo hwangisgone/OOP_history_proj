@@ -15,7 +15,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Quy.src.constant.Constant;
+import database.constants.PathConstants;
 
 public class ExtractData {
     // List<Map<String, String >> data = new ArrayList<>();
@@ -162,7 +162,7 @@ public class ExtractData {
     public void writeDataToFile() throws IOException {
         try (
                 FileWriter fileWriter = new FileWriter(
-                        Constant.JSON_PATH_EVENT)) {
+                		PathConstants.pathEvent)) {
             String modifiedJsonString = unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();

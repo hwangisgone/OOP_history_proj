@@ -109,7 +109,7 @@ public class CharacterSceneController implements Initializable {
 			
 			ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
 	        comboBox.setItems(itemsList);
-	        comboBox.setValue("Tên sách");
+	        comboBox.setValue("ID");
 	        
 	        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
 	        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));

@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import Quy.src.constant.Constant;
+import database.constants.PathConstants;
 
 
 public class ExtractAndList extends ExtractData {
@@ -89,7 +89,7 @@ public class ExtractAndList extends ExtractData {
 
     public void writeJsonArrayFile() throws IOException{
         try (
-            FileWriter fileWriter = new FileWriter(Constant.JSON_PATH_EVENT)) {
+            FileWriter fileWriter = new FileWriter(PathConstants.pathEvent)) {
             String modifiedJsonString = ExtractData.unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();
@@ -129,7 +129,7 @@ public class ExtractAndList extends ExtractData {
             jsonArray.remove(i);
 
         searchMoreLink.writeJsonArrayFile();
-        
+
         System.out.println(size);
     }
 }
