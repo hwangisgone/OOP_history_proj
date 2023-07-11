@@ -9,7 +9,7 @@ import java.util.HashMap;
 	The ground of project: where all actions take place
  */
 
-import Source.data.database.CharacterDatabase;
+import database.CharacterDatabase;
 import entity.Character;
 import entity.Entity;
 
@@ -74,8 +74,9 @@ public class Ground {
 		System.out.println("Size: " + listEntity.size());
 	}	// close testSearch
 
+
 	public static void main(String[] args) {
-		Ground.testLoad("src/main/resources/character_data.json");
+		Ground.testLoad("src/main/resources/final/Character.json");
 		// Ground.mergeDataset();
 	}	// close main
 }
