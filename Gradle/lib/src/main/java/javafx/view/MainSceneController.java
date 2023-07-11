@@ -2,27 +2,59 @@ package javafx.view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 public class MainSceneController {
 
+	@FXML
+    private AnchorPane contentCharacter;
+
+    @FXML
+    private AnchorPane contentDynasty;
+
+    @FXML
+    private AnchorPane contentEvent;
+
+    @FXML
+    private AnchorPane contentFestival;
+
+    @FXML
+    private AnchorPane contentLocation;
+
+    @FXML
+    private BorderPane paneTabCharacter;
+
+    @FXML
+    private BorderPane paneTabDynasty;
+
+    @FXML
+    private BorderPane paneTabEvent;
+
+    @FXML
+    private BorderPane paneTabFestival;
+
+    @FXML
+    private BorderPane paneTabLocation;
+
+    @FXML
+    private Tab tabCharacter;
+
     @FXML
     private Tab tabDynasty;
+
+    @FXML
+    private Tab tabEvent;
 
     @FXML
     private Tab tabFestival;
 
     @FXML
     private Tab tabLocation;
-
-    @FXML
-    private TabPane tabPane;
-
-    @FXML
-    private BorderPane paneTabCharacter;
-
     
     @FXML
     void mainLogOut(ActionEvent event) {
@@ -30,9 +62,28 @@ public class MainSceneController {
     }
 
 
+    private void loadFXML(AnchorPane parent, String path) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+        try {
+            AnchorPane childControllerRoot = loader.load();
+            parent.getChildren().add(childControllerRoot);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
 	@FXML
     public void initialize() {
-        tabDynasty.setGraphic(paneTabCharacter);
+		loadFXML(contentDynasty, "entity/DynastyScene.fxml");
+		loadFXML(contentCharacter, "entity/CharacterScene.fxml");
+		loadFXML(contentFestival, "entity/FestivalScene.fxml");
+		loadFXML(contentLocation, "entity/LocationScene.fxml");
+        
+        tabDynasty.setGraphic(paneTabDynasty);
+        tabCharacter.setGraphic(paneTabCharacter);
+        tabEvent.setGraphic(paneTabEvent);
+        tabFestival.setGraphic(paneTabFestival);
+        tabLocation.setGraphic(paneTabLocation);
     }
 
 }

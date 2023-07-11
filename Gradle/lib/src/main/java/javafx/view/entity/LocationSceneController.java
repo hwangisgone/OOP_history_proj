@@ -103,7 +103,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
         colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         
-        colOtherNames.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colOtherNames.setCellValueFactory(new PropertyValueFactory<>("otherNames"));
         colLocated.setCellValueFactory(new PropertyValueFactory<>("located"));
         colPosition.setCellValueFactory(new PropertyValueFactory<>("position"));
         colGrade.setCellValueFactory(new PropertyValueFactory<>("grade"));

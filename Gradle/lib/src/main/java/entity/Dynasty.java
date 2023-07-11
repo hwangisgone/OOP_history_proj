@@ -19,6 +19,10 @@ public class Dynasty extends Entity {
 	public List<String> getLongName() {
 		return longName;
 	}
+	
+	public String getLongNameString() {
+		return String.join(", ", longName);
+	}
 
 
 	public void setLongName(List<String> longName) {
@@ -28,6 +32,10 @@ public class Dynasty extends Entity {
 
 	public List<String> getNativeName() {
 		return nativeName;
+	}
+	
+	public String getNativeNameString() {
+		return String.join(", ", nativeName);
 	}
 
 
@@ -138,7 +146,5 @@ public class Dynasty extends Entity {
                 .append("\n}");
         return sb.toString();
     }
-
-	
 
 }

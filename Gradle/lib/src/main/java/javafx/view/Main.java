@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("entity/LocationScene.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
 			primaryStage.setTitle("Group 12");
 			primaryStage.getIcons().add(new Image( new File("/Users/trinhdiemquynh/Documents/gui/GUI/src/image/group.png").toURI().toString()));
 			

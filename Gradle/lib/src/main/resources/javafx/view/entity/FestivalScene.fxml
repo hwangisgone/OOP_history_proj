@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.view.entity.LocationSceneController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.view.entity.FestivalSceneController">
    <children>
       <VBox layoutX="107.0" layoutY="47.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -25,7 +25,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </HBox>
-            <TableView fx:id="LocationsTableView" prefHeight="561.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="FestivalsTableView" prefHeight="561.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
                <columns>
                   <TableColumn fx:id="colID" prefWidth="77.60000801086426" text="Tên" />
                   <TableColumn fx:id="colLocation" prefWidth="106.39999389648438" text="Địa điểm" />

@@ -11,6 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.view.MainSceneController">
    <children>
@@ -18,32 +19,45 @@
          <center>
             <TabPane fx:id="tabPane" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="80.0" tabMinHeight="100.0" tabMinWidth="80.0">
               <tabs>
-                <Tab fx:id="tabDynasty" text="Nhân vật">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" />
-                  </content>
-                </Tab>
-                <Tab fx:id="tabFestival">
+                <Tab fx:id="tabDynasty" text="Triều đại">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <fx:include source="entity/FestivalScene.fxml" />
-                                 </children>
-                              </AnchorPane>
+                              <AnchorPane fx:id="contentDynasty" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children></AnchorPane>
                   </content>
                 </Tab>
-                  <Tab fx:id="tabLocation">
+                  <Tab fx:id="tabCharacter" text="Nhân vật">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <fx:include source="entity/LocationScene.fxml" />
-                                 </children>
-                              </AnchorPane>
+                              <AnchorPane fx:id="contentCharacter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tabEvent" text="Sự kiện">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <AnchorPane fx:id="contentEvent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="tabFestival" text="Lễ hội">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <AnchorPane fx:id="contentFestival" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabLocation" text="Địa điểm">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <AnchorPane fx:id="contentLocation" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children></AnchorPane>
                      </content>
                   </Tab>
@@ -62,21 +76,85 @@
             </MenuBar>
          </top>
          <bottom>
-            <BorderPane fx:id="paneTabCharacter" maxWidth="80.0" BorderPane.alignment="CENTER">
-               <center>
-                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../image/search-icon-png-9964.png" />
-                     </image>
-                  </ImageView>
-               </center>
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-               <bottom>
-                  <Label text="Nhân vật" BorderPane.alignment="CENTER" />
-               </bottom>
-            </BorderPane>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="paneTabCharacter" maxWidth="80.0">
+                     <center>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../image/search-icon-png-9964.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <bottom>
+                        <Label text="Nhân vật" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane fx:id="paneTabDynasty" maxWidth="80.0">
+                     <center>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../image/search-icon-png-9964.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <bottom>
+                        <Label text="Triều đại" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane fx:id="paneTabEvent" maxWidth="80.0">
+                     <center>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../image/search-icon-png-9964.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <bottom>
+                        <Label text="Sự kiện" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane fx:id="paneTabFestival" layoutX="10.0" layoutY="186.0" maxWidth="80.0">
+                     <center>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../image/search-icon-png-9964.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <bottom>
+                        <Label text="Lễ hội" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane fx:id="paneTabLocation" layoutX="10.0" layoutY="274.0" maxWidth="80.0">
+                     <center>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../image/search-icon-png-9964.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <bottom>
+                        <Label text="Địa điểm" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </VBox>
          </bottom>
       </BorderPane>
    </children>
