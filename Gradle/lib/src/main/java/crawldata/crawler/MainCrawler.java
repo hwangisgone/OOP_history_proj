@@ -10,12 +10,14 @@ import crawldata.crawler.wiki.wikifull.DynastyCrawler;
 import crawldata.crawler.wiki.wikifull.FestivalCrawler;
 import database.CharacterDatabase;
 import database.DynastyDatabase;
+import database.EventDatabase;
 import database.FestivalDatabase;
 import database.IDatabase;
 import database.LocationDatabase;
 import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.Festival;
+import entity.HistoricalEvent;
 import entity.Location;
 import entity.Character;
 
@@ -59,16 +61,18 @@ public class MainCrawler {
 			return locList;
 		});
 		
-		// ICrawler<Character> charCrawler = new CharacterDescCrawler(client);
+//		// ICrawler<Character> charCrawler = new CharacterDescCrawler(client);
+		IDatabase<HistoricalEvent> eventDB = new EventDatabase();
+		List<HistoricalEvent> events = eventDB.load();
 		List<Character> characters = CharacterDatabase.getListCharacter(); // charCrawler.crawl();
-		CharacterDatabase charaDatabase = CharacterDatabase.getDatabase(PathConstants.pathCharacter);
-		
-		charaDatabase.store(characters.subList(0, 10));
-		charaDatabase.close();
+//		CharacterDatabase charaDatabase = CharacterDatabase.getDatabase(PathConstants.pathCharacter);
+//		
+//		charaDatabase.store(characters.subList(0, 10));
+//		charaDatabase.close();
 		
 		System.out.println("Collected in Dynasty: " + dynasties.size());
 		System.out.println("Collected in Characters: " + characters.size());
-		// System.out.println("Collected in Events: " + events.size());
+		 System.out.println("Collected in Events: " + events.size());
 		System.out.println("Collected in Festival: " + festivals.size());
 		System.out.println("Collected in Location: " + locations.size());
 	}
