@@ -9,16 +9,14 @@ package entity;
 
 import java.util.Map;
 
-import entity.Entity;
 import Source.data.Date;
-import Source.exception.data.NoIdException;
 
 
 public class Character extends Entity {
 
 	private Date dateOfBirth;		// can be convert to String by toString
 	private Date dateOfDeath;		// can be convert to String by toString
-	private String fullName;		
+	private String fullName;
 	private String father;
 	private String mother;
 	private String dynasty;

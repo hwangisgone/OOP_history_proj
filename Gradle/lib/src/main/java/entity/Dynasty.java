@@ -7,7 +7,7 @@ public class Dynasty extends Entity {
 	List<String> nativeName;
 	String yearEnd;
 	String yearStart;
-	
+
 	String currency;
 	String status;
 	String religion;
@@ -15,15 +15,10 @@ public class Dynasty extends Entity {
 	String governmentType;
 	List<String> capitals;
 
-	
+
 	public List<String> getLongName() {
 		return longName;
 	}
-	
-	public String getLongNameString() {
-		return String.join(", ", longName);
-	}
-
 
 	public void setLongName(List<String> longName) {
 		this.longName = longName;
@@ -32,10 +27,6 @@ public class Dynasty extends Entity {
 
 	public List<String> getNativeName() {
 		return nativeName;
-	}
-	
-	public String getNativeNameString() {
-		return String.join(", ", nativeName);
 	}
 
 

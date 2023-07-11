@@ -16,16 +16,9 @@ public class FestivalInfoboxExtractor extends InfoboxExtractor<Festival> {
 	private Festival festival;
 
 	@Override
-	public void startNew(String name) {
-		festival = new Festival();
-		festival.setName(name);
+	public void startNew(Festival festival) {
+		this.festival = festival;
 	}
-
-	@Override
-	public Festival endNew() {
-		return festival;
-	}
-
 
 	@Override
 	protected void mapFindInInfobox(Element infobox) {

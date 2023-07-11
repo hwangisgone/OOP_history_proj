@@ -1,5 +1,7 @@
 package crawldata.wikibasis;
 
+import java.net.http.HttpClient;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,8 +13,51 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import crawldata.wikibasis.infobox.InfoboxException;
+import main.Multithreader;
+import util.URLMaker;
+
 public class WikiUtility {
 	private static String whitespace = "    ";
+	
+	public static Map<String, Document> getDocumentsFromPages(List<String> pages, HttpClient client) {
+		List<String> htmlurls = URLMaker.getHtmlQueries(pages);
+		Map<String, Document> docs = new HashMap<>();
+
+		int index = 0;
+		Multithreader multithreader = new Multithreader();
+        for (HttpResponse<String> response : multithreader.getResponseFromPages(client, htmlurls)) {
+            if (response.statusCode() == 200) {
+                String jsonResponse = response.body();
+                // System.out.println(jsonResponse);
+
+                ObjectMapper mapper = new ObjectMapper();
+
+                try {
+					JsonNode parse = mapper.readTree(jsonResponse).get("parse");
+
+					if (parse == null) { continue; }
+
+					Document thisdoc = Jsoup.parse(parse.get("text").asText());
+					if (thisdoc != null) {
+						docs.put(pages.get(index), thisdoc);
+					}
+
+				} catch (JsonProcessingException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }
+
+            index += 1;
+        }
+
+        return docs;
+	}
 
 	/**
 	 * Lấy Document từ trang web bất kì của Wikipedia.
@@ -148,10 +193,10 @@ public class WikiUtility {
 	 * @return Một Map chứa các thuộc tính và giá trị thuộc tính tương ứng dưới dạng key-value.
 	 * </br> Trong trường hợp trang web không tồn tại hoặc có lỗi hoặc trang web không có "info box" thì trả về Map rỗng.
 	 */
-	public static Map<String, String> getAdditionalInfoFromWikiInfoBoxOfURL(String url) {
+	public static Map<String, String> getAdditionalInfoFromWikiInfoBoxDocument(Document document) {
 		Map<String, String> additionalInfo = new HashMap<>();
 
-		Document document = getWikiDocumentFromURL(url);
+//		Document document = getWikiDocumentFromURL(url);
 		if (document == null) return additionalInfo;
 
 		Element infoBox = document.selectFirst(".infobox");
@@ -181,10 +226,9 @@ public class WikiUtility {
 	 * </br>Trong trường hợp trang web không tồn tại hoặc có lỗi hoặc do load động
 	 * mà không có nội dung thì trả về mặc định là "Chưa có thông tin.".
 	 */
-	public static String getDescriptionFromContentBoxOfURL(String url) {
+	public static String getDescriptionFromDocument(Document document) {
 		String defaultDescription = "Chưa có thông tin.";
 
-		Document document = getWikiDocumentFromURL(url);
 		if (document == null) return defaultDescription;
 
 		Element content = document.selectFirst("#mw-content-text .mw-parser-output");

@@ -2,7 +2,7 @@ package entity;
 
 public class Pagoda extends Location {
 	private String religion;
-	
+
 	public String getReligion() {
 		return religion;
 	}

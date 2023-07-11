@@ -19,6 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
+import util.ExtraStringUtil;
 
 public class DynastySceneController extends SearchController<Dynasty> implements Initializable{
 
@@ -65,8 +66,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
 		searchMap.put("Tên",		dynasty -> dynasty.getName());
-		searchMap.put("Tên đầy đủ",	dynasty -> dynasty.getLongNameString());
-		searchMap.put("Tên khác",	dynasty -> dynasty.getNativeNameString());
+		searchMap.put("Tên đầy đủ",	dynasty -> ExtraStringUtil.addComma(dynasty.getLongName()));
+		searchMap.put("Tên khác",	dynasty -> ExtraStringUtil.addComma(dynasty.getNativeName()));
 		// Mô tả
 		
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());

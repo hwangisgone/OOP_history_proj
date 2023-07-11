@@ -18,7 +18,7 @@ public class FestivalDatabase implements IDatabase<Festival> {
 	
 	@Override
 	public void store(List<Festival> listObject) {
-		// TODO Auto-generated method stub
+		csvHandler.write(fileJson, listObject);
 	}
 
 	@Override

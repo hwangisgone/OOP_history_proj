@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+
+import org.jsoup.nodes.Document;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.exc.StreamWriteException;
@@ -15,14 +18,16 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import crawldata.util.ExtraStringUtil;
 import crawldata.wikibasis.CategoryFinder;
 import crawldata.wikibasis.PageFinder;
+import crawldata.wikibasis.WikiUtility;
 import crawldata.wikibasis.infobox.DynastyInfoboxExtractor;
 import crawldata.wikibasis.infobox.FestivalInfoboxExtractor;
+import crawldata.wikibasis.infobox.InfoboxException;
 import crawldata.wikibasis.infobox.InfoboxExtractor;
 import entity.Dynasty;
 import entity.Festival;
+import util.ExtraStringUtil;
 
 public class FestivalCrawler extends WikiCrawler<Festival> {
 	private HttpClient client;
@@ -57,12 +62,37 @@ public class FestivalCrawler extends WikiCrawler<Festival> {
 
 		pageFinder.getPagesFor(pageSet, categories);
 
-		return new ArrayList<>(pageSet);
+		List<String> wordsFilter = Arrays.asList(
+				"Thành viên:",
+				"Năm Du lịch quốc gia 2021"
+		);
+		
+		return ExtraStringUtil.filterString(pageSet, wordsFilter, false);
 	}
 
 	@Override
 	protected List<Festival> getInfoFromPages(List<String> pages) {
 		InfoboxExtractor<Festival> ext = new FestivalInfoboxExtractor(client);
-		return ext.getInfoboxContents(pages);
+		
+		List<Festival> festivals = new ArrayList<>();
+		Map<String, Document> docs = WikiUtility.getDocumentsFromPages(pages, client);
+		for (Map.Entry<String, Document> entry : docs.entrySet()) {
+		    String title = entry.getKey();
+		    Document doc = entry.getValue();
+		    
+		    Festival festival = new Festival();
+		    festival.setName(title);
+		    
+		    try {
+				ext.getInfoFromHtmlFor(doc, festival);
+			} catch (InfoboxException e) {
+				System.err.println(e.getMessage());
+				// e.printStackTrace();
+			}
+		    
+		    festivals.add(festival);
+		}
+		
+		return festivals;
 	}
 }

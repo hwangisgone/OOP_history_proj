@@ -16,18 +16,18 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import crawldata.util.URLMaker;
+import entity.Entity;
 import main.Multithreader;
+import util.URLMaker;
 
-public abstract class InfoboxExtractor<T> {
+public abstract class InfoboxExtractor<T extends Entity> {
 	private HttpClient client;
 
 	public InfoboxExtractor(HttpClient client) {
 		this.client = client;
 	}
 
-	protected abstract T endNew();
-	protected abstract void startNew(String title);
+	protected abstract void startNew(T entity);
 	protected abstract void mapKeyVal(Element key, Element val);
 	protected abstract void mapFindInInfobox(Element infobox);
 	protected abstract boolean mapRow(int index, Element key, Element val);
@@ -47,15 +47,15 @@ public abstract class InfoboxExtractor<T> {
         }
 	}
 
-	private T getInfoFromHtml(String html, String title) throws InfoboxException {
-		Document doc = Jsoup.parse(html);
+	public void getInfoFromHtmlFor(Document doc, T entity) throws InfoboxException {
 		Element infobox = doc.selectFirst("table.infobox");
 
 		if (infobox == null) {
-			throw new InfoboxException("Infobox not found for: " + title);
+			throw new InfoboxException("Infobox not found for: " + entity.getName());
 		}
+		
 		this.remapBr(infobox);
-		this.startNew(title);
+		this.startNew(entity);
 		this.mapFindInInfobox(infobox);
 
 		Elements rows = infobox.select("tr");
@@ -75,46 +75,5 @@ public abstract class InfoboxExtractor<T> {
 				}
 			}
 		}
-
-		return this.endNew();
-	}
-
-	public List<T> getInfoboxContents(List<String> pages) {
-		List<String> htmlurls = URLMaker.getHtmlQueries(pages);
-		List<T> infos = new ArrayList<>();
-
-		int index = 0;
-		Multithreader multithreader = new Multithreader();
-        for (HttpResponse<String> response : multithreader.getResponseFromPages(client, htmlurls)) {
-            if (response.statusCode() == 200) {
-                String jsonResponse = response.body();
-                // System.out.println(jsonResponse);
-
-                ObjectMapper mapper = new ObjectMapper();
-
-                try {
-					JsonNode parse = mapper.readTree(jsonResponse).get("parse");
-
-					if (parse == null) { continue; }
-
-					try {
-						T output = getInfoFromHtml(parse.get("text").asText(), pages.get(index));
-						infos.add(output);
-					} catch (InfoboxException e) {
-						// TODO Auto-generated catch block
-						System.err.println(e.getMessage());
-					}
-
-
-				} catch (JsonProcessingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-            }
-
-            index += 1;
-        }
-
-        return infos;
 	}
 }

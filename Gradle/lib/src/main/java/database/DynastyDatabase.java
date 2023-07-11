@@ -18,7 +18,7 @@ public class DynastyDatabase implements IDatabase<Dynasty> {
 	
 	@Override
 	public void store(List<Dynasty> listObject) {
-		// TODO Auto-generated method stub
+		csvHandler.write(fileJson, listObject);
 	}
 
 	@Override

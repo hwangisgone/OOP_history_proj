@@ -9,7 +9,7 @@ public class Location extends Entity {
 	private String gradeType;
 	private String grade;
 	private String worship;
-	
+
 	private String image;
 
 	public String getImage() {

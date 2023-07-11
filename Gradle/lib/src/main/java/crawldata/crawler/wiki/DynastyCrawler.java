@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+
+import org.jsoup.nodes.Document;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.exc.StreamWriteException;
@@ -14,12 +17,15 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import crawldata.util.ExtraStringUtil;
 import crawldata.wikibasis.CategoryFinder;
 import crawldata.wikibasis.PageFinder;
+import crawldata.wikibasis.WikiUtility;
 import crawldata.wikibasis.infobox.DynastyInfoboxExtractor;
-import crawldata.wikibasis.infobox.FestivalInfoboxExtractor;
+import crawldata.wikibasis.infobox.DynastyInfoboxExtractor;
+import crawldata.wikibasis.infobox.InfoboxException;
 import crawldata.wikibasis.infobox.InfoboxExtractor;
+import entity.Dynasty;
+import util.ExtraStringUtil;
 import entity.Dynasty;
 
 public class DynastyCrawler extends WikiCrawler<Dynasty> {
@@ -67,6 +73,26 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	@Override
 	protected List<Dynasty> getInfoFromPages(List<String> pages) {
 		InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
-		return ext.getInfoboxContents(pages);
+		
+		List<Dynasty> dynasties = new ArrayList<>();
+		Map<String, Document> docs = WikiUtility.getDocumentsFromPages(pages, client);
+		for (Map.Entry<String, Document> entry : docs.entrySet()) {
+		    String title = entry.getKey();
+		    Document doc = entry.getValue();
+		    
+		    Dynasty dynasty = new Dynasty();
+		    dynasty.setName(title);
+		    
+		    try {
+				ext.getInfoFromHtmlFor(doc, dynasty);
+			    dynasties.add(dynasty);
+			} catch (InfoboxException e) {
+				
+				// Don't add
+				System.err.println(e.getMessage());
+			}
+		}
+		
+		return dynasties;
 	}
 }

@@ -19,16 +19,9 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 	private Dynasty dynasty;
 
 	@Override
-	public void startNew(String name) {
-		dynasty = new Dynasty();
-		dynasty.setName(name);
+	public void startNew(Dynasty dynasty) {
+		this.dynasty = dynasty;
 	}
-
-	@Override
-	public Dynasty endNew() {
-		return dynasty;
-	}
-
 
 	@Override
 	protected void mapFindInInfobox(Element infobox) {
@@ -127,14 +120,14 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
     	HttpClient client = HttpClient.newHttpClient();
     	InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
 
-    	List<Dynasty> maps = ext.getInfoboxContents(Arrays.asList("Thời kỳ Bắc thuộc lần thứ ba", "Nhà Tiền Lý", "Nhà Hậu Trần"));
+    	// List<Dynasty> maps = ext.getInfoboxContents(Arrays.asList("Thời kỳ Bắc thuộc lần thứ ba", "Nhà Tiền Lý", "Nhà Hậu Trần"));
 
     	// Sort the map by key
 
-    	maps.forEach(map -> {
-    		System.out.println(map.toString());
-
-    	});
+//    	maps.forEach(map -> {
+//    		System.out.println(map.toString());
+//
+//    	});
     }
 
 }

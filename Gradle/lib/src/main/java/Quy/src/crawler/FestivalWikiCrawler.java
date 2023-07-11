@@ -40,7 +40,7 @@ public class FestivalWikiCrawler extends AbstractCrawler {
 			
 			String festivalName = currentRowElements.get(1).text();
 			String linkToDetailedPost = rootURL + currentRowElements.get(1).selectFirst("a").attr("href");
-			String festivalDescription = WikiUtility.getDescriptionFromContentBoxOfURL(linkToDetailedPost);
+			String festivalDescription = WikiUtility.getDescriptionFromDocument(linkToDetailedPost);
 			
 			Map<String, String> festivalAdditionalInfo = new HashMap<String, String>();
 			festivalAdditionalInfo.put(tableHeaders.get(0), currentRowElements.get(0).text());

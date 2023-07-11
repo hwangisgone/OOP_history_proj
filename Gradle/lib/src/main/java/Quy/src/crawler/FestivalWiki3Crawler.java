@@ -46,8 +46,8 @@ public class FestivalWiki3Crawler extends AbstractCrawler {
 				if (aTag_toFestival == null) continue;
 				
 				String linkToDetailedPost = rootURL + aTag_toFestival.attr("href");
-				String festivalDescription = WikiUtility.getDescriptionFromContentBoxOfURL(linkToDetailedPost);
-				Map<String, String> festivalAdditionalInfo = WikiUtility.getAdditionalInfoFromWikiInfoBoxOfURL(linkToDetailedPost);
+				String festivalDescription = WikiUtility.getDescriptionFromDocument(linkToDetailedPost);
+				Map<String, String> festivalAdditionalInfo = WikiUtility.getAdditionalInfoFromWikiInfoBoxDocument(linkToDetailedPost);
 				if (festivalDescription == "Chưa có thông tin." && festivalAdditionalInfo.size() == 0) continue;
 				
 				crawled.add(new FestivalEntity(festivalName, festivalAdditionalInfo, festivalDescription, rootURL));

@@ -1,4 +1,4 @@
-package crawldata.util;
+package util;
 
 import java.util.Collection;
 import java.util.List;
@@ -23,4 +23,9 @@ public class ExtraStringUtil {
     	
     	return filteredList;
     }
+	
+	public static String addComma(List<String> strings) {
+		return String.join(", ", strings);
+	}
+
 }

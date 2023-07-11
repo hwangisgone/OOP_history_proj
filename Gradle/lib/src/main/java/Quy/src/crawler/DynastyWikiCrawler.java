@@ -70,8 +70,8 @@ public class DynastyWikiCrawler extends AbstractCrawler {
 			if (aTags.size() != 0) {
 				String linkToDetailedPost = rootURL + aTags.first().attr("href");
 
-				Map<String, String> dynastyAdditionalInfo = WikiUtility.getAdditionalInfoFromWikiInfoBoxOfURL(linkToDetailedPost);
-				String dynastyDescription = WikiUtility.getDescriptionFromContentBoxOfURL(linkToDetailedPost);
+				Map<String, String> dynastyAdditionalInfo = WikiUtility.getAdditionalInfoFromWikiInfoBoxDocument(linkToDetailedPost);
+				String dynastyDescription = WikiUtility.getDescriptionFromDocument(linkToDetailedPost);
 
 				isThisDynastyValid = (dynastyDescription != "Chưa có thông tin.") || (dynastyAdditionalInfo.size() != 0);
 

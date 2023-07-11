@@ -18,7 +18,7 @@ public class LocationDatabase implements IDatabase<Location> {
 	
 	@Override
 	public void store(List<Location> listObject) {
-		// TODO Auto-generated method stub
+		csvHandler.write(fileJson, listObject);
 	}
 
 	@Override
