@@ -85,10 +85,12 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 		    
 		    try {
 				ext.getInfoFromHtmlFor(doc, dynasty);
+			    dynasty.setDescription(WikiUtility.getDescriptionFromDocument(doc));
+			    
 			    dynasties.add(dynasty);
 			} catch (InfoboxException e) {
 				
-				// Don't add
+				// Don't add without infobox
 				System.err.println(e.getMessage());
 			}
 		}

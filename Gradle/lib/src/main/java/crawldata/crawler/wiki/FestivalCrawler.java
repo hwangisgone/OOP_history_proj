@@ -90,6 +90,8 @@ public class FestivalCrawler extends WikiCrawler<Festival> {
 				// e.printStackTrace();
 			}
 		    
+		    festival.setDescription(WikiUtility.getDescriptionFromDocument(doc));
+		    
 		    festivals.add(festival);
 		}
 		
