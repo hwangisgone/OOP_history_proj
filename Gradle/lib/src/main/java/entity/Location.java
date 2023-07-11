@@ -2,6 +2,8 @@ package entity;
 
 import java.util.List;
 
+import util.ExtraStringUtil;
+
 public class Location extends Entity {
 	private List<String> otherNames;
 	private String located;
@@ -72,13 +74,11 @@ public class Location extends Entity {
 	@Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n Tên: ").append(id)
-	    	.append("\n Tên khác: ").append(otherNames != null ? String.join(", ", otherNames) : "")
-	    	.append("\n Vị trí: ").append(located)
-	    	.append("\n Tọa độ: ").append(position)
-	    	.append("\n Tôn thờ: ").append(worship).append("\n")
-	    	.append("\n Loại hình xếp hạng").append(gradeType)
-	    	.append("\n Xếp hạng: ").append(grade);
+        ExtraStringUtil.appendNotNull(sb, "\n Tên khác: ", otherNames);
+        ExtraStringUtil.appendNotNull(sb, "\n Toạ độ: ", position);
+        ExtraStringUtil.appendNotNull(sb, "\n Tôn thờ: ", worship); sb.append("\n");
+        ExtraStringUtil.appendNotNull(sb, "\n\n Loại hình xếp hạng: ", gradeType);
+        ExtraStringUtil.appendNotNull(sb, "\n Xếp hạng: ", grade);
 
         return sb.toString();
     }

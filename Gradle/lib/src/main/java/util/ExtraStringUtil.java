@@ -27,5 +27,23 @@ public class ExtraStringUtil {
 	public static String addComma(List<String> strings) {
 		return String.join(", ", strings);
 	}
+	
+	public static void appendNotNull(StringBuilder sb, String str, String val) {
+		if (val != null) {
+			sb.append(str).append(val);
+		}
+	}
+
+	public static void appendNotNull(StringBuilder sb, String str, List<String> val) {
+		if (val != null) {
+			sb.append(str).append(addComma(val));
+		}
+	}
+	
+	public static void appendNotNull(StringBuilder sb, String str, List<String> val, String delimiter) {
+		if (val != null) {
+			sb.append(str).append(String.join(delimiter, val));
+		}
+	}
 
 }

@@ -176,8 +176,10 @@ public class LocationSceneController extends SearchController<Location> implemen
         	paneInfo.setVisible(false);
         	paneTable.setVisible(true);
     	} else {
+			paneExtra.getChildren().remove(imageInfo);
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
+        	
 
 //        	URLConnection connection;
 //			try {

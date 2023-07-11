@@ -93,8 +93,7 @@ public class HistoricalEvent extends Entity{
 		sb.append("\n Thời gian").append(time)
 				.append("\n Nhà nước liên quan: ").append(ExtraStringUtil.addComma(dynasty_related))
 				.append("\n Địa điểm: ").append(location)
-				.append("\n Kết quả: ").append(result)
-				.append("\n}");
+				.append("\n Kết quả: ").append(result);
 		return sb.toString();
 	}
 }

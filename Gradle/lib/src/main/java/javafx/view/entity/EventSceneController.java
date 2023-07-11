@@ -26,6 +26,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import util.ExtraStringUtil;
 
 public class EventSceneController extends SearchController<HistoricalEvent> implements Initializable{
 
@@ -136,16 +137,15 @@ public class EventSceneController extends SearchController<HistoricalEvent> impl
         	paneInfo.setVisible(false);
         	paneTable.setVisible(true);
     	} else {
+    		paneExtra.getChildren().remove(imageInfo);
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
 			
 			StringBuilder sb = new StringBuilder();
-			sb.append(selectHistoricalEvent.getDescription())
-			.append("\n Sự kiện liên quan: \n - ")
-			.append(String.join("\n - ", selectHistoricalEvent.getRelatedTo()))
-			.append("\n Nhân vật liên quan: ")
-			.append(String.join(", ", selectHistoricalEvent.getCharacters()));
+			sb.append(selectHistoricalEvent.getDescription());
+			ExtraStringUtil.appendNotNull(sb, "\n\n Sự kiện liên quan: \n - ", selectHistoricalEvent.getRelatedTo(), "\n - ");
+			ExtraStringUtil.appendNotNull(sb, "\n\n Nhân vật liên quan: ", selectHistoricalEvent.getCharacters());
 			
         	labelTitle.setText(selectHistoricalEvent.getID());
         	labelDescription.setText(sb.toString());

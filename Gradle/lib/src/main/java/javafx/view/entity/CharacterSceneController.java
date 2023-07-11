@@ -67,12 +67,6 @@ public class CharacterSceneController extends SearchController<Character> implem
     @FXML
     private HBox hboxFeature;
 
-    @FXML
-    private AnchorPane paneAdd;
-
-    @FXML
-    private VBox paneMain;
-
     private ObservableList<Character> data;
     /*
         Here I don't return any database, just return directly the list of Character,
