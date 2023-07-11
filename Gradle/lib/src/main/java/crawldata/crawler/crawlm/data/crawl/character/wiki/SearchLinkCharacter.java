@@ -62,7 +62,6 @@ public class SearchLinkCharacter extends SearchLink {
 			JsonArray listWebsite = jsonObject.getJsonArray("HistoricalCharacter");
 			for (int i = 0; i < listWebsite.size(); i ++ ) {
 				JsonObject web = listWebsite.getJsonObject(i);
-				String nameWeb = web.getString("website");
 				// get avoid array
 				JsonArray array = web.getJsonArray("avoid");
 				for (int j = 0; j < array.size(); j ++ )

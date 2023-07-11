@@ -155,8 +155,8 @@ public class LocationSceneController extends SearchController<Location> implemen
 
     @FXML
     private VBox paneExtra;
-    
-    
+
+
     @FXML
     private Text labelDescription;
 
@@ -180,7 +180,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 			paneExtra.getChildren().remove(imageInfo);
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
-        	
+
         	imageInfo.setImage(new Image(selectLocation.getImage().replace("\\", "//"), true));
 //        	URLConnection connection;
 //			try {

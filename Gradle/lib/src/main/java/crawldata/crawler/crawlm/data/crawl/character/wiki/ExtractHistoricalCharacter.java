@@ -156,12 +156,12 @@ public class ExtractHistoricalCharacter extends ExtractData {
 	}	// close extract
 
 
-	private void testExtractOneUrl(String url) {
-		ExtractData extractor = new ExtractHistoricalCharacter();
-		Map<String, String> map = extractor.extract(url);
-		for (Map.Entry<String, String> entry: map.entrySet()) {
-			System.out.println(entry.getKey() + ": " + entry.getValue());
-		}	// close for
-	}	// close main
+//	private void testExtractOneUrl(String url) {
+//		ExtractData extractor = new ExtractHistoricalCharacter();
+//		Map<String, String> map = extractor.extract(url);
+//		for (Map.Entry<String, String> entry: map.entrySet()) {
+//			System.out.println(entry.getKey() + ": " + entry.getValue());
+//		}	// close for
+//	}	// close main
 
 }	// close ExtractHistoricalCharacter

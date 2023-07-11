@@ -22,7 +22,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -158,10 +157,10 @@ public class CharacterSceneController extends SearchController<Character> implem
 
     @FXML
     private ScrollPane scrollText;
-    
+
     @FXML
     private VBox paneExtra;
-    
+
     @FXML
     private Text labelDescription;
 

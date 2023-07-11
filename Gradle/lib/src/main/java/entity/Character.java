@@ -26,9 +26,9 @@ public class Character extends Entity {
 	private String biography;
 
 	public Character() {
-		
+
 	}
-	
+
 	public Character(Map<String, String> map) {
 		setID(map.get("id"));
 		setDescription(map.get("description"));
@@ -43,10 +43,10 @@ public class Character extends Entity {
 
 	public Map<String, String> toMap() {
 		Map<String, String> conversion = new HashMap<>();
-		
+
 		conversion.put("id", id);
 		conversion.put("description", description);
-		
+
 		conversion.put("dateOfBirth", dateOfBirth.toString());
 		conversion.put("dateOfDeath", dateOfDeath.toString());
 		conversion.put("name", fullName);
@@ -54,7 +54,7 @@ public class Character extends Entity {
 		conversion.put("mother", mother);
 		conversion.put("dynasty", dynasty);
 		conversion.put("biography", biography);
-		
+
 		return conversion;
 	}
 

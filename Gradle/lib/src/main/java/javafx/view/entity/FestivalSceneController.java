@@ -113,8 +113,8 @@ public class FestivalSceneController extends SearchController<Festival> implemen
 
     @FXML
     private VBox paneExtra;
-    
-    
+
+
     @FXML
     private Text labelDescription;
 

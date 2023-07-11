@@ -6,7 +6,6 @@ import java.util.function.Supplier;
 
 import database.constants.PathConstants;
 import database.handler.CSVHandler;
-import entity.Dynasty;
 import entity.HistoricalEvent;
 
 public class EventDatabase implements IDatabase<HistoricalEvent>{

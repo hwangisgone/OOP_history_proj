@@ -8,39 +8,22 @@
 package database;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Supplier;
-
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonReader;
-import javax.json.JsonValue;
-import javax.json.JsonWriter;
 
 import database.constants.PathConstants;
 import database.handler.CSVHandler;
 import entity.Character;
-import entity.Dynasty;
 
 
 public class CharacterDatabase implements IDatabase <Character> {
 
 	private static List<String> listFileExist;			// list of files have already been opened
 	private static List<CharacterDatabase> listDatabase;		// list of database exist
-//	private String jsonFilePath;						
+//	private String jsonFilePath;
 	private List<Character> list;						// the list of objects in database
-	
+
 	private File fileJson;								// the file where the database operates on
 	private CSVHandler<Character> jacksonHandler;
 	// initialize static properties

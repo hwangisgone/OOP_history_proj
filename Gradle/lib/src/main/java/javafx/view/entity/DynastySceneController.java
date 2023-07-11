@@ -27,7 +27,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.scene.web.WebView;
 import util.ExtraStringUtil;
 
 public class DynastySceneController extends SearchController<Dynasty> implements Initializable{
@@ -129,7 +128,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 
     @FXML
     private VBox paneExtra;
-    
+
     @FXML
     private Text labelDescription;
 
@@ -144,7 +143,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 
     @FXML
     private VBox paneTable;
-    
+
 //    @FXML
 //    private WebView htmlView;
 
@@ -157,7 +156,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         	paneTable.setVisible(false);
 
 
-        	
+
         	labelTitle.setText(selectDynasty.getID());
         	labelDescription.setText(selectDynasty.getDescription());
 //        	htmlView.getEngine().loadContent(selectDynasty.getDescription());

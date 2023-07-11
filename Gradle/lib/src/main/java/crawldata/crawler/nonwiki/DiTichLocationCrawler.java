@@ -64,7 +64,7 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 		        loc.setID(aTag.selectFirst("h2").text());
 		        loc.setLocated(locText);
 		        loc.setImage(mainUrl + aTag.selectFirst("img").attr("src"));
-		        
+
 		        loc.setID(loc.getID().substring(0, 1).toUpperCase() + loc.getID().substring(1)); // Capitalize first letter
 		        locList.add(loc);
 		    }
@@ -137,9 +137,5 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
             }
         }
     }
-	
-	private void getWikiDesc(Location location) {
-		
-	}
 
 }

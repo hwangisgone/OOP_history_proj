@@ -56,7 +56,7 @@ public class HistoricalEvent extends Entity{
 	}
 
 	public void setRelatedTo(List<String> relatedTo) {
-		this.related_to = related_to;
+		this.related_to = relatedTo;
 	}
 
 	public List<String> getCharacters() {

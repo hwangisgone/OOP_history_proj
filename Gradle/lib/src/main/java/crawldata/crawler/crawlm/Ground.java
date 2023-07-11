@@ -1,9 +1,9 @@
 package crawldata.crawler.crawlm;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 
 /*
 	The ground of project: where all actions take place
@@ -27,8 +27,8 @@ public class Ground {
 			"src/main/resources/character_crawl/historical-character/hc#10-07#500.json"
 		};
 		// Using hashmap to remove entities with dupplicated ID
-		Map<String, Character> mergedMap= new HashMap<String, Character> (2000);
-		
+		Map<String, Character> mergedMap= new HashMap<> (2000);
+
 		List<Character> uniqueList = new ArrayList<> ();
 		// create list of database
 		for (String datasetPath: listDataset) {
@@ -45,7 +45,7 @@ public class Ground {
 				}	// close if
 			}	// close for
 		}	// close for
-		// create a single database 
+		// create a single database
 		String unifiedDataset = "src/main/resources/character_crawl/historical-character/hc.json";
 		CharacterDatabase unionDatabase = CharacterDatabase.getDatabase(unifiedDataset);
 		unionDatabase.store(uniqueList);

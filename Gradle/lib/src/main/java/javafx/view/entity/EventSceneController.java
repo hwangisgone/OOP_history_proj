@@ -86,10 +86,10 @@ public class EventSceneController extends SearchController<HistoricalEvent> impl
 
         colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-        
+
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
-        
+
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
         labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
@@ -115,8 +115,8 @@ public class EventSceneController extends SearchController<HistoricalEvent> impl
 
     @FXML
     private VBox paneExtra;
-    
-    
+
+
     @FXML
     private Text labelDescription;
 
@@ -141,12 +141,12 @@ public class EventSceneController extends SearchController<HistoricalEvent> impl
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-			
+
 			StringBuilder sb = new StringBuilder();
 			sb.append(selectHistoricalEvent.getDescription());
 			ExtraStringUtil.appendNotNull(sb, "\n\n Sự kiện liên quan: \n - ", selectHistoricalEvent.getRelatedTo(), "\n - ");
 			ExtraStringUtil.appendNotNull(sb, "\n\n Nhân vật liên quan: ", selectHistoricalEvent.getCharacters());
-			
+
         	labelTitle.setText(selectHistoricalEvent.getID());
         	labelDescription.setText(sb.toString());
         	labelInfo.setText(selectHistoricalEvent.toString());

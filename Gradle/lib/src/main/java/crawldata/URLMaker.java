@@ -42,7 +42,7 @@ public class URLMaker {
 	public static List<String> getHtmlQueries(List<String> titles) {
 		return getQueries(titles, URL_HTML);
 	}
-	
+
 	public static String getHtmlQuery(String title) {
 		return URL_HTML + title;
 	}

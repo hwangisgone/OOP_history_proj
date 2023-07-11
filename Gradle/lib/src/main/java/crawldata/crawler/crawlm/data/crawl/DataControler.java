@@ -13,7 +13,6 @@ import java.io.IOException;
 // Container
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import database.IDatabase;
 import entity.Character;
@@ -94,7 +93,7 @@ public class DataControler {
 		List<String> listUrl = readListUrl(fileUrl);
 		List<Character> extracted = extractor.extract(listUrl)
 										.stream().map(emap -> new Character(emap)).toList();
-		
+
 		this.database.store(extracted);
 		this.database.close();
 		System.out.println("Successfully extract " + extracted.size() + " objects!");

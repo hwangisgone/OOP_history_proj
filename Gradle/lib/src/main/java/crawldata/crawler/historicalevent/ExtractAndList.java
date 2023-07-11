@@ -14,10 +14,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import crawldata.crawler.ICrawler;
-import database.constants.PathConstants;
-import entity.HistoricalEvent;
-
 
 public class ExtractAndList extends ExtractData  {
     public static int numberUrlUsed = 0;

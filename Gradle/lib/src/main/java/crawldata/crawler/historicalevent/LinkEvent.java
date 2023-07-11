@@ -62,7 +62,6 @@ public class LinkEvent {
 
     public String contentInfobox(String element, int type1, int type2) throws IOException {
         String returnString = "";
-        List<String> listString = new ArrayList<>();
         Element content = doc.getElementsByClass("infobox vevent").first();
         Element contentSpecial = content.select("tr:has(th:containsOwn(" + element + "))").first();
         if (contentSpecial != null && contentSpecial.nextElementSibling() != null) {
@@ -76,7 +75,6 @@ public class LinkEvent {
     }
 
     public List<String> contentInfoboxList(String element, int type1, int type2) throws IOException {
-        String returnString = "";
         List<String> listString = new ArrayList<>();
         Element content = doc.getElementsByClass("infobox vevent").first();
         Element contentSpecial = content.select("tr:has(th:containsOwn(" + element + "))").first();
@@ -84,7 +82,6 @@ public class LinkEvent {
             Element contentArray = contentSpecial.nextElementSibling();
             Element first = contentArray.select("td").first();
             Element second = contentArray.select("td").last();
-            returnString = "Bên 1 " + first.text() + " " + "Bên 2 " + second.text();
             listString.add(first.text());
             listString.add(second.text());
         }
