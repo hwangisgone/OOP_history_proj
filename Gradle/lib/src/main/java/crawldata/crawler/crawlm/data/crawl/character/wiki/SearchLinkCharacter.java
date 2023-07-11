@@ -25,6 +25,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import crawldata.crawler.crawlm.data.crawl.SearchLink;
+import database.constants.PathConstants;
 
 
 
@@ -43,7 +44,7 @@ public class SearchLinkCharacter extends SearchLink {
 		listMust = new ArrayList<>();
 		listSpecifiedExist = new ArrayList<>();
 		listSpecifiedAll = new ArrayList<>();
-		JSON_FILE = "src/main/java/crawldata/crawlm/data/crawl/character/wiki/constraintWord.json";
+		JSON_FILE = PathConstants.pathCharConstraintWord;
 		readConstraint();
 	}	// close constructor
 
