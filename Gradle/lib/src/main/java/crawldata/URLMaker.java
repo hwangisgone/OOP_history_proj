@@ -1,4 +1,4 @@
-package util;
+package crawldata;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -11,7 +11,7 @@ public class URLMaker {
 	private static final String URL = "https://vi.wikipedia.org/w/api.php";
 	private static final String URL_SUBCAT = URL + "?action=query&cmlimit=100&list=categorymembers&format=json&formatversion=2&cmtype=subcat&cmtitle=";
 	private static final String URL_SUBPAGE = URL + "?action=query&cmlimit=100&list=categorymembers&format=json&formatversion=2&cmtype=page&cmtitle=";
-	private static final String URL_HTML = URL + "?action=parse&format=json&formatversion=2&page=";
+	private static final String URL_HTML = URL + "?action=parse&format=json&formatversion=2&redirects=true&page=";
 
     private static String encodeCorrectURL(String value) {
         try {
@@ -41,6 +41,10 @@ public class URLMaker {
 
 	public static List<String> getHtmlQueries(List<String> titles) {
 		return getQueries(titles, URL_HTML);
+	}
+	
+	public static String getHtmlQuery(String title) {
+		return URL_HTML + title;
 	}
 
 //	public URLMaker() {

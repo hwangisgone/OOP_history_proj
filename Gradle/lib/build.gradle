@@ -84,8 +84,14 @@ run {
 }
 
 application {
-	// mainClass = 'javafx.App'
-	mainClass = 'crawldata.crawlm.data.DataGround'
+	mainClass = 'javafx.App'
+	// mainClass = 'crawldata.crawlm.data.DataGround'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 jar {

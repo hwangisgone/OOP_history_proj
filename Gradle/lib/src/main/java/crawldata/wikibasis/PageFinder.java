@@ -9,8 +9,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import crawldata.URLMaker;
 import main.Multithreader;
-import util.URLMaker;
 
 public class PageFinder {
 	private HttpClient client;

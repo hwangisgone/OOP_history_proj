@@ -104,7 +104,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearStart"));
         colYearEnd.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
 
-        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
         labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 
@@ -145,8 +145,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
     @FXML
     private VBox paneTable;
     
-    @FXML
-    private WebView htmlView;
+//    @FXML
+//    private WebView htmlView;
 
     private void switchPane(Dynasty selectDynasty) {
     	if (selectDynasty == null) {
@@ -159,8 +159,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 
         	
         	labelTitle.setText(selectDynasty.getID());
-        	// labelDescription.setText(selectDynasty.getDescription());
-        	htmlView.getEngine().loadContent(selectDynasty.getDescription());
+        	labelDescription.setText(selectDynasty.getDescription());
+//        	htmlView.getEngine().loadContent(selectDynasty.getDescription());
         	labelInfo.setText(selectDynasty.toString());
     	}
     }

@@ -88,7 +88,7 @@ public class FestivalSceneController extends SearchController<Festival> implemen
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
         labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 

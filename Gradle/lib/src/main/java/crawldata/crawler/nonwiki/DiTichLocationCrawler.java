@@ -137,5 +137,9 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
             }
         }
     }
+	
+	private void getWikiDesc(Location location) {
+		
+	}
 
 }

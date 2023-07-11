@@ -17,8 +17,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import crawldata.URLMaker;
 import main.Multithreader;
-import util.URLMaker;
 
 public class WikiUtility {
 	private static String whitespace = "    ";
@@ -271,8 +271,8 @@ public class WikiUtility {
 		// Thêm các nội dung có thể thực sự trình bày
 		childs = content.children();
 		
-		return content.html();
-		/*
+//		return content.html();
+		
 		int nChilds = childs.size();
 		for (int i = 0; i < nChilds; i++) {
 			Element child = childs.get(i);
@@ -319,6 +319,6 @@ public class WikiUtility {
 			}
 		}
 
-		return description.toString(); */
+		return description.toString();
 	}
 }

@@ -63,7 +63,7 @@
                         <Insets right="20.0" top="30.0" />
                      </padding>
                      <content>
-                        <Text fx:id="labelDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="dfsdfsdfsdfsdfsdfsdfsd" />
+                        <Text fx:id="labelDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="dfsdfsdfsdfsdfsdfsdfsd" textAlignment="JUSTIFY" />
                      </content>
                   </ScrollPane>
                </children>

@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-import util.URLMaker;
+import crawldata.URLMaker;
 
 public class Multithreader {
 	private ExecutorService executorService;

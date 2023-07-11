@@ -16,6 +16,11 @@ public class LocationDatabase implements IDatabase<Location> {
 		fileJson = new File(PathConstants.pathLocation);
 		csvHandler = new CSVHandler<>(Location.class);
 	}
+	
+	public LocationDatabase(String filePath) {
+		fileJson = new File(filePath);
+		csvHandler = new CSVHandler<>(Location.class);
+	}
 
 	@Override
 	public void store(List<Location> listObject) {

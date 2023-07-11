@@ -110,7 +110,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         colGradeType.setCellValueFactory(new PropertyValueFactory<>("gradeType"));
         colWorship.setCellValueFactory(new PropertyValueFactory<>("worship"));
 
-        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
         labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 //	@Override

@@ -120,7 +120,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 	        colFather.setCellValueFactory(new PropertyValueFactory<>("father"));
 	        colMother.setCellValueFactory(new PropertyValueFactory<>("mother"));
 
-	        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+	        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
 	        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 //	@Override

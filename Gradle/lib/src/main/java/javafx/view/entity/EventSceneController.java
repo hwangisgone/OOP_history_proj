@@ -90,7 +90,7 @@ public class EventSceneController extends SearchController<HistoricalEvent> impl
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
         
-        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty().subtract(20));
         labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 

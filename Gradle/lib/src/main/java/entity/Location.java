@@ -77,7 +77,7 @@ public class Location extends Entity {
         ExtraStringUtil.appendNotNull(sb, "\n Tên khác: ", otherNames);
         ExtraStringUtil.appendNotNull(sb, "\n Toạ độ: ", position);
         ExtraStringUtil.appendNotNull(sb, "\n Tôn thờ: ", worship); sb.append("\n");
-        ExtraStringUtil.appendNotNull(sb, "\n\n Loại hình xếp hạng: ", gradeType);
+        ExtraStringUtil.appendNotNull(sb, "\n Loại hình xếp hạng: ", gradeType);
         ExtraStringUtil.appendNotNull(sb, "\n Xếp hạng: ", grade);
 
         return sb.toString();

@@ -3,7 +3,7 @@ package crawldata.crawler;
 import java.net.http.HttpClient;
 import java.util.List;
 
-import crawldata.crawler.nonwiki.DiTichLocationCrawler;
+import crawldata.crawler.nonwiki.LocationCrawler;
 import crawldata.crawler.wiki.DynastyCrawler;
 import crawldata.crawler.wiki.FestivalCrawler;
 import database.DynastyDatabase;
@@ -48,7 +48,7 @@ public class MainCrawler {
 		});
 
 		List<Location> locations = locationDB.loadOr(() -> {
-			ICrawler<Location> crawler = new DiTichLocationCrawler();
+			ICrawler<Location> crawler = new LocationCrawler(client);
 			List<Location> locList = crawler.crawl();
 			locationDB.store(locList);
 
