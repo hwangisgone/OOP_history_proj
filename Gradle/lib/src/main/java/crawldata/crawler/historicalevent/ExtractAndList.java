@@ -1,4 +1,4 @@
-package crawldata.crawler.HistoricalEvent;
+package crawldata.crawler.historicalevent;
 
 import java.io.FileWriter;
 // import org.jsoup.*;
