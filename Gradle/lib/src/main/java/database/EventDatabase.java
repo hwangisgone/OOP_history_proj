@@ -9,25 +9,25 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import database.constants.PathConstants;
 import entity.Dynasty;
-import entity.HistoricalEventWar;
+import entity.HistoricalEvent;
 import main.CSVHandler;
 
-public class EventDatabase implements IDatabase<HistoricalEventWar>{
+public class EventDatabase implements IDatabase<HistoricalEvent>{
 	File fileJson;
-	CSVHandler<HistoricalEventWar> csvHandler;
+	CSVHandler<HistoricalEvent> csvHandler;
 
 	public EventDatabase() {
-		fileJson = new File(PathConstants.pathEvent);
-		csvHandler = new CSVHandler<>(HistoricalEventWar.class);
+		fileJson = new File("lib/src/main/resources/event_data.json");
+		csvHandler = new CSVHandler<>(HistoricalEvent.class);
 	}
 
 	@Override
-	public void store(List<HistoricalEventWar> listObject) {
+	public void store(List<HistoricalEvent> listObject) {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public List<HistoricalEventWar> load() {
+	public List<HistoricalEvent> load() {
 		// TODO Auto-generated method stub
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
@@ -38,7 +38,7 @@ public class EventDatabase implements IDatabase<HistoricalEventWar>{
 	}
 
 	@Override
-	public List<HistoricalEventWar> loadOr(Supplier<List<HistoricalEventWar>> getList) {
+	public List<HistoricalEvent> loadOr(Supplier<List<HistoricalEvent>> getList) {
 		// TODO Auto-generated method stub
 		if (fileJson.exists()) {
 			return csvHandler.load(fileJson);
@@ -55,7 +55,7 @@ public class EventDatabase implements IDatabase<HistoricalEventWar>{
     
 	public static void main(String[] args){
 		EventDatabase ed = new EventDatabase();
-		List<HistoricalEventWar> eventlist = ed.load();
+		List<HistoricalEvent> eventlist = ed.load();
 		System.out.println(eventlist.get(40).toString());
 	}
 }

@@ -7,7 +7,7 @@ public class PathConstants {
 	
 	public static final String pathDynasty	= finalDirectory + "Dynasty.json";
 	public static final String pathCharacter = finalDirectory + "Character.json";
-	public static final String pathEvent	= finalDirectory + "Event.json";
+	public static final String pathEvent	= finalDirectory + "event_data.json";
 	public static final String pathFestival	= finalDirectory + "Festival.json";
 	public static final String pathLocation	= finalDirectory + "Location.json";
 	
