@@ -10,6 +10,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import Quy.src.datamodel.FestivalEntity;
+import crawldata.wikibasis.WikiUtility;
 
 public class FestivalWikiCrawler extends AbstractCrawler {
 	public void start() {

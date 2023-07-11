@@ -1,1 +1,0 @@
-package Hoang.basis.infobox;

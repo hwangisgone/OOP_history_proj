@@ -8,6 +8,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import Quy.src.datamodel.FestivalEntity;
+import crawldata.wikibasis.WikiUtility;
 
 public class FestivalWiki3Crawler extends AbstractCrawler {
 	public void start() {

@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.List;
 import java.util.function.Supplier;
 
-import Hoang.CSVHandler;
 import entity.Location;
+import main.CSVHandler;
 
 public class LocationDatabase implements IDatabase<Location> {
 	File fileJson;
