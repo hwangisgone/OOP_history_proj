@@ -3,6 +3,7 @@ package crawldata.wikibasis;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -18,11 +19,31 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import crawldata.URLMaker;
+import entity.Entity;
 import main.Multithreader;
 
 public class WikiUtility {
 	private static String whitespace = "    ";
 
+	public static <T extends Entity> void getDescriptionsFor(Collection<T> locs, HttpClient client) {
+		List<String> pages = new ArrayList<>();
+		Map<String, T> newMap = new HashMap<>();
+		for (T loc: locs) {
+			if (loc.getDescription() == null || loc.getDescription().equals("null")) { // Only do it with the ones wihout desc
+				newMap.put(loc.getID(), loc);
+				pages.add(loc.getID());
+			}
+		}
+		
+		Map<String, Document> docs = getDocumentsFromPages(pages, client);
+		for (Map.Entry<String, Document> entry : docs.entrySet()) {
+		    T entity = newMap.get(entry.getKey());
+		    Document doc = entry.getValue();
+
+		    entity.setDescription(WikiUtility.getDescriptionFromDocument(doc));
+		}
+	}
+	
 	public static Map<String, Document> getDocumentsFromPages(List<String> pages, HttpClient client) {
 		List<String> htmlurls = URLMaker.getHtmlQueries(pages);
 		Map<String, Document> docs = new HashMap<>();

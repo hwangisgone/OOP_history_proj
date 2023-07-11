@@ -5,27 +5,27 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import database.constants.PathConstants;
+import database.handler.CSVHandler;
 import entity.Dynasty;
-import main.CSVHandler;
 
 public class DynastyDatabase implements IDatabase<Dynasty> {
-	File fileJson;
-	CSVHandler<Dynasty> csvHandler;
+	private File fileJson;
+	private CSVHandler<Dynasty> jacksonHandler;
 
 	public DynastyDatabase() {
 		fileJson = new File(PathConstants.pathDynasty);
-		csvHandler = new CSVHandler<>(Dynasty.class);
+		jacksonHandler = new CSVHandler<>(Dynasty.class);
 	}
 
 	@Override
 	public void store(List<Dynasty> listObject) {
-		csvHandler.write(fileJson, listObject);
+		jacksonHandler.write(fileJson, listObject);
 	}
 
 	@Override
 	public List<Dynasty> load() {
 		if (fileJson.exists()) {
-			return csvHandler.load(fileJson);
+			return jacksonHandler.load(fileJson);
 		} else {
 			System.err.println("File not found for: " + fileJson.getName());
 			return null;
@@ -35,7 +35,7 @@ public class DynastyDatabase implements IDatabase<Dynasty> {
 	@Override
 	public List<Dynasty> loadOr(Supplier<List<Dynasty>> getList) {
 		if (fileJson.exists()) {
-			return csvHandler.load(fileJson);
+			return jacksonHandler.load(fileJson);
 		} else {
 			return getList.get();
 		}

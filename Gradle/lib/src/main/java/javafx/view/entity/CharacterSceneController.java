@@ -186,7 +186,12 @@ public class CharacterSceneController extends SearchController<Character> implem
         	paneTable.setVisible(false);
 
         	labelTitle.setText(selectCharacter.getID());
-        	labelDescription.setText(selectCharacter.getBiography());
+        	if (selectCharacter.getBiography() != null) {
+            	labelDescription.setText(selectCharacter.getBiography());
+        	} else {
+        		labelDescription.setText(selectCharacter.getDescription());
+        	}
+
         	labelInfo.setText(selectCharacter.toString());
     	}
     }

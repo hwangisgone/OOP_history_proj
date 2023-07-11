@@ -15,18 +15,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import crawldata.crawler.crawlm.data.crawl.ExtractData;
-import crawldata.crawler.crawlm.data.crawl.SearchLink;
 import database.IDatabase;
+import entity.Character;
 
 
 public class DataControler {
 
 	private SearchLink seacher;								// seacher for specific data
 	private ExtractData extractor;							// extractor for specific data
-	private IDatabase<Map<String, String>> database;		// where to store extracted data
+	private IDatabase<Character> database;		// where to store extracted data
 
-	public DataControler(SearchLink seacher, ExtractData extractor, IDatabase<Map<String, String>> database) {
+	public DataControler(SearchLink seacher, ExtractData extractor, IDatabase<Character> database) {
 		this.seacher = seacher;
 		this.extractor = extractor;
 		this.database = database;
@@ -93,7 +92,9 @@ public class DataControler {
 	 */
 	public void extractUrlFile(String fileUrl) {
 		List<String> listUrl = readListUrl(fileUrl);
-		List<Map<String, String>> extracted = extractor.extract(listUrl);
+		List<Character> extracted = extractor.extract(listUrl)
+										.stream().map(emap -> new Character(emap)).toList();
+		
 		this.database.store(extracted);
 		this.database.close();
 		System.out.println("Successfully extract " + extracted.size() + " objects!");

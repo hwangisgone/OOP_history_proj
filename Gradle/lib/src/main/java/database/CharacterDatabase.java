@@ -7,6 +7,7 @@
 
 package database;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -27,16 +28,21 @@ import javax.json.JsonReader;
 import javax.json.JsonValue;
 import javax.json.JsonWriter;
 
+import database.constants.PathConstants;
+import database.handler.CSVHandler;
 import entity.Character;
+import entity.Dynasty;
 
 
-public class CharacterDatabase implements IDatabase <Map<String, String>> {
+public class CharacterDatabase implements IDatabase <Character> {
 
 	private static List<String> listFileExist;			// list of files have already been opened
 	private static List<CharacterDatabase> listDatabase;		// list of database exist
-	private String jsonFilePath;						// the json file where the database operates on
-	private List<Map<String, String>> list;				// the list of objects in database
-
+//	private String jsonFilePath;						
+	private List<Character> list;						// the list of objects in database
+	
+	private File fileJson;								// the file where the database operates on
+	private CSVHandler<Character> jacksonHandler;
 	// initialize static properties
 	static {
 		listFileExist = new ArrayList<>();
@@ -45,10 +51,10 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 
 
 	// constructor
-	private CharacterDatabase(String jsonFilePath) {
-		this.jsonFilePath = jsonFilePath;
+	private CharacterDatabase(File fileJson) {
+		this.fileJson = fileJson;
 		this.list = new ArrayList<>();
-		// pre-load the file
+		jacksonHandler = new CSVHandler<>(Character.class);
 		loadFile();
 	}	// constructor
 
@@ -63,7 +69,7 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		}	// close if
 										// file does not exist
 		listFileExist.add(jsonFilePath);
-		CharacterDatabase newDatabase = new CharacterDatabase(jsonFilePath);
+		CharacterDatabase newDatabase = new CharacterDatabase(new File(jsonFilePath));
 		listDatabase.add(newDatabase);
 		return newDatabase;
 	}	// close getDatabase
@@ -75,74 +81,32 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		@return 	List of Character
 	 */
 	public static List<Character> getListCharacter() {
-		CharacterDatabase database = CharacterDatabase.getDatabase("src/main/resources/final/Character.json");
+		CharacterDatabase database = CharacterDatabase.getDatabase(PathConstants.pathCharacter);
 		// read database
-		List<Map<String, String>> listMap = database.load();
-		// modeling Character
-		List<Character> listCharacter = new ArrayList<> ();
-		for (Map<String, String> map: listMap) {
-			listCharacter.add(new Character(map));
-		}	// close for
-		// return list of character
+		List<Character> listCharacter = database.load();
+
 		return listCharacter;
 	}	// close
 
 
 	// load the JSON array from file and return the list of object
 	private void loadFile() {
-		try {
-			InputStream fis = new FileInputStream(jsonFilePath);
-
-			JsonReader reader = Json.createReader(fis);
-			JsonArray array = reader.readArray();
-			// convert json array into list of Map<String, String>
-			for (JsonValue value: array) {
-				JsonObject obj = (JsonObject) value;
-				if (obj.isEmpty())			// if obj is empty, remove it
-					continue;
-				Map<String, String> map = new HashMap<> ();
-				for (String key: obj.keySet()) {
-					map.put(key, obj.getString(key));
-				}	// close for
-				this.list.add(map);
-			}	// close for
-			reader.close();
-			fis.close();
-		} catch (IOException e) {
-			System.out.println("Unable to read the json file: " + jsonFilePath);
-			System.out.println("ERROR: " + e.getMessage());
-		}	// close try
+		if (fileJson.exists()) {
+			this.list.addAll(jacksonHandler.load(fileJson));
+		} else {
+			System.err.println("File not found for: " + fileJson.getName());
+		}
 	}	// close loadFile
 
 
 	// write each object in list into json file
 	private void storeFile() {
-		try {
-			OutputStream fos = new FileOutputStream(this.jsonFilePath);
-			JsonWriter writer = Json.createWriter(fos);
-			// convert list into Json array
-			JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-			// convert each object in list into JsonObject
-			for (Map<String, String> map: this.list) {
-				JsonObjectBuilder objBuilder = Json.createObjectBuilder();
-				for (Map.Entry<String, String> entry: map.entrySet())
-					objBuilder.add(entry.getKey(), entry.getValue());
-				arrayBuilder.add(objBuilder);
-			}	// close for
-			// write array into file
-			writer.writeArray(arrayBuilder.build());
-			writer.close();
-			fos.close();
-		} catch (IOException e) {
-			System.out.println("Unable to save the change to the database!");
-			System.out.println("ERROR: " + e.getMessage());
-		}	// close
+		jacksonHandler.write(fileJson, this.list);
 	}	// close storeFile
-
 
 	/* Store an object into database */
 	@Override
-	public void store(List<Map<String, String>> listObject) {
+	public void store(List<Character> listObject) {
 		this.list.addAll(listObject);
 	}	// close store
 
@@ -151,8 +115,8 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 		- changes in the return list does NOT change the database
 	 */
 	@Override
-	public List<Map<String, String>> load() {
-		List<Map<String, String>> cloneList = new ArrayList<>(this.list);
+	public List<Character> load() {
+		List<Character> cloneList = new ArrayList<>(this.list);
 		return cloneList;
 	}	// close load
 
@@ -166,7 +130,7 @@ public class CharacterDatabase implements IDatabase <Map<String, String>> {
 
 	/* load or ?*/
 	@Override
-	public List<Map<String, String>> loadOr(Supplier<List<Map<String, String>>> getList) {
+	public List<Character> loadOr(Supplier<List<Character>> getList) {
 		// TO-DO?
 		return null;
 	}	// close

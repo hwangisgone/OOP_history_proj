@@ -27,20 +27,21 @@ public class Ground {
 			"src/main/java/Data/Database/historical-character/hc#10-07#500.json"
 		};
 		// Using hashmap to remove entities with dupplicated ID
-		Map<String, Map<String, String>> mergedMap= new HashMap<String, Map<String, String>> (2000);
-		List<Map<String, String>> uniqueList = new ArrayList<Map<String, String>> ();
+		Map<String, Character> mergedMap= new HashMap<String, Character> (2000);
+		
+		List<Character> uniqueList = new ArrayList<> ();
 		// create list of database
 		for (String datasetPath: listDataset) {
 			CharacterDatabase database = CharacterDatabase.getDatabase(datasetPath);
-			List<Map<String, String>> listObject = database.load();
+			List<Character> listChara = database.load();
 			// add each Map into hashmap
-			for (Map<String, String> map: listObject) {
-				String id = map.get("id");
+			for (Character chara: listChara) {
+				String id = chara.getID();
 				if (id.contains("\""))
 					continue;
 				if (!mergedMap.containsKey(id)) {		// id is unique
-					mergedMap.put(id, map);
-					uniqueList.add(map);
+					mergedMap.put(id, chara);
+					uniqueList.add(chara);
 				}	// close if
 			}	// close for
 		}	// close for
@@ -57,16 +58,12 @@ public class Ground {
 		Load the data from given dataset path
 		@param 	jsonPath 	where the dataset allocated
 	 */
-	public static void testLoad(String jsonPath) {
+	private static void testLoad(String jsonPath) {
 		// Read database
 		CharacterDatabase database = CharacterDatabase.getDatabase(jsonPath);
 
 		// Modeling entities
-		List<Entity> listEntity = new ArrayList<> ();		// place holder - testing
-		List<Map<String, String>> listObject = database.load();
-		for (Map<String, String> map: listObject) {
-			listEntity.add(new Character(map));
-		}	// close for
+		List<Character> listEntity = database.load();
 
 		// Print the ID of entity
 		for (Entity entity: listEntity) {

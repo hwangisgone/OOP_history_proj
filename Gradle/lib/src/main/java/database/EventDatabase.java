@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import database.constants.PathConstants;
+import database.handler.CSVHandler;
 import entity.Dynasty;
 import entity.HistoricalEvent;
-import main.CSVHandler;
 
 public class EventDatabase implements IDatabase<HistoricalEvent>{
-	File fileJson;
-	CSVHandler<HistoricalEvent> csvHandler;
+	private File fileJson;
+	private CSVHandler<HistoricalEvent> jacksonHandler;
 
 	public EventDatabase() {
 		fileJson = new File(PathConstants.pathEvent);
-		csvHandler = new CSVHandler<>(HistoricalEvent.class);
+		jacksonHandler = new CSVHandler<>(HistoricalEvent.class);
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class EventDatabase implements IDatabase<HistoricalEvent>{
 	public List<HistoricalEvent> load() {
 		// TODO Auto-generated method stub
 		if (fileJson.exists()) {
-			return csvHandler.load(fileJson);
+			return jacksonHandler.load(fileJson);
 		} else {
 			System.err.println("File not found for: " + fileJson.getName());
 			return null;
@@ -38,7 +38,7 @@ public class EventDatabase implements IDatabase<HistoricalEvent>{
 	public List<HistoricalEvent> loadOr(Supplier<List<HistoricalEvent>> getList) {
 		// TODO Auto-generated method stub
 		if (fileJson.exists()) {
-			return csvHandler.load(fileJson);
+			return jacksonHandler.load(fileJson);
 		} else {
 			return getList.get();
 		}

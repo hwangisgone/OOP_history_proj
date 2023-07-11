@@ -2,10 +2,13 @@ package crawldata.crawler;
 
 import java.net.http.HttpClient;
 import java.util.List;
+import java.util.Map;
 
-import crawldata.crawler.nonwiki.LocationCrawler;
-import crawldata.crawler.wiki.DynastyCrawler;
-import crawldata.crawler.wiki.FestivalCrawler;
+import crawldata.crawler.wiki.CharacterDescCrawler;
+import crawldata.crawler.wiki.LocationCrawler;
+import crawldata.crawler.wiki.wikifull.DynastyCrawler;
+import crawldata.crawler.wiki.wikifull.FestivalCrawler;
+import database.CharacterDatabase;
 import database.DynastyDatabase;
 import database.FestivalDatabase;
 import database.IDatabase;
@@ -14,6 +17,7 @@ import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.Festival;
 import entity.Location;
+import entity.Character;
 
 public class MainCrawler {
 	public MainCrawler() {
@@ -54,8 +58,17 @@ public class MainCrawler {
 
 			return locList;
 		});
-
+		
+		// ICrawler<Character> charCrawler = new CharacterDescCrawler(client);
+		List<Character> characters = CharacterDatabase.getListCharacter(); // charCrawler.crawl();
+		CharacterDatabase charaDatabase = CharacterDatabase.getDatabase(PathConstants.pathCharacter);
+		
+		charaDatabase.store(characters.subList(0, 10));
+		charaDatabase.close();
+		
 		System.out.println("Collected in Dynasty: " + dynasties.size());
+		System.out.println("Collected in Characters: " + characters.size());
+		// System.out.println("Collected in Events: " + events.size());
 		System.out.println("Collected in Festival: " + festivals.size());
 		System.out.println("Collected in Location: " + locations.size());
 	}

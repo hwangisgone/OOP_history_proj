@@ -7,6 +7,7 @@
 
 package entity;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import crawldata.crawler.crawlm.data.Date;
@@ -24,6 +25,7 @@ public class Character extends Entity {
 
 	public Character(Map<String, String> map) {
 		setID(map.get("id"));
+		setDescription(map.get("description"));
 		dateOfBirth = new Date(map.get("dateOfBirth"));
 		dateOfDeath = new Date(map.get("dateOfDeath"));
 		this.fullName = map.get("name");
@@ -33,6 +35,22 @@ public class Character extends Entity {
 		this.biography = map.get("career&bio");
 	}	// close Character
 
+	public Map<String, String> toMap() {
+		Map<String, String> conversion = new HashMap<>();
+		
+		conversion.put("id", id);
+		conversion.put("description", description);
+		
+		conversion.put("dateOfBirth", dateOfBirth.toString());
+		conversion.put("dateOfDeath", dateOfDeath.toString());
+		conversion.put("name", fullName);
+		conversion.put("father", father);
+		conversion.put("mother", mother);
+		conversion.put("dynasty", dynasty);
+		conversion.put("career&bio", biography);
+		
+		return conversion;
+	}
 
 	// getters for fields
 	public String getFullName() {
