@@ -231,7 +231,7 @@ public class WikiUtility {
 
 		if (document == null) return defaultDescription;
 
-		Element content = document.selectFirst("#mw-content-text .mw-parser-output");
+		Element content = document.selectFirst(".mw-parser-output");
 		if (content == null || content.text().length() == 0) return defaultDescription;
 
 		// Kết quả trả về.

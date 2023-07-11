@@ -35,9 +35,6 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     private TableColumn<Festival, String> colDate;
 
     @FXML
-    private TableColumn<Festival, String> colDescription;
-
-    @FXML
     private TableColumn<Festival, String> colID;
 
     @FXML
@@ -84,7 +81,7 @@ public class FestivalSceneController extends SearchController<Festival> implemen
 		initSearchMap();
         
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+       //  colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));

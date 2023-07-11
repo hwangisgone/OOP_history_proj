@@ -36,7 +36,13 @@ public class Character extends Entity {
 
 	// getters for fields
 	public String getFullName() {
-		return fullName;
+		if (fullName.isBlank()) {
+			return id;
+
+		} else {
+			return fullName;
+		}
+
 	}	// close getFullName
 
 	public String getDateOfBirth() {

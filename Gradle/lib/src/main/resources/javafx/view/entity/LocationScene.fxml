@@ -34,7 +34,6 @@
                   <TableColumn fx:id="colGrade" prefWidth="94.0" text="Xếp hạng" />
                   <TableColumn fx:id="colGradeType" prefWidth="109.0" text="Loại xếp hạng" />
                   <TableColumn fx:id="colWorship" prefWidth="113.0" text="Tôn thờ" />
-                  <TableColumn fx:id="colDescription" prefWidth="74.0" text="Mô tả" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
