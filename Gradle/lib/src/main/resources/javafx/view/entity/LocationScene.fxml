@@ -77,7 +77,7 @@
             </VBox>
          </center>
          <right>
-            <VBox fx:id="paneExtra" prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="paneExtra" prefWidth="400.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="TOP_RIGHT">
                      <children>
@@ -86,7 +86,7 @@
                   </HBox>
                   <HBox alignment="CENTER">
                      <children>
-                        <ImageView fx:id="imageInfo" fitHeight="320.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imageInfo" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </HBox>
                   <Label fx:id="labelInfo" text="Thông tin: Thông tin:" />

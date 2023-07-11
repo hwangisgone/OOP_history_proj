@@ -19,6 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -180,7 +181,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
         	
-
+        	imageInfo.setImage(new Image(selectLocation.getImage().replace("\\", "//"), true));
 //        	URLConnection connection;
 //			try {
 //				String url = selectLocation.getImage();

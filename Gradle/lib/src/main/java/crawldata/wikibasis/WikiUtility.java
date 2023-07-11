@@ -270,6 +270,9 @@ public class WikiUtility {
 
 		// Thêm các nội dung có thể thực sự trình bày
 		childs = content.children();
+		
+		return content.html();
+		/*
 		int nChilds = childs.size();
 		for (int i = 0; i < nChilds; i++) {
 			Element child = childs.get(i);
@@ -316,6 +319,6 @@ public class WikiUtility {
 			}
 		}
 
-		return description.toString();
+		return description.toString(); */
 	}
 }

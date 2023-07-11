@@ -46,6 +46,8 @@ dependencies {
 		// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
 	
+	// https://mvnrepository.com/artifact/org.openjfx/javafx-web
+	implementation group: 'org.openjfx', name: 'javafx-web', version: '20'
 	
 	
 	// https://mvnrepository.com/artifact/com.tangorabox/component-inspector-fx
@@ -71,7 +73,7 @@ tasks.named('test') {
 
 javafx {
    version = "20.0.1"
-   modules = [ 'javafx.controls', 'javafx.fxml' ]
+   modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
 }
 
 run {
