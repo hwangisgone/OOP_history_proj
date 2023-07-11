@@ -1,11 +1,7 @@
 package entity;
 
-<<<<<<< Updated upstream
 import java.util.Map;
 
-=======
-import com.fasterxml.jackson.annotation.JsonProperty;
->>>>>>> Stashed changes
 public abstract class Entity {
 	protected String id;
 	protected String description;
@@ -41,12 +37,6 @@ public abstract class Entity {
 	public void setName(String name) {
 		this.id = name;
 	}
-<<<<<<< Updated upstream
 
-
-	@Override
-=======
-	
->>>>>>> Stashed changes
 	public abstract String toString();
 }
