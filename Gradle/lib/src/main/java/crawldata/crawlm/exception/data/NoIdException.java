@@ -2,7 +2,7 @@
 	This an exception to alert when constructing an entity object without passing ID property
  */
 
-package Source.exception.data;
+package crawldata.crawlm.exception.data;
 
 public class NoIdException extends Exception {
 

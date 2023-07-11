@@ -4,7 +4,7 @@
 		(2) From listUrl, extract the data and store it into database.json
  */
 
-package Source.data.crawl;
+package crawldata.crawlm.data.crawl;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 import database.IDatabase;
+import crawldata.crawlm.data.crawl.SearchLink;
+import crawldata.crawlm.data.crawl.ExtractData;
 
 
 public class DataControler {

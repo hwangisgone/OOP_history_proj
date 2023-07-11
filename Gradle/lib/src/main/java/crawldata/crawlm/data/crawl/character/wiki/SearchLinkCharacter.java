@@ -2,7 +2,7 @@
 	* SearchLinkCharacter: a subclass of SearchLink to find links about Historical character
  */
 
-package Source.data.crawl.character.wiki;
+package crawldata.crawlm.data.crawl.character.wiki;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 // custom
-import Source.data.crawl.SearchLink;
+import crawldata.crawlm.data.crawl.SearchLink;
 
 
 
@@ -44,7 +44,7 @@ public class SearchLinkCharacter extends SearchLink {
 		listMust = new ArrayList<>();
 		listSpecifiedExist = new ArrayList<>();
 		listSpecifiedAll = new ArrayList<>();
-		JSON_FILE = "src/main/java/Data/DataConfigure/constraintWord.json";
+		JSON_FILE = "src/main/java/crawldata/crawlm/data/crawl/character/wiki/constraintWord.json";
 		readConstraint();
 	}	// close constructor
 

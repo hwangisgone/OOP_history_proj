@@ -4,7 +4,7 @@
  	They are made to check and validate urls for specific data
  */
 
-package Source.data.crawl;
+package crawldata.crawlm.data.crawl;
 
 import java.io.IOException;
 // net

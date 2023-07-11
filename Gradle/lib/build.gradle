@@ -82,7 +82,7 @@ run {
 
 application {
 	// mainClass = 'javafx.App'
-	mainClass = 'Source.Ground'
+	mainClass = 'crawldata.crawlm.data.DataGround'
 }
 
 jar {

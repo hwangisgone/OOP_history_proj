@@ -5,7 +5,7 @@
 		3. year, unknown year is represented by Integer.MIN_VALUE
  */
 
-package Source.data;
+package crawldata.crawlm.data;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

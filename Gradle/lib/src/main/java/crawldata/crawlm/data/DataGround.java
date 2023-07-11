@@ -3,11 +3,11 @@
  */
 
 
-package Source.data;
+package crawldata.crawlm.data;
 
-import Source.data.crawl.DataControler;
-import Source.data.crawl.character.wiki.ExtractHistoricalCharacter;
-import Source.data.crawl.character.wiki.SearchLinkCharacter;
+import crawldata.crawlm.data.crawl.DataControler;
+import crawldata.crawlm.data.crawl.character.wiki.ExtractHistoricalCharacter;
+import crawldata.crawlm.data.crawl.character.wiki.SearchLinkCharacter;
 import database.CharacterDatabase;
 
 
@@ -42,6 +42,6 @@ public class DataGround {
 
 	public static void main(String[] args) {
 		String urlSeed = "https://vi.wikipedia.org/wiki/Ng%C3%B4_Quy%E1%BB%81n";
-		DataGround.crawl("10-07#2", urlSeed, 10);
+		DataGround.crawl("11-07#1", urlSeed, 1);
 	}	// close main
 }	// close DataGround
