@@ -57,7 +57,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 // 		return sb.toString();
 // 	}
 // }
-public class HistoricalEventWar extends HistoricalEvent{
+public class HistoricalEventWar {
 
 	@JsonProperty("time")
 	protected String time;
