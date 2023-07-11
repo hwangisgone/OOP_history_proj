@@ -1,8 +1,6 @@
 package crawldata.crawler;
 
-import java.io.File;
 import java.net.http.HttpClient;
-import java.util.ArrayList;
 import java.util.List;
 
 import crawldata.crawler.nonwiki.DiTichLocationCrawler;
@@ -12,11 +10,10 @@ import database.DynastyDatabase;
 import database.FestivalDatabase;
 import database.IDatabase;
 import database.LocationDatabase;
-import database.PathConstants;
+import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.Festival;
 import entity.Location;
-import main.CSVHandler;
 
 public class MainCrawler {
 	public MainCrawler() {
@@ -34,23 +31,32 @@ public class MainCrawler {
 		IDatabase<Festival> festivalDB = new FestivalDatabase();
 		IDatabase<Location> locationDB = new LocationDatabase();
 
-		List<Dynasty> dynastyList = dynastyDB.loadOr(() -> {
+		List<Dynasty> dynasties = dynastyDB.loadOr(() -> {
 			ICrawler<Dynasty> crawler = new DynastyCrawler(client);
-			return crawler.crawl();
+			List<Dynasty> dynastyList = crawler.crawl();
+			dynastyDB.store(dynastyList);
+
+			return dynastyList;
 		});
 
-		List<Festival> festivalList = festivalDB.loadOr(() -> {
+		List<Festival> festivals = festivalDB.loadOr(() -> {
 			ICrawler<Festival> crawler = new FestivalCrawler(client);
-			return crawler.crawl();
+			List<Festival> festivalList = crawler.crawl();
+			festivalDB.store(festivalList);
+
+			return festivalList;
 		});
 
-		List<Location> locList = locationDB.loadOr(() -> {
+		List<Location> locations = locationDB.loadOr(() -> {
 			ICrawler<Location> crawler = new DiTichLocationCrawler();
-			return crawler.crawl();
+			List<Location> locList = crawler.crawl();
+			locationDB.store(locList);
+
+			return locList;
 		});
 
-		System.out.println("Collected in Dynasty: " + dynastyList.size());
-		System.out.println("Collected in Festival: " + festivalList.size());
-		System.out.println("Collected in Location: " + locList.size());
+		System.out.println("Collected in Dynasty: " + dynasties.size());
+		System.out.println("Collected in Festival: " + festivals.size());
+		System.out.println("Collected in Location: " + locations.size());
 	}
 }

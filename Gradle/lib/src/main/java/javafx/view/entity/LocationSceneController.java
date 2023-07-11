@@ -32,9 +32,6 @@ public class LocationSceneController extends SearchController<Location> implemen
     private TableView<Location> LocationsTableView;
 
     @FXML
-    private TableColumn<Location, String> colDescription;
-
-    @FXML
     private TableColumn<Location, String> colGrade;
 
     @FXML
@@ -101,7 +98,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 		initSearchMap();
         
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         
         colOtherNames.setCellValueFactory(new PropertyValueFactory<>("otherNames"));
         colLocated.setCellValueFactory(new PropertyValueFactory<>("located"));

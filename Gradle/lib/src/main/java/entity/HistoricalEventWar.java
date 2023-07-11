@@ -110,7 +110,7 @@ public class HistoricalEventWar extends HistoricalEvent{
 		this.location = location;
 	}
 
-	
+
 	public HistoricalEventWar() {
 	}
 

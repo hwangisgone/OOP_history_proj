@@ -1,8 +1,6 @@
 package crawldata.wikibasis.infobox;
 
-import java.net.http.HttpClient;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.jsoup.nodes.Element;
@@ -10,25 +8,12 @@ import org.jsoup.nodes.Element;
 import entity.Dynasty;
 
 public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
-
-    public DynastyInfoboxExtractor(HttpClient client) {
-		super(client);
-		// TODO Auto-generated constructor stub
-	}
-
 	private Dynasty dynasty;
 
 	@Override
-	public void startNew(String name) {
-		dynasty = new Dynasty();
-		dynasty.setName(name);
+	public void startNew(Dynasty dynasty) {
+		this.dynasty = dynasty;
 	}
-
-	@Override
-	public Dynasty endNew() {
-		return dynasty;
-	}
-
 
 	@Override
 	protected void mapFindInInfobox(Element infobox) {
@@ -124,17 +109,17 @@ public class DynastyInfoboxExtractor extends InfoboxExtractor<Dynasty> {
 
 
     public static void main(String[] args) {
-    	HttpClient client = HttpClient.newHttpClient();
-    	InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
-
-    	List<Dynasty> maps = ext.getInfoboxContents(Arrays.asList("Thời kỳ Bắc thuộc lần thứ ba", "Nhà Tiền Lý", "Nhà Hậu Trần"));
-
-    	// Sort the map by key
-
-    	maps.forEach(map -> {
-    		System.out.println(map.toString());
-
-    	});
+//    	HttpClient client = HttpClient.newHttpClient();
+//    	InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
+//
+//    	// List<Dynasty> maps = ext.getInfoboxContents(Arrays.asList("Thời kỳ Bắc thuộc lần thứ ba", "Nhà Tiền Lý", "Nhà Hậu Trần"));
+//
+//    	// Sort the map by key
+//
+////    	maps.forEach(map -> {
+////    		System.out.println(map.toString());
+////
+////    	});
     }
 
 }

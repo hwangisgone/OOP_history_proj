@@ -1,4 +1,4 @@
-package Source.data.crawl.HistoricalEvent;
+package crawldata.crawler.HistoricalEvent;
 
 import java.io.FileWriter;
 // import org.jsoup.*;
@@ -13,6 +13,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import database.constants.PathConstants;
 
 
 public class ExtractAndList extends ExtractData {
@@ -87,7 +89,7 @@ public class ExtractAndList extends ExtractData {
 
     public void writeJsonArrayFile() throws IOException{
         try (
-            FileWriter fileWriter = new FileWriter("lib/src/main/java/Data/Database/historical-event/extractData.json")) {
+            FileWriter fileWriter = new FileWriter(PathConstants.pathEvent)) {
             String modifiedJsonString = ExtractData.unescapeUnicode(jsonArray.toString());
             fileWriter.write(modifiedJsonString);
             fileWriter.flush();
@@ -127,7 +129,7 @@ public class ExtractAndList extends ExtractData {
             jsonArray.remove(i);
 
         searchMoreLink.writeJsonArrayFile();
-        
+
         System.out.println(size);
     }
 }

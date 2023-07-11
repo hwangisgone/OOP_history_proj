@@ -7,15 +7,17 @@ import java.util.function.Supplier;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import database.constants.PathConstants;
 import entity.Dynasty;
 import entity.HistoricalEventWar;
 import main.CSVHandler;
+
 public class EventDatabase implements IDatabase<HistoricalEventWar>{
 	File fileJson;
 	CSVHandler<HistoricalEventWar> csvHandler;
 
 	public EventDatabase() {
-		fileJson = new File("lib/src/main/java/Data/Database/historical-event/extractData.json");
+		fileJson = new File(PathConstants.pathEvent);
 		csvHandler = new CSVHandler<>(HistoricalEventWar.class);
 	}
 
@@ -54,6 +56,6 @@ public class EventDatabase implements IDatabase<HistoricalEventWar>{
 	public static void main(String[] args){
 		EventDatabase ed = new EventDatabase();
 		List<HistoricalEventWar> eventlist = ed.load();
-		System.out.println(eventlist.get(30).toString());
+		System.out.println(eventlist.get(40).toString());
 	}
 }

@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.List;
 import java.util.function.Supplier;
 
+import database.constants.PathConstants;
 import entity.Dynasty;
 import main.CSVHandler;
 
@@ -18,7 +19,7 @@ public class DynastyDatabase implements IDatabase<Dynasty> {
 	
 	@Override
 	public void store(List<Dynasty> listObject) {
-		// TODO Auto-generated method stub
+		csvHandler.write(fileJson, listObject);
 	}
 
 	@Override

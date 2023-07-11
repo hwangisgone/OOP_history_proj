@@ -5,15 +5,12 @@ import java.net.http.HttpResponse;
 import java.util.Collection;
 import java.util.List;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import crawldata.util.URLMaker;
 import main.Multithreader;
+import util.URLMaker;
 
 public class PageFinder {
 	private HttpClient client;

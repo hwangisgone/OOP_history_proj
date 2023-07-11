@@ -43,9 +43,6 @@ public class CharacterSceneController implements Initializable {
     private TableColumn<Character, String> colDeath;
 
     @FXML
-    private TableColumn<Character, String> colDescription;
-
-    @FXML
     private TableColumn<Character, String> colDynasty;
 
     @FXML
@@ -112,15 +109,15 @@ public class CharacterSceneController implements Initializable {
 			
 			ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
 	        comboBox.setItems(itemsList);
-	        comboBox.setValue("Tên sách");
+	        comboBox.setValue("ID");
 	        
 	        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
-	        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+	        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 	        
 	        colFullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
 	        colBiography.setCellValueFactory(new PropertyValueFactory<>("biography"));
 	        colBirth.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
-	        colDeath.setCellValueFactory(new PropertyValueFactory<>("dateofDeath"));
+	        colDeath.setCellValueFactory(new PropertyValueFactory<>("dateOfDeath"));
 	        colDynasty.setCellValueFactory(new PropertyValueFactory<>("dynasty"));
 	        colFather.setCellValueFactory(new PropertyValueFactory<>("father"));
 	        colMother.setCellValueFactory(new PropertyValueFactory<>("mother"));

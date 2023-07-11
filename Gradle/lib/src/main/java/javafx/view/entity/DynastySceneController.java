@@ -19,14 +19,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
+import util.ExtraStringUtil;
+import javafx.beans.property.SimpleStringProperty;
 
 public class DynastySceneController extends SearchController<Dynasty> implements Initializable{
 
     @FXML
     private TableView<Dynasty> DynastiesTableView;
-
-    @FXML
-    private TableColumn<Dynasty, String> colDescription;
     
     @FXML
     private TableColumn<Dynasty, String> colID;
@@ -65,8 +64,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
 		searchMap.put("Tên",		dynasty -> dynasty.getName());
-		searchMap.put("Tên đầy đủ",	dynasty -> dynasty.getLongNameString());
-		searchMap.put("Tên khác",	dynasty -> dynasty.getNativeNameString());
+		searchMap.put("Tên đầy đủ",	dynasty -> ExtraStringUtil.addComma(dynasty.getLongName()));
+		searchMap.put("Tên khác",	dynasty -> ExtraStringUtil.addComma(dynasty.getNativeName()));
 		// Mô tả
 		
 		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
@@ -83,10 +82,14 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 		initSearchMap();
         
         colID.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         
-        colLongName.setCellValueFactory(new PropertyValueFactory<>("longNameString"));
-        colNativeName.setCellValueFactory(new PropertyValueFactory<>("nativeNameString"));
+        colLongName.setCellValueFactory(celldata -> {
+        	return new SimpleStringProperty(ExtraStringUtil.addComma(celldata.getValue().getLongName()));
+        });
+        colNativeName.setCellValueFactory(celldata -> {
+        	return new SimpleStringProperty(ExtraStringUtil.addComma(celldata.getValue().getNativeName()));
+        });
         colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
         colYearEnd.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
 	}

@@ -1,7 +1,5 @@
 package entity;
 
-import java.util.List;
-
 public class Festival extends Entity {
 	String location; // Địa điểm, cử hành bởi
 	String date; // Ngày, ngày (âm lịch)

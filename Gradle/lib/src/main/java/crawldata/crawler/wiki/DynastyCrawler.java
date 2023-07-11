@@ -1,26 +1,23 @@
 package crawldata.crawler.wiki;
 
-import java.io.IOException;
 import java.net.http.HttpClient;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.core.exc.StreamWriteException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DatabindException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jsoup.nodes.Document;
 
-import crawldata.util.ExtraStringUtil;
 import crawldata.wikibasis.CategoryFinder;
 import crawldata.wikibasis.PageFinder;
+import crawldata.wikibasis.WikiUtility;
 import crawldata.wikibasis.infobox.DynastyInfoboxExtractor;
-import crawldata.wikibasis.infobox.FestivalInfoboxExtractor;
+import crawldata.wikibasis.infobox.InfoboxException;
 import crawldata.wikibasis.infobox.InfoboxExtractor;
 import entity.Dynasty;
+import util.ExtraStringUtil;
 
 public class DynastyCrawler extends WikiCrawler<Dynasty> {
 	private HttpClient client;
@@ -41,8 +38,8 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 
 		// Filter subcategories
 		List<String> wordsFilter = Arrays.asList(
-			":Thời kỳ", 
-			":Nhà", 
+			":Thời kỳ",
+			":Nhà",
 			":Triều đại"
 		);
 		return ExtraStringUtil.filterString(catSet, wordsFilter, false);
@@ -63,10 +60,32 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 		);
 		return ExtraStringUtil.filterString(pageSet, wordsFilter, true);
 	}
-	
+
 	@Override
 	protected List<Dynasty> getInfoFromPages(List<String> pages) {
-		InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor(client);
-		return ext.getInfoboxContents(pages);
+		InfoboxExtractor<Dynasty> ext = new DynastyInfoboxExtractor();
+
+		List<Dynasty> dynasties = new ArrayList<>();
+		Map<String, Document> docs = WikiUtility.getDocumentsFromPages(pages, client);
+		for (Map.Entry<String, Document> entry : docs.entrySet()) {
+		    String title = entry.getKey();
+		    Document doc = entry.getValue();
+
+		    Dynasty dynasty = new Dynasty();
+		    dynasty.setName(title);
+
+		    try {
+				ext.getInfoFromHtmlFor(doc, dynasty);
+			    dynasty.setDescription(WikiUtility.getDescriptionFromDocument(doc));
+
+			    dynasties.add(dynasty);
+			} catch (InfoboxException e) {
+
+				// Don't add without infobox
+				System.err.println(e.getMessage());
+			}
+		}
+
+		return dynasties;
 	}
 }

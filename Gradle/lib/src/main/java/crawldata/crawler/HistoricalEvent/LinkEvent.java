@@ -1,4 +1,4 @@
-package Source.data.crawl.HistoricalEvent;
+package crawldata.crawler.HistoricalEvent;
 
 import java.io.IOException;
 import java.util.ArrayList;

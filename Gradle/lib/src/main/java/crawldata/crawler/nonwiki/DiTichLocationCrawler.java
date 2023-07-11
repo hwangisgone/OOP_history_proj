@@ -1,11 +1,9 @@
 package crawldata.crawler.nonwiki;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -20,19 +18,19 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 	public List<Location> crawl() {
 		return getLocationsFromDiTich();
 	}
-	
+
 	private List<Location> getLocationsFromDiTich() {
 		int cpage = 1;
 		int totalRecordInt = 4024; // Replace with the actual total record value
-		
+
 		String url = "http://ditich.vn/FrontEnd/DiTich"; // Replace with the actual URL
 		String mainUrl = "http://ditich.vn";
-		
+
 
 		try {
 			Document docstart = DefaultJsoup.getDoc(url);
 	        Element span = docstart.selectFirst("span:contains(Tổng số)");
-	        
+
 	        if (span != null) {
 	            String totalRecord = span.text().split(":")[1].trim();
 	            totalRecordInt = Integer.parseInt(totalRecord);
@@ -45,22 +43,22 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 			e.printStackTrace();
 		}
 
-		
+
 		// Build the URL with parameters
 		String fullUrl = url + "?cpage=" + cpage + "&rpage=" + totalRecordInt;
-		
+
 	    List<Location> locList = new ArrayList<>();
-		
+
 		try {
 		    Document doc = DefaultJsoup.getDoc(fullUrl);
 		    Elements aTags = doc.select("a[title=Xem chi tiết]");
 		    System.out.println(fullUrl);
 		    System.out.println(aTags.size());
-		    
+
 		    for (Element aTag : aTags) {
 		        Element thisLoc = aTag.selectFirst("span:matchesOwn((?i).+)");
 		        String locText = thisLoc != null ? thisLoc.text() : null;
-		
+
 		        Location loc = new Location();
 		        loc.setUrl(mainUrl + aTag.attr("href"));
 		        loc.setName(aTag.selectFirst("h2").text());
@@ -73,11 +71,11 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 		    System.out.println("Connecting to DiTich failed");
 		    return locList;
 		}
-		
+
 		List<Location> failedLocations = new ArrayList<>();
-		
+
 		System.out.println("Success.");
-		
+
 		Multithreader multithreader = new Multithreader();
 		locList = multithreader.start(locList, loc -> {
 			try {
@@ -87,32 +85,32 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 			}
 			return loc;
 		});
-		
+
 
 //		for (Location loc: locList) {
 //			getLocationInfo(loc);
 //			System.out.println(i);
 //			i--;
 //		}
-		
+
 		return locList;
 	}
-	
+
 	private void matchKeyVal(String key, String val, Location loc) {
 		switch (key) {
 			case "Xếp hạng":
 				loc.setGrade(val); break;
 			case "Loại hình xếp hạng":
 				loc.setGradeType(val); break;
-			case "Đối tượng thờ": 
+			case "Đối tượng thờ":
 				loc.setWorship(val); break;
-			case "Tọa độ": 
+			case "Tọa độ":
 				loc.setPosition(val); break;
 			default:
 				break;
 		}
 	}
-	
+
 	private void getLocationInfo(Location location) throws IOException {
         System.out.println("Getting " + location.getName() + "...");
 
@@ -137,5 +135,5 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
             }
         }
     }
-	
+
 }

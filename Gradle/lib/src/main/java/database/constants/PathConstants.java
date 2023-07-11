@@ -1,4 +1,4 @@
-package database;
+package database.constants;
 
 import java.io.File;
 
