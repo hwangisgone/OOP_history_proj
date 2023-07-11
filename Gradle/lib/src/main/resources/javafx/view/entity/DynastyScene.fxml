@@ -75,7 +75,7 @@
             </VBox>
          </center>
          <right>
-            <VBox prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="paneExtra" prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="TOP_RIGHT">
                      <children>

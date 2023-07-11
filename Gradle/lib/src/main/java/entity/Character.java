@@ -23,7 +23,7 @@ public class Character extends Entity {
 	private String biography;
 
 	public Character(Map<String, String> map) {
-		setName(map.get("id"));
+		setID(map.get("id"));
 		dateOfBirth = new Date(map.get("dateOfBirth"));
 		dateOfDeath = new Date(map.get("dateOfDeath"));
 		this.fullName = map.get("name");
@@ -73,7 +73,7 @@ public class Character extends Entity {
 	@Override
 	public String toString() {
 		StringBuffer info = new StringBuffer("");
-		info.append("Tên: " + getName() + "\n");
+		info.append("Tên: " + getID() + "\n");
 		info.append("Tên đầy đủ: " + getFullName() + "\n");
 		info.append("Ngày sinh: " + getDateOfBirth() + "\n");
 		info.append("Ngày mất: " + getDateOfDeath() + "\n");

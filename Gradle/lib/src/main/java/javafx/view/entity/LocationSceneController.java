@@ -77,7 +77,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("Tên",		loc -> loc.getName());
+		searchMap.put("Tên",		loc -> loc.getID());
 		searchMap.put("Tên khác",	loc -> loc.getOtherNames().toString());
 		searchMap.put("Địa điểm",	loc -> loc.getLocated());
 		searchMap.put("Vị trí",		loc -> loc.getPosition());
@@ -99,7 +99,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 		refresh();
 		initSearchMap();
 
-        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 
         colOtherNames.setCellValueFactory(new PropertyValueFactory<>("otherNames"));
@@ -110,6 +110,7 @@ public class LocationSceneController extends SearchController<Location> implemen
         colWorship.setCellValueFactory(new PropertyValueFactory<>("worship"));
 
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 //	@Override
 //	public void initialize() {
@@ -152,6 +153,10 @@ public class LocationSceneController extends SearchController<Location> implemen
     private ScrollPane scrollText;
 
     @FXML
+    private VBox paneExtra;
+    
+    
+    @FXML
     private Text labelDescription;
 
     @FXML
@@ -189,7 +194,7 @@ public class LocationSceneController extends SearchController<Location> implemen
 //				e.printStackTrace();
 //			}
 
-        	labelTitle.setText(selectLocation.getName());
+        	labelTitle.setText(selectLocation.getID());
         	labelDescription.setText(selectLocation.getDescription());
         	labelInfo.setText(selectLocation.toString());
     	}

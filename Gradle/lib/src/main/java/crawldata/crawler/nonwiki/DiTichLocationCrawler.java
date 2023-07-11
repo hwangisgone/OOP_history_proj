@@ -61,9 +61,11 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 
 		        Location loc = new Location();
 		        loc.setUrl(mainUrl + aTag.attr("href"));
-		        loc.setName(aTag.selectFirst("h2").text());
+		        loc.setID(aTag.selectFirst("h2").text());
 		        loc.setLocated(locText);
 		        loc.setImage(mainUrl + aTag.selectFirst("img").attr("src"));
+		        
+		        loc.setID(loc.getID().substring(0, 1).toUpperCase() + loc.getID().substring(1)); // Capitalize first letter
 		        locList.add(loc);
 		    }
 		} catch (IOException e) {
@@ -112,7 +114,7 @@ public class DiTichLocationCrawler implements ICrawler<Location> {
 	}
 
 	private void getLocationInfo(Location location) throws IOException {
-        System.out.println("Getting " + location.getName() + "...");
+        System.out.println("Getting " + location.getID() + "...");
 
         Document doc = DefaultJsoup.getDoc(location.getUrl());
         Elements divs = doc.select("div.hl__illustrated-list__list-item");

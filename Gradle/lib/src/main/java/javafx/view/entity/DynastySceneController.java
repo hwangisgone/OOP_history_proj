@@ -71,7 +71,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("Tên",		dynasty -> dynasty.getName());
+		searchMap.put("Tên",		dynasty -> dynasty.getID());
 		searchMap.put("Tên đầy đủ",	dynasty -> ExtraStringUtil.addComma(dynasty.getLongName()));
 		searchMap.put("Tên khác",	dynasty -> ExtraStringUtil.addComma(dynasty.getNativeName()));
 		// Mô tả
@@ -91,7 +91,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 		refresh();
 		initSearchMap();
 
-        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 
         colLongName.setCellValueFactory(celldata -> {
@@ -100,10 +100,11 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         colNativeName.setCellValueFactory(celldata -> {
         	return new SimpleStringProperty(ExtraStringUtil.addComma(celldata.getValue().getNativeName()));
         });
-        colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
+        colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearStart"));
         colYearEnd.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
 
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 
     @FXML
@@ -125,6 +126,9 @@ public class DynastySceneController extends SearchController<Dynasty> implements
     @FXML
     private ScrollPane scrollText;
 
+    @FXML
+    private VBox paneExtra;
+    
     @FXML
     private Text labelDescription;
 
@@ -148,7 +152,7 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-        	labelTitle.setText(selectDynasty.getName());
+        	labelTitle.setText(selectDynasty.getID());
         	labelDescription.setText(selectDynasty.getDescription());
         	labelInfo.setText(selectDynasty.toString());
     	}

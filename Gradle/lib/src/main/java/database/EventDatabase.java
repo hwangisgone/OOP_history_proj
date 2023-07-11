@@ -14,7 +14,7 @@ public class EventDatabase implements IDatabase<HistoricalEvent>{
 	CSVHandler<HistoricalEvent> csvHandler;
 
 	public EventDatabase() {
-		fileJson = new File("lib/src/main/resources/final/Event.json");
+		fileJson = new File(PathConstants.pathEvent);
 		csvHandler = new CSVHandler<>(HistoricalEvent.class);
 	}
 

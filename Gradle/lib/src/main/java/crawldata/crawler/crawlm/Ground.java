@@ -70,7 +70,7 @@ public class Ground {
 
 		// Print the ID of entity
 		for (Entity entity: listEntity) {
-			System.out.println(entity.getName());
+			System.out.println(entity.getID());
 			System.out.println("------------------");
 		}	// close for
 		System.out.println("Size: " + listEntity.size());

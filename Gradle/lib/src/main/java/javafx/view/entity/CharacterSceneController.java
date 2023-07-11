@@ -92,7 +92,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("ID",			chara -> chara.getName());
+		searchMap.put("ID",			chara -> chara.getID());
 		searchMap.put("Tên đầy đủ",	chara -> chara.getFullName());
 		searchMap.put("Ngày sinh",	chara -> chara.getDateOfBirth());
 		searchMap.put("Ngày mất",	chara -> chara.getDateOfDeath());
@@ -115,7 +115,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 			initSearchMap();
 
 
-	        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
+	        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
 	        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 
 	        colFullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
@@ -127,6 +127,7 @@ public class CharacterSceneController extends SearchController<Character> implem
 	        colMother.setCellValueFactory(new PropertyValueFactory<>("mother"));
 
 	        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+	        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 //	@Override
 //	public void initialize() {
@@ -163,7 +164,10 @@ public class CharacterSceneController extends SearchController<Character> implem
 
     @FXML
     private ScrollPane scrollText;
-
+    
+    @FXML
+    private VBox paneExtra;
+    
     @FXML
     private Text labelDescription;
 
@@ -187,7 +191,7 @@ public class CharacterSceneController extends SearchController<Character> implem
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-        	labelTitle.setText(selectCharacter.getName());
+        	labelTitle.setText(selectCharacter.getID());
         	labelDescription.setText(selectCharacter.getBiography());
         	labelInfo.setText(selectCharacter.toString());
     	}

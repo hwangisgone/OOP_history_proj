@@ -72,7 +72,7 @@ public class DynastyCrawler extends WikiCrawler<Dynasty> {
 		    Document doc = entry.getValue();
 
 		    Dynasty dynasty = new Dynasty();
-		    dynasty.setName(title);
+		    dynasty.setID(title);
 
 		    try {
 				ext.getInfoFromHtmlFor(doc, dynasty);

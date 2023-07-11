@@ -30,11 +30,11 @@ public abstract class Entity {
 		this.description = description;
 	}
 
-	public String getName() {
+	public String getID() {
 		return id;
 	}
 
-	public void setName(String name) {
+	public void setID(String name) {
 		this.id = name;
 	}
 

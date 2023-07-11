@@ -64,7 +64,7 @@ public class FestivalSceneController extends SearchController<Festival> implemen
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("Tên",		loc -> loc.getName());
+		searchMap.put("Tên",		loc -> loc.getID());
 		searchMap.put("Địa điểm",	loc -> loc.getLocation());
 		searchMap.put("Thời gian",	loc -> loc.getDate());
 		// Mô tả
@@ -82,13 +82,14 @@ public class FestivalSceneController extends SearchController<Festival> implemen
 		refresh();
 		initSearchMap();
 
-        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
        //  colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
 
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 
     @FXML
@@ -110,6 +111,10 @@ public class FestivalSceneController extends SearchController<Festival> implemen
     @FXML
     private ScrollPane scrollText;
 
+    @FXML
+    private VBox paneExtra;
+    
+    
     @FXML
     private Text labelDescription;
 
@@ -133,7 +138,7 @@ public class FestivalSceneController extends SearchController<Festival> implemen
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-        	labelTitle.setText(selectFestival.getName());
+        	labelTitle.setText(selectFestival.getID());
         	labelDescription.setText(selectFestival.getDescription());
         	labelInfo.setText(selectFestival.toString());
     	}

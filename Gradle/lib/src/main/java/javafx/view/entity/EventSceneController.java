@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 
 import database.EventDatabase;
 import database.IDatabase;
-import entity.HistoricalEventWar;
+import entity.HistoricalEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -27,19 +27,19 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class EventSceneController extends SearchController<HistoricalEventWar> implements Initializable{
+public class EventSceneController extends SearchController<HistoricalEvent> implements Initializable{
 
     @FXML
-    private TableView<HistoricalEventWar> HistoricalEventsTableView;
+    private TableView<HistoricalEvent> HistoricalEventsTableView;
 
     @FXML
-    private TableColumn<HistoricalEventWar, String> colDate;
+    private TableColumn<HistoricalEvent, String> colTime;
 
     @FXML
-    private TableColumn<HistoricalEventWar, String> colID;
+    private TableColumn<HistoricalEvent, String> colID;
 
     @FXML
-    private TableColumn<HistoricalEventWar, String> colLocation;
+    private TableColumn<HistoricalEvent, String> colLocation;
 
     @FXML
     private ComboBox<String> comboBox;
@@ -50,7 +50,7 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
     @FXML
     private HBox hboxFeature;
 
-    private IDatabase<HistoricalEventWar> db = new EventDatabase();
+    private IDatabase<HistoricalEvent> db = new EventDatabase();
 
     @Override
 	public void refresh() {
@@ -63,7 +63,7 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
 	@Override
 	protected void initSearchMap() {
 		searchMap = new HashMap<>();
-		searchMap.put("Tên",		hisevent -> hisevent.getName());
+		searchMap.put("Tên",		hisevent -> hisevent.getID());
 		searchMap.put("Thời gian",	hisevent -> hisevent.getTime());
 		searchMap.put("Địa điểm",	hisevent -> hisevent.getLocation());
 		// Mô tả
@@ -78,17 +78,19 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		 System.out.println("HistoricalEventWar controller initialized");
+		 System.out.println("HistoricalEvent controller initialized");
 	        // Add a default row
 		refresh();
 		initSearchMap();
 
-        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
-
-
-
+        
+        colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
+        colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
+        
         labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
+        labelInfo.prefWidthProperty().bind(paneExtra.widthProperty());
 	}
 
     @FXML
@@ -111,6 +113,10 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
     private ScrollPane scrollText;
 
     @FXML
+    private VBox paneExtra;
+    
+    
+    @FXML
     private Text labelDescription;
 
     @FXML
@@ -125,17 +131,25 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
     @FXML
     private VBox paneTable;
 
-    private void switchPane(HistoricalEventWar selectHistoricalEventWar) {
-    	if (selectHistoricalEventWar == null) {
+    private void switchPane(HistoricalEvent selectHistoricalEvent) {
+    	if (selectHistoricalEvent == null) {
         	paneInfo.setVisible(false);
         	paneTable.setVisible(true);
     	} else {
         	paneInfo.setVisible(true);
         	paneTable.setVisible(false);
 
-        	labelTitle.setText(selectHistoricalEventWar.getName());
-        	labelDescription.setText(selectHistoricalEventWar.getDescription());
-        	labelInfo.setText(selectHistoricalEventWar.toString());
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append(selectHistoricalEvent.getDescription())
+			.append("\n Sự kiện liên quan: \n - ")
+			.append(String.join("\n - ", selectHistoricalEvent.getRelatedTo()))
+			.append("\n Nhân vật liên quan: ")
+			.append(String.join(", ", selectHistoricalEvent.getCharacters()));
+			
+        	labelTitle.setText(selectHistoricalEvent.getID());
+        	labelDescription.setText(sb.toString());
+        	labelInfo.setText(selectHistoricalEvent.toString());
     	}
     }
 
@@ -147,7 +161,7 @@ public class EventSceneController extends SearchController<HistoricalEventWar> i
     @FXML
     void tableClick(MouseEvent event) {
     	// if (event.getClickCount() == 2) {
-            HistoricalEventWar entity = HistoricalEventsTableView.getSelectionModel().getSelectedItem();
+            HistoricalEvent entity = HistoricalEventsTableView.getSelectionModel().getSelectedItem();
             switchPane(entity);
         // }
     }

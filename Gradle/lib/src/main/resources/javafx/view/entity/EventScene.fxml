@@ -37,7 +37,7 @@
                <columns>
                   <TableColumn fx:id="colID" prefWidth="77.60000801086426" text="Tên" />
                   <TableColumn fx:id="colLocation" prefWidth="106.39999389648438" text="Địa điểm" />
-                  <TableColumn fx:id="colDate" prefWidth="124.0" text="Thời gian" />
+                  <TableColumn fx:id="colTime" prefWidth="124.0" text="Thời gian" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -73,7 +73,7 @@
             </VBox>
          </center>
          <right>
-            <VBox prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="paneExtra" prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="TOP_RIGHT">
                      <children>

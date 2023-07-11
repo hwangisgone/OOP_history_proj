@@ -71,7 +71,7 @@ public class FestivalCrawler extends WikiCrawler<Festival> {
 		    Document doc = entry.getValue();
 
 		    Festival festival = new Festival();
-		    festival.setName(title);
+		    festival.setID(title);
 
 		    try {
 				ext.getInfoFromHtmlFor(doc, festival);

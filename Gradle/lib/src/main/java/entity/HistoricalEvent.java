@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import util.ExtraStringUtil;
+
 public class HistoricalEvent extends Entity{
 
 	@JsonProperty("time")
@@ -88,14 +90,10 @@ public class HistoricalEvent extends Entity{
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("HistoricalEvent{")
-				.append("\n name=").append(id)
-				.append("'\n time='").append(time)
-				.append("'\n dynasty related='").append(dynasty_related)
-				.append("'\n location='").append(location)
-				.append("'\n related to='").append(related_to)
-				.append("'\n characters related='").append(characters_related)
-				.append("'\n result='").append(result)
+		sb.append("\n Thời gian").append(time)
+				.append("\n Nhà nước liên quan: ").append(ExtraStringUtil.addComma(dynasty_related))
+				.append("\n Địa điểm: ").append(location)
+				.append("\n Kết quả: ").append(result)
 				.append("\n}");
 		return sb.toString();
 	}

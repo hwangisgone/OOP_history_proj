@@ -36,7 +36,7 @@ public abstract class InfoboxExtractor<T extends Entity> {
 		Element infobox = doc.selectFirst("table.infobox");
 
 		if (infobox == null) {
-			throw new InfoboxException("Infobox not found for: " + entity.getName());
+			throw new InfoboxException("Infobox not found for: " + entity.getID());
 		}
 
 		this.remapBr(infobox);

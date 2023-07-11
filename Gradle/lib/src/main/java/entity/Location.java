@@ -73,12 +73,12 @@ public class Location extends Entity {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("\n Tên: ").append(id)
-	    	.append("'\n Tên khác: ").append(otherNames != null ? String.join(", ", otherNames) : "")
-	    	.append("'\n Vị trí: ").append(located)
-	    	.append("'\n Tọa độ: ").append(position)
-	    	.append("'\n Tôn thờ: ").append(worship).append("\n")
-	    	.append("'\n Loại hình xếp hạng").append(gradeType)
-	    	.append("'\n Xếp hạng: ").append(grade);
+	    	.append("\n Tên khác: ").append(otherNames != null ? String.join(", ", otherNames) : "")
+	    	.append("\n Vị trí: ").append(located)
+	    	.append("\n Tọa độ: ").append(position)
+	    	.append("\n Tôn thờ: ").append(worship).append("\n")
+	    	.append("\n Loại hình xếp hạng").append(gradeType)
+	    	.append("\n Xếp hạng: ").append(grade);
 
         return sb.toString();
     }

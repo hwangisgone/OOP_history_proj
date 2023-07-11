@@ -2,7 +2,7 @@ package main;
 
 import crawldata.crawler.MainCrawler;
 
-public class App {
+public class AppDemoCrawl {
     public static void main(String[] args) {
 
     	MainCrawler main = new MainCrawler();
