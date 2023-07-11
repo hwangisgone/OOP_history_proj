@@ -90,7 +90,7 @@ public class HistoricalEvent extends Entity{
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("\n Thời gian").append(time)
+		sb.append("\n Thời gian: ").append(time)
 				.append("\n Nhà nước liên quan: ").append(ExtraStringUtil.addComma(dynasty_related))
 				.append("\n Địa điểm: ").append(location)
 				.append("\n Kết quả: ").append(result);
