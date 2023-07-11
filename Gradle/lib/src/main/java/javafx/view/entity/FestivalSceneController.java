@@ -16,14 +16,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import entity.Festival;
 import entity.Festival;
 
 public class FestivalSceneController extends SearchController<Festival> implements Initializable {
@@ -85,6 +92,8 @@ public class FestivalSceneController extends SearchController<Festival> implemen
         
         colLocation.setCellValueFactory(new PropertyValueFactory<>("location"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 
     @FXML
@@ -98,5 +107,53 @@ public class FestivalSceneController extends SearchController<Festival> implemen
         } else {
 		    FestivalsTableView.setItems(getSearchData(searchText, searchOption));
 		}
+    }
+    
+    @FXML
+    private ImageView imageInfo;
+
+    @FXML
+    private ScrollPane scrollText;
+    
+    @FXML
+    private Text labelDescription;
+
+    @FXML
+    private Label labelInfo;
+
+    @FXML
+    private Label labelTitle;
+
+    @FXML
+    private BorderPane paneInfo;
+    
+    @FXML
+    private VBox paneTable;
+    
+    private void switchPane(Festival selectFestival) {
+    	if (selectFestival == null) {
+        	paneInfo.setVisible(false);
+        	paneTable.setVisible(true);
+    	} else {
+        	paneInfo.setVisible(true);
+        	paneTable.setVisible(false);
+        	
+        	labelTitle.setText(selectFestival.getName());
+        	labelDescription.setText(selectFestival.getDescription());
+        	labelInfo.setText(selectFestival.toString());
+    	}
+    }
+    
+    @FXML
+    void btnActionReturn(ActionEvent event) {
+    	switchPane(null);
+    }
+
+    @FXML
+    void tableClick(MouseEvent event) {
+    	// if (event.getClickCount() == 2) {
+            Festival entity = FestivalsTableView.getSelectionModel().getSelectedItem();
+            switchPane(entity);
+        // }
     }
 }

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.view.entity.DynastySceneController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.view.entity.DynastySceneController">
    <children>
-      <VBox layoutX="107.0" layoutY="47.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="paneTable" layoutX="107.0" layoutY="47.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox fx:id="hboxFeature" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="484.0" spacing="10.0" VBox.vgrow="NEVER">
                <children>
@@ -25,7 +33,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </HBox>
-            <TableView fx:id="DynastiesTableView" prefHeight="561.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="DynastiesTableView" onMouseClicked="#tableClick" prefHeight="561.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
                <columns>
                   <TableColumn fx:id="colID" prefWidth="77.60000801086426" text="Tên" />
                   <TableColumn fx:id="colLongName" prefWidth="106.39999389648438" text="Tên đầy đủ" />
@@ -39,6 +47,57 @@
             </TableView>
          </children>
       </VBox>
+      <BorderPane fx:id="paneInfo" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelTitle" text="Label">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <ScrollPane fx:id="scrollText" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="20.0" top="30.0" />
+                     </padding>
+                     <content>
+                        <Text fx:id="labelDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="dfsdfsdfsdfsdfsdfsdfsd" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+            </VBox>
+         </center>
+         <right>
+            <VBox prefWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnActionReturn" text="Quay lại" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imageInfo" fitHeight="320.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="labelInfo" text="Thông tin: Thông tin:" />
+               </children>
+            </VBox>
+         </right>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </BorderPane>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

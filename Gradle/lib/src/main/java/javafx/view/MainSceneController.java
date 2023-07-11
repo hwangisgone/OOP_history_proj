@@ -65,8 +65,13 @@ public class MainSceneController {
     private void loadFXML(AnchorPane parent, String path) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         try {
-            AnchorPane childControllerRoot = loader.load();
-            parent.getChildren().add(childControllerRoot);
+            AnchorPane child = loader.load();
+            parent.getChildren().add(child);
+            
+            AnchorPane.setTopAnchor(child, 0.0);
+            AnchorPane.setBottomAnchor(child, 0.0);
+            AnchorPane.setLeftAnchor(child, 0.0);
+            AnchorPane.setRightAnchor(child, 0.0);
         } catch (Exception e) {
             e.printStackTrace();
         }

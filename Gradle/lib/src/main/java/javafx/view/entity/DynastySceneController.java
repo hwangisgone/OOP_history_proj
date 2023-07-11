@@ -1,5 +1,6 @@
 package javafx.view.entity;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -10,15 +11,23 @@ import entity.Dynasty;
 import entity.Festival;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import util.ExtraStringUtil;
 import javafx.beans.property.SimpleStringProperty;
 
@@ -73,6 +82,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         comboBox.setValue("Tên");
 	}
 	
+
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -92,6 +103,8 @@ public class DynastySceneController extends SearchController<Dynasty> implements
         });
         colYearStart.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
         colYearEnd.setCellValueFactory(new PropertyValueFactory<>("yearEnd"));
+        
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 
     @FXML
@@ -107,4 +120,51 @@ public class DynastySceneController extends SearchController<Dynasty> implements
 		}
     }
 
+    @FXML
+    private ImageView imageInfo;
+
+    @FXML
+    private ScrollPane scrollText;
+    
+    @FXML
+    private Text labelDescription;
+
+    @FXML
+    private Label labelInfo;
+
+    @FXML
+    private Label labelTitle;
+
+    @FXML
+    private BorderPane paneInfo;
+    
+    @FXML
+    private VBox paneTable;
+    
+    private void switchPane(Dynasty selectDynasty) {
+    	if (selectDynasty == null) {
+        	paneInfo.setVisible(false);
+        	paneTable.setVisible(true);
+    	} else {
+        	paneInfo.setVisible(true);
+        	paneTable.setVisible(false);
+        	
+        	labelTitle.setText(selectDynasty.getName());
+        	labelDescription.setText(selectDynasty.getDescription());
+        	labelInfo.setText(selectDynasty.toString());
+    	}
+    }
+    
+    @FXML
+    void btnActionReturn(ActionEvent event) {
+    	switchPane(null);
+    }
+
+    @FXML
+    void tableClick(MouseEvent event) {
+    	// if (event.getClickCount() == 2) {
+            Dynasty entity = DynastiesTableView.getSelectionModel().getSelectedItem();
+            switchPane(entity);
+        // }
+    }
 }

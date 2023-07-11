@@ -14,21 +14,28 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
+import javafx.scene.text.Text;
+import entity.Character;
+import entity.Festival;
 import entity.Character;
 import database.IDatabase;
 import database.CharacterDatabase;
 
 
-public class CharacterSceneController implements Initializable {
+public class CharacterSceneController extends SearchController<Character> implements Initializable {
 
     @FXML
     private TableView<Character> CharactersTableView;
@@ -85,10 +92,24 @@ public class CharacterSceneController implements Initializable {
         // Bind the ObservableList to the TableView
 	    CharactersTableView.setItems(data);
     }
-    
-	
-    Map<String, Function<Character, String>> searchMap;
 
+
+	@Override
+	protected void initSearchMap() {
+		searchMap = new HashMap<>();
+		searchMap.put("ID",			chara -> chara.getName());
+		searchMap.put("Tên đầy đủ",	chara -> chara.getFullName());
+		searchMap.put("Ngày sinh",	chara -> chara.getDateOfBirth());
+		searchMap.put("Ngày mất",	chara -> chara.getDateOfDeath());
+		searchMap.put("Tên bố",		chara -> chara.getFather());
+		searchMap.put("Tên mẹ",		chara -> chara.getMother());
+		searchMap.put("Triều đại",	chara -> chara.getDynasty());
+		// Tiểu sử, mô tả
+		
+		ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
+        comboBox.setItems(itemsList);
+        comboBox.setValue("ID");
+	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -96,20 +117,8 @@ public class CharacterSceneController implements Initializable {
 		 System.out.println("Character controller initialized");
 	        // Add a default row
 			refresh();
+			initSearchMap();
 
-			searchMap = new HashMap<>();
-			searchMap.put("ID",			chara -> chara.getName());
-			searchMap.put("Tên đầy đủ",	chara -> chara.getFullName());
-			searchMap.put("Ngày sinh",	chara -> chara.getDateOfBirth());
-			searchMap.put("Ngày mất",	chara -> chara.getDateOfDeath());
-			searchMap.put("Tên bố",		chara -> chara.getFather());
-			searchMap.put("Tên mẹ",		chara -> chara.getMother());
-			searchMap.put("Triều đại",	chara -> chara.getDynasty());
-			// Tiểu sử, mô tả
-			
-			ObservableList<String> itemsList = FXCollections.observableArrayList(searchMap.keySet());
-	        comboBox.setItems(itemsList);
-	        comboBox.setValue("ID");
 	        
 	        colID.setCellValueFactory(new PropertyValueFactory<>("name"));
 	        // colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -121,6 +130,8 @@ public class CharacterSceneController implements Initializable {
 	        colDynasty.setCellValueFactory(new PropertyValueFactory<>("dynasty"));
 	        colFather.setCellValueFactory(new PropertyValueFactory<>("father"));
 	        colMother.setCellValueFactory(new PropertyValueFactory<>("mother"));
+	        
+	        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 //	@Override
 //	public void initialize() {
@@ -143,36 +154,61 @@ public class CharacterSceneController implements Initializable {
     void inputSearch(KeyEvent event) {
         String searchText = fieldSearch.getText();
         String searchOption = comboBox.getValue();
-        SearchData(searchText, searchOption);
-    }
-    
-    private void SearchData(String searchText, String searchOption) {
+        
         if (searchText.isEmpty()) {
             // If the search text is empty, revert to the original unfiltered list
-            CharactersTableView.setItems(data);
+        	CharactersTableView.setItems(data);
         } else {
+		    CharactersTableView.setItems(getSearchData(searchText, searchOption));
+		}
+    }
+    
+    @FXML
+    private ImageView imageInfo;
+
+    @FXML
+    private ScrollPane scrollText;
+    
+    @FXML
+    private Text labelDescription;
+
+    @FXML
+    private Label labelInfo;
+
+    @FXML
+    private Label labelTitle;
+
+    @FXML
+    private BorderPane paneInfo;
+    
+    @FXML
+    private VBox paneTable;
+    
+    private void switchPane(Character selectCharacter) {
+    	if (selectCharacter == null) {
+        	paneInfo.setVisible(false);
+        	paneTable.setVisible(true);
+    	} else {
+        	paneInfo.setVisible(true);
+        	paneTable.setVisible(false);
         	
-            // Apply filtering based on the search text and option
-            FilteredList<Character> filteredList = new FilteredList<>(data);
+        	labelTitle.setText(selectCharacter.getName());
+        	labelDescription.setText(selectCharacter.getBiography());
+        	labelInfo.setText(selectCharacter.toString());
+    	}
+    }
+    
+    @FXML
+    void btnActionReturn(ActionEvent event) {
+    	switchPane(null);
+    }
 
-            filteredList.setPredicate(chara -> {
-                Function<Character, String> fun = searchMap.get(searchOption);
-                
-                if (fun != null) {
-                	String originalText = fun.apply(chara);
-                	
-                    if (searchOption.equals("ID")) {
-                        return originalText.startsWith(searchText);
-                    } else {
-                        return originalText.toLowerCase().contains(searchText.toLowerCase());
-                    }
-                }
-
-                return false;
-            });
-
-            CharactersTableView.setItems(filteredList);
-        }
+    @FXML
+    void tableClick(MouseEvent event) {
+    	// if (event.getClickCount() == 2) {
+            Character entity = CharactersTableView.getSelectionModel().getSelectedItem();
+            switchPane(entity);
+        // }
     }
 
 }

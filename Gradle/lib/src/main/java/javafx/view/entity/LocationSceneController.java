@@ -16,14 +16,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import entity.Location;
 import entity.Location;
 
 public class LocationSceneController extends SearchController<Location> implements Initializable {
@@ -106,6 +113,8 @@ public class LocationSceneController extends SearchController<Location> implemen
         colGrade.setCellValueFactory(new PropertyValueFactory<>("grade"));
         colGradeType.setCellValueFactory(new PropertyValueFactory<>("gradeType"));
         colWorship.setCellValueFactory(new PropertyValueFactory<>("worship"));
+        
+        labelDescription.wrappingWidthProperty().bind(scrollText.widthProperty());
 	}
 //	@Override
 //	public void initialize() {
@@ -140,4 +149,52 @@ public class LocationSceneController extends SearchController<Location> implemen
 		}
     }
 
+    
+    @FXML
+    private ImageView imageInfo;
+
+    @FXML
+    private ScrollPane scrollText;
+    
+    @FXML
+    private Text labelDescription;
+
+    @FXML
+    private Label labelInfo;
+
+    @FXML
+    private Label labelTitle;
+
+    @FXML
+    private BorderPane paneInfo;
+    
+    @FXML
+    private VBox paneTable;
+    
+    private void switchPane(Location selectLocation) {
+    	if (selectLocation == null) {
+        	paneInfo.setVisible(false);
+        	paneTable.setVisible(true);
+    	} else {
+        	paneInfo.setVisible(true);
+        	paneTable.setVisible(false);
+        	
+        	labelTitle.setText(selectLocation.getName());
+        	labelDescription.setText(selectLocation.getDescription());
+        	labelInfo.setText(selectLocation.toString());
+    	}
+    }
+    
+    @FXML
+    void btnActionReturn(ActionEvent event) {
+    	switchPane(null);
+    }
+
+    @FXML
+    void tableClick(MouseEvent event) {
+    	// if (event.getClickCount() == 2) {
+            Location entity = LocationsTableView.getSelectionModel().getSelectedItem();
+            switchPane(entity);
+        // }
+    }
 }
