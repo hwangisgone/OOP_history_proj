@@ -30,3 +30,4 @@ Configure/
 demo/
 log/
 
+*.ipynb
